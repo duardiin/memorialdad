@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+  
+  --color-ufv-green: #1E3A8A;
+  --color-ufv-green-dark: #1E40AF;
+  --color-ufv-green-light: #93C5FD;
+  --color-ufv-gold: #FFFFFF;
+  --color-ufv-gold-light: #FFFFFF;
+  --color-ufv-cream: #FFFFFF;
+  --color-ufv-gray: #3a3a3a;
+  --color-ufv-gray-light: #6b6b6b;
+  --color-ufv-border: #d0ccc2;
+}
+
+@layer base {
+  body {
+    @apply bg-ufv-cream text-ufv-gray font-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg border border-ufv-border p-7 shadow-sm;
+  }
+  
+  .nav-item {
+    @apply bg-transparent border-none cursor-pointer font-sans text-[13px] font-medium text-white/70 px-3.5 py-2.5 whitespace-nowrap border-b-3 border-transparent transition-all relative;
+  }
+  
+  .nav-item.active {
+    @apply text-ufv-gold-light border-b-ufv-gold bg-white/5;
+  }
+
+  .event-tag {
+    @apply inline-block text-[10px] tracking-[1.2px] uppercase font-bold px-2 py-0.5 rounded-[3px] mb-1.5;
+  }
+  
+  .tag-fundacao { @apply bg-[#d4edda] text-[#155724]; }
+  .tag-ensino { @apply bg-[#d1ecf1] text-[#0c5460]; }
+  .tag-pesquisa { @apply bg-[#fff3cd] text-[#856404]; }
+  .tag-extensao { @apply bg-[#f8d7da] text-[#721c24]; }
+  .tag-gestao { @apply bg-[#e2d9f3] text-[#432874]; }
+  .tag-infraestrutura { @apply bg-[#d0e8f5] text-[#0a4b77]; }
+  .tag-reconhecimento { @apply bg-[#fce8c4] text-[#7a4a00]; }
+  .tag-parceria { @apply bg-[#e0f0e8] text-[#1a5c35]; }
+}
+

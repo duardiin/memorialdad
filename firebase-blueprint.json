@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "MemorialEvent": {
+      "title": "MemorialEvent",
+      "description": "A historical event in the memorial.",
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year the event occurred."
+        },
+        "tag": {
+          "type": "string",
+          "enum": ["fundacao", "ensino", "pesquisa", "extensao", "gestao", "infraestrutura", "reconhecimento", "parceria"],
+          "description": "The category of the event."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the event."
+        },
+        "desc": {
+          "type": "string",
+          "description": "A detailed description of the event."
+        },
+        "authorUid": {
+          "type": "string",
+          "description": "The UID of the user who contributed the event."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the event was added."
+        }
+      },
+      "required": ["year", "tag", "title", "desc", "authorUid", "createdAt"]
+    },
+    "MemorialPhoto": {
+      "title": "MemorialPhoto",
+      "description": "A photo in the memorial gallery.",
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "The year the photo belongs to."
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL of the photo (e.g., from Firebase Storage or external)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "The caption for the photo."
+        },
+        "authorUid": {
+          "type": "string",
+          "description": "The UID of the user who contributed the photo."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the photo was added."
+        }
+      },
+      "required": ["year", "url", "caption", "authorUid", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/events/{eventId}": {
+      "schema": "MemorialEvent",
+      "description": "Collection of historical events."
+    },
+    "/photos/{photoId}": {
+      "schema": "MemorialPhoto",
+      "description": "Collection of gallery photos."
+    }
+  }
+}
