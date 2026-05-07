@@ -145,56 +145,50 @@ export default function App() {
     testConnection();
   }, []);
 
+  const exportarDoFirebase = async () => {
+  try {
+    const { getDocs, collection } = await import('firebase/firestore');
+    const querySnapshot = await getDocs(collection(db, "events"));
+    const todosOsEventos = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+    
+    // Isso vai imprimir todos os seus dados no console do F12
+    console.log("--- DADOS PARA O MEMORIALDATA.TS ---");
+    console.log(JSON.stringify(todosOsEventos, null, 2));
+    console.log("------------------------------------");
+    alert("Dados exportados! Aperte F12 para copiar do console.");
+  } catch (e) {
+    console.error("Erro na exportação:", e);
+  }
+};
+
   // Real-time Data Listeners
-  useEffect(() => {
-    if (!isAuthReady) return;
+ useEffect(() => {
+  async function extrairTudo() {
+    try {
+      const { getDocs, collection } = await import('firebase/firestore');
+      
+      // Busca Eventos
+      const eventsSnap = await getDocs(collection(db, "events"));
+      const eventsData = eventsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      
+      // Busca Fotos
+      const photosSnap = await getDocs(collection(db, "photos"));
+      const photosData = photosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-    const eventsUnsubscribe = onSnapshot(collection(db, 'events'), (snapshot) => {
-      const eventsByYear: Record<number, MemorialEvent[]> = {};
-      snapshot.docs.forEach(doc => {
-        const data = doc.data();
-        const year = data.year;
-        if (!eventsByYear[year]) eventsByYear[year] = [];
-        eventsByYear[year].push(data as MemorialEvent);
-      });
-      setDbEvents(eventsByYear);
-    }, (error) => {
-      handleFirestoreError(error, OperationType.GET, 'events');
-    });
-
-    const photosUnsubscribe = onSnapshot(collection(db, 'photos'), (snapshot) => {
-      const photosByYear: Record<number, MemorialPhoto[]> = {};
-      snapshot.docs.forEach(doc => {
-        const data = doc.data();
-        const year = data.year;
-        if (!photosByYear[year]) photosByYear[year] = [];
-        photosByYear[year].push(data as MemorialPhoto);
-      });
-      setDbPhotos(photosByYear);
-    }, (error) => {
-      handleFirestoreError(error, OperationType.GET, 'photos');
-    });
-
-    const galleryUnsubscribe = onSnapshot(collection(db, 'gallery'), (snapshot) => {
-      const photos = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      })) as Array<{ id: string; url: string; caption: string; title: string; createdAt: any }>;
-      photos.sort((a, b) => {
-        if (!a.createdAt || !b.createdAt) return 0;
-        return b.createdAt.seconds - a.createdAt.seconds;
-      });
-      setAllGalleryPhotos(photos);
-    }, (error) => {
-      handleFirestoreError(error, OperationType.GET, 'gallery');
-    });
-
-    return () => {
-      eventsUnsubscribe();
-      photosUnsubscribe();
-      galleryUnsubscribe();
-    };
-  }, [isAuthReady]);
+      console.log("=== COPIE DAQUI PARA O MEMORIALDATA.TS ===");
+      console.log("EVENTOS:", JSON.stringify(eventsData, null, 2));
+      console.log("FOTOS:", JSON.stringify(photosData, null, 2));
+      console.log("==========================================");
+      
+    } catch (e) {
+      console.error("Erro ao puxar dados:", e);
+    }
+  }
+  extrairTudo();
+}, []);
 
   const yearsInDecade = useMemo(() => {
     return Array.from({ length: 10 }, (_, i) => currentDecade + i).filter(y => y <= 2026);
@@ -648,6 +642,76 @@ export default function App() {
                     <p>
                       Ao longo de mais de cinco décadas, o DAD consolidou-se como um dos principais centros de formação em Administração e Ciências Contábeis, contribuindo para o desenvolvimento regional por meio da produção científica e formação de excelência.
                     </p>
+                  </div>
+                </div>
+
+                {/* BLOCO HISTÓRICO — ORIGENS UFV E DAD */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
+                    Uma Trajetória de 100 Anos
+                  </h2>
+                  <div className="space-y-5 text-ufv-gray text-[15px] leading-relaxed">
+
+                    <p>
+                      Tudo iniciou em <strong>1925</strong>…<br />
+                      E hoje, em <strong>2026</strong>, a UFV completa os seus <strong>100 anos</strong> e o Departamento de Administração e Contabilidade seus <strong>50 anos jubilosos</strong> em conquistas e inovações.
+                    </p>
+
+                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
+                      A realidade nem sempre foi assim…<br />
+                      Muitos sacrifícios, percalços, conquistas e vitórias!<br />
+                      Vejamos alguns fatos marcantes e merecedores.
+                    </p>
+
+                    <p>
+                      A UFV, sucessora da antiga <strong>Escola Superior de Agricultura e Veterinária – ESAV</strong>, foi concebida em{' '}
+                      <strong>06 de Setembro de 1920</strong> (Lei nº 761) e criada em <strong>30 de Março de 1922</strong> (Decreto 6.053)
+                      pelo Governador do Estado de Minas Gerais, <strong>Arthur da Silva Bernardes</strong>, autorizando o governo a criar a
+                      Escola Superior de Agricultura e Veterinária do Estado de Minas Gerais.
+                    </p>
+
+                    <p>
+                      Nos moldes dos <em>"Land Grant Colleges"</em>, semelhante às escolas direcionadas à agricultura,{' '}
+                      <strong>Peter Henry Rolfs</strong> foi o indicado e o responsável pela implantação e direção da ESAV.
+                      Sua inauguração deu-se em <strong>28 de agosto de 1926</strong> por Arthur da Silva Bernardes, então como Presidente da República.
+                    </p>
+
+                    <p>
+                      <strong>Cursos oferecidos:</strong> Fundamental, Médio e Superior nos anos <strong>1927</strong> e <strong>1928</strong>.
+                    </p>
+
+                    {/* CURIOSIDADES */}
+                    <div className="bg-ufv-cream border border-ufv-border rounded-lg p-5 space-y-2">
+                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-3">✦ Curiosidades</div>
+                      <p>
+                        Durante o dia e antes desse período, as aulas primárias eram lecionadas aos filhos dos operários da construção,
+                        devido ao alto nível de analfabetismo. Também os operários tinham aulas, mas à noite, uma vez que mais de{' '}
+                        <strong>80% deles eram analfabetos</strong>, reduzindo esse índice para menos de <strong>10% em 1926</strong>.
+                      </p>
+                    </div>
+
+                    {/* AUTORIA */}
+                    <div className="border border-ufv-border rounded-lg p-5 space-y-3">
+                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-3">✦ De autoria do Walmer</div>
+                      <p>
+                        Em suma, o início do CCH está na <strong>Economia Doméstica</strong> e na <strong>Economia Rural</strong>, que eram, à época,
+                        extensões das Ciências Agrárias. Essas duas áreas deram origem aos departamentos e cursos que compõem o atual CCH.
+                      </p>
+                      <p>
+                        Da Economia Doméstica, surgiram os cursos de <strong>Letras</strong> e de <strong>Educação</strong>. Da Economia Rural, foram criados os cursos de{' '}
+                        <strong>Administração</strong>, <strong>Economia</strong>, <strong>Cooperativismo</strong> e, mais recentemente, o{' '}
+                        <strong>Curso de Gestão do Agronegócio</strong>. A partir desses dois ramos, foram então desmembrados e estruturados os
+                        departamentos de Administração e Economia, de Educação, e de Letras e Artes que, juntamente com o Departamento de
+                        Economia Doméstica, passaram a integrar o <strong>Centro de Ciências Humanas, Letras e Artes</strong>.
+                      </p>
+                      <p>
+                        Estes departamentos pioneiros ancoravam cinco cursos: Administração, Economia, Economia Doméstica, Letras e Pedagogia.
+                        O <strong>Departamento de Administração e Economia (DAE)</strong> conduzia os cursos de Administração e Economia e se encarregava
+                        das disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais.
+                      </p>
+                    </div>
+
                   </div>
                 </div>
 

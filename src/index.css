@@ -4,15 +4,19 @@
   --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Merriweather", Georgia, serif;
   
-  --color-ufv-green: #1E3A8A;
-  --color-ufv-green-dark: #1E40AF;
-  --color-ufv-green-light: #93C5FD;
-  --color-ufv-gold: #FFFFFF;
-  --color-ufv-gold-light: #FFFFFF;
-  --color-ufv-cream: #FFFFFF;
-  --color-ufv-gray: #3a3a3a;
-  --color-ufv-gray-light: #6b6b6b;
-  --color-ufv-border: #d0ccc2;
+ 
+  --color-ufv-green: #0F172A;  
+  --color-ufv-green-dark: #1E293B; 
+  --color-ufv-green-light: #3B82F6;
+  
+ 
+  --color-ufv-gold: #B45309;  
+  --color-ufv-gold-light: #FDE68A; 
+  --color-ufv-cream: #F8FAFC;  
+  
+  --color-ufv-gray: #334155;      
+  --color-ufv-gray-light: #64748B;   
+  --color-ufv-border: #E2E8F0;      
 }
 
 @layer base {
