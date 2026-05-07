@@ -211,6 +211,39 @@ export default function App() {
     return allEvents.filter(e => e.tag === activeFilter);
   }, [selectedYear, activeFilter, dbEvents]);
 
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+
+    const results: Array<{ year: number; event: MemorialEvent }> = [];
+
+    Object.entries(memorialData).forEach(([year, data]) => {
+      data.events.forEach(event => {
+        if (
+          event.title.toLowerCase().includes(q) ||
+          event.desc.toLowerCase().includes(q) ||
+          event.tag.toLowerCase().includes(q)
+        ) {
+          results.push({ year: Number(year), event });
+        }
+      });
+    });
+
+    Object.entries(dbEvents).forEach(([year, events]) => {
+      events.forEach(event => {
+        if (
+          event.title.toLowerCase().includes(q) ||
+          event.desc.toLowerCase().includes(q) ||
+          event.tag.toLowerCase().includes(q)
+        ) {
+          results.push({ year: Number(year), event });
+        }
+      });
+    });
+
+    return results.sort((a, b) => a.year - b.year);
+  }, [searchQuery, dbEvents]);
+
   const yearPhotos = useMemo(() => {
     const originalPhotos = memorialData[selectedYear]?.photos || [];
     const userPhotos = dbPhotos[selectedYear] || [];
@@ -388,17 +421,76 @@ export default function App() {
             Preservando a trajetória histórica e o legado acadêmico do Departamento de Administração e Contabilidade.
           </div>
           <div className="w-full md:w-auto md:ml-auto flex items-center gap-3">
-            <div className="flex-grow md:flex-none flex items-center bg-white/10 border border-white/25 rounded-full px-4 py-1.5 focus-within:bg-white/20 focus-within:border-ufv-gold-light transition-all">
-              <Search className="w-4 h-4 text-white/50 mr-2" />
-              <input 
-                type="text" 
-                placeholder="Pesquisar no Memorial…" 
-                className="bg-transparent border-none text-white text-sm outline-none w-full md:w-48"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
+            <div className="flex-grow md:flex-none relative">
+              <div className="flex items-center bg-white/10 border border-white/25 rounded-full px-4 py-1.5 focus-within:bg-white/20 focus-within:border-ufv-gold-light transition-all">
+                <Search className="w-4 h-4 text-white/50 mr-2 shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Pesquisar no Memorial…"
+                  className="bg-transparent border-none text-white text-sm outline-none w-full md:w-48 placeholder:text-white/40"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                {searchQuery && (
+                  <button onClick={() => setSearchQuery('')} className="ml-2 text-white/40 hover:text-white transition-colors shrink-0">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+
+              {/* SEARCH RESULTS DROPDOWN */}
+              {searchQuery.trim() && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-ufv-border z-[200] max-h-[70vh] overflow-y-auto min-w-[320px] md:min-w-[420px]">
+                  <div className="px-4 py-3 border-b border-ufv-border flex items-center justify-between bg-ufv-cream rounded-t-xl">
+                    <span className="text-xs font-bold uppercase tracking-wider text-ufv-gray-light">
+                      {searchResults.length} resultado{searchResults.length !== 1 ? 's' : ''} para &ldquo;{searchQuery}&rdquo;
+                    </span>
+                    <button onClick={() => setSearchQuery('')} className="text-ufv-gray-light hover:text-ufv-gray transition-colors">
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  {searchResults.length === 0 ? (
+                    <div className="px-4 py-10 text-center">
+                      <Search className="w-8 h-8 text-ufv-border mx-auto mb-2" />
+                      <p className="text-sm text-ufv-gray-light">Nenhum resultado encontrado.</p>
+                      <p className="text-xs text-ufv-gray-light mt-1">Tente outras palavras-chave.</p>
+                    </div>
+                  ) : (
+                    <div className="divide-y divide-ufv-border">
+                      {searchResults.map(({ year, event }, i) => (
+                        <button
+                          key={i}
+                          className="w-full text-left px-4 py-3.5 hover:bg-ufv-cream/60 transition-colors group"
+                          onClick={() => {
+                            setActivePanel('years');
+                            setCurrentDecade(Math.floor(year / 10) * 10);
+                            setSelectedYear(year);
+                            setSearchQuery('');
+                          }}
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-ufv-green/20 transition-colors text-ufv-green">
+                              {getTagIcon(event.tag)}
+                            </div>
+                            <div className="flex-grow min-w-0">
+                              <div className="flex items-center gap-2 mb-0.5">
+                                <span className="text-[10px] font-bold text-ufv-gold uppercase tracking-wider">{year}</span>
+                                <span className={`event-tag tag-${event.tag}`} style={{ fontSize: '9px', padding: '0 4px' }}>{event.tag}</span>
+                              </div>
+                              <div className="text-sm font-semibold text-ufv-gray leading-snug truncate">{event.title}</div>
+                              <div className="text-xs text-ufv-gray-light mt-0.5 line-clamp-2 leading-relaxed">{event.desc}</div>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-ufv-border shrink-0 mt-2 group-hover:text-ufv-green transition-colors" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
             >
