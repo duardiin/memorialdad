@@ -43,7 +43,7 @@ import {
 } from 'firebase/firestore';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec';
 
 enum OperationType {
   CREATE = 'create',
@@ -525,6 +525,12 @@ export default function App() {
           >
             Por Ano
           </button>
+          <button 
+            className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
+            onClick={() => setActivePanel('quebec')}
+          >
+            🍁 Projeto Quebec
+          </button>
           <div className="hidden sm:flex items-center">
             <div className="w-px h-6 bg-white/15 self-center mx-2 shrink-0"></div>
             <span className="text-[10px] tracking-[1.5px] uppercase text-white/35 font-semibold self-center mr-2 whitespace-nowrap">Décadas</span>
@@ -588,7 +594,8 @@ export default function App() {
                       { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-4 h-4" /> },
                       { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-4 h-4" /> },
                       { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-4 h-4" /> },
-                      { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> }
+                      { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> },
+                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> }
                     ].map(item => (
                       <button 
                         key={item.id}
@@ -906,6 +913,146 @@ export default function App() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'quebec' && (
+            <motion.div
+              key="quebec"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              {/* HEADER CARD */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center text-xl">🍁</div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Cooperação Internacional · 1989</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Projeto Quebec</h1>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    A parceria que consolidou tecnologicamente a UFV e projetou o Departamento de Administração no cenário da cooperação internacional.
+                  </p>
+                  <div className="flex flex-wrap gap-6 mt-6 pt-5 border-t border-white/15">
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1989</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Início da cooperação</span>
+                    </div>
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">UFV</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">↔ Université du Québec</span>
+                    </div>
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">DAD</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Protagonismo institucional</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ARTICLE BODY */}
+              <div className="space-y-6">
+
+                {/* Intro */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
+                    Memória UFV: O Impacto do "Projeto Quebec" na Consolidação Tecnológica e Institucional da Universidade
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      <strong>VIÇOSA</strong> – No final da década de 1980, mais precisamente em torno de <strong>1989</strong>, a Universidade Federal de Viçosa (UFV) vivenciava um período efervescente de expansão científica. Foi nesse cenário de redemocratização e busca por modernização que ganhou força a cooperação internacional com instituições canadenses, um marco que impulsionou o avanço tecnológico de diversos setores da instituição e consolidou a projeção de seus novos departamentos acadêmicos.
+                    </p>
+                    <p>
+                      O movimento, que ficou conhecido nos bastidores da instituição como o reflexo do <strong>Projeto Quebec</strong>, teve um papel fundamental não apenas nas ciências exatas e biológicas, mas também nas ciências humanas e gerenciais, com o protagonismo direto do recém-desmembrado <strong>Departamento de Administração (DAD)</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Contexto */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Globe className="w-4 h-4 text-white" /></div>
+                    O Contexto: A Conexão Viçosa-Canadá
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      Em janeiro de <strong>1989</strong>, os informantes oficiais da UFV já destacavam que o Departamento de Administração (DAD) estabelecia formalmente as bases de um promissor intercâmbio com a <strong>Universidade de Québec</strong>. O ecossistema canadense daquela província era referência mundial em gestão organizacional, pequenas e médias empresas e inovação tecnológica industrial.
+                    </p>
+                    <p>
+                      Para a UFV, que estruturava suas frentes de ensino e extensão para além do setor puramente agrário, a parceria representava a oportunidade de absorver metodologias de ponta. A cooperação não se limitou a termos burocráticos: ela ganhou vida por meio de um intenso fluxo de pessoas e conhecimento.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Protagonismo Feminino */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Users className="w-4 h-4 text-white" /></div>
+                    O Protagonismo Feminino: As Missões Internacionais
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá com o objetivo de estreitar esses laços.
+                    </p>
+                    <p>
+                      Entre os nomes de destaque que lideraram e vivenciaram essa transformação no ambiente acadêmico de Viçosa, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Barbassa</strong>. Em uma época em que o campo da gestão e as missões internacionais de alta tecnologia ainda eram amplamente dominados por homens, a atuação de docentes como Nina Rosa foi emblemática para estruturar as bases de ensino, pesquisa e extensão que moldariam as décadas seguintes do departamento e do Centro de Ciências Humanas (CCH).
+                    </p>
+                  </div>
+                </div>
+
+                {/* Efeitos Práticos */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Handshake className="w-4 h-4 text-white" /></div>
+                    Efeitos Práticos e Intercâmbio de Conhecimento
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>O convênio gerou frutos bilaterais robustos nos anos subsequentes:</p>
+                    <div className="space-y-4 mt-2">
+                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
+                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
+                          <GraduationCap className="w-5 h-5 text-ufv-green" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-ufv-gray mb-1">Capacitação Docente</div>
+                          <div className="text-sm text-ufv-gray-light leading-relaxed">A imersão técnica permitiu que o corpo docente da UFV trouxesse metodologias avançadas de ensino e pesquisa em administração voltada para a realidade de pequenos e médios negócios locais.</div>
+                        </div>
+                      </div>
+                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
+                        <div className="w-9 h-9 rounded-full bg-ufv-gold/15 flex items-center justify-center shrink-0 mt-0.5">
+                          <Globe className="w-5 h-5 text-ufv-gold" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-ufv-gray mb-1">Visitas Internacionais</div>
+                          <div className="text-sm text-ufv-gray-light leading-relaxed">O fluxo contínuo trouxe a Viçosa grandes referências canadenses. Em <strong>1990</strong>, o professor <strong>Gérald d'Amboise</strong>, renomado acadêmico da Universidade de Laval (Québec), esteve no campus ministrando palestras específicas sobre Pequenas e Médias Empresas para a comunidade acadêmica e empresários da região.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Legado */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Award className="w-4 h-4 text-white" /></div>
+                    O Legado Silencioso
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      Embora as menções diretas ao projeto pertençam aos recortes de jornais e arquivos históricos de 1989, o impacto prático moldou a UFV contemporânea. A cooperação marcou uma transição crucial na mentalidade da universidade: a mudança de um modelo de assistência técnica tradicional para <strong>parcerias horizontais de alta tecnologia industrial e de gestão</strong>.
+                    </p>
+                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
+                      Graças à audácia de professores e professoras que cruzaram o continente no final dos anos 80, os departamentos da UFV ganharam a maturidade necessária para transformar a instituição no polo de excelência e inovação que hoje celebra sua história.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </motion.div>
           )}

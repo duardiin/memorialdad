@@ -1,3 +1,4 @@
+import { isReadable } from 'stream';
 import { MemorialData } from '../types';
 
 export const memorialData: MemorialData = {
@@ -10,8 +11,8 @@ export const memorialData: MemorialData = {
       { tag: 'fundacao', title: 'Criação do Departamento de Administração e Contabilidade', desc: 'O DAD foi oficialmente criado por meio de resolução do Conselho Universitário da UFV, reunindo as disciplinas de Administração e Contabilidade.' },
     ],
     photos: [
-      { url: 'https://picsum.photos/seed/ufv1974/800/600', caption: 'Primeira reunião do conselho departamental em 1974.' },
-      { url: 'https://picsum.photos/seed/dad74/800/600', caption: 'Fachada original do prédio que abrigava o DAD.' }
+      { url: 'src/data/public/1974 “Ampliação da oferta de vagas no Vestibular”.avif', caption: 'Ampliação da oferta de vagas no Vestibular.' },
+      { url: 'src/data/public/1974 “Criação do Departamento”.avif', caption: 'Criação do Departamento.' }
     ]
   },
   1975: {
@@ -44,7 +45,12 @@ export const memorialData: MemorialData = {
       { tag: 'cultura', title: 'Cultura e Representação', desc: 'Regência do Coral da UFV pelo professor João Adamor Dias Neves (DAE). Participação no II Congresso Brasileiro de Treinamento.' },
       { tag: 'extensao', title: 'Expansão Nacional', desc: 'Professor Carlos Alberto Freire Resende assume a direção do campus da UFV em Altamira, no Pará.' },
     ],
-    photos: []
+    photos: [
+      { url: 'src/data/public/1978 “Coral da UFV”.avif', caption: 'Coral da UFV.' },
+      { url: 'src/data/public/1978 “Direção do CCH”.avif', caption: 'Direção do CCH.' },
+      { url: 'src/data/public/1978 “O professor João Adamor Dias Neves recebeu Menção Honrosa”.webp', caption: 'O professor João Adamor Dias Neves recebeu Menção Honrosa' },
+      { url: 'src/data/public/1978 “O técnico Carlos Alberto Freire Resende”.avif', caption: 'O técnico Carlos Alberto Freire Resende' }
+    ]
   },
   1979: {
     events: [
@@ -54,7 +60,15 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Desenvolvimento Docente', desc: 'Participação em ciclos de estudos sobre ciências administrativas e oferta de cursos técnicos em Contabilidade e RH.' },
       { tag: 'gestao', title: 'Cultura e Gestão', desc: 'Nomeação de novos diretores para o CCA e CCH; intensa atividade do Coral da UFV.' },
     ],
-    photos: []
+    photos: [
+      { url: 'src/data/public/1979 “1º aniversário do Coral da UFV.”.webp', caption: '1º aniversário do Coral da UFV.' },
+      { url: 'src/data/public/1978 “Direção do CCH”.avif', caption: 'Direção do CCH.' },
+      { url: 'src/data/public/1979 “Cursos Técnicos”.webp', caption: 'Cursos Técnicos' },
+      { url: 'src/data/public/1979 “I Semana do Administrador”.webp', caption: 'I Semana do Administrador' },
+      { url: 'src/data/public/1979 “I Semana do Economista”.avif', caption: 'I Semana do Economista' },
+      { url: 'src/data/public/1979 “Novos Diretores”.webp', caption: 'Novos Diretores' },
+      { url: 'src/data/public/1979 “O professor João Adamor Dias Neves recebeu Menção Honrosa”.webp', caption: 'O professor João Adamor Dias Neves recebeu Menção Honrosa' }
+    ]
   },
   1980: {
     events: [
@@ -64,9 +78,7 @@ export const memorialData: MemorialData = {
       { tag: 'reconhecimento', title: 'Homenagens', desc: 'Homenagem de formatura aos professores Jacinto Luiz da Silva e João Adamor.' },
       { tag: 'extensao', title: 'Primeiras atividades de extensão comunitária', desc: 'O DAD organiza as primeiras atividades de extensão voltadas a pequenas empresas e produtores rurais.' },
     ],
-    photos: [
-      { url: 'https://picsum.photos/seed/extensao80/800/600', caption: 'Visita técnica a produtores rurais em 1980.' }
-    ]
+    photos: []
   },
   1981: {
     events: [
@@ -94,7 +106,7 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'Qualificação Técnica', desc: 'Parceria com Centreinar para administração de unidades e qualificação para servidores da UFV.' },
       { tag: 'ensino', title: 'Produção Intelectual', desc: 'Publicação da apostila "Administração e Esforço Motivacional".' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1983 “Os Novos Diretores ”.webp', caption: 'Novos Diretores' }]
   },
   1984: {
     events: [
@@ -131,7 +143,9 @@ export const memorialData: MemorialData = {
       { tag: 'reconhecimento', title: 'Professora Nanci à Frente do Novo Núcleo de Treinamento do DAE', desc: 'Sob a coordenação da professora Nanci Pereira de Vasconcelos, o Departamento de Administração e Economia (DAE) da UFV implementou o Núcleo de Treinamento Profissional na área de Contabilidade. A professora destaca que o objetivo do sistema é fazer com que os estudantes simulem e acompanhem as atividades de uma empresa fictícia, garantindo que o aluno tenha "a vivência da teoria, com uma verdadeira integração interdisciplinar". Segundo a coordenadora, essa metodologia prática beneficiará imediatamente até mesmo os calouros ingressantes de 1987.' },
       { tag: 'ensino', title: 'I Semana do Empresário', desc: 'I Semana do Empresário, um evento promovido pelo Conselho de Extensão (CEE) e pelo Departamento de Administração e Economia (DAE) da UF será realizada de quatro a sete de agosto na UFV.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1987 “O Diretor do CCH. professor Gilson Faria Potsch Magalhães”.jpg', caption: 'O Diretor do CCH. professor Gilson Faria Potsch Magalhães' },
+    { url: 'src/data/public/1987 “O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.”.jpg', caption: 'O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.' }
+    ]
   },
   1988: {
     events: [
@@ -145,7 +159,10 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'Posse do DAD 1ª Chefia e do DEE 1ª Chefia', desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia, oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração.' },
       { tag: 'gestao', title: 'Nova Diretoria da FUNARBE', desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria ao lado dos professores Sebastião César Cardoso Brandão (presidente) e Carlos Sigueyuki Sediyama (diretor-técnico). A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1988 “Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.”.jpg', caption: 'Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.' },
+    { url: 'src/data/public/1988 “O Reitor Geraldo Martins Chaves cumprimenta o professor Marcos Tanure Sanábio, vendo-se, à direita, o professor Juraci Aureliano Teixeira.”.jpg', caption: 'O Reitor Geraldo Martins Chaves cumprimenta o professor Marcos Tanure Sanábio, vendo-se, à direita, o professor Juraci Aureliano Teixeira.' },
+    { url: 'src/data/public/1988 “Professor Newton Paulo Bueno”.jpg', caption: 'Professor Newton Paulo Bueno.' }
+    ]
   },
   1989: {
     events: [
@@ -156,7 +173,12 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'Reitor empossa novos chefes de departamento da UFV', desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados estão professores de áreas como Administração, Economia, Engenharia e Veterinária.' },
       { tag: 'reconhecimento', title: 'Falecimento do professor Roberto de Carvalho Araújo ', desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1989 “As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa”.jpg', caption: 'OAs professoras Nina Rosa da S. Cunhas e Maria E. Barbassa' },
+    { url: 'src/data/public/1989 “Construção do Departamento de Administração e Economia”.jpg', caption: 'Construção do Departamento de Administração e Economia.' },
+    { url: 'src/data/public/1989 “O professor Roberto de Carvalho Araújo. ”.jpg', caption: 'O professor Roberto de Carvalho Araújo.' },
+    { url: 'src/data/public/1989 “O Reitor Antônio Fagundes faz seu discurso durante a solenidade de posse”.jpg', caption: 'O Reitor Antônio Fagundes faz seu discurso durante a solenidade de posse' },
+    { url: 'src/data/public/1989 Os professores canadenses, acompanhados de professores do Departamento de Administração.jpg', caption: 'Os professores canadenses, acompanhados de professores do Departamento de Administração.' }
+    ]
   },
   1990: {
     events: [
@@ -165,7 +187,7 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Professor Canadense visita a UFV', desc: 'O professor canadense André Courtemanche, da Universidade de Quebec, visitou a UFV entre 14 de abril e 4 de maio de 1990 para discutir um programa de cooperação técnica. O projeto prevê o treinamento de doutorado para professores do Departamento de Administração e a criação de um mestrado focado em pequenas e médias empresas. A parceria visa transformar o Naipe em um centro de excelência e incentivar a criação de novas empresas na região. Além dele, a pesquisadora canadense Verna J. Higgins também visitou a instituição para seminários sobre fitopatologia e biotecnologia.' },
       { tag: 'ensino', title: 'Departamento de Administração', desc: 'O Departamento de Administração da UFV promoveu a IV Semana do Empresário, oferecendo 16 cursos de capacitação e áreas para exposição de produtos. O setor também avançou em entendimentos para um intercâmbio com a Universidade de Quebec, visando o treinamento de doutorado de seus professores e a criação de um mestrado em pequenas empresas. Administrativamente, o departamento foi marcado pela posse do chefe Roberto de Carvalho Araújo em 1989 e pelo seu posterior falecimento em dezembro do mesmo ano.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1990 “André Courtemanche”.jpg', caption: 'André Courtemanche.' }]
   },
   1991: {
     events: [
@@ -175,7 +197,7 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'XVII Encontro Nacional dos Estudantes de Administração', desc: 'Cerca de dois mil estudantes de diversas regiões do país são esperados em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. O evento é organizado pelo Centro Acadêmico da UFV, pela Executiva Nacional da categoria e pelo Departamento de Administração da instituição.' },
       { tag: 'ensino', title: 'TV Viçosa inicia suas transmissões', desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), estão praticamente concluídos e a estreia deve ocorrer nos próximos dias. A emissora terá programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho aproveitará funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1991 “Formandos de Janeiro de 1991. ”.jpg', caption: 'Formandos de Janeiro de 1991.' }]
   },
   1992: {
     events: [
@@ -187,8 +209,8 @@ export const memorialData: MemorialData = {
       { tag: 'infraestrutura', title: 'Prédio do CCH', desc: 'O prédio do Centro de Ciências Humanas, Letras e Artes (CCH) da UFV tem inauguração prevista para o final de agosto de 1992. A obra, iniciada em junho após anos de paralisação, abrigará os departamentos de Economia, Administração e Letras, além do curso de Direito. Para cumprir o cronograma, a reitoria autorizou a contratação de funcionários temporários e regime de trabalho noturno. A nova estrutura de três pavimentos e 4.000 m² visa solucionar a carência de espaço físico para docentes e técnicos.' },
       { tag: 'ensino', title: 'Calouros 91 de Administração promovem palestras', desc: 'Os egressos da turma de 1991 de Administração da Unioeste, conhecidos como "Calouros 91", realizam periodicamente eventos e palestras para compartilhar experiências de mercado com os atuais estudantes. A iniciativa visa fortalecer o networking e integrar gerações, oferecendo uma visão prática da profissão aos acadêmicos.' },
     ],
-    photos: [
-      { url: 'https://picsum.photos/seed/ejdad/800/600', caption: 'Primeira equipe da Empresa Júnior do DAD.' }
+    photos: [{ url: 'src/data/public/1992 “Aspecto da palestra do professor canadense”.jpg', caption: 'Aspecto da palestra do professor canadense.' },
+    { url: 'src/data/public/1992 “O superintendente Paulo Henrique Ayres Pena”.jpg', caption: 'O superintendente Paulo Henrique Ayres Pena.' }
     ]
   },
   1993: {
@@ -197,7 +219,7 @@ export const memorialData: MemorialData = {
       { tag: 'infraestrutura', title: 'IV Congresso Mineiro de Recursos Humanos', desc: ' O professor Luciano Zille Pereira, do Departamento de Administração da UFV, e os acadêmicos Rodrigo Gava e Rogério Rezende de Castro participaram do IV Congresso Mineiro de Recursos Humanos, em Belo Horizonte. O evento destacou a relevância do ser humano no processo de Qualidade Total e a necessidade de criar condições para o desenvolvimento individual. ' },
       { tag: 'ensino', title: 'DAD promove palestra', desc: 'O DAD promoveu palestra sobre "Técnicas Gerenciais Japonesas" no auditório do Departamento de Engenharia Florestal no dia 10 de novembro.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1993 “Formandos de agosto de 1993”.jpg', caption: 'Formandos de agosto de 1993.' }]
   },
   1994: {
     events: [
@@ -206,14 +228,19 @@ export const memorialData: MemorialData = {
       { tag: 'reconhecimento', title: 'Formando Homenageado', desc: 'O formando Edmilson de Oliveira Lima, do curso de Administração, foi homenageado pelo Conselho Regional de Administração (CRA) por seu destacado coeficiente de rendimentos acadêmico, expresso em uma placa de prata; que recebeu durante a cerimônia de colação de grau, realizada hoje, no Ginásio de Esportes da UFV.' },
       { tag: 'ensino', title: 'Professores e estudantes de Administração realizam visita de estudos ao Sul de Minas', desc: 'Um grupo de professores e estudantes do curso de Administração da UFV visitou Santa Rita do Sapucaí para conhecer a estrutura do Inatel e seu processo de incubação de empresas. Durante a visita ao "Vale da Eletrônica", o grupo conheceu empresas como a Inaco Telecomunicações e discutiu a realidade da Empresa Júnior CACE. A equipe da UFV também foi convidada a auxiliar o Inatel na implantação de um programa com as atribuições do PET.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1994 “O professor José Edson Lara fala durante o lançamento da revista”.jpg', caption: 'O professor José Edson Lara fala durante o lançamento da revista.' },
+    { url: 'src/data/public/1994 “Professores e estudantes na visita ao sul de Minas”.jpg', caption: 'Professores e estudantes na visita ao sul de Minas.' }
+    ]
   },
   1995: {
     events: [
       { tag: 'ensino', title: 'Curso de Chefia e Liderança', desc: 'O Curso de Chefia e Liderança, coordenado pelos professores José Edson Lara e Arnete Folgaça, recebeu uma avaliação positiva dos participantes. A iniciativa focou no desenvolvimento de habilidades gerenciais e na melhoria das relações interpessoais no ambiente de trabalho. O sucesso do evento reforçou a importância da capacitação contínua para o fortalecimento das lideranças na instituição.' },
       { tag: 'ensino', title: 'Graduandos e Pós-Graduandos de Julho de 1995', desc: 'Em julho de 1995, a UFV realizou a sessão solene de colação de grau para novos profissionais, com discurso da paraninfa Valéria Oliveira Braga Duarte Ferreira destacando o destaque das gerações graduadas. Paralelamente, foram registrados diversos projetos de pesquisa no Departamento de Solos, abordando temas como modelagem de erosão, desenvolvimento sustentado na Amazônia, no Cerrado e em áreas de Mata de Minas.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1995 “Colação de grau dos novos profissionais”.jpg', caption: 'Colação de grau dos novos profissionais.' },
+    { url: 'src/data/public/1995 “Os formandos da Turma de Julho de 1995”.jpg', caption: 'Os formandos da Turma de Julho de 1995.' },
+    { url: 'src/data/public/1995 “Pós Graduandos de Dezembro de 1995”.jpg', caption: 'Pós Graduandos de Dezembro de 1995.' }
+    ]
   },
   1996: {
     events: [
@@ -223,7 +250,11 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Correção – Profa. Nina Rosa da Silveira Cunha', desc: 'Correção de Cargo/Formação: Diferente do publicado na edição anterior (nº 1.309), a Profa. Nina Rosa da Silveira Cunha é Administradora, e não economista doméstica. Titulação: Ela possui o título de Mestre em Administração pela UFMG, com área de concentração em Organização e Recursos Humanos. Atuação Acadêmica: Além de ser professora do Departamento de Administração da UFV, ela é membro do corpo editorial da revista da Associação Nacional de Pós-Graduação em Administração (ANPAD) e da Business Association of Latin American Studies (BALAS).' },
       { tag: 'ensino', title: 'Formandos de Setembro de 1996', desc: 'A turma de formandos de setembro de 1996 da UFV, autodenominada "Trem de Doido", colou grau em sessão solene no Edifício Arthur da Silva Bernardes com a diplomação de 303 profissionais, além de mestres e doutores. Durante as festividades, os graduandos prestaram homenagens a diversos professores e funcionários que contribuíram para sua trajetória acadêmica. Entre os destaques, foram entregues placas ao paraninfo Paulo de Tarso Alvim e ao homenageado geral Vicente Sant\'Ana da Fonseca.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1996 “Formandos de 1996”.jpg', caption: 'Formandos de 1996.' },
+    { url: 'src/data/public/1996 “Parte da turma dos Formandos”.jpg', caption: 'Parte da turma dos Formandos.' },
+    { url: 'src/data/public/1996 “Prof. Sérgio Augusto Pereira Monteiro”.jpg', caption: 'Prof. Sérgio Augusto Pereira Monteiro”.jpg' },
+    { url: 'src/data/public/1996 “Profa. Nina Rosa da Silveira Cunha”.jpg', caption: 'Profa. Nina Rosa da Silveira Cunha.' }
+    ]
   },
   1997: {
     events: [
@@ -234,7 +265,9 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'Núcleo de Treinamento Profissional em Contabilidade', desc: 'O Departamento de Administração e Economia (DAE) da UFV iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos, o núcleo funciona no Pavilhão de Aulas (sala 309) e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial.' },
       { tag: 'gestao', title: 'Posse na FUNARBE', desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, empossou José Edson Lara como o novo Diretor Administrativo-Financeiro da Fundação Arthur Bernardes (FUNARBE). Administrador de empresas e ex-chefe da Divisão de Marketing do órgão, Lara substituiu José Clévio Dias Casali. Em seu discurso, ele enfatizou a necessidade de uma "revisão corporativa" e de um trabalho integrado para reestruturar as áreas administrativa e financeira da instituição a curto prazo.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1997 “O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.”.jpg', caption: 'O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE' },
+    { url: 'src/data/public/1997 “Volta às aulas”.jpg', caption: 'Volta às aulas.' }
+    ]
   },
   1998: {
     events: [
@@ -248,7 +281,12 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'UFV Promove II Semana do Empresário em Julho', desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.' },
       { tag: 'gestao', title: 'Novas Chefias', desc: 'Departamento de Administração (DAD): Assumiu como primeiro chefe o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE): Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira.' },
     ],
-    photos: []
+    photos: [{ url: 'src/data/public/1998 “1 Encontro de Administração Municipal da Zona da Mata”.jpg', caption: '1 Encontro de Administração Municipal da Zona da Mata' },
+    { url: 'src/data/public/1998 “Autoridades participantes da mesa-redonda.”.jpg', caption: 'Autoridades participantes da mesa redonda.' },
+    { url: 'src/data/public/1998 “O professor João Adamor.”.jpg', caption: 'O professor João Adamor.' },
+    { url: 'src/data/public/1998 “O Reitor Geraldo Martins Chaves cumprimenta o professor Marcos Tanure Sanábio, vendo-se, à direita, o professor Juraci Aureliano Teixeira.”.jpg', caption: 'O Reitor Geraldo Martins Chaves cumprimenta o professor Marcos Tanure Sanábio, vendo-se, à direita, o professor Juraci Aureliano Teixeira.' },
+    { url: 'src/data/public/1998 “Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.”.jpg', caption: 'Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa..' }
+    ]
   },
   1999: {
     events: [
@@ -263,7 +301,10 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'VII Encontro Regional dos Estudantes de Administração', desc: 'O encontro, agendado para março de 1999 na UFV, foca na potencialização das competências do administrador diante das exigências atuais do mercado. O evento promove discussões sobre a formação universitária brasileira e os ajustes necessários na grade curricular para alinhar o ensino à realidade profissional. É organizado pela Federação Nacional dos Estudantes de Administração em parceria com o diretório acadêmico local.' },
       { tag: 'reconhecimento', title: 'Formandos de Março de 1999', desc: 'A Universidade Federal de Viçosa realizou as cerimônias de formatura dos estudantes que concluíram seus cursos no início de 1999. O evento celebrou a graduação de novos profissionais em diversas áreas, marcando o encerramento de um ciclo acadêmico e a entrada desses ex-alunos no mercado de trabalho. As solenidades contaram com a presença de autoridades universitárias, familiares e paraninfos homenageados pelas turmas.' },
     ],
-    photos: []
+    photos: [{ url: '1999 “Formandos de Março de 1999”.png', caption: 'Formandos de Março de 1999.' },
+      { url: 'src/data/public/1999 “O pró-reitor Walmer Faroni e os novos membros da CMA”.png', caption: 'O pró-reitor Walmer Faroni e os novos membros da CMA.' },
+      { url: 'src/data/public/1999 “Parte do público do seminário ”.jpg', caption: 'Parte do público do seminário.' }
+    ]
   },
   2000: {
     events: [
@@ -359,6 +400,38 @@ export const memorialData: MemorialData = {
     ],
     photos: []
   },
+
+  2011: {
+    events: [
+      { tag: 'ensino', title: 'Resumo do Livro e Temas Abordados', desc: 'A obra intitulada "Administração Pública, Gestão Social e Economia Solidária" foi organizada pelos professores Marco Aurélio Ferreira Marques, Magnus Luiz Emmendoerfer e Rodrigo Gava, da UFV. O objetivo do livro é analisar os avanços e desafios nas práticas profissionais e teóricas relacionadas à administração pública, gestão social e economia solidária. Para isso, reúne autores com diferentes experiências para discutir contradições do mundo contemporâneo em diversas regiões do Brasil, dando ênfase especial ao cenário de Minas Gerais.' },
+      { tag: 'ensino', title: 'Origem dos Trabalhos e II Encontro Mineiro', desc: 'Segundo o professor Magnus, o livro é fruto de uma série de pesquisas realizadas em instituições mineiras de ensino e pesquisa nos últimos anos. Grande parte dos estudos presentes na obra foi apresentada originalmente por pesquisadores durante o II Encontro Mineiro de Administração Pública, Economia Solidária e Gestão Social. Esse evento ocorreu no campus da UFV entre os dias 10 e 11 de junho de 2010.' },
+      { tag: 'extensao', title: 'Datas de Lançamento e Canais de Distribuição', desc: 'O livro teve um pré-lançamento em novembro de 2010 durante o Encontro Nacional de Administração Pública e Governança, mas sua distribuição oficial ocorre ao longo de 2011. Além do lançamento previsto para o V Encontro Nacional de Pesquisadores em Gestão Social, in Florianópolis, entre 25 e 28 de maio de 2011, a obra será enviada para bibliotecas de universidades públicas em países de língua portuguesa. Atualmente, exemplares já estão disponíveis para consulta na Biblioteca Central da UFV.' },
+      { tag: 'gestao', title: 'O I Seminário de Acompanhamento do Plano de Gestão', desc: 'A Pró-Reitoria de Planejamento e Orçamento (PPO) da Universidade Federal de Viçosa realizou, entre os dias 1º e 8 de julho de 2011, o I Seminário de Acompanhamento do Plano de Gestão, reunindo membros da administração superior para debater as realizações em curso e o ciclo de planejamento para o período de 2012-2015. O evento foi liderado pelo pró-reitor Sebastião Tavares de Rezende e teve como foco principal o acompanhamento e a avaliação das ações institucionais, permitindo a identificação de metas cumpridas e a correção de rumos para o cumprimento dos objetivos da universidade. Durante os debates, enfatizou-se que o Plano de Desenvolvimento Institucional (PDI) funciona como um plano de Estado estratégico e independente de gestões específicas, enquanto o Plano de Gestão equivale a um plano de governo focado em ações práticas.' },
+      { tag: 'gestao', title: 'A Participação do Professor Walmer Faroni e Diretores de Centro', desc: 'Dentro da programação de apresentações das unidades acadêmicas, o professor Walmer Faroni, na qualidade de diretor do Centro de Ciências Humanas, Letras e Artes (CCH), foi um dos dirigentes que expuseram a situação de sua respectiva unidade, detalhando o que já havia sido executado e as perspectivas futuras para o centro. Além dele, participaram diretores de outros centros e dos campi de Florestal e Rio Paranaíba, como a professora Maria Goreti de Almeida Oliveira (CCB), o professor Sérgio Hermínio Brommonschenkel (CCA) e o professor Carlos de Castro Goulart (CCE), fornecendo dados essenciais para consolidar a cultura do planejamento dentro da comunidade acadêmica. O seminário contou com o apoio da reitora Nilda de Fátima Ferreira Soares, que destacou a importância de dar transparência à sociedade sobre o que está sendo planejado para superar desafios financeiros e de recursos humanos.' },
+      { tag: 'reconhecimento', title: 'Desempenho Geral e Cursos com Cinco Estrelas', desc: 'A Universidade Federal de Viçosa obteve um resultado expressivo na avaliação de cursos superiores realizada pelo Guia do Estudante (GE) em 2011, que fará parte da publicação GE Profissões 2012. No total, a instituição recebeu a classificação máxima de cinco estrelas em 14 de seus cursos de graduação, demonstrando a excelência acadêmica em diversas áreas do conhecimento. Os cursos contemplados com a pontuação máxima no campus de Viçosa foram Agronomia, Cooperativismo, Economia Doméstica, Engenharia Agrícola e Ambiental, Engenharia de Alimentos, Engenharia Florestal, Nutrição, Pedagogia e Zootecnia. Além destes, o campus de Florestal também se destacou com cinco estrelas nos cursos de Agronomia, Ciência de Alimentos, Engenharia de Alimentos, Gestão Ambiental e Tecnologia em Gestão Ambiental.' },
+      { tag: 'reconhecimento', title: 'Cursos Avaliados com Quatro e Três Estrelas', desc: 'Além dos cursos de excelência máxima, a UFV apresentou uma ampla gama de graduações com alto índice de qualidade, recebendo quatro estrelas (consideradas "muito boas") em 21 cursos diferentes. Entre os avaliados com quatro estrelas estão Administração, Arquitetura e Urbanismo, Ciência da Computação, Ciências Biológicas, Ciências Contábeis, Ciências Econômicas, Direito, Educação Física, Enfermagem, Engenharia Civil, Engenharia de Agrimensura e Cartográfica, Engenharia Elétrica, Engenharia Mecânica, Engenharia Química, Física, Geografia, História, Letras, Matemática, Medicina Veterinária e Química. O curso de Bioquímica também foi mencionado na avaliação, recebendo três estrelas, o que completa o panorama de qualidade da instituição nos diversos campi analisados.' },
+      { tag: 'reconhecimento', title: 'Trajetória Acadêmica e Identidade com a Instituição', desc: 'Lauro de Morais Passos Júnior, formado em Agronomia pela turma de 1971, é um dos muitos ex-alunos que mantêm um vínculo profundo e vitalício com a Universidade Federal de Viçosa, refletindo o sentimento de pertencimento compartilhado por aqueles que passaram pela instituição. Natural de Salvador, Bahia, Lauro seguiu os passos de seu pai, Lauro de Morais Passos, que também foi agrônomo graduado em Viçosa na turma de 1937, consolidando uma tradição familiar ligada à universidade. Durante seus anos de graduação, ele viveu intensamente o campus, residindo no alojamento estudantil — especificamente no Bloco B do Bernardão — e participando ativamente da vida acadêmica e social, o que incluiu sua atuação no Centro Acadêmico de Agronomia e a convivência com colegas que se tornaram amigos para a vida toda.' },
+      { tag: 'reconhecimento', title: 'Sucesso Profissional e Reconhecimento à UFV', desc: 'Após concluir sua formação em Viçosa, Lauro seguiu para os Estados Unidos, onde obteve os títulos de mestre e doutor pela University of Florida, mas atribui à base sólida recebida na UFV o suporte necessário para o sucesso em sua carreira internacional e em suas atividades como produtor rural na Bahia. Em seu depoimento, ele enfatiza que a universidade não apenas forneceu conhecimento técnico de excelência, mas também moldou seu caráter e visão de mundo, destacando que o "orgulho de ser UFV" reside na combinação entre a qualidade do ensino e o ambiente de fraternidade único do campus. Para ele, retornar à universidade em celebrações como a Reunião Anual de Ex-Alunos é uma oportunidade de renovar as energias e celebrar a importância da instituição em sua trajetória pessoal e profissional.' }
+    ],
+    photos: []
+  },
+  2012: {
+    events: [
+      { tag: 'gestao', title: 'Posse da Nova Diretoria e Composição', desc: 'O Instituto de Políticas Públicas e Desenvolvimento Sustentável da Universidade Federal de Viçosa realizou a cerimônia de posse de sua nova diretoria, reconduzindo a professora Suely de Fátima Ramos Silveira, do Departamento de Administração, ao cargo de diretora para um novo mandato. A equipe diretiva é composta também pelo professor Evonir Batista de Oliveira, do Departamento de Economia Rural, que assumiu a função de vice-diretor, e pelo professor Alair Ferreira de Freitas, do Departamento de Administração e Contabilidade, que atua como secretário executivo do órgão. A solenidade ocorreu com a presença de membros da administração superior, incluindo a reitora Nilda de Fátima Ferreira Soares, consolidando a estrutura de governança do instituto para os próximos anos.' },
+      { tag: 'gestao', title: 'Metas Estratégicas e Consolidação do IPPDS', desc: 'Durante seu pronunciamento, a diretora Suely Silveira enfatizou que o principal foco desta gestão é o fortalecimento e a consolidação do IPPDS como um centro de excelência em pesquisa e extensão voltado para a formulação e análise de políticas públicas. Entre as prioridades estabelecidas estão a ampliação das parcerias institucionais e a captação de recursos para projetos que promovam o desenvolvimento sustentável, integrando diferentes áreas do conhecimento da universidade. A reitora Nilda Soares destacou a importância estratégica do instituto para a UFV, ressaltando que o trabalho da diretoria é fundamental para projetar a competência técnica da instituição na solução de problemas sociais e governamentais, garantindo que o conhecimento gerado no campus chegue de forma efetiva à sociedade.' },
+      { tag: 'reconhecimento', title: 'Homenagem à Professora Suely de Fátima Ramos Silveira', desc: 'A professora Suely de Fátima Ramos Silveira, vinculada ao Departamento de Administração, foi agraciada com a Medalha de Mérito em Extensão durante as festividades do 85º aniversário de fundação da Universidade Federal de Viçosa. Essa honraria reconhece sua trajetória de dedicação e as relevantes contribuições oferecidas à instituição ao longo de sua carreira, especialmente no âmbito das atividades extensionistas que aproximam a universidade da comunidade. A entrega da medalha ocorreu em uma sessão solene que reuniu autoridades, profissionais e membros da comunidade acadêmica para rememorar fatos históricos e prestar homenagens àqueles que ajudaram a construir a trajetória vitoriosa da UFV.' },
+      { tag: 'reconhecimento', title: 'Homenagem à Professora Soraya Maria de Carvalho Pieve', desc: 'A professora Soraya Maria de Carvalho Pieve também foi destaque nas celebrações comemorativas da universidade, sendo homenageada com a Medalha Valentina de Cruz. Esta distinção foi concedida em reconhecimento aos seus 30 anos de serviços prestados à Universidade Federal de Viçosa, simbolizando o agradecimento da instituição pelo seu longo período de comprometimento e trabalho contínuo. A solenidade de premiação fez parte de um calendário diversificado de eventos socioculturais e sessões solenes que marcaram não apenas o aniversário da instituição, mas também o cinquentenário da pós-graduação na UFV.' }
+    ],
+    photos: []
+  },
+  2013: {
+    events: [
+      { tag: 'gestao', title: 'A Atuação da Professora Suely Silveira no IPPDS', desc: 'A professora Suely de Fátima Ramos Silveira, vinculada ao Departamento de Administração, desempenha um papel central na gestão do Instituto de Políticas Públicas e Desenvolvimento Sustentável (IPPDS) da Universidade Federal de Viçosa. Em sua atuação, ela coordena seminários e atividades voltadas para o planejamento estratégico e a avaliação de políticas públicas, buscando integrar o conhecimento acadêmico com as demandas da sociedade. Sob sua liderança, o instituto foca na consolidação de metas que envolvem a captação de recursos e a promoção do desenvolvimento sustentável, reafirmando o compromisso da UFV em ser um agente de transformação social por meio da competência técnica e da inovação.' },
+      { tag: 'ensino', title: 'Trajetória e Formatura da Aluna Bárbara Pacheco', desc: 'Bárbara Pacheco destacou-se em sua trajetória acadêmica como estudante de Administração no campus de Rio Paranaíba, participando ativamente de momentos históricos para a expansão da Universidade Federal de Viçosa. Durante a cerimônia de colação de grau, que marcou a primeira formatura de estudantes que iniciaram a graduação naquele campus, ela celebrou a conclusão de sua jornada junto aos seus familiares e à comunidade acadêmica. Como parte da turma denominada "Os Pioneiros", Bárbara e seus colegas foram exortados pela administração superior a atuar como agentes de mudança e a pautar sua prática profissional pelos valores da justiça social e da dignidade humana, levando adiante o nome da instituição em suas futuras carreiras.' }
+    ],
+    photos: []
+  },
+
   2024: {
     events: [
       { tag: 'reconhecimento', title: 'Jubileu de Ouro — 50 anos do DAD', desc: 'O departamento celebra seu cinquentenário com semana comemorativa e publicação de livro histórico.' },
