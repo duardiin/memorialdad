@@ -29,19 +29,6 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
-import { auth, db, loginWithGoogle, logout } from './firebase';
-import { 
-  collection, 
-  addDoc, 
-  onSnapshot, 
-  query, 
-  where, 
-  serverTimestamp, 
-  Timestamp,
-  getDocFromServer,
-  doc
-} from 'firebase/firestore';
-import { onAuthStateChanged, User } from 'firebase/auth';
 
 type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec';
 
@@ -73,29 +60,6 @@ interface FirestoreErrorInfo {
   }
 }
 
-function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
-  const errInfo: FirestoreErrorInfo = {
-    error: error instanceof Error ? error.message : String(error),
-    authInfo: {
-      userId: auth.currentUser?.uid,
-      email: auth.currentUser?.email,
-      emailVerified: auth.currentUser?.emailVerified,
-      isAnonymous: auth.currentUser?.isAnonymous,
-      tenantId: auth.currentUser?.tenantId,
-      providerInfo: auth.currentUser?.providerData.map(provider => ({
-        providerId: provider.providerId,
-        displayName: provider.displayName,
-        email: provider.email,
-        photoUrl: provider.photoURL
-      })) || []
-    },
-    operationType,
-    path
-  }
-  console.error('Firestore Error: ', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
-}
-
 export default function App() {
   const [activePanel, setActivePanel] = useState<PanelType>('overview');
   const [currentDecade, setCurrentDecade] = useState<number>(1970);
@@ -119,76 +83,9 @@ export default function App() {
   const [allGalleryPhotos, setAllGalleryPhotos] = useState<Array<{ id: string; url: string; caption: string; title: string; createdAt: any }>>([]);
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
 
-  // Check if Firebase is configured (useful for manual deployment)
-  const isFirebaseConfigured = !!import.meta.env.VITE_FIREBASE_API_KEY;
-
-  // Auth Listener
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setIsAuthReady(true);
-    });
-    return () => unsubscribe();
   }, []);
 
-  // Test Connection
-  useEffect(() => {
-    async function testConnection() {
-      try {
-        await getDocFromServer(doc(db, 'test', 'connection'));
-      } catch (error) {
-        if(error instanceof Error && error.message.includes('the client is offline')) {
-          console.error("Please check your Firebase configuration.");
-        }
-      }
-    }
-    testConnection();
-  }, []);
-
-  const exportarDoFirebase = async () => {
-  try {
-    const { getDocs, collection } = await import('firebase/firestore');
-    const querySnapshot = await getDocs(collection(db, "events"));
-    const todosOsEventos = querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-    
-    // Isso vai imprimir todos os seus dados no console do F12
-    console.log("--- DADOS PARA O MEMORIALDATA.TS ---");
-    console.log(JSON.stringify(todosOsEventos, null, 2));
-    console.log("------------------------------------");
-    alert("Dados exportados! Aperte F12 para copiar do console.");
-  } catch (e) {
-    console.error("Erro na exportação:", e);
-  }
-};
-
-  // Real-time Data Listeners
- useEffect(() => {
-  async function extrairTudo() {
-    try {
-      const { getDocs, collection } = await import('firebase/firestore');
-      
-      // Busca Eventos
-      const eventsSnap = await getDocs(collection(db, "events"));
-      const eventsData = eventsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      
-      // Busca Fotos
-      const photosSnap = await getDocs(collection(db, "photos"));
-      const photosData = photosSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-      console.log("=== COPIE DAQUI PARA O MEMORIALDATA.TS ===");
-      console.log("EVENTOS:", JSON.stringify(eventsData, null, 2));
-      console.log("FOTOS:", JSON.stringify(photosData, null, 2));
-      console.log("==========================================");
-      
-    } catch (e) {
-      console.error("Erro ao puxar dados:", e);
-    }
-  }
-  extrairTudo();
-}, []);
 
   const yearsInDecade = useMemo(() => {
     return Array.from({ length: 10 }, (_, i) => currentDecade + i).filter(y => y <= 2026);
@@ -272,44 +169,6 @@ export default function App() {
     }
   };
 
-  const submitPhoto = async () => {
-    if (!user || !uploadData.base64 || !uploadData.caption) return;
-
-    try {
-      const path = 'photos';
-      await addDoc(collection(db, path), {
-        year: selectedYear,
-        url: uploadData.base64,
-        caption: uploadData.caption,
-        authorUid: user.uid,
-        createdAt: serverTimestamp()
-      });
-
-      setUploadData({ caption: '', file: null, base64: '' });
-      setIsUploadModalOpen(false);
-    } catch (error) {
-      handleFirestoreError(error, OperationType.WRITE, 'photos');
-    }
-  };
-
-  const submitEvent = async () => {
-    if (!user || !eventData.title || !eventData.desc) return;
-
-    try {
-      const path = 'events';
-      await addDoc(collection(db, path), {
-        ...eventData,
-        year: selectedYear,
-        authorUid: user.uid,
-        createdAt: serverTimestamp()
-      });
-
-      setEventData({ tag: 'ensino', title: '', desc: '' });
-      setIsEventModalOpen(false);
-    } catch (error) {
-      handleFirestoreError(error, OperationType.WRITE, 'events');
-    }
-  };
 
   const handleGalleryFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -326,23 +185,6 @@ export default function App() {
     }
   };
 
-  const submitGalleryPhoto = async () => {
-    if (!user || !galleryUploadData.base64 || !galleryUploadData.caption || !galleryUploadData.title) return;
-    try {
-      await addDoc(collection(db, 'gallery'), {
-        url: galleryUploadData.base64,
-        caption: galleryUploadData.caption,
-        title: galleryUploadData.title,
-        authorUid: user.uid,
-        authorName: user.displayName,
-        createdAt: serverTimestamp()
-      });
-      setGalleryUploadData({ caption: '', title: '', file: null, base64: '' });
-      setIsGalleryUploadModalOpen(false);
-    } catch (error) {
-      handleFirestoreError(error, OperationType.WRITE, 'gallery');
-    }
-  };
 
   const getTagIcon = (tag: string) => {
     switch (tag) {
@@ -391,13 +233,6 @@ export default function App() {
           </div>
         </div>
       </div>
-
-      {/* WARNING BANNER FOR MANUAL DEPLOYMENT */}
-      {!isFirebaseConfigured && (
-        <div className="bg-red-600 text-white p-4 text-center text-sm font-bold sticky top-0 z-[200]">
-          Configuração do Firebase ausente! Verifique o arquivo README.md para instruções de implantação.
-        </div>
-      )}
 
       {/* HEADER */}
       <header className="bg-ufv-green pt-4 sticky top-0 z-50 shadow-lg border-b-4 border-ufv-gold">
@@ -1611,6 +1446,7 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
+      
 
       {/* FOOTER */}
       <footer className="bg-ufv-green-dark text-white/65 py-12 px-6 text-sm border-t-4 border-ufv-gold">
