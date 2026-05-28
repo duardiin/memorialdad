@@ -2,6 +2,7 @@ export interface MemorialEvent {
   tag: 'fundacao' | 'ensino' | 'pesquisa' | 'extensao' | 'gestao' | 'infraestrutura' | 'reconhecimento' | 'parceria' | 'cultura';
   title: string;
   desc: string;
+  url?: string;
 }
 
 export interface MemorialPhoto {

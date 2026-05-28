@@ -3,35 +3,35 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo, useEffect } from 'react';
-import { 
-  Search, 
-  ChevronRight, 
-  Calendar, 
-  BookOpen, 
-  History, 
-  Image as ImageIcon, 
-  Award, 
-  Users, 
-  Building2, 
+import {
+  Award,
+  BookOpen,
+  Building2,
+  Calendar,
+  ChevronRight,
   Globe,
   GraduationCap,
-  Microscope,
   Handshake,
-  LayoutGrid,
+  History,
+  Image as ImageIcon,
   Info,
+  LayoutGrid,
   LogIn,
   LogOut,
-  Plus,
   Menu,
+  Microscope,
+  Plus,
+  Search,
+  Users,
   X
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
-import { allGalleryPhotos } from './data/allGalleryPhotos.ts';
+import { allGalleryPhotos } from './data/allGalleryPhotos';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento';
 
 enum OperationType {
   CREATE = 'create',
@@ -67,13 +67,13 @@ export default function App() {
   const [selectedYear, setSelectedYear] = useState<number>(1974);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('all');
-  
+
   const [user, setUser] = useState<User | null>(null);
   const [isAuthReady, setIsAuthReady] = useState(false);
-  
+
   const [dbEvents, setDbEvents] = useState<Record<number, MemorialEvent[]>>({});
   const [dbPhotos, setDbPhotos] = useState<Record<number, MemorialPhoto[]>>({});
-  
+
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [isEventModalOpen, setIsEventModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -81,7 +81,7 @@ export default function App() {
   const [uploadData, setUploadData] = useState({ caption: '', file: null as File | null, base64: '' });
   const [galleryUploadData, setGalleryUploadData] = useState({ caption: '', title: '', file: null as File | null, base64: '' });
   const [eventData, setEventData] = useState<MemorialEvent>({ tag: 'ensino', title: '', desc: '' });
-  const [allGalleryPhotos, setAllGalleryPhotos] = useState<Array<{ id: string; url: string; caption: string; title: string; createdAt: any }>>([]);
+
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export default function App() {
     const originalEvents = memorialData[selectedYear]?.events || [];
     const userEvents = dbEvents[selectedYear] || [];
     const allEvents = [...originalEvents, ...userEvents];
-    
+
     if (activeFilter === 'all') return allEvents;
     return allEvents.filter(e => e.tag === activeFilter);
   }, [selectedYear, activeFilter, dbEvents]);
@@ -151,7 +151,7 @@ export default function App() {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-      
+
       // Limit size to ~700KB to stay safe within Firestore's 1MB limit (base64 adds overhead)
       if (file.size > 700 * 1024) {
         alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB para garantir o armazenamento.");
@@ -160,10 +160,10 @@ export default function App() {
 
       const reader = new FileReader();
       reader.onloadend = () => {
-        setUploadData({ 
-          ...uploadData, 
+        setUploadData({
+          ...uploadData,
           file: file,
-          base64: reader.result as string 
+          base64: reader.result as string
         });
       };
       reader.readAsDataURL(file);
@@ -216,7 +216,7 @@ export default function App() {
             {user ? (
               <div className="flex items-center gap-3">
                 <span className="text-white/90">Olá, {user.displayName?.split(' ')[0]}</span>
-                <button 
+                <button
                   onClick={() => logout()}
                   className="flex items-center gap-1.5 hover:text-ufv-gold-light transition-colors"
                 >
@@ -224,7 +224,7 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              <button 
+              <button
                 onClick={() => loginWithGoogle()}
                 className="flex items-center gap-1.5 hover:text-ufv-gold-light transition-colors"
               >
@@ -248,7 +248,7 @@ export default function App() {
             </div>
             <div className="text-white overflow-hidden">
               <span className="font-serif text-[10px] sm:text-sm font-light tracking-wider opacity-90 block truncate">Universidade Federal de Viçosa</span>
-              <span className="font-serif text-base sm:text-xl font-bold leading-tight block truncate">Dep. de Administração e Contabilidade</span>
+              <span className="font-serif text-base sm:text-xl font-bold leading-tight block truncate">Departamento de Administração e Contabilidade</span>
               <span className="text-[9px] sm:text-[11px] tracking-[1px] sm:tracking-[2px] uppercase text-ufv-gold-light font-semibold block mt-0.5">Memorial · DAD</span>
             </div>
           </div>
@@ -337,42 +337,48 @@ export default function App() {
 
         {/* NAV TABS */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto no-scrollbar pb-1">
-          <button 
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'overview' ? 'active' : ''}`}
             onClick={() => setActivePanel('overview')}
           >
             Visão Geral
           </button>
-          <button 
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'timeline' ? 'active' : ''}`}
             onClick={() => setActivePanel('timeline')}
           >
             Linha do Tempo
           </button>
-          <button 
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'photos' ? 'active' : ''}`}
             onClick={() => setActivePanel('photos')}
           >
             Fotos
           </button>
-          <button 
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'years' ? 'active' : ''}`}
             onClick={() => setActivePanel('years')}
           >
             Por Ano
           </button>
-          <button 
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
             onClick={() => setActivePanel('quebec')}
           >
             🍁 Projeto Quebec
+          </button>
+          <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'desmembramento' ? 'active' : ''}`}
+            onClick={() => setActivePanel('desmembramento')}
+          >
+            O Desmembramento do DAE
           </button>
           <div className="hidden sm:flex items-center">
             <div className="w-px h-6 bg-white/15 self-center mx-2 shrink-0"></div>
             <span className="text-[10px] tracking-[1.5px] uppercase text-white/35 font-semibold self-center mr-2 whitespace-nowrap">Décadas</span>
             <div className="flex gap-1">
               {decades.map(d => (
-                <button 
+                <button
                   key={d}
                   className={`nav-item whitespace-nowrap ${activePanel === 'years' && currentDecade === d ? 'active' : ''}`}
                   onClick={() => {
@@ -393,14 +399,14 @@ export default function App() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMobileMenuOpen(false)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] md:hidden"
             />
-            <motion.div 
+            <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -431,9 +437,10 @@ export default function App() {
                       { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-4 h-4" /> },
                       { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-4 h-4" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> },
-                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> }
+                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> },
+                      { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> }
                     ].map(item => (
-                      <button 
+                      <button
                         key={item.id}
                         onClick={() => {
                           setActivePanel(item.id as PanelType);
@@ -452,7 +459,7 @@ export default function App() {
                   <h4 className="text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-4">Décadas</h4>
                   <div className="grid grid-cols-2 gap-2">
                     {decades.map(d => (
-                      <button 
+                      <button
                         key={d}
                         onClick={() => {
                           setActivePanel('years');
@@ -479,7 +486,7 @@ export default function App() {
                         <div className="text-[10px] text-ufv-gray-light">{user.email}</div>
                       </div>
                     </div>
-                    <button 
+                    <button
                       onClick={() => {
                         logout();
                         setIsMobileMenuOpen(false);
@@ -491,7 +498,7 @@ export default function App() {
                   </div>
                 ) : (
                   <div className="pt-6 border-t border-ufv-border">
-                    <button 
+                    <button
                       onClick={() => {
                         loginWithGoogle();
                         setIsMobileMenuOpen(false);
@@ -557,7 +564,7 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-6 py-10 flex-grow w-full">
         <AnimatePresence mode="wait">
           {activePanel === 'overview' && (
-            <motion.div 
+            <motion.div
               key="overview"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -681,7 +688,7 @@ export default function App() {
                   <div className="bg-ufv-green text-white px-4 py-3 text-sm font-semibold tracking-wide">Navegação Rápida</div>
                   <div className="p-4 space-y-1">
                     {decades.map(d => (
-                      <button 
+                      <button
                         key={d}
                         onClick={() => {
                           setActivePanel('years');
@@ -709,7 +716,7 @@ export default function App() {
           )}
 
           {activePanel === 'timeline' && (
-            <motion.div 
+            <motion.div
               key="timeline"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -888,6 +895,188 @@ export default function App() {
                     </p>
                   </div>
                 </div>
+                      <a
+                      href="https://drive.google.com/file/d/12G0cwzmnwP6BNYCBhuiw3jqnp8KmITqn/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-ufv-green text-white px-4 py-2 rounded-lg hover:bg-ufv-green-dark transition-colors"
+                    >
+                      Notícia Completa
+                    </a>
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'desmembramento' && (
+            <motion.div
+              key="desmembramento"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              {/* HEADER CARD */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <History className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Marco Histórico · 1988</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">A Ascensão da Administração na UFV: O Desmembramento do DAE e a Consolidação do DAD</h1>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Como a separação do Departamento de Administração e Economia moldou os rumos do ensino de gestão em Minas Gerais.
+                  </p>
+                  <div className="flex flex-wrap gap-6 mt-6 pt-5 border-t border-white/15">
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1977</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Criação do DAE</span>
+                    </div>
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1988</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Desmembramento oficial</span>
+                    </div>
+                    <div>
+                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">26</span>
+                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Professores permanentes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ARTICLE BODY */}
+              <div className="space-y-6">
+
+                {/* Introdução */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
+                    Visão Geral
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      <strong>VIÇOSA, MG</strong> – A estrutura administrativa da Universidade Federal de Viçosa (UFV) passou por uma transformação definitiva que moldou os rumos do ensino de gestão em Minas Gerais. O desmembramento do antigo Departamento de Administração e Economia (DAE), que deu origem ao Departamento de Administração (DAD) e ao Departamento de Economia (DEE), não foi apenas uma mudança burocrática, mas uma resposta à necessidade de maturidade acadêmica e especialização pedagógica.
+                    </p>
+                  </div>
+                </div>
+
+                {/* A Era do DAE */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
+                    O Antecedente: A Era do DAE (1977–1988)
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      A trajetória da Administração em Viçosa começou formalmente em <strong>1975</strong>, com a criação do curso de graduação sob a égide do Centro de Ciências Humanas, Letras e Artes. Dois anos depois, em <strong>10 de maio de 1977</strong>, foi implantado o Departamento de Administração e Economia (DAE), com a missão de gerir as duas áreas que, embora correlatas, já demonstravam vocações distintas.
+                    </p>
+                    <p>
+                      Durante pouco mais de uma década, o DAE serviu como um "incubador" para o pensamento administrativo. No entanto, o crescimento do número de alunos e a complexidade crescente das teorias organizacionais exigiam uma estrutura que permitisse à Administração caminhar com as próprias pernas.
+                    </p>
+                  </div>
+                </div>
+
+                {/* O Divisor de Águas */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Award className="w-4 h-4 text-white" /></div>
+                    O Divisor de Águas: O Parecer 221/88
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      O desmembramento oficial foi selado em <strong>30 de março de 1988</strong>. Naquela data, o Conselho Federal de Educação (CFE), por meio do <strong>Parecer nº 221/88</strong>, autorizou a divisão do DAE em duas unidades administrativas independentes.
+                    </p>
+                    <p>
+                      Esta separação permitiu que o recém-criado Departamento de Administração (DAD) passasse a focar exclusivamente na formação de gestores, expandindo seu escopo para além das técnicas de mercado e abraçando, mais tarde, o "Campo de Públicas" e a Gestão Social.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Protagonistas */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Users className="w-4 h-4 text-white" /></div>
+                    Os Protagonistas e o Legado Docente
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>O fortalecimento do DAD deve-se a um corpo docente altamente qualificado, que atuou tanto na articulação política da separação quanto na construção da excelência acadêmica. Entre os nomes que registraram e lideraram essa evolução, destacam-se:</p>
+                    <div className="space-y-4 mt-2">
+                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
+                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
+                          <GraduationCap className="w-5 h-5 text-ufv-green" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-ufv-gray mb-1">Prof. Magnus Luiz Emmendoerfer</div>
+                          <div className="text-sm text-ufv-gray-light leading-relaxed">Uma figura central na documentação histórica do curso e na pesquisa em Administração Pública, sendo um dos responsáveis por sistematizar a memória institucional do departamento.</div>
+                        </div>
+                      </div>
+                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
+                        <div className="w-9 h-9 rounded-full bg-ufv-gold/15 flex items-center justify-center shrink-0 mt-0.5">
+                          <Users className="w-5 h-5 text-ufv-gold" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-ufv-gray mb-1">Profs. Marco Aurélio Marques Ferreira, Luiz Antônio Abrantes e Edson Arlindo Silva</div>
+                          <div className="text-sm text-ufv-gray-light leading-relaxed">Docentes que foram pilares na transição, ajudando a elevar o DAD ao patamar de referência nacional em gestão.</div>
+                        </div>
+                      </div>
+                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
+                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
+                          <Globe className="w-5 h-5 text-ufv-green" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-ufv-gray mb-1">Qualificação Internacional</div>
+                          <div className="text-sm text-ufv-gray-light leading-relaxed">O departamento consolidou-se com um quadro de <strong>26 professores permanentes</strong>. Um dado relevante é que <strong>30% destes docentes possuem doutorado no exterior</strong> (em países como EUA, Inglaterra, Espanha e França), trazendo uma perspectiva global para o interior de Minas Gerais.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expansão */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Building2 className="w-4 h-4 text-white" /></div>
+                    Expansão Pós-Desmembramento: Direito e Contabilidade
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      O sucesso da autonomia do DAD foi tão expressivo que o departamento tornou-se um "berço" para outros cursos da UFV. Na <strong>década de 1990</strong>, o DAD propiciou a criação dos cursos de <strong>Direito</strong> e de <strong>Ciências Contábeis</strong>.
+                    </p>
+                    <p>
+                      Atualmente, o departamento é oficialmente denominado <strong>Departamento de Administração e Contabilidade (DAD)</strong>, mantendo sob sua gestão ambos os cursos e consolidando uma estrutura de ensino, pesquisa e extensão que atende a milhares de estudantes.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Campo de Públicas */}
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Handshake className="w-4 h-4 text-white" /></div>
+                    A Consolidação no Campo de Públicas
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      Um dos marcos mais recentes após a autonomia foi a criação, em <strong>2005</strong>, do <strong>Programa de Pós-graduação em Administração (PPGADM)</strong>. Diferente de outros programas, o DAD-UFV fez uma escolha estratégica: focar o mestrado na área de <strong>Administração Pública</strong>.
+                    </p>
+                    <p>
+                      Essa decisão influenciou diretamente a graduação. Hoje, embora o curso seja de Administração (Generalista), a matriz curricular de <strong>3.135 horas-aula</strong> é permeada por temas de interesse público, gestão social e desenvolvimento, preparando profissionais para atuar com excelência tanto no setor privado quanto no fortalecimento das instituições estatais brasileiras.
+                    </p>
+                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
+                      A notícia do desmembramento, ocorrida há mais de três décadas, reverbera hoje em um departamento que é símbolo de pioneirismo e rigor acadêmico na UFV.
+                    </p>
+                    <a
+                      href="https://drive.google.com/file/d/11OFVzuJyKXlRgNeyjeaKnn2caECTCpnz/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-ufv-green text-white px-4 py-2 rounded-lg hover:bg-ufv-green-dark transition-colors"
+                    >
+                      Notícia Completa
+                    </a>
+                  </div>
+                </div>
 
               </div>
             </motion.div>
@@ -901,7 +1090,9 @@ export default function App() {
               exit={{ opacity: 0, y: -10 }}
             >
               {/* GALLERY HEADER */}
+
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
                     <ImageIcon className="w-6 h-6" /> Acervo Fotográfico
@@ -928,14 +1119,11 @@ export default function App() {
               {/* GALLERY GRID */}
               {allGalleryPhotos.length > 0 ? (
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-                  {allGalleryPhotos.map((photo, i) => (
+                  {allGalleryPhotos.map((photo) => (
                     <motion.div
                       key={photo.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
-                      className="break-inside-avoid bg-white border border-ufv-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
-                      onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption, title: photo.title })}
+                      className="..."
+                      onClick={() => setLightboxPhoto(photo)}
                     >
                       <div className="overflow-hidden bg-ufv-cream">
                         <img
@@ -1099,7 +1287,7 @@ export default function App() {
           )}
 
           {activePanel === 'years' && (
-            <motion.div 
+            <motion.div
               key="years"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1112,7 +1300,7 @@ export default function App() {
                   <div className="text-[11px] tracking-[1.5px] uppercase text-ufv-gray-light font-bold mb-3">Navegação por Década</div>
                   <div className="flex flex-wrap gap-2">
                     {decades.map(d => (
-                      <button 
+                      <button
                         key={d}
                         onClick={() => setCurrentDecade(d)}
                         className={`px-3 py-1.5 rounded border text-sm font-medium transition-all ${currentDecade === d ? 'bg-ufv-green text-white border-ufv-green' : 'bg-transparent border-ufv-border text-ufv-gray hover:border-ufv-green hover:text-ufv-green'}`}
@@ -1128,7 +1316,7 @@ export default function App() {
                   {yearsInDecade.map(y => {
                     const hasData = !!memorialData[y];
                     return (
-                      <button 
+                      <button
                         key={y}
                         onClick={() => setSelectedYear(y)}
                         className={`flex flex-col items-center p-1.5 sm:p-2 rounded-lg border transition-all ${selectedYear === y ? 'bg-ufv-green text-white border-ufv-green-dark' : 'bg-white border-ufv-border text-ufv-gray hover:border-ufv-green hover:text-ufv-green'} ${hasData ? 'ring-1 ring-ufv-gold/30' : ''}`}
@@ -1152,14 +1340,14 @@ export default function App() {
                     </div>
                     <div className="flex gap-2">
                       {user ? (
-                        <button 
+                        <button
                           onClick={() => setIsEventModalOpen(true)}
                           className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-gold text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-gold-light transition-colors"
                         >
                           <Plus className="w-4 h-4" /> Adicionar Registro
                         </button>
                       ) : (
-                        <button 
+                        <button
                           onClick={() => loginWithGoogle()}
                           className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-border text-ufv-gray-light px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-border/80 transition-colors"
                         >
@@ -1172,14 +1360,14 @@ export default function App() {
                   {hasAnyEvents ? (
                     <div className="card">
                       <div className="flex gap-4 mb-6 border-b border-ufv-border pb-2 overflow-x-auto no-scrollbar">
-                        <button 
+                        <button
                           className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-all whitespace-nowrap ${activeFilter === 'all' ? 'text-ufv-green border-ufv-green' : 'text-ufv-gray-light border-transparent'}`}
                           onClick={() => setActiveFilter('all')}
                         >
                           Eventos
                         </button>
                         {['fundacao', 'ensino', 'pesquisa', 'extensao', 'gestao'].map(tag => (
-                          <button 
+                          <button
                             key={tag}
                             className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-all whitespace-nowrap ${activeFilter === tag ? 'text-ufv-green border-ufv-green' : 'text-ufv-gray-light border-transparent'}`}
                             onClick={() => setActiveFilter(tag)}
@@ -1188,7 +1376,7 @@ export default function App() {
                           </button>
                         ))}
                       </div>
-                      
+
                       {filteredEvents.length > 0 ? (
                         <div className="space-y-6">
                           {filteredEvents.map((e, i) => (
@@ -1209,7 +1397,7 @@ export default function App() {
                           <Info className="w-12 h-12 text-ufv-border mx-auto mb-4" />
                           <h3 className="font-serif text-lg text-ufv-gray mb-2">Sem registros nesta categoria</h3>
                           <p className="text-sm text-ufv-gray-light max-w-xs mx-auto">Não há eventos marcados como "{activeFilter}" para o ano de {selectedYear}.</p>
-                          <button 
+                          <button
                             onClick={() => setActiveFilter('all')}
                             className="mt-4 text-xs font-bold text-ufv-green hover:underline uppercase tracking-widest"
                           >
@@ -1233,7 +1421,7 @@ export default function App() {
                         <ImageIcon className="w-5 h-5" /> Galeria de Fotos ({yearPhotos.length})
                       </h3>
                       {user && (
-                        <button 
+                        <button
                           onClick={() => setIsUploadModalOpen(true)}
                           className="w-full sm:w-auto flex items-center justify-center gap-2 bg-ufv-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
                         >
@@ -1241,19 +1429,19 @@ export default function App() {
                         </button>
                       )}
                     </div>
-                    
+
                     {yearPhotos.length > 0 ? (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {yearPhotos.map((photo, i) => (
-                          <motion.div 
+                          <motion.div
                             key={i}
                             whileHover={{ y: -5 }}
                             className="bg-white border border-ufv-border rounded-lg overflow-hidden shadow-sm"
                           >
                             <div className="aspect-video overflow-hidden bg-ufv-cream">
-                              <img 
-                                src={photo.url} 
-                                alt={photo.caption} 
+                              <img
+                                src={photo.url}
+                                alt={photo.caption}
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                 referrerPolicy="no-referrer"
                               />
@@ -1281,7 +1469,7 @@ export default function App() {
               <AnimatePresence>
                 {isUploadModalOpen && (
                   <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
@@ -1297,17 +1485,17 @@ export default function App() {
                         <div>
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Foto</label>
                           <div className="border-2 border-dashed border-ufv-border rounded-lg p-8 text-center hover:border-ufv-green transition-colors cursor-pointer relative">
-                            <input 
-                              type="file" 
-                              accept="image/*" 
+                            <input
+                              type="file"
+                              accept="image/*"
                               className="absolute inset-0 opacity-0 cursor-pointer"
                               onChange={handleFileUpload}
                             />
                             {uploadData.base64 ? (
                               <div className="relative group">
-                                <img 
-                                  src={uploadData.base64} 
-                                  alt="Preview" 
+                                <img
+                                  src={uploadData.base64}
+                                  alt="Preview"
                                   className="max-h-48 mx-auto rounded-lg shadow-md"
                                 />
                                 <div className="mt-2 text-xs text-ufv-green font-bold flex items-center justify-center gap-1">
@@ -1324,14 +1512,14 @@ export default function App() {
                         </div>
                         <div>
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Legenda / Contexto</label>
-                          <textarea 
+                          <textarea
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none min-h-[100px]"
                             placeholder="Descreva o que está acontecendo na foto, quem são as pessoas, etc."
                             value={uploadData.caption}
                             onChange={(e) => setUploadData({ ...uploadData, caption: e.target.value })}
                           ></textarea>
                         </div>
-                        <button 
+                        <button
                           onClick={submitPhoto}
                           disabled={!uploadData.file || !uploadData.caption}
                           className="w-full bg-ufv-green text-white py-3 rounded-lg font-bold hover:bg-ufv-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -1348,7 +1536,7 @@ export default function App() {
               <AnimatePresence>
                 {isEventModalOpen && (
                   <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
@@ -1363,7 +1551,7 @@ export default function App() {
                       <div className="p-6 space-y-4">
                         <div>
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Categoria</label>
-                          <select 
+                          <select
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none bg-white"
                             value={eventData.tag}
                             onChange={(e) => setEventData({ ...eventData, tag: e.target.value as any })}
@@ -1380,7 +1568,7 @@ export default function App() {
                         </div>
                         <div>
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Título do Evento</label>
-                          <input 
+                          <input
                             type="text"
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none"
                             placeholder="Ex: Criação do novo laboratório"
@@ -1390,14 +1578,14 @@ export default function App() {
                         </div>
                         <div>
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Descrição / Detalhes</label>
-                          <textarea 
+                          <textarea
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none min-h-[100px]"
                             placeholder="Descreva o marco histórico com mais detalhes..."
                             value={eventData.desc}
                             onChange={(e) => setEventData({ ...eventData, desc: e.target.value })}
                           ></textarea>
                         </div>
-                        <button 
+                        <button
                           onClick={submitEvent}
                           disabled={!eventData.title || !eventData.desc}
                           className="w-full bg-ufv-gold text-white py-3 rounded-lg font-bold hover:bg-ufv-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -1447,7 +1635,7 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
-      
+
 
       {/* FOOTER */}
       <footer className="bg-ufv-green-dark text-white/65 py-12 px-6 text-sm border-t-4 border-ufv-gold">
