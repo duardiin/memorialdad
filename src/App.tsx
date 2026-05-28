@@ -29,6 +29,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
+import { allGalleryPhotos } from './data/allGalleryPhotos.ts';
 
 type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec';
 
