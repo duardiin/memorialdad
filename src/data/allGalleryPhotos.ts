@@ -146,6 +146,18 @@ export const allGalleryPhotos: GalleryPhoto[] = [
 		url: '/35 adm.jpg',
 		title: '35 Anos ADM',
 		caption: 'Celebração dos 35 anos de história do curso'
+	},
+	{
+		id: 'photo-97',
+		url: '/1992 “Aspecto da palestra do professor canadense”.jpg',
+		title: 'Aspecto da palestra do professor canadense.',
+		caption: 'Aspecto da palestra do professor canadense.'
+	},
+	{
+		id: 'photo-98',
+		url: '/1992 “O superintendente Paulo Henrique Ayres Pena”.jpg',
+		title: 'O superintendente Paulo Henrique Ayres Pena.',
+		caption: 'O superintendente Paulo Henrique Ayres Pena.'
 	}
 ];
 

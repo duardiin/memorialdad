@@ -3,6 +3,7 @@ export interface MemorialEvent {
   title: string;
   desc: string;
   url?: string;
+  articleUrl?: string;
 }
 
 export interface MemorialPhoto {
@@ -13,6 +14,7 @@ export interface MemorialPhoto {
 export interface YearData {
   events: MemorialEvent[];
   photos: MemorialPhoto[];
+  articleUrl?: string;
 }
 
 export type MemorialData = Record<number, YearData>;

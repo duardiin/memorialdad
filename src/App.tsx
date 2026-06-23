@@ -30,6 +30,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
 import { allGalleryPhotos } from './data/allGalleryPhotos';
+import Fuse from 'fuse.js';
 
 type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento';
 
@@ -109,38 +110,41 @@ export default function App() {
     return allEvents.filter(e => e.tag === activeFilter);
   }, [selectedYear, activeFilter, dbEvents]);
 
-  const searchResults = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
-    if (!q) return [];
+  const allEventsForSearch = useMemo(() => {
+  const list: Array<{ year: number; event: MemorialEvent }> = [];
 
-    const results: Array<{ year: number; event: MemorialEvent }> = [];
+  Object.entries(memorialData).forEach(([year, data]) => {
+    data.events.forEach(event => list.push({ year: Number(year), event }));
+  });
 
-    Object.entries(memorialData).forEach(([year, data]) => {
-      data.events.forEach(event => {
-        if (
-          event.title.toLowerCase().includes(q) ||
-          event.desc.toLowerCase().includes(q) ||
-          event.tag.toLowerCase().includes(q)
-        ) {
-          results.push({ year: Number(year), event });
-        }
-      });
-    });
+  Object.entries(dbEvents).forEach(([year, events]) => {
+    events.forEach(event => list.push({ year: Number(year), event }));
+  });
 
-    Object.entries(dbEvents).forEach(([year, events]) => {
-      events.forEach(event => {
-        if (
-          event.title.toLowerCase().includes(q) ||
-          event.desc.toLowerCase().includes(q) ||
-          event.tag.toLowerCase().includes(q)
-        ) {
-          results.push({ year: Number(year), event });
-        }
-      });
-    });
+  return list;
+}, [dbEvents]);
 
-    return results.sort((a, b) => a.year - b.year);
-  }, [searchQuery, dbEvents]);
+// 2. Cria a instância do Fuse.js configurando os pesos de relevância da busca
+const fuse = useMemo(() => {
+  return new Fuse(allEventsForSearch, {
+    keys: [
+      { name: 'event.title', weight: 0.7 },
+      { name: 'event.desc', weight: 0.3 },
+      { name: 'year', weight: 0.5 },
+      { name: 'event.tag', weight: 0.2 }
+    ],
+    threshold: 0.35, // Controla a sensibilidade (0 = busca exata, 1 = aceita qualquer coisa)
+    ignoreLocation: true,
+  });
+}, [allEventsForSearch]);
+
+// 3. Executa a busca inteligente toda vez que o usuário digita algo
+const searchResults = useMemo(() => {
+  if (!searchQuery.trim()) return [];
+  
+  const results = fuse.search(searchQuery);
+  return results.map(result => result.item);
+}, [searchQuery, fuse]);
 
   const yearPhotos = useMemo(() => {
     const originalPhotos = memorialData[selectedYear]?.photos || [];
@@ -586,74 +590,40 @@ export default function App() {
                     </p>
                   </div>
                 </div>
+               
 
-                {/* BLOCO HISTÓRICO — ORIGENS UFV E DAD */}
                 <div className="card">
                   <h2 className="card-title">
-                    <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
-                    Uma Trajetória de 100 Anos
+                    <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
+                    Notícias
                   </h2>
-                  <div className="space-y-5 text-ufv-gray text-[15px] leading-relaxed">
+                  <div className="space-y-3">
+                    {[
+                      { title: 'Primeira Jornada Acadêmica', href: 'https://drive.google.com/file/d/1TB5j47Hrl4t3ARd_EQeOhFXMJoE65f3u/view?usp=sharing' },
+                      { title: 'ASPUV', href: 'https://drive.google.com/file/d/1gBKFZjv0gpCJCEb4wFvR4mxQ5CLwdfXB/view?usp=sharing' },
+                      { title: 'Criação do Curso de Ciências Contábeis', href: 'https://drive.google.com/file/d/1pMLkf3Oo0GsRm-MDJghAiqqZD8XsIY1s/view?usp=sharing' },
+                      { title: 'Relatório de Atividade de Extensão', href: 'https://drive.google.com/file/d/1LNJB9rQCBQNrhq0F45nexkNSxz05ru1I/view?usp=sharing' },
+                      { title: 'O Planejamento Estratégico e sua Aplicação na Organização Universitária', href: 'https://drive.google.com/file/d/1UILui-B0EgioEWPag5cvIu-LFPZLNcCY/view?usp=sharing' },
+                       { title: 'Decreto de 15 de julho de 1969', href: 'https://drive.google.com/file/d/1me5KgBsIgS96khG-4vUO1JpkfVKf_e2G/view?usp=sharing' },
+                       { title: 'Regulamentação do uso da biblioteca e laboratório de informática', href: 'https://drive.google.com/file/d/1Dv8SEC1a44m8tGYt_DFmzdumRzYjcRls/view?usp=sharing' },
+                        { title: 'Relação de Lotação do Departamento de Administração', href: 'https://drive.google.com/file/d/1mlF7PkAPCmMLgRISsl9AcN4H7jUEUrJQ/view?usp=sharing' },
 
-                    <p>
-                      Tudo iniciou em <strong>1925</strong>…<br />
-                      E hoje, em <strong>2026</strong>, a UFV completa os seus <strong>100 anos</strong> e o Departamento de Administração e Contabilidade seus <strong>50 anos jubilosos</strong> em conquistas e inovações.
-                    </p>
-
-                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
-                      A realidade nem sempre foi assim…<br />
-                      Muitos sacrifícios, percalços, conquistas e vitórias!<br />
-                      Vejamos alguns fatos marcantes e merecedores.
-                    </p>
-
-                    <p>
-                      A UFV, sucessora da antiga <strong>Escola Superior de Agricultura e Veterinária – ESAV</strong>, foi concebida em{' '}
-                      <strong>06 de Setembro de 1920</strong> (Lei nº 761) e criada em <strong>30 de Março de 1922</strong> (Decreto 6.053)
-                      pelo Governador do Estado de Minas Gerais, <strong>Arthur da Silva Bernardes</strong>, autorizando o governo a criar a
-                      Escola Superior de Agricultura e Veterinária do Estado de Minas Gerais.
-                    </p>
-
-                    <p>
-                      Nos moldes dos <em>"Land Grant Colleges"</em>, semelhante às escolas direcionadas à agricultura,{' '}
-                      <strong>Peter Henry Rolfs</strong> foi o indicado e o responsável pela implantação e direção da ESAV.
-                      Sua inauguração deu-se em <strong>28 de agosto de 1926</strong> por Arthur da Silva Bernardes, então como Presidente da República.
-                    </p>
-
-                    <p>
-                      <strong>Cursos oferecidos:</strong> Fundamental, Médio e Superior nos anos <strong>1927</strong> e <strong>1928</strong>.
-                    </p>
-
-                    {/* CURIOSIDADES */}
-                    <div className="bg-ufv-cream border border-ufv-border rounded-lg p-5 space-y-2">
-                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-3">✦ Curiosidades</div>
-                      <p>
-                        Durante o dia e antes desse período, as aulas primárias eram lecionadas aos filhos dos operários da construção,
-                        devido ao alto nível de analfabetismo. Também os operários tinham aulas, mas à noite, uma vez que mais de{' '}
-                        <strong>80% deles eram analfabetos</strong>, reduzindo esse índice para menos de <strong>10% em 1926</strong>.
-                      </p>
-                    </div>
-
-                    {/* AUTORIA */}
-                    <div className="border border-ufv-border rounded-lg p-5 space-y-3">
-                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-3">✦ De autoria do Walmer</div>
-                      <p>
-                        Em suma, o início do CCH está na <strong>Economia Doméstica</strong> e na <strong>Economia Rural</strong>, que eram, à época,
-                        extensões das Ciências Agrárias. Essas duas áreas deram origem aos departamentos e cursos que compõem o atual CCH.
-                      </p>
-                      <p>
-                        Da Economia Doméstica, surgiram os cursos de <strong>Letras</strong> e de <strong>Educação</strong>. Da Economia Rural, foram criados os cursos de{' '}
-                        <strong>Administração</strong>, <strong>Economia</strong>, <strong>Cooperativismo</strong> e, mais recentemente, o{' '}
-                        <strong>Curso de Gestão do Agronegócio</strong>. A partir desses dois ramos, foram então desmembrados e estruturados os
-                        departamentos de Administração e Economia, de Educação, e de Letras e Artes que, juntamente com o Departamento de
-                        Economia Doméstica, passaram a integrar o <strong>Centro de Ciências Humanas, Letras e Artes</strong>.
-                      </p>
-                      <p>
-                        Estes departamentos pioneiros ancoravam cinco cursos: Administração, Economia, Economia Doméstica, Letras e Pedagogia.
-                        O <strong>Departamento de Administração e Economia (DAE)</strong> conduzia os cursos de Administração e Economia e se encarregava
-                        das disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais.
-                      </p>
-                    </div>
-
+                    ].map((news, i) => (
+                      <div key={i} className="flex items-center justify-between gap-4 py-3 border-b border-ufv-border last:border-none">
+                        <div className="flex items-center gap-3">
+                          <div className="w-2 h-2 rounded-full bg-ufv-gold shrink-0"></div>
+                          <span className="text-sm font-medium text-ufv-gray">{news.title}</span>
+                        </div>
+                        <a
+                          href={news.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 flex items-center gap-1.5 text-xs font-semibold text-ufv-green border border-ufv-green rounded-full px-3 py-1 hover:bg-ufv-green hover:text-white transition-colors"
+                        >
+                          Notícia completa <ChevronRight className="w-3 h-3" />
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -665,7 +635,7 @@ export default function App() {
                   <div className="space-y-6">
                     {[
                       { year: '1974', tag: 'fundacao', title: 'Criação do Departamento', desc: 'O DAD foi criado a partir da reorganização acadêmica da UFV.' },
-                      { year: '1976', tag: 'ensino', title: 'Curso de Ciências Contábeis', desc: 'Implantação do curso de graduação em Ciências Contábeis.' },
+                      { year: '1988', tag: 'ensino', title: 'Curso de Ciências Contábeis', desc: 'Implantação do curso de graduação em Ciências Contábeis.' },
                       { year: '2024', tag: 'reconhecimento', title: 'Jubileu de Ouro', desc: 'Celebração de 50 anos de história e contribuição acadêmica.' }
                     ].map((m, i) => (
                       <div key={i} className="flex gap-5">
@@ -721,41 +691,150 @@ export default function App() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="card"
+              className="max-w-4xl mx-auto space-y-8"
             >
-              <h2 className="card-title">
-                <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
-                Linha do Tempo — 1974 a 2026
-              </h2>
-              <div className="space-y-4 sm:space-y-8 mt-8">
-                {Object.entries(memorialData).sort((a, b) => Number(a[0]) - Number(b[0])).map(([year, data]) => (
-                  <div key={year} className="flex gap-4 sm:gap-6 group cursor-pointer hover:bg-ufv-cream/50 p-3 sm:p-4 rounded-lg transition-colors" onClick={() => {
-                    setActivePanel('years');
-                    setCurrentDecade(Math.floor(Number(year) / 10) * 10);
-                    setSelectedYear(Number(year));
-                  }}>
-                    <div className="flex flex-col items-center shrink-0 w-10 sm:w-14">
-                      <div className="font-serif text-base sm:text-lg font-bold text-ufv-green">{year}</div>
-                      <div className="w-0.5 h-full bg-ufv-border mt-2 group-last:hidden"></div>
-                    </div>
-                    <div className="flex-grow">
-                      {data.events.map((e, i) => (
-                        <div key={i} className="mb-4 last:mb-0">
-                          <span className={`event-tag tag-${e.tag}`}>{e.tag}</span>
-                          <div className="font-semibold text-ufv-gray">{e.title}</div>
-                          <div className="text-sm text-ufv-gray-light mt-1">{e.desc}</div>
-                        </div>
-                      ))}
-                      {data.photos.length > 0 && (
-                        <div className="mt-3 flex gap-2">
-                          <span className="flex items-center gap-1 text-[10px] font-bold uppercase text-ufv-gold">
-                            <ImageIcon className="w-3 h-3" /> {data.photos.length} Foto(s)
-                          </span>
-                        </div>
-                      )}
-                    </div>
+              {/* HERO DO TEXTO */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="text-[11px] tracking-[3px] uppercase text-ufv-gold-light font-bold mb-4">Memorial Histórico · UFV & DAD</div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-4 leading-tight">
+                    Tudo iniciou em 1925…
+                  </h1>
+                  <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    E hoje, em <strong>2026</strong>, a UFV completa os seus <strong>100 anos</strong> e o Departamento de Administração e Contabilidade seus <strong>50 anos jubilosos</strong> em conquistas e inovações.
+                  </p>
+                  <p className="text-white/65 text-sm mt-4 italic leading-relaxed">
+                    A realidade nem sempre foi assim… Muitos sacrifícios, percalços, conquistas e vitórias!<br />
+                    Vejamos alguns fatos marcantes e merecedores.
+                  </p>
+                </div>
+              </div>
+
+              {/* ORIGENS DA UFV */}
+              <div className="card">
+                <h2 className="card-title">
+                  <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
+                  As Origens da UFV
+                </h2>
+                <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                  <p>
+                    A UFV, sucessora da antiga <strong>Escola Superior de Agricultura e Veterinária – ESAV</strong>, foi concebida em{' '}
+                    <strong>06 de Setembro de 1920</strong> (Lei nº 761) e criada em <strong>30 de Março de 1922</strong> (Decreto 6.053)
+                    pelo Governador do Estado de Minas Gerais, <strong>Arthur da Silva Bernardes</strong>, autorizando o governo a criar a
+                    Escola Superior de Agricultura e Veterinária do Estado de Minas Gerais.
+                  </p>
+                  <p>
+                    Nos moldes dos <em>"Land Grant Colleges"</em>, semelhante às escolas direcionadas à agricultura,{' '}
+                    <strong>Peter Henry Rolfs</strong> foi o indicado e o responsável pela implantação e direção da ESAV.
+                    Sua inauguração deu-se em <strong>28 de agosto de 1926</strong> por Arthur da Silva Bernardes, então como Presidente da República.
+                    Cursos oferecidos: Fundamental, Médio e Superior nos anos <strong>1927</strong> e <strong>1928</strong>.
+                  </p>
+                  <div className="bg-ufv-cream border border-ufv-border rounded-lg p-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-3">✦ Curiosidades</div>
+                    <p className="text-sm">
+                      Durante o dia e antes desse período, as aulas primárias eram lecionadas aos filhos dos operários da construção,
+                      devido ao alto nível de analfabetismo. Também os operários tinham aulas, mas à noite, uma vez que mais de{' '}
+                      <strong>80% deles eram analfabetos</strong>, reduzindo esse índice para menos de <strong>10% em 1926</strong>.
+                    </p>
                   </div>
-                ))}
+                </div>
+              </div>
+
+              {/* MARCOS HISTÓRICOS */}
+              <div className="card">
+                <h2 className="card-title">
+                  <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
+                  Marcos que Moldaram a Instituição
+                </h2>
+                <div className="space-y-6 mt-2 text-ufv-gray text-[15px] leading-relaxed">
+                  <div className="border-l-4 border-ufv-gold pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-1">1942</div>
+                    <p>
+                      A trajetória da UFV implicou no desmembramento do curso de Veterinária da ESAV e sua transferência para Belo Horizonte,
+                      ficando vinculado ao Estado de Minas Gerais sob a denominação de <strong>Escola Superior de Veterinária</strong> (Decreto-Lei Estadual nº 824, de 20 de janeiro).
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-ufv-green pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-1">1948</div>
+                    <p>
+                      A ESAV se tornou a <strong>Universidade Rural do Estado de Minas Gerais – UREMG</strong>, formada pela Escola Superior de Ciências Domésticas,
+                      pela Escola de Especialização (Pós-Graduação), pelo Serviço de Experimentação e Pesquisa e pelo Serviço de Extensão,
+                      agregando a Escola Superior de Agricultura, de Viçosa, com a Escola Superior de Veterinária, de Belo Horizonte
+                      (Lei nº 272, de 13 de novembro de 1948).
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-ufv-gold pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-1">1969</div>
+                    <p>
+                      Ocorreu a <strong>federalização da UFV</strong> (Decreto-Lei nº 570, de 8 de maio de 1969), configurando-se como pessoa jurídica
+                      a partir de 1º de agosto (Decreto nº 64.825, de 15 de julho).
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-ufv-green pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-1">1975</div>
+                    <p>
+                      Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do{' '}
+                      <strong>Instituto de Ciências Humanas</strong>, aprovado pelo CEPE (Ata 72/1975) e pelo CONSU (Ata 42/75).
+                      O anteprojeto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira,
+                      Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. A proposta foi aprovada por unanimidade
+                      no CONSU: <em>"apoiar a implantação do Instituto de Ciências Humanas"</em>.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-ufv-gold pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-1">1976</div>
+                    <p>
+                      Pela Portaria nº 70, de 11 de fevereiro, o Reitor designou os Professores Evonir Batista de Oliveira,
+                      Juraci Aureliano Teixeira, Sônia Coelho de Alvarenga e Maria da Conceição Rolim Simões para equacionarem todas
+                      as providências à efetiva implantação do Instituto de Ciências Humanas.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-ufv-green pl-5">
+                    <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-1">1978</div>
+                    <p>
+                      Em razão das escolas superiores adotarem os centros como unidades acadêmicas, o antigo Instituto de Ciências Humanas
+                      tornou-se o <strong>Centro de Ciências Humanas</strong>, em 3 de outubro de 1978, no qual se inserem os Departamentos de
+                      Administração e Economia, de Educação, de Letras e Artes e de Economia Doméstica (Portaria nº 940).
+                      Nessa época foram criados também os demais Centros de Ciências (CCA, CCB e CCE).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* AUTORIA WALMER */}
+              <div className="card">
+                <h2 className="card-title">
+                  <div className="card-icon"><GraduationCap className="w-4 h-4 text-white" /></div>
+                  As Raízes do CCH e do DAE (DAD)
+                </h2>
+                <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                  <div className="border border-ufv-border rounded-lg p-5 bg-ufv-cream/40">
+                    <p className="mb-3">
+                      Em suma, o início do CCH está na <strong>Economia Doméstica</strong> e na <strong>Economia Rural</strong>, que eram, à época,
+                      extensões das Ciências Agrárias. Essas duas áreas deram origem aos departamentos e cursos que compõem o atual CCH.
+                    </p>
+                    <p className="mb-3">
+                      Da Economia Doméstica, surgiram os cursos de <strong>Letras</strong> e de <strong>Educação</strong>. Da Economia Rural, foram criados os cursos de{' '}
+                      <strong>Administração</strong>, <strong>Economia</strong>, <strong>Cooperativismo</strong> e, mais recentemente, o{' '}
+                      <strong>Curso de Gestão do Agronegócio</strong>.
+                    </p>
+                    <p>
+                      A partir desses dois ramos, foram então desmembrados e estruturados os departamentos de Administração e Economia,
+                      de Educação, e de Letras e Artes que, juntamente com o Departamento de Economia Doméstica, passaram a integrar o{' '}
+                      <strong>Centro de Ciências Humanas, Letras e Artes</strong>.
+                    </p>
+                  </div>
+                  <p>
+                    Estes departamentos pioneiros ancoravam cinco cursos: <strong>Administração</strong>, <strong>Economia</strong>,{' '}
+                    <strong>Economia Doméstica</strong>, <strong>Letras</strong> e <strong>Pedagogia</strong>. O Departamento de Administração e Economia (DAE)
+                    conduzia os cursos de Administração e Economia e se encarregava das disciplinas das áreas de Administração, Contabilidade,
+                    Direito, Economia e Ciências Sociais.
+                  </p>
+                  <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
+                    A Economia Doméstica e a Economia Rural, como extensões das Ciências Agrárias, foram os precursores do Centro de Ciências Humanas.
+                  </p>
+                </div>
               </div>
             </motion.div>
           )}
@@ -1411,6 +1490,21 @@ export default function App() {
                       <Info className="w-12 h-12 text-ufv-border mx-auto mb-4" />
                       <h3 className="font-serif text-lg text-ufv-gray mb-2">Sem registros de eventos</h3>
                       <p className="text-sm text-ufv-gray-light max-w-xs mx-auto">Não há eventos cadastrados para o ano de {selectedYear}.</p>
+                    </div>
+                  )}
+
+                  {/* ARTICLE LINK */}
+                  {(memorialData[selectedYear] as any)?.articleUrl && (
+                    <div className="flex justify-end">
+                      <a
+                        href={(memorialData[selectedYear] as any).articleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-ufv-green text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors shadow-sm"
+                      >
+                        Leia a matéria completa
+                        <ChevronRight className="w-4 h-4" />
+                      </a>
                     </div>
                   )}
 
