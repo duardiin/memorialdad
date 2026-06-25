@@ -83,23 +83,8 @@ export const memorialData: MemorialData = {
     },
     {
       tag: 'extensao',
-      title: 'Formalização das Comissões de Ensino, Pesquisa e Extensão',
-      desc: 'Em 11 de maio de 1979, durante a reunião dos professores do departamento, sob a presidência do Professor Tancredo Almada Cruz, foram formalizadas as composições de três comissões integradas por docentes. A Comissão de Extensão ficou constituída pelos professores Eloy Alves Filho (presidente), Gilson Faria, Paulo Roberto Magalhães e Maria Elena Barbassa; a Comissão de Pesquisa passou a contar com Juraci Aureliano Teixeira (presidente), Eduardo Alfonso Cadavid Garcia e Maria da Graça Thomaz Sant\'Ana; e a Comissão de Ensino foi composta por José Euclides Seabra Cavalcante (presidente) e José Clévio Alves Cocco.'
-    },
-    {
-      tag: 'extensao',
       title: 'Aprovação de Novo Processo de Admissão e Nomeação do Professor Gualberto Silva',
       desc: 'Em 05 de junho de 1979, os professores do Departamento de Administração e Economia reuniram-se para deliberar sobre novos processos de admissão docente. Na ocasião, foi realizada a leitura e a aprovação por unanimidade do relatório da comissão de seleção de candidatos ao magistério do DAE/UFV/79, resultando na aprovação e nomeação do Professor Gualberto Ferreira da Silva.'
-    },
-    {
-      tag: 'extensao',
-      title: 'Nomeação para cargo de Vice-Diretora do Centro',
-      desc: '31 de agosto de 1979 Nesta data, durante a realização da reunião do Departamento de Administração e Economia, foi comunicada oficialmente a nomeação para o cargo de Vice-Diretora do Centro, realizada pelo Ministro da Educação e Cultura. Adicionalmente, inserido no planejamento do programa preliminar de atividades de extensão para o próximo ano, definiu-se a organização de eventos comemorativos e celebrações institucionais voltadas à comunidade acadêmica, destacando-se a realização da Semana do Administrador e da Semana do Economista.'
-    },
-    {
-      tag: 'extensao',
-      title: 'Homologação de Listas Tríplices e Planejamento de Extensão no DAE',
-      desc: '12 de setembro de 1979 Nesta data, sob a presidência do Professor Tancredo Almada Cruz, os docentes do Departamento de Administração e Economia reuniram-se na sala de reuniões do Departamento de Engenharia Florestal. Durante a sessão, foram apresentados e homologados os nomes para compor as listas tríplices para a Coordenação dos Cursos de Administração e de Economia, cujas escolhas finais seriam posteriormente ratificadas pelo Diretor do Centro. Além disso, a Comissão de Extensão sugeriu o planejamento e o desenvolvimento de atividades integradas às comemorações do Dia do Administrador e do Dia do Economista para o ano seguinte, com o objetivo explícito de incentivar e estimular uma maior participação por parte do corpo discente.'
     },
     {
       tag: 'extensao',
@@ -132,7 +117,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'cultura',
         title: 'Ciência, Liderança e Arte: O Ano de Ouro do DAE e do Coral da UFV',
-        desc: 'Esse mesmo professor regeu o Coral, abrilhantando as comemorações do 1º aniversário do Coral da UFV. (n. 579). E, posteriormente, o Coral se apresentou, a convite do Coral Monlevade, no município de João Monlevade, que comemorou os 16 anos do Coral de Monlevade e da Federação Mineira de Conjuntos Corais (n. 581).'
+        desc: 'O professor João Adamor Dias Neves regeu o Coral, abrilhantando as comemorações do 1º aniversário do Coral da UFV. (n. 579). E, posteriormente, o Coral se apresentou, a convite do Coral Monlevade, no município de João Monlevade, que comemorou os 16 anos do Coral de Monlevade e da Federação Mineira de Conjuntos Corais (n. 581).'
       },
 
       {
@@ -172,11 +157,6 @@ export const memorialData: MemorialData = {
   },
   1980: {
     events: [
-      {
-        tag: 'extensao',
-        title: 'DAE e Conselho de Extensão Promovem Curso Básico de Vendas com Specialist da SIAMAR',
-        desc: 'O DAE e o Conselho de Extensão promoveram nos dias 26 e 27 de março o Curso Básico de Vendas, ministrado pelo Prof. Nicolau Martino Netto, diretor presidente da SIAMAR – Serviço Interamericano de Marketing Imp. Exp. Ltda e ex-gerente de Propaganda e Marketing da Union Carbide do Brasil e da Cia. Swift do Brasil. O Curso teve a participação de empresários, executivos, vendedores de Viçosa, de Visconde de Rio Branco e de outras cidades, e de alunos que cursaram ou que estavam cursando a disciplina ADE 220 (Mercadologia). Foram 200 participantes.'
-      },
       {
       tag: 'extensao',
       title: 'DAE Celebra Sucesso de Encontros de Aproximação com Estudantes',
@@ -229,13 +209,8 @@ export const memorialData: MemorialData = {
     },
     {
       tag: 'ensino',
-      title: 'Relatório de Triagem e Análise de Atas Departamentais',
-      desc: '19 de maio de 1981, constata-se que a reunião do departamento tratou unicamente de procedimentos de rotina administrativa e de organização técnico-pedagógica de caráter geral. Os debates do dia concentraram-se na análise do processo de pré-matrícula, na orientação de alunos em relação a pré-requisitos, na estipulação do número de vagas e limites de estudantes por turmas teóricas e práticas, além da aprovação e ajuste de horários de disciplinas específicas para o segundo semestre letivo. ata n 26'
-    },
-    {
-      tag: 'ensino',
       title: 'Convênio DAE/FUNARBE: Recursos para Biblioteca e Contratação de Docentes',
-      desc: 'Em 05 de junho de 1981, no Auditório da Engenharia Florestal, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca. Visando atender exigências curriculares, foi comunicada a solicitação oficial para a contratação de três novos professores, incluindo um para a disciplina de Estudo de Problemas Brasileiros.'
+      desc: 'Em 05 de junho de 1981, no Auditório da Engenharia Florestal, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca.'
     },
     {
       tag: 'extensao',
@@ -411,11 +386,6 @@ export const memorialData: MemorialData = {
       title: 'Definição de Representantes junto à Câmara Curricular de Engenharia Civil',
       desc: 'Em julho de 1983, o colegiado realizou um processo de escolha interna para a definição de representantes do Departamento de Administração e Economia junto à Câmara Curricular do Curso de Engenharia Civil, estruturando a representação da área em outras unidades da instituição através da formação de uma lista tríplice de candidatos.'
     },
-    {
-      tag: 'ensino',
-      title: 'Nomeação de Professora Substituta na Disciplina de Administração',
-      desc: 'Em 07 de dezembro de 1983, em reunião conduzida pelo Professor Gilson Faria Potsch Magalhães na sala dois do departamento, o Colegiado deliberou sobre soluções de substituição docente devido ao afastamento temporário do Professor Paulo Shikazu Toma. Após a votação regulamentar, foi aprovada por unanimidade a nomeação da Professora Vera Lúcia Teixeira Muniz como substituta para ministrar as disciplinas ADE 180 e ADE 282.'
-    },
       {
         tag: 'extensao',
         title: 'Professores do DAE Ministram Curso de Administração Financeira em São Lourenço',
@@ -542,11 +512,6 @@ export const memorialData: MemorialData = {
       tag: 'extensao',
       title: 'DAE Recorre a Respaldo Jurídico para Contratar Professora Sílvia Toyoshima',
       desc: 'Em 25 de abril de 1985, durante sessão presidida pelo Professor Gilson Faria Potsch Magalhães, o departamento deliberou sobre a recomposição docente. Devido ao fim do contrato anterior da Professora Sílvia Harumi Toyoshima e vedações regimentais de recontratação na mesma área, o Colegiado analisou o parecer da Assessoria Jurídica e aprovou por unanimidade a nomeação da referida professora para uma nova área de ensino.'
-    },
-    {
-      tag: 'extensao',
-      title: 'Boas-Vindas e Nomeação de Novos Conselheiros do Colegiado',
-      desc: 'Em 21 de outubro de 1985, durante a reunião realizada na sala de reuniões do Departamento de Engenharia Florestal, sob a presidência do Professor Gilson Faria Potsch Magalhães, o Colegiado registrou em ata os votos formais de boas-vindas aos professores Mívio Vicente de Campos e Eloy Alves Filho, integrando-os oficialmente ao Colegiado do departamento.'
     },
     {
       tag: 'pesquisa',
@@ -712,11 +677,7 @@ export const memorialData: MemorialData = {
   },
   1987: {
     events: [
-      {
-      tag: 'extensao',
-      title: 'A Consolidação das Diretrizes e Bancas Examinadoras do DAE',
-      desc: '26 de março de 1987 Em reunião de caráter extraordinário do Colegiado do DAE, o Professor Eloy Alves Filho levou ao conhecimento de todos os docentes a conclusão das atividades da comissão encarregada de analisar as diretrizes regulamentares institucionais. Adicionalmente, de modo a dar vazão às demandas oficiais e recompor as coordenações pedagógicas desfalcadas, os professores apresentaram listas de nomes e aprovaram formalmente as nomeações para a estruturação das Bancas Examinadoras voltadas aos concursos docentes em andamento no âmbito das áreas de Legislação Tributária, de Direito e de Administração de Materiais e Produção.'
-    },
+    
     {
       tag: 'infraestrutura',
       title: 'Obras das Novas Instalações e o Desmembramento dos Departamentos de Administração e Economia',
@@ -725,7 +686,7 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Administração: Um dos 22 Cursos da UFV', desc: 'O curso de Administração foi um dos 22 cursos de graduação escolhidos para compor a oferta acadêmica da Universidade Federal de Viçosa (UFV), sendo disponibilizado aos estudantes no período noturno.' },
       { tag: 'gestao', title: 'Posse de José Edson Lara como Diretor Administrativo-Financeiro', desc: 'O Reitor da Universidade Federal de Viçosa (UFV), professor Geraldo Martins Chaves, deu posse a José Edson Lara como o novo Diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE).' },
       { tag: 'reconhecimento', title: 'Professora Nanci à Frente do Novo Núcleo de Treinamento do DAE', desc: 'Sob a coordenação da professora Nanci Pereira de Vasconcelos, o Departamento de Administração e Economia (DAE) da UFV implementou o Núcleo de Treinamento Profissional na área de Contabilidade. A professora destaca que o objetivo do sistema é fazer com que os estudantes simulem e acompanhem as atividades de uma empresa fictícia, garantindo que o aluno tenha "a vivência da teoria, com uma verdadeira integração interdisciplinar". Segundo a coordenadora, essa metodologia prática beneficiará imediatamente até mesmo os calouros ingressantes de 1987.' },
-      { tag: 'ensino', title: 'I Semana do Empresário', desc: 'I Semana do Empresário, um evento promovido pelo Conselho de Extensão (CEE) e pelo Departamento de Administração e Economia (DAE) da UF será realizada de quatro a sete de agosto na UFV.' },
+      { tag: 'ensino', title: 'I Semana do Empresário', desc: 'I Semana do Empresário, um evento promovido pelo Conselho de Extensão (CEE) e pelo Departamento de Administração e Economia (DAE) da UFV será realizada de quatro a sete de agosto na UFV.' },
     ],
     photos: [
       { url: '/1987 “O Diretor do CCH. professor Gilson Faria Potsch Magalhães”.jpg', caption: 'O Diretor do CCH. professor Gilson Faria Potsch Magalhães' },
@@ -749,13 +710,13 @@ export const memorialData: MemorialData = {
 
       { tag: 'gestao', title: 'UFV Propõe Criação do Curso de Ciências Contábeis para Suprir Demanda Regional', desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa encaminhou, em abril de 1988, uma proposta preliminar para a implementação do curso de graduação em Ciências Contábeis. A iniciativa, assinada pelos professores Nanci Pereira de Vasconcelos e Milton Rodrigues Natalino, visa preencher uma lacuna na área de ciências humanas da instituição.' },
 
-      { tag: 'gestao', title: 'VIII Semana do Administrador', desc: 'O Centro Acadêmico de Administração promoverá, de 16 a 19 de agosto, a VIII Semana do Administrador. O evento será realizado no auditório do Edifício Reinaldo de Jesus Araújo, com abertura às 19h.' },
-      { tag: 'gestao', title: 'II Semana do Empresário', desc: 'O Departamento de Administração e Economia (DAE) da UFV realizará, de 10 a 14 de julho, a II Semana do Empresário. O evento busca integrar empresários e executivos à universidade através de cursos sobre análise de custos, informática e planejamento para pequenas e médias empresas. Inscrições podem ser feitas por correio ou telefone, com direito a alojamento gratuito no campus.' },
-      { tag: 'reconhecimento', title: 'Homenagem ao Professor Carlos Roberto Ramos', desc: 'Durante as festividades de formatura da Turma de Janeiro de 1988 da Universidade Federal de Viçosa (UFV), os formandos de cada curso escolheram seus homenageados. No curso de Administração, o professor Carlos Roberto Ramos foi o homenageado escolhido. Na mesma ocasião, os formandos em Administração também receberam uma homenagem especial.' },
-      { tag: 'gestao', title: 'I Encontro de Administração Municipal', desc: 'Entre os dias 16 e 18 de março, a UFV promoveu o I Encontro de Administração Municipal no auditório do Edifício Reinaldo de Jesus Araújo. O objetivo foi reunir prefeitos e técnicos da Zona da Mata para analisar problemas locais e buscar soluções com suporte universitário. A iniciativa faz parte da filosofia da instituição de integrar-se ativamente ao desenvolvimento da sua região.' },
+      { tag: 'gestao', title: 'VIII Semana do Administrador', desc: 'O Centro Acadêmico de Administração promoverá, de 16 a 19 de agosto, a VIII Semana do Administrador. O evento será realizado no auditório do Edifício Reinaldo de Jesus Araújo, com abertura às 19h. n.1063' },
+      { tag: 'gestao', title: 'II Semana do Empresário', desc: 'O Departamento de Administração e Economia (DAE) da UFV realizará, de 10 a 14 de julho, a II Semana do Empresário. O evento busca integrar empresários e executivos à universidade através de cursos sobre análise de custos, informática e planejamento para pequenas e médias empresas. Inscrições podem ser feitas por correio ou telefone, com direito a alojamento gratuito no campus. n.1047' },
+      { tag: 'reconhecimento', title: 'Homenagem ao Professor Carlos Roberto Ramos', desc: 'Durante as festividades de formatura da Turma de Janeiro de 1988 da Universidade Federal de Viçosa (UFV), os formandos de cada curso escolheram seus homenageados. No curso de Administração, o professor Carlos Roberto Ramos foi o homenageado escolhido. Na mesma ocasião, os formandos em Administração também receberam uma homenagem especial. n.1033' },
+      { tag: 'gestao', title: 'I Encontro de Administração Municipal', desc: 'Entre os dias 16 e 18 de março, a UFV promoveu o I Encontro de Administração Municipal no auditório do Edifício Reinaldo de Jesus Araújo. O objetivo foi reunir prefeitos e técnicos da Zona da Mata para analisar problemas locais e buscar soluções com suporte universitário. A iniciativa faz parte da filosofia da instituição de integrar-se ativamente ao desenvolvimento da sua região. n. 1039' },
       { tag: 'ensino', title: 'Professor do DAE fala sobre dinâmica do investimento em economias capitalistas', desc: 'O professor Newton Paulo Bueno, do DAE, debateu a dinâmica do investimento em economias capitalistas em palestra na UFV. Baseado em Keynes e Kalecki, ele criticou políticas recessivas, argumentando que a expansão é o estado natural do capitalismo. Bueno alertou que a recessão causa o sucateamento econômico ao romper a natureza sequencial dos investimentos.' },
-      { tag: 'gestao', title: 'Posse do DAD 1ª Chefia e do DEE 1ª Chefia', desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia, oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração.' },
-      { tag: 'gestao', title: 'Nova Diretoria da FUNARBE', desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria ao lado dos professores Sebastião César Cardoso Brandão (presidente) e Carlos Sigueyuki Sediyama (diretor-técnico). A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação.' },
+      { tag: 'gestao', title: 'Posse do DAD 1ª Chefia e do DEE 1ª Chefia', desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia, oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração. n.1074' },
+      { tag: 'gestao', title: 'Nova Diretoria da FUNARBE', desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria ao lado dos professores Sebastião César Cardoso Brandão (presidente) e Carlos Sigueyuki Sediyama (diretor-técnico). A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação. n.1037' },
     ],
     photos: [
       { url: '/1988 “Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.”.jpg', caption: 'Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.' },
@@ -806,13 +767,13 @@ export const memorialData: MemorialData = {
       title: 'Debate sobre a transformação do curso de Cooperativismo para duração plena',
       desc: 'Em 21 de novembro de 1989, durante a sessão, o Colegiado debateu o processo de transformação do curso de Tecnólogo em Cooperativismo (de curta duração) para o curso de Cooperativismo com titulação em duração plena. O Senhor Presidente ressaltou a importância do projeto ao evidenciar que a maioria das disciplinas componentes do novo curso de duração plena serão oferecidas diretamente pelo DAD.'
     },
-      { tag: 'extensao', title: 'Professoras da UFV visitam Universidades do Canadá', desc: 'Em 1989, a Universidade Federal de Viçosa (UFV) deu um passo histórico rumo ao fortalecimento do empreendedorismo regional ao iniciar uma cooperação técnica com a Universidade de Quebec, no Canadá.O pontapé inicial ocorreu quando as professoras Maria Elena Barbassa e Nina Rosa visitaram a instituição canadense para negociar a parceria. Logo em seguida, em março do mesmo ano, professores da Universidade de Quebec retribuíram a visita, indo até o Departamento de Administração da UFV para firmar o intercâmbio.O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa em Viçosa. Para consolidar o centro e capacitar o corpo docente, o projeto previa o treinamento de professores da UFV em nível de doutorado no Canadá, além da implementação pioneira de cursos de mestrado (com previsão de início para 1991) e doutorado na universidade mineira.Além do ganho acadêmico, a iniciativa buscava implantar, de forma pioneira, "Incubatórios de Empresa" (as chamadas incubadoras), com o propósito de fomentar o empreendedorismo local e gerar novos empregos no município de Viçosa.'},
+      { tag: 'extensao', title: 'Professoras da UFV visitam Universidades do Canadá', desc: 'Em 1989, a Universidade Federal de Viçosa (UFV) deu um passo histórico rumo ao fortalecimento do empreendedorismo regional ao iniciar uma cooperação técnica com a Universidade de Quebec, no Canadá.O pontapé inicial ocorreu quando as professoras Maria Elena Barbassa e Nina Rosa visitaram a instituição canadense para negociar a parceria. Logo em seguida, em março do mesmo ano, professores da Universidade de Quebec retribuíram a visita, indo até o Departamento de Administração da UFV para firmar o intercâmbio.O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa em Viçosa. Para consolidar o centro e capacitar o corpo docente, o projeto previa o treinamento de professores da UFV em nível de doutorado no Canadá, além da implementação pioneira de cursos de mestrado (com previsão de início para 1991) e doutorado na universidade mineira.Além do ganho acadêmico, a iniciativa buscava implantar, de forma pioneira, "Incubatórios de Empresa" (as chamadas incubadoras), com o propósito de fomentar o empreendedorismo local e gerar novos empregos no município de Viçosa. n. 1107'},
 
-      { tag: 'extensao', title: 'III Semana do Empresário', desc: 'A III Semana do Empresário ocorrerá de 10 a 14 de julho na UFV, focando em empresários e profissionais do setor. O evento oferecerá cursos de curta duração sobre temas como administração em tempos de crise, informática aplicada e marketing para pequenas empresas. Paralelamente, haverá uma exposição de produtos e serviços aberta ao público no campus. A organização conta com o apoio da Associação Comercial de Viçosa e do CEAG-MG.' },
-      { tag: 'ensino', title: 'UFV e Québec: Um Marco na Administração', desc: 'Em março de 1989, professores da Universidade de Quebec visitaram o Departamento de Administração da UFV para firmar um intercâmbio histórico. O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa na universidade. O projeto envolvia treinar professores da UFV no doutorado no Canadá e fundar um curso de mestrado em Viçosa para 1991.' },
-      { tag: 'infraestrutura', title: 'Departamentos de Administração e Economia terão novas sedes', desc: 'As novas sedes dos Departamentos de Administração e Economia da UFV estão em fase adiantada, com o primeiro pavimento de uma estrutura de 3.410 m² quase concluído atrás do Edifício Reinaldo de Jesus Araújo. O projeto racionalista prevê, no térreo, 24 gabinetes duplos, áreas administrativas, laboratórios e salas de leitura e computação. Os andares superiores deverão abrigar os departamentos de Letras e Artes e de Educação.' },
-      { tag: 'gestao', title: 'Reitor empossa novos chefes de departamento da UFV', desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados estão professores de áreas como Administração, Economia, Engenharia e Veterinária.' },
-      { tag: 'reconhecimento', title: 'Falecimento do professor Roberto de Carvalho Araújo ', desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos.' },
+      { tag: 'extensao', title: 'III Semana do Empresário', desc: 'A III Semana do Empresário ocorrerá de 10 a 14 de julho na UFV, focando em empresários e profissionais do setor. O evento oferecerá cursos de curta duração sobre temas como administração em tempos de crise, informática aplicada e marketing para pequenas empresas. Paralelamente, haverá uma exposição de produtos e serviços aberta ao público no campus. A organização conta com o apoio da Associação Comercial de Viçosa e do CEAG-MG. n. 1102 n.1118' },
+      { tag: 'ensino', title: 'UFV e Québec: Um Marco na Administração', desc: 'Em março de 1989, professores da Universidade de Quebec visitaram o Departamento de Administração da UFV para firmar um intercâmbio histórico. O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa na universidade. O projeto envolvia treinar professores da UFV no doutorado no Canadá e fundar um curso de mestrado em Viçosa para 1991. n.1087 n.1094 n.1107' },
+      { tag: 'infraestrutura', title: 'Departamentos de Administração e Economia terão novas sedes', desc: 'As novas sedes dos Departamentos de Administração e Economia da UFV estão em fase adiantada, com o primeiro pavimento de uma estrutura de 3.410 m² quase concluído atrás do Edifício Reinaldo de Jesus Araújo. O projeto racionalista prevê, no térreo, 24 gabinetes duplos, áreas administrativas, laboratórios e salas de leitura e computação. Os andares superiores deverão abrigar os departamentos de Letras e Artes e de Educação. n.1121' },
+      { tag: 'gestao', title: 'Reitor empossa novos chefes de departamento da UFV', desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados estão professores de áreas como Administração, Economia, Engenharia e Veterinária. n. 1117' },
+      { tag: 'reconhecimento', title: 'Falecimento do professor Roberto de Carvalho Araújo ', desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos. n.1130' },
     ],
     photos: [
       { url: '/1989 “As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa”.jpg', caption: 'OAs professoras Nina Rosa da S. Cunhas e Maria Elena Barbassa' },
@@ -826,8 +787,8 @@ export const memorialData: MemorialData = {
   1990: {
     events: [
       
-      { tag: 'reconhecimento', title: 'UFV perde mais um professor', desc: 'O professor Gualberto Ferreira da Silva faleceu aos 51 anos, no dia 9 de janeiro, no Rio de Janeiro. Natural da capital carioca e mestre pela COPPE/UFRJ, ele atuava como professor assistente VI no Departamento de Administração da UFV desde 1979. Sua formação incluía o bacharelado em Administração pela FCEPRJ, concluído em 1977. O sepultamento ocorreu na tarde de seu falecimento, no Cemitério da Estrada da Cacuia, na Ilha do Governador.' },
-      { tag: 'extensao', title: 'IV Semana do Empresário', desc: 'A IV Semana do Empresário ocorreu de 2 a 5 de outubro de 1990 na UFV, oferecendo 16 cursos de curta duração sobre gestão, informática e marketing. O evento reuniu empresários, gerentes e profissionais para debater o setor e expor produtos em áreas cedidas pela universidade. A organização foi uma parceria entre o Conselho de Extensão, o Departamento de Administração e o Naipe, com apoio de entidades como a ACV e o Ceag-MG.' },
+      { tag: 'reconhecimento', title: 'UFV perde mais um professor', desc: 'O professor Gualberto Ferreira da Silva faleceu aos 51 anos, no dia 9 de janeiro, no Rio de Janeiro. Natural da capital carioca e mestre pela COPPE/UFRJ, ele atuava como professor assistente VI no Departamento de Administração da UFV desde 1979. Sua formação incluía o bacharelado em Administração pela FCEPRJ, concluído em 1977. O sepultamento ocorreu na tarde de seu falecimento, no Cemitério da Estrada da Cacuia, na Ilha do Governador. n.1131' },
+      { tag: 'extensao', title: 'IV Semana do Empresário', desc: 'A IV Semana do Empresário ocorreu de 2 a 5 de outubro de 1990 na UFV, oferecendo 16 cursos de curta duração sobre gestão, informática e marketing. O evento reuniu empresários, gerentes e profissionais para debater o setor e expor produtos em áreas cedidas pela universidade. A organização foi uma parceria entre o Conselho de Extensão, o Departamento de Administração e o Naipe, com apoio de entidades como a ACV e o Ceag-MG. n.1158' },
       {
       tag: 'extensao',
       title: 'Homenagens póstumas e boas-vindas a novo docente no DAD',
@@ -863,17 +824,17 @@ export const memorialData: MemorialData = {
       title: 'Conclusão do laboratório de microcomputadores do DAD e aquisição de novas máquinas',
       desc: 'Em 7 de dezembro de 1990, no que tange ao aprimoramento do espaço físico e suporte às atividades acadêmicas do departamento, foi registrada em ata a conclusão da obra física do laboratório de microcomputadores do DAD. Paralelamente à finalização desse espaço, foi anunciada a compra de trinta e cinco novas máquinas destinadas ao Núcleo de Treinamento Profissional.'
     },
-      { tag: 'extensao', title: 'Professor Canadense visita a UFV', desc: 'O professor canadense André Courtemanche, da Universidade de Quebec, visitou a UFV entre 14 de abril e 4 de maio de 1990 para discutir um programa de cooperação técnica. O projeto prevê o treinamento de doutorado para professores do Departamento de Administração e a criação de um mestrado focado em pequenas e médias empresas. A parceria visa transformar o Naipe em um centro de excelência e incentivar a criação de novas empresas na região. Além dele, a pesquisadora canadense Verna J. Higgins também visitou a instituição para seminários sobre fitopatologia e biotecnologia.' },
-      { tag: 'extensao', title: 'Departamento de Administração', desc: 'O Departamento de Administração da UFV promoveu a IV Semana do Empresário, oferecendo 16 cursos de capacitação e áreas para exposição de produtos. O setor também avançou em entendimentos para um intercâmbio com a Universidade de Quebec, visando o treinamento de doutorado de seus professores e a criação de um mestrado em pequenas empresas. Administrativamente, o departamento foi marcado pela posse do chefe Roberto de Carvalho Araújo em 1989 e pelo seu posterior falecimento em dezembro do mesmo ano.' },
+      { tag: 'extensao', title: 'Professor Canadense visita a UFV', desc: 'O professor canadense André Courtemanche, da Universidade de Quebec, visitou a UFV entre 14 de abril e 4 de maio de 1990 para discutir um programa de cooperação técnica. O projeto prevê o treinamento de doutorado para professores do Departamento de Administração e a criação de um mestrado focado em pequenas e médias empresas. A parceria visa transformar o Naipe em um centro de excelência e incentivar a criação de novas empresas na região. Além dele, a pesquisadora canadense Verna J. Higgins também visitou a instituição para seminários sobre fitopatologia e biotecnologia. n. 1147' },
+      { tag: 'extensao', title: 'Departamento de Administração', desc: 'O Departamento de Administração da UFV promoveu a IV Semana do Empresário, oferecendo 16 cursos de capacitação e áreas para exposição de produtos. O setor também avançou em entendimentos para um intercâmbio com a Universidade de Quebec, visando o treinamento de doutorado de seus professores e a criação de um mestrado em pequenas empresas. Administrativamente, o departamento foi marcado pela posse do chefe Roberto de Carvalho Araújo em 1989 e pelo seu posterior falecimento em dezembro do mesmo ano. n.1163' },
     ],
     photos: [{ url: '/1990 “André Courtemanche”.jpg', caption: 'André Courtemanche.' }],
     articleUrl: 'https://atom.ufv.br/index.php/1990-ufv-informa'
   },
   1991: {
     events: [
-      { tag: 'extensao', title: 'V Semana do Empresário', desc: 'A Universidade Federal de Viçosa (UFV) realizará, de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes.' },
-      { tag: 'extensao', title: 'XVII Encontro Nacional dos Estudantes de Administração', desc: 'Cerca de dois mil estudantes de diversas regiões do país são esperados em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. O evento é organizado pelo Centro Acadêmico da UFV, pela Executiva Nacional da categoria e pelo Departamento de Administração da instituição.' },
-      { tag: 'ensino', title: 'TV Viçosa inicia suas transmissões', desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), estão praticamente concluídos e a estreia deve ocorrer nos próximos dias. A emissora terá programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho aproveitará funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso.' },
+      { tag: 'extensao', title: 'V Semana do Empresário', desc: 'A Universidade Federal de Viçosa (UFV) realizará, de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes. n.1191' },
+      { tag: 'extensao', title: 'XVII Encontro Nacional dos Estudantes de Administração', desc: 'Cerca de dois mil estudantes de diversas regiões do país são esperados em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. O evento é organizado pelo Centro Acadêmico da UFV, pela Executiva Nacional da categoria e pelo Departamento de Administração da instituição. n.1178' },
+      { tag: 'ensino', title: 'TV Viçosa inicia suas transmissões', desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), estão praticamente concluídos e a estreia deve ocorrer nos próximos dias. A emissora terá programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho aproveitará funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. n.1199' },
     ],
     photos: [{ url: '/1991 “Formandos de Janeiro de 1991. ”.jpg', caption: 'Formandos de Janeiro de 1991.' }],
     articleUrl: 'https://atom.ufv.br/index.php/1991-ufv-informa'
