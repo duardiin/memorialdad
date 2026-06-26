@@ -739,40 +739,26 @@ export const memorialData: MemorialData = {
     },
     {
       tag: 'ensino',
-      title: 'Previsão de inclusão de novas disciplinas de Informática no Catálogo',
-      desc: 'Em 27 de fevereiro de 1989, durante sessão do Colegiado, o professor Gualberto confirmou o seu interesse em promover a criação das novas disciplinas de Informática aplicadas à Administração. Contudo, ele ponderou que, em virtude dos prazos necessários para a tramitação regular do processo no âmbito do departamento, a inclusão efetiva dessas novas matérias só se tornaria viável para constar no Catálogo de noventa/noventa e dois.'
-    },
-    {
-      tag: 'ensino',
-      title: 'Homologação e criação de novas disciplinas optativas pelo CTG e CEPE',
-      desc: 'Em 4 de abril de 1989, o Senhor Presidente transmitiu ao Colegiado as recentes deliberações homologadas pelo Conselho Técnico de Graduação e pela CEPE. Entre as medidas oficiais, destacou-se a criação da disciplina Pesquisa em Administração, além da aprovação e inclusão de três novas disciplinas — Comercialização Agrícola, Análise de Preços Agrícolas e Desenvolvimento de Comunidades — no elenco de matérias optativas ofertadas pelo curso de Administração.'
-    },
-    {
-      tag: 'ensino',
       title: 'Propostas de criação das disciplinas de Informática Aplicada e Novos Empreendimentos',
       desc: 'Em 14 de abril de 1989, nesta reunião, o Senhor Presidente evidenciou ao Colegiado a necessidade interna de se viabilizar a criação de novas disciplinas específicas para a grade do curso de Administração, citando formalmente os títulos de Informática Aplicada e Novos Empreendimentos. Em consonância com a demanda, a professora Rina Rosa realizou a apresentação de um programa analítico voltado para a Criação de Empresas, que havia sido elaborado por ela.'
-    },
-    {
-      tag: 'ensino',
-      title: 'Discussão sobre a reformulação e transformação dos cursos de Cooperativismo',
-      desc: 'Em 22 de agosto de 1989, durante as discussões voltadas ao panorama de novos cursos e reestruturações acadêmicas, o professor José Clévio expôs ao Colegiado o andamento dos processos de transformação do curso de Tecnólogo em Cooperativismo para Administração de Cooperativas Agrícolas ou Administração com habilitação em cooperativismo, além do curso de Cooperativista. Foi ressaltado na oportunidade que tais cursos reformulados passarão a aproveitar um elenco altamente representativo de disciplinas pertencentes ao curso de Administração já existente.'
     },
     {
       tag: 'infraestrutura',
       title: 'Aprovação da ocupação do DAD no novo prédio e curso de extensão concluído',
       desc: 'Em 19 de outubro de 1989, em relação ao espaço físico departamental, o Senhor Presidente apresentou ao Colegiado a planta do prédio do DAD, informando que a comissão da obra se reuniu com o arquiteto Paulo, da prefeitura universitária, que solicitou dados sobre as divisões internas conforme as necessidades. Após debates, o Colegiado aprovou por maioria que o DAD ficasse instalado nas dependências do terceiro andar e na parte térrea (garagem) da nova edificação. Também nesta data, a professora Rina Rosa informou a conclusão do segundo curso de extensão em Informática Aplicada à Administração.'
     },
-    {
-      tag: 'ensino',
-      title: 'Debate sobre a transformação do curso de Cooperativismo para duração plena',
-      desc: 'Em 21 de novembro de 1989, durante a sessão, o Colegiado debateu o processo de transformação do curso de Tecnólogo em Cooperativismo (de curta duração) para o curso de Cooperativismo com titulação em duração plena. O Senhor Presidente ressaltou a importância do projeto ao evidenciar que a maioria das disciplinas componentes do novo curso de duração plena serão oferecidas diretamente pelo DAD.'
-    },
       { tag: 'extensao', title: 'Professoras da UFV visitam Universidades do Canadá', desc: 'Em 1989, a Universidade Federal de Viçosa (UFV) deu um passo histórico rumo ao fortalecimento do empreendedorismo regional ao iniciar uma cooperação técnica com a Universidade de Quebec, no Canadá.O pontapé inicial ocorreu quando as professoras Maria Elena Barbassa e Nina Rosa visitaram a instituição canadense para negociar a parceria. Logo em seguida, em março do mesmo ano, professores da Universidade de Quebec retribuíram a visita, indo até o Departamento de Administração da UFV para firmar o intercâmbio.O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa em Viçosa. Para consolidar o centro e capacitar o corpo docente, o projeto previa o treinamento de professores da UFV em nível de doutorado no Canadá, além da implementação pioneira de cursos de mestrado (com previsão de início para 1991) e doutorado na universidade mineira.Além do ganho acadêmico, a iniciativa buscava implantar, de forma pioneira, "Incubatórios de Empresa" (as chamadas incubadoras), com o propósito de fomentar o empreendedorismo local e gerar novos empregos no município de Viçosa. n. 1107'},
 
       { tag: 'extensao', title: 'III Semana do Empresário', desc: 'A III Semana do Empresário ocorrerá de 10 a 14 de julho na UFV, focando em empresários e profissionais do setor. O evento oferecerá cursos de curta duração sobre temas como administração em tempos de crise, informática aplicada e marketing para pequenas empresas. Paralelamente, haverá uma exposição de produtos e serviços aberta ao público no campus. A organização conta com o apoio da Associação Comercial de Viçosa e do CEAG-MG. n. 1102 n.1118' },
+
       { tag: 'ensino', title: 'UFV e Québec: Um Marco na Administração', desc: 'Em março de 1989, professores da Universidade de Quebec visitaram o Departamento de Administração da UFV para firmar um intercâmbio histórico. O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa na universidade. O projeto envolvia treinar professores da UFV no doutorado no Canadá e fundar um curso de mestrado em Viçosa para 1991. n.1087 n.1094 n.1107' },
+
       { tag: 'infraestrutura', title: 'Departamentos de Administração e Economia terão novas sedes', desc: 'As novas sedes dos Departamentos de Administração e Economia da UFV estão em fase adiantada, com o primeiro pavimento de uma estrutura de 3.410 m² quase concluído atrás do Edifício Reinaldo de Jesus Araújo. O projeto racionalista prevê, no térreo, 24 gabinetes duplos, áreas administrativas, laboratórios e salas de leitura e computação. Os andares superiores deverão abrigar os departamentos de Letras e Artes e de Educação. n.1121' },
-      { tag: 'gestao', title: 'Reitor empossa novos chefes de departamento da UFV', desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados estão professores de áreas como Administração, Economia, Engenharia e Veterinária. n. 1117' },
+
+      { tag: 'gestao', title: 'Reitor empossa novos chefes de departamento da UFV', desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados está o professor Roberto de Carvalho Araújo da Administração. n. 1117' },
+
+       { tag: 'extensao', title: 'Imprensa Universitária da UFV Lança Três Obras', desc: 'A Imprensa Universitária da Universidade Federal de Viçosa (UFV) publicou recentemente três novas obras. A primeira delas é "Tabelas Financeiras – Juros Compostos", de autoria do professor Gualberto Ferreira da Silva (Departamento de Administração), que traz tabelas financeiras calculadas em microcomputador ao longo de 254 páginas. A segunda obra é "Memória da Reunião do Programa de Pesquisa de Soja do Estado de Minas Gerais – 1986", escrita por pesquisadores da UFV e da Epamig (Neyson Eustáquio Arantes, Isamar Ferreira de Paiva, Antônio Machado Headley e José Pedroso Neto). Por fim, foram lançados os "Anais do IX Encontro de Mirmecologia", volume de 412 páginas que reúne trabalhos apresentados por pesquisadores brasileiros e estrangeiros durante o evento científico ocorrido na UFV em julho de 1988. n. 1127' },
+
       { tag: 'reconhecimento', title: 'Falecimento do professor Roberto de Carvalho Araújo ', desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos. n.1130' },
     ],
     photos: [
@@ -789,10 +775,11 @@ export const memorialData: MemorialData = {
       
       { tag: 'reconhecimento', title: 'UFV perde mais um professor', desc: 'O professor Gualberto Ferreira da Silva faleceu aos 51 anos, no dia 9 de janeiro, no Rio de Janeiro. Natural da capital carioca e mestre pela COPPE/UFRJ, ele atuava como professor assistente VI no Departamento de Administração da UFV desde 1979. Sua formação incluía o bacharelado em Administração pela FCEPRJ, concluído em 1977. O sepultamento ocorreu na tarde de seu falecimento, no Cemitério da Estrada da Cacuia, na Ilha do Governador. n.1131' },
       { tag: 'extensao', title: 'IV Semana do Empresário', desc: 'A IV Semana do Empresário ocorreu de 2 a 5 de outubro de 1990 na UFV, oferecendo 16 cursos de curta duração sobre gestão, informática e marketing. O evento reuniu empresários, gerentes e profissionais para debater o setor e expor produtos em áreas cedidas pela universidade. A organização foi uma parceria entre o Conselho de Extensão, o Departamento de Administração e o Naipe, com apoio de entidades como a ACV e o Ceag-MG. n.1158' },
+
       {
       tag: 'extensao',
-      title: 'Homenagens póstumas e boas-vindas a novo docente no DAD',
-      desc: 'Em 24 de janeiro de 1990, na abertura desta sessão do Colegiado, o professor Adriel solicitou que fosse prestada uma homenagem póstuma aos professores e colegas Roberto de Carvalho Araujo e Gualberto Ferreira da Silva. A homenagem foi prestada por meio de um minuto de silêncio, deixando formalmente registrado em ata um voto de profundo pesar pelo falecimento de ambos. Adicionalmente, a professora Maria Elena solicitou e registrou em ata um voto de boas-vindas ao professor Antônio de Figueiredo Vieira.'
+      title: 'Boas-vindas a novo docente no DAD',
+      desc: 'A professora Maria Elena solicitou e registrou em ata um voto de boas-vindas ao professor Antônio de Figueiredo Vieira.'
     },
     {
       tag: 'pesquisa',
@@ -813,11 +800,6 @@ export const memorialData: MemorialData = {
       tag: 'ensino',
       title: 'Criação da comissão do curso de Direito e definição de prioridades institucionais',
       desc: 'Em 12 de outubro de 1990, o professor José Maria expôs os detalhes de uma reunião na SEGEPLAN, na qual foi transmitido o desejo do magnífico Reitor de que o novo curso de Direito fosse implantado na UFV com início já no segundo semestre de 1991. Para atender a essa meta, o Colegiado aprovou a criação de uma comissão de estudos dedicada ao curso e o envio de um ofício para avaliar a transferência do professor Guy Capdeville para o DAD. Em contrapartida, ao avaliar o parecer sobre a transformação do curso de Cooperativismo em Bacharelado, o Colegiado aprovou uma moção declarando que o DAD não dispunha de condições momentâneas para colaborar, visto que possuía outras prioridades institucionais imediatas (Direito, Ciências Contábeis, aumento de vagas e pós-graduação).'
-    },
-    {
-      tag: 'extensao',
-      title: 'Explanação sobre Mestrado em Agribusiness e criação do curso de extensão em Direito Agrário',
-      desc: 'Em 13 de novembro de 1990, o professor Carlos Arthur (TAL) realizou uma detalhada explanação sobre o projeto interdisciplinar de mestrado em "Agribusiness" no Brasil, informando que o DAD daria suporte à área gerencial do programa. Na mesma sessão, o Colegiado aprovou de maneira unânime a proposta da professora Valéria para a criação e oferecimento, já no primeiro semestre de 1991, de um curso de extensão em Direito Agrário (60 horas-aula). Por fim, o Colegiado registrou oficialmente um voto coletivo de pesar direcionado à professora Vânia devido ao falecimento de seu irmão.'
     },
     {
       tag: 'infraestrutura',
@@ -956,6 +938,11 @@ export const memorialData: MemorialData = {
       tag: 'infraestrutura',
       title: 'Tratativas para o novo prédio do Departamento de Administração',
       desc: '16 de dezembro de 1988 a ata número onze detalha a reunião do Colegiado do Departamento de Administração, realizada às dez horas na sala de reuniões do Departamento de Engenharia Florestal. No encerramento da sessão, o Senhor Presidente compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Magnífico Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras. Adicionalmente, no âmbito do desenvolvimento de novos cursos e atendendo a uma solicitação formal do Centro Acadêmico de Administração, debateu-se o planejamento e o oferecimento futuro do Curso de Informática Aplicada à Administração. '
+    },
+      {
+      tag: 'extensao',
+      title: 'O PET no Curso de Administração da UFV',
+      desc: 'O Departamento de Administração da Universidade Federal de Viçosa (UFV) teve sua proposta aprovada pela CAPES para implantar o Programa Especial de Treinamento (PET). Sob a orientação e tutoria do professor Adriel Rodrigues de Oliveira, o programa selecionou seus quatro primeiros estudantes da turma de 1988 (Carla Carvalho Malaquias, Edson Mauro Santos, Geraldo Magela de Abreu e Geraldo Vieira Júnior) por meio de critérios como coeficiente de rendimento, redação e entrevista.'
     },
       { tag: 'ensino', title: 'Doutorado na Escócia', desc: 'O professor João Adamor Dias Neves, do Departamento de Administração do Centro de Ciências Humanas, Letras e Artes, regressou à UFV após concluir o seu doutorado na Universidade de Stirling, na Escócia. O seu programa foi focado na área de Administração de Pequenas e Médias Empresas, sob a orientação do professor Stewart Butts.' },
       { tag: 'infraestrutura', title: 'Reestruturação Acadêmica', desc: 'Os novos departamentos foram criados para substituir o antigo Departamento de Administração e Economia do Centro de Ciências Humanas, Letras e Artes.' },
