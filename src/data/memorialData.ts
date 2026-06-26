@@ -860,19 +860,27 @@ export const memorialData: MemorialData = {
   },
   1993: {
     events: [
-      { tag: 'ensino', title: 'Formandos', desc: 'Nas formaturas de agosto de 1993, os formandos prestaram juramento profissional e receberam certificados e álbuns de biografias. O evento contou com discursos do orador da turma, do paraninfo e do reitor, que destacaram a importância da atuação profissional. Além da colação de grau, a cerimônia incluiu a entrega de placas a homenageados especiais.' },
-      { tag: 'infraestrutura', title: 'IV Congresso Mineiro de Recursos Humanos', desc: ' O professor Luciano Zille Pereira, do Departamento de Administração da UFV, e os acadêmicos Rodrigo Gava e Rogério Rezende de Castro participaram do IV Congresso Mineiro de Recursos Humanos, em Belo Horizonte. O evento destacou a relevância do ser humano no processo de Qualidade Total e a necessidade de criar condições para o desenvolvimento individual. ' },
+      { tag: 'nomeacao', title: 'Contratação de Docente e Voto de Louvor', desc: 'Aprovação unânime da nomeação do técnico Afonso Augusto Teixeira de Freitas de Carvalho Lima para o cargo de professor. Na mesma data, foi aprovado um voto de louvor e homenagem à professora Graça pela sugestão de ampliar a participação do departamento na diretoria do Centro e em posições administrativas.' },
+      { tag: 'homenagem', title: 'Voto de Louvor ao Conselheiro Evaldo Guimarães Barbosa', desc: 'Aprovação de voto de louvor, elogio e agradecimento especial ao conselheiro Evaldo Guimarães Barbosa, prestando uma homenagem formal pela sua dedicação e trabalho na melhoria do programa do PET.' },
       { tag: 'ensino', title: 'DAD promove palestra', desc: 'O DAD promoveu palestra sobre "Técnicas Gerenciais Japonesas" no auditório do Departamento de Engenharia Florestal no dia 10 de novembro.' },
+      { tag: 'extensao', title: 'UFES Busca Integração com a UFV', desc: 'Com o objetivo de conhecer a sólida experiência da Universidade Federal de Viçosa (UFV) na realização de eventos corporativos e de extensão, representantes da Universidade Federal do Espírito Santo (UFES) realizaram uma visita oficial ao campus de Viçosa. A comitiva capixaba foi composta pelo assessor da Pró-Reitoria de Extensão, Nelton Martins Yin, e pelo diretor do Departamento de Integração com o Setor Produtivo, Anselmo Frizera Júnior, acompanhados pelo consultor Paulo Raul Guimarães Souza, do Sebrae-ES. Motivada pela intenção de realizar a sua própria I Semana do Empresário ainda naquele ano, a equipe da UFES reuniu-se com docentes e técnicos da Comissão de Extensão do Departamento de Administração da UFV e formalizou um convite para que a equipe mineira ministre palestras durante o evento no Espírito Santo. Tiveram participação os professores e técnicos Cássia Viviani Silva Santiago, José Roberto Reis, Afonso Augusto Teixeira de Freitas de Carvalho Lima e Beatriz de Freitas Dias' },
+      { tag: 'extensao', title: 'Técnicas Gerenciais Japonesas no Armarinho Santo Antônio', desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento, promovido pelo Departamento de Administração (DAD) por meio do Programa Especial de Treinamento (PET) e coordenado pelo professor José Edson Lara, destacou o caso de sucesso da empresa mineira. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito.' },
     ],
     photos: [{ url: '/1993 “Formandos de agosto de 1993”.jpg', caption: 'Formandos de agosto de 1993.' }],
     articleUrl: 'https://atom.ufv.br/index.php/1993-jornal-da-ufv'
   },
   1994: {
     events: [
+
+      { tag: 'fundacao', title: 'Aprovação da Empresa Júnior na CEPE', desc: 'Ocorreu a aprovação da criação da Empresa Júnior de Consultoria em reunião realizada pela Coordenação de Ensino, Pesquisa e Extensão (CEPE) da UFV. O Presidente comunicou oficialmente ao colegiado a aprovação da criação da Empresa Júnior de Consultoria, chancelada no mês anterior pela CEPE.' },
+
+      { tag: 'ensino', title: 'Ratificação da Criação do Curso de Direito', desc: 'Aprovação por unanimidade do ato "ad referendum" do Chefe do DAD relativo à criação do Curso de Direito e homologação do respectivo Plano de Curso, ratificando a decisão da Ata nº 53/91.' },
+
       { tag: 'ensino', title: 'Primeira revista do PET', desc: 'O Departamento de Administração da UFV lançou a primeira edição da Revista do PET Administração, sob a coordenação do professor José Edson Lara. A publicação visa divulgar as atividades de ensino, pesquisa e extensão desenvolvidas pelo grupo, além de oferecer um espaço para produções científicas de estudantes e professores.' },
-      { tag: 'fundacao', title: 'Criação do Centro Acadêmico de Consultoria – CACE', desc: 'Estudantes de Administração e Economia da UFV constituíram o Centro Acadêmico de Consultoria Empresarial (CACE), uma empresa júnior que visa aproximar a teoria acadêmica da prática profissional. A entidade presta serviços de consultoria e assessoria a micro, pequenas e médias empresas, além de produtores rurais da região. O projeto foca no desenvolvimento técnico dos alunos e na contribuição para o fortalecimento do setor empresarial local.' },
-      { tag: 'reconhecimento', title: 'Formando Homenageado', desc: 'O formando Edmilson de Oliveira Lima, do curso de Administração, foi homenageado pelo Conselho Regional de Administração (CRA) por seu destacado coeficiente de rendimentos acadêmico, expresso em uma placa de prata; que recebeu durante a cerimônia de colação de grau, realizada hoje, no Ginásio de Esportes da UFV.' },
-      { tag: 'ensino', title: 'Professores e estudantes de Administração realizam visita de estudos ao Sul de Minas', desc: 'Um grupo de professores e estudantes do curso de Administração da UFV visitou Santa Rita do Sapucaí para conhecer a estrutura do Inatel e seu processo de incubação de empresas. Durante a visita ao "Vale da Eletrônica", o grupo conheceu empresas como a Inaco Telecomunicações e discutiu a realidade da Empresa Júnior CACE. A equipe da UFV também foi convidada a auxiliar o Inatel na implantação de um programa com as atribuições do PET.' },
+
+      { tag: 'fundacao', title: 'Criação do Centro Acadêmico de Consultoria – CACE', desc: 'Estudantes de Administração e Economia da UFV constituíram o Centro Acadêmico de Consultoria Empresarial (CACE), uma empresa júnior que visa aproximar a teoria acadêmica da prática profissional. A entidade presta serviços de consultoria e assessoria a micro, pequenas e médias empresas, além de produtores rurais da região.' },
+
+      { tag: 'extensao', title: 'Professores e estudantes de Administração realizam visita de estudos ao Sul de Minas', desc: 'Um grupo de professores e estudantes do curso de Administração da UFV visitou Santa Rita do Sapucaí para conhecer a estrutura do Inatel e seu processo de incubação de empresas. Durante a visita ao "Vale da Eletrônica", o grupo conheceu empresas como a Inaco Telecomunicações e discutiu a realidade da Empresa Júnior CACE. A equipe da UFV também foi convidada a auxiliar o Inatel na implantação de um programa com as atribuições do PET.' },
     ],
     photos: [
       { url: '/1994 “O professor José Edson Lara fala durante o lançamento da revista”.jpg', caption: 'O professor José Edson Lara fala durante o lançamento da revista.' },
@@ -882,8 +890,11 @@ export const memorialData: MemorialData = {
   },
   1995: {
     events: [
+      { tag: 'extensao', title: 'Programação de Eventos do DAD e Parceria com o CRA', desc: 'Aprovação unânime da programação de eventos do DAD para o ano de 1995 e recebimento de ofício do Conselho Regional de Administração (CRA) propondo participação nos eventos regionais.' },
+      { tag: 'ensino', title: 'Seminário com a Professora Suzana Braga Rodrigues', desc: 'Anúncio da visita da professora Suzana Braga Rodrigues para a apresentação do seminário "Gerência e Cultura nas Organizações".' },
+      { tag: 'comemoracao', title: 'Lançamento da Revista do PET e 30 Anos de Administração', desc: 'Comunicado oficial do recebimento de felicitações pelo lançamento da Revista do PET/Administração e apresentação do programa de comemoração de "Administração 30 Anos na UFV".' },
+      { tag: 'ensino', title: 'Proposta de Especialização em nível de Pós-Graduação', desc: 'A Comissão de Pós-Graduação expôs a proposta para a criação de um novo curso de Pós-Graduação em nível de Especialização com carga mínima de 420 horas, sendo incorporado ao plano geral da Comissão de Planejamento.' },
       { tag: 'ensino', title: 'Curso de Chefia e Liderança', desc: 'O Curso de Chefia e Liderança, coordenado pelos professores José Edson Lara e Arnete Folgaça, recebeu uma avaliação positiva dos participantes. A iniciativa focou no desenvolvimento de habilidades gerenciais e na melhoria das relações interpessoais no ambiente de trabalho. O sucesso do evento reforçou a importância da capacitação contínua para o fortalecimento das lideranças na instituição.' },
-      { tag: 'ensino', title: 'Graduandos e Pós-Graduandos de Julho de 1995', desc: 'Em julho de 1995, a UFV realizou a sessão solene de colação de grau para novos profissionais, com discurso da paraninfa Valéria Oliveira Braga Duarte Ferreira destacando o destaque das gerações graduadas. Paralelamente, foram registrados diversos projetos de pesquisa no Departamento de Solos, abordando temas como modelagem de erosão, desenvolvimento sustentado na Amazônia, no Cerrado e em áreas de Mata de Minas.' },
     ],
     photos: [
       { url: '/1995 “Colação de grau dos novos profissionais”.jpg', caption: 'Colação de grau dos novos profissionais.' },
@@ -894,11 +905,11 @@ export const memorialData: MemorialData = {
   },
   1996: {
     events: [
-      { tag: 'gestao', title: 'Pró-Reitoria de Assuntos Comunitários - Prof. Walmer Faroni', desc: 'Administração e doutor em Administração de Empresas e Pública pela Universidade de Valência (Espanha). Atuou como secretário de Administração e Finanças da Prefeitura de Viçosa e coordenador do curso de Administração da UFV. Sua pró-reitoria gerencia áreas como assistência estudantil, alimentação, saúde, esportes e vivência.' },
-      { tag: 'gestao', title: 'Coordenadoria do Sistema Rádio e Televisão - Prof. Sérgio Augusto Pereira Monteiro', desc: 'Bacharel em Administração pela UFV, com especialização em Sensoriamento Remoto. Atuou em consultorias de organização e métodos no SEBRAE-MG e em prefeituras do Mato Grosso. É professor adjunto da UFV desde 1990 e coordenador técnico de rádio e TV' },
-      { tag: 'gestao', title: 'Diretoria de Recursos Humanos - Profa. Nina Rosa da Silveira Cunha', desc: 'Bacharel em Economia Doméstica com especialização em Organização e Recursos Humanos pela UFMG. É professora adjunta e integrante do corpo editorial da revista da Associação Brasileira de Pesquisadores em Administração. Possui experiência docente em Negociação e Administração na UNA, em Belo Horizonte.' },
-      { tag: 'ensino', title: 'Correção – Profa. Nina Rosa da Silveira Cunha', desc: 'Correção de Cargo/Formação: Diferente do publicado na edição anterior (nº 1.309), a Profa. Nina Rosa da Silveira Cunha é Administradora, e não economista doméstica. Titulação: Ela possui o título de Mestre em Administração pela UFMG, com área de concentração em Organização e Recursos Humanos. Atuação Acadêmica: Além de ser professora do Departamento de Administração da UFV, ela é membro do corpo editorial da revista da Associação Nacional de Pós-Graduação em Administração (ANPAD) e da Business Association of Latin American Studies (BALAS).' },
-      { tag: 'ensino', title: 'Formandos de Setembro de 1996', desc: 'A turma de formandos de setembro de 1996 da UFV, autodenominada "Trem de Doido", colou grau em sessão solene no Edifício Arthur da Silva Bernardes com a diplomação de 303 profissionais, além de mestres e doutores. Durante as festividades, os graduandos prestaram homenagens a diversos professores e funcionários que contribuíram para sua trajetória acadêmica. Entre os destaques, foram entregues placas ao paraninfo Paulo de Tarso Alvim e ao homenageado geral Vicente Sant\'Ana da Fonseca.' },
+      { tag: 'nomeacao', title: 'Nomeação de Ricardo Correa Gomes', desc: 'Comunicação da nomeação de Ricardo Correa Gomes no Diário Oficial da União na área Contábil-Financeira.' },
+       { tag: 'extensao', title: 'Homenagem ao CACE', desc: ' Registro de homenagem prestada pela Associação Comercial de Viçosa ao CACE.' },
+      { tag: 'homenagem', title: 'Docentes homenageados pela ASPUV', desc: 'O Colegiado decidiu estender a homenagem da ASPUV a todos os professores da ativa e também, em memória, aos professores Roberto e Gualberto.' },
+      { tag: 'nomeacao', title: 'Homologação de Concurso Público para Docentes', desc: 'Oficialização da homologação dos resultados para preenchimento de vagas docentes: Lourival de Castro Vale (Contábil-Financeira), Luciana de Oliveira Miranda Gomes e Jorge Alberto dos Santos (Administração Geral e RH).' },
+      { tag: 'gestao', title: 'Nomeações de professores do DAD para administração superior X', desc: 'Pró-Reitoria de Assuntos Comunitários - Prof. Walmer Faroni, Coordenadoria do Sistema Rádio e Televisão - Prof. Sérgio Augusto Pereira Monteiro, Diretoria de Recursos Humanos - Profa. Nina Rosa da Silveira Cunha. ' },
     ],
     photos: [
       { url: '/1996 “Formandos de 1996”.jpg', caption: 'Formandos de 1996.' },
@@ -910,11 +921,21 @@ export const memorialData: MemorialData = {
   },
   1997: {
     events: [
-      { tag: 'fundacao', title: 'Lançamento de Novo Produto', desc: 'A FUNARBE lançou no mercado o Iogurte Viçosa, o primeiro iogurte em saquinho (embalagem plástica de 200 ml) do Brasil. Inicialmente disponível no sabor morango, o produto visa atender especialmente ao setor de merenda escolar. José Edson Lara, como Diretor de Marketing, destacou que o iogurte passa a integrar a linha de produtos da fundação, que já inclui itens como doce de leite, néctar de mamão e pasta de alho.' },
-      { tag: 'ensino', title: 'I Semana do Empresário e Atuação do DAE/CEE', desc: 'O Departamento de Administração e Economia (DAE) e o Conselho de Extensão (CEE) da UFV promovem, entre 12 e 18 de julho, a I Semana do Empresário. O evento tem como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais.' },
-      { tag: 'gestao', title: 'Cursos do NAIPE', desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. Devido à grande demanda e ao sucesso das edições de 1986 — que incluíram temas como "Administração de Pessoal" e "Sistemas de Informações Contábeis" — a coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos em 1987 para atender empresários de Viçosa e região.' },
-      { tag: 'infraestrutura', title: 'Visita Técnica à Imprensa Universitária', desc: 'Na qualidade de Diretor de Marketing da FUNARBE, José Edson Lara acompanhou os programadores visuais Alceu Muniz e Pedro de Castro (da empresa Studio Design Ltda., de Belo Horizonte) em uma visita às dependências da Imprensa Universitária da UFV. A Studio Design é a responsável pela criação dos rótulos dos produtos da FUNARBE, e o objetivo da visita foi conhecer o parque gráfico e os laboratórios da universidade.' },
+      { tag: 'nomeacao', title: 'Contratação de Docente, Novo Tutor do PET e Biblioteca Setorial', desc: 'Aprovação da contratação de Jorge Alberto dos Santos e extinção de certame correlato. Aprovação do prof. Adriel Rodrigues de Oliveira como tutor do PET com voto de reconhecimento ao prof. José Edson Lara. Debate sobre coordenação para a Biblioteca Setorial.' },
+      { tag: 'nomeacao', title: 'Homologação do Professor Luiz Cláudio Lopes Alves X', desc: 'Aprovação unânime do resultado do concurso na área de Administração da Produção/Material/Novas Empresas, elegendo Luiz Cláudio Lopes Alves para o cargo de Professor Assistente I.' },
+      { tag: 'ensino', title: 'Aprovação da Especialização em Administração Municipal', desc: 'Aprovação unânime da implantação do curso de especialização Lato-Sensu em Administração Municipal, com carga horária de 400 horas-aulas com disciplinas aos sábados.' },
+      { tag: 'extensao', title: 'Planejamento de Atividades de Extensão do 2º Semestre X', desc: 'Deliberação sobre o cronograma que integrará o Dia do Administrador, Encontro Mineiro de Administração Municipal, Simpósio Sobre Qualidade Total, Semana de Trainees e curso de Gestão da Inovação.' },
+
+      { tag: 'nomeacao', title: 'Nomeação de Eliezer Egídio e Organização das Salas de Informática', desc: 'Comunicação da nomeação de Eliezer Egídio e Silva (Mercadologia/Estratégia). Definição do uso dos computadores da coordenação (estrito de docentes) e da sala 13 (compartilhado entre professores e bolsistas). Boas-vindas oficiais prestadas pelo prof. Adriel Rodrigues de Oliveira e demais conselheiros ao recém-nomeado professor Eliezer.' },
+
+      { tag: 'extensao', title: 'Nomeação do professor Adriel como diretor do CCH', desc: 'Nomeação do prof. Adriel como diretor do CCH.' },
+
+      { tag: 'ensino', title: 'I Semana do Empresário e Atuação do DAD/CEE', desc: 'O Departamento de Administração e Economia (DAD) e o Conselho de Extensão (CEE) da UFV promovem, entre 12 e 18 de julho, a I Semana do Empresário. O evento tem como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais.' },
+
+      { tag: 'gestao', title: 'Cursos do NAIPE', desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos.' },
+
       { tag: 'gestao', title: 'Núcleo de Treinamento Profissional em Contabilidade', desc: 'O Departamento de Administração e Economia (DAE) da UFV iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos, o núcleo funciona no Pavilhão de Aulas (sala 309) e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial.' },
+
       { tag: 'gestao', title: 'Posse na FUNARBE', desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, empossou José Edson Lara como o novo Diretor Administrativo-Financeiro da Fundação Arthur Bernardes (FUNARBE). Administrador de empresas e ex-chefe da Divisão de Marketing do órgão, Lara substituiu José Clévio Dias Casali. Em seu discurso, ele enfatizou a necessidade de uma "revisão corporativa" e de um trabalho integrado para reestruturar as áreas administrativa e financeira da instituição a curto prazo.' },
     ],
     photos: [
@@ -925,7 +946,12 @@ export const memorialData: MemorialData = {
   },
   1998: {
     events: [
+      { tag: 'nomeacao', title: 'Boas-vindas ao Professor Jailson de Oliveira Arieira', desc: 'Recepção institucional ao professor Jailson de Oliveira Arieira.' },
+
+      { tag: 'homenagem', title: 'Projeto PROIN e Parabenização pelo Resultado no Provão', desc: 'Atualizações sobre o status do Projeto PROIN e compartilhamento de cartão do Reitor parabenizando os professores do DAD pelo expressivo resultado obtido no Exame Nacional de Cursos (Provão).' },
+
       { tag: 'ensino', title: 'Primeiros Selecionados', desc: 'Uma Comissão de Seleção presidida pelo professor Adriel selecionou os quatro primeiros estudantes da turma de 1988 para integrarem o programa:  Carla Carvalho Malaquias, Edson Mauro Santos, Geraldo Magela de Abreu e Geraldo Vieira Júnior.' },
+      
       {
       tag: 'infraestrutura',
       title: 'Tratativas para o novo prédio do Departamento de Administração',
@@ -951,6 +977,9 @@ export const memorialData: MemorialData = {
   },
   1999: {
     events: [
+      { tag: 'ensino', title: 'Aula Inaugural da Pós-Graduação em Gestão Estratégica', desc: 'Realização da aula inaugural do Curso de Pós-Graduação Lato Sensu em Gestão Estratégica, com preenchimento total das vagas ofertadas.' },
+      { tag: 'integracao', title: 'Mesa Redonda no Dia do Administrador', desc: 'Mesa redonda realizada no Auditório do Departamento de Economia Rural às 20h em comemoração ao Dia do Administrador, com dispensa de atividades didáticas no segundo horário.' },
+      { tag: 'confraternizacao', title: 'Celebração da Confraternização de Natal', desc: 'Realização e registro da celebração da Confraternização de Natal do Departamento de Administração.' },
       { tag: 'ensino', title: '6º Ciclo de Estudos Pedagógicos', desc: 'Realizado em janeiro de 1999, este ciclo reuniu mais de 200 educadores para analisar os impactos da então recente Lei de Diretrizes e Bases (LDB). O Professor Adriel Rodrigues de Oliveira teve participação central no evento.' },
       { tag: 'ensino', title: 'IV Congresso e IV Mostra de Ciências Humanas, Letras e Artes', desc: 'Iniciativa conjunta das universidades federais de Minas Gerais para debater o papel das ciências humanas na universidade contemporânea.' },
       { tag: 'reconhecimento', title: 'Participação da Profa. Nina Rosa da Silveira Cunha', desc: 'A professora atua como uma das orientadoras do projeto "Minuto Gerencial", coordenando estudantes do PET de Administração.' },
@@ -966,6 +995,10 @@ export const memorialData: MemorialData = {
   },
   2000: {
     events: [
+      { tag: 'ensino', title: 'Segunda Turma de Gestão Estratégica e Novo Laboratório', desc: 'Avaliação do projeto de Pós-Graduação para a Agência de Desenvolvimento de Ubá (2ª turma em Gestão Estratégica). Efetivação do novo Laboratório de Informática estruturado com recursos do PROIN.' },
+      { tag: 'nomeacao', title: 'Contratação de Docentes Substitutos', desc: 'Homologação e divulgação do resultado dos concursos para professores substitutos nas áreas Contábil Financeira e de Gerenciamento e Sistemas de Informações.' },
+      { tag: 'infraestrutura', title: 'Novo Curso em Ubá e Liberação de Salas no Subsolo', desc: 'Aprovação do curso em "Gestão Empresarial" em Ubá. Liberação de 4 salas no subsolo do anexo ao Prédio de Ciências Humanas para abrigar o CACE, monitoria, almoxarifado/arquivo morto e pequenas reuniões.' },
+      { tag: 'infraestrutura', title: 'Agradecimento por Instalação da Sala do CACE', desc: 'Agradecimento formal pela cessão e instalação da sala destinada ao Centro Acadêmico de Consultoria Empresarial (CACE) localizada no anexo do prédio do departamento.' },
       { tag: 'gestao', title: 'Encontro Mineiro de Empresas', desc: 'O evento reuniu representantes de diversas empresas juniores e entidades de classe para discutir o mercado de trabalho.' },
       { tag: 'reconhecimento', title: 'Homenagem na DRH', desc: 'A diretora Nina Rosa da Silveira Cunha recebe homenagem dos funcionários da Diretoria de Recursos Humanos.' },
       { tag: 'reconhecimento', title: 'Festa no Encerramento do Futebol dos Veteranos', desc: 'O encerramento do futebol dos veteranos foi marcado por uma confraternização com entrega de prêmios.' },
