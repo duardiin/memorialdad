@@ -717,6 +717,11 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Professor do DAE fala sobre dinâmica do investimento em economias capitalistas', desc: 'O professor Newton Paulo Bueno, do DAE, debateu a dinâmica do investimento em economias capitalistas em palestra na UFV. Baseado em Keynes e Kalecki, ele criticou políticas recessivas, argumentando que a expansão é o estado natural do capitalismo. Bueno alertou que a recessão causa o sucateamento econômico ao romper a natureza sequencial dos investimentos.' },
       { tag: 'gestao', title: 'Posse do DAD 1ª Chefia e do DEE 1ª Chefia', desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia, oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração. n.1074' },
       { tag: 'gestao', title: 'Nova Diretoria da FUNARBE', desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria ao lado dos professores Sebastião César Cardoso Brandão (presidente) e Carlos Sigueyuki Sediyama (diretor-técnico). A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação. n.1037' },
+         {
+      tag: 'infraestrutura',
+      title: 'Tratativas para o novo prédio do Departamento de Administração',
+      desc: '16 de dezembro de 1988 a ata número onze detalha a reunião do Colegiado do Departamento de Administração, realizada às dez horas na sala de reuniões do Departamento de Engenharia Florestal. No encerramento da sessão, o Senhor Presidente compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Magnífico Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras. Adicionalmente, no âmbito do desenvolvimento de novos cursos e atendendo a uma solicitação formal do Centro Acadêmico de Administração, debateu-se o planejamento e o oferecimento futuro do Curso de Informática Aplicada à Administração. '
+    },
     ],
     photos: [
       { url: '/1988 “Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.”.jpg', caption: 'Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.' },
@@ -933,23 +938,11 @@ export const memorialData: MemorialData = {
       { tag: 'homenagem', title: 'Projeto PROIN e Parabenização pelo Resultado no Provão', desc: 'Atualizações sobre o status do Projeto PROIN e compartilhamento de cartão do Reitor parabenizando os professores do DAD pelo expressivo resultado obtido no Exame Nacional de Cursos (Provão).' },
 
       { tag: 'ensino', title: 'Primeiros Selecionados', desc: 'Uma Comissão de Seleção presidida pelo professor Adriel selecionou os quatro primeiros estudantes da turma de 1988 para integrarem o programa:  Carla Carvalho Malaquias, Edson Mauro Santos, Geraldo Magela de Abreu e Geraldo Vieira Júnior.' },
-      
-      {
-      tag: 'infraestrutura',
-      title: 'Tratativas para o novo prédio do Departamento de Administração',
-      desc: '16 de dezembro de 1988 a ata número onze detalha a reunião do Colegiado do Departamento de Administração, realizada às dez horas na sala de reuniões do Departamento de Engenharia Florestal. No encerramento da sessão, o Senhor Presidente compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Magnífico Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras. Adicionalmente, no âmbito do desenvolvimento de novos cursos e atendendo a uma solicitação formal do Centro Acadêmico de Administração, debateu-se o planejamento e o oferecimento futuro do Curso de Informática Aplicada à Administração. '
-    },
-      {
-      tag: 'extensao',
-      title: 'O PET no Curso de Administração da UFV',
-      desc: 'O Departamento de Administração da Universidade Federal de Viçosa (UFV) teve sua proposta aprovada pela CAPES para implantar o Programa Especial de Treinamento (PET). Sob a orientação e tutoria do professor Adriel Rodrigues de Oliveira, o programa selecionou seus quatro primeiros estudantes da turma de 1988 (Carla Carvalho Malaquias, Edson Mauro Santos, Geraldo Magela de Abreu e Geraldo Vieira Júnior) por meio de critérios como coeficiente de rendimento, redação e entrevista.'
-    },
       { tag: 'ensino', title: 'Doutorado na Escócia', desc: 'O professor João Adamor Dias Neves, do Departamento de Administração do Centro de Ciências Humanas, Letras e Artes, regressou à UFV após concluir o seu doutorado na Universidade de Stirling, na Escócia. O seu programa foi focado na área de Administração de Pequenas e Médias Empresas, sob a orientação do professor Stewart Butts.' },
       { tag: 'infraestrutura', title: 'Reestruturação Acadêmica', desc: 'Os novos departamentos foram criados para substituir o antigo Departamento de Administração e Economia do Centro de Ciências Humanas, Letras e Artes.' },
       { tag: 'gestao', title: 'Implantação do PET na Administração', desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta.' },
       { tag: 'ensino', title: 'Palestra sobre Dinâmica de Investimento e Economia Capitalista', desc: 'O professor Newton Paulo Bueno proferiu uma palestra no auditório do Departamento de Economia Rural (DER) abordando o tema: "A dinâmica do investimento em economias capitalistas: um questionamento sobre o princípio do ajustamento do estoque de capital".' },
       { tag: 'ensino', title: 'Homenagem ao Professor Carlos Roberto Ramos', desc: 'Curso de Administração: O professor Carlos Roberto Ramos foi o homenageado escolhido especificamente pelos formandos do curso de Administração. Homenagem Especial: Além do professor, os próprios "formandos em Administração" foram citados como alvo de uma homenagem especial dentro do curso.' },
-      { tag: 'ensino', title: 'Solenidade e Homenagens Gerais', desc: 'Colação de Grau: A Sessão Solene ocorreu em 8 de janeiro de 1988, presidida pelo Reitor Geraldo Martins Chaves, diplomando 412 graduandos e 100 mestres e doutores. Paraninfa e Orador: A Turma teve como paraninfa a atriz Fernanda Montenegro e como orador o acadêmico Elton Chaud' },
       { tag: 'gestao', title: 'UFV Promove II Semana do Empresário em Julho', desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.' },
       { tag: 'gestao', title: 'Novas Chefias', desc: 'Departamento de Administração (DAD): Assumiu como primeiro chefe o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE): Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira.' },
     ],
@@ -1002,6 +995,13 @@ export const memorialData: MemorialData = {
   },
   2001: {
     events: [
+      { "tag": "infraestrutura", "title": "Regulamentação de Espaços Físicos", "desc": "Discussão sobre a necessidade de elaborar normas próprias para a utilização do Laboratório de Informática II e da Sala de Conferências, com indicação de uma comissão de professores para formular a proposta." },
+      { "tag": "gestao", "title": "Representantes para Novos Cursos", "desc": "Apresentação de processos em extra-pauta para a escolha de representantes do DAD junto às comissões coordenadoras dos cursos de Gestão do Agronegócio, Gestão de Cooperativas, Engenharia da Production e Secretariado Executivo." },
+      { "tag": "extensao", "title": "Planejamento dos 25 Anos do Curso", "desc": "Definição de que a Comissão de Extensão, o coordenador do curso e a chefia do DAD apresentariam uma proposta para a celebração do vigésimo quinto aniversário do curso de Administração." },
+      { "tag": "infraestrutura", "title": "Aprovação de Normas do Laboratório", "desc": "Aprovação formal das normas de funcionamento do Laboratório de Informática II." },
+      { "tag": "ensino", "title": "Demanda de Pós-Graduação em Ponte Nova", "desc": "Debate sobre a solicitação da Faculdade de Ciências Contábeis (FACCO) de Ponte Nova (MG) para o oferecimento de uma turma de Pós-Graduação Lato Sensu." },
+      { "tag": "extensao", "title": "Aprovação da Programação Festiva", "desc": "Submissão e aprovação formal, com alterações, da proposta com a programação do evento comemorativo dos 25 anos do Curso de Administração." },
+      { "tag": "ensino", "title": "Encerramento de Turma em Ubá", "desc": "Comunicação oficial sobre a conclusão das atividades e fechamento da primeira turma do Curso de Pós-Graduação Lato Sensu realizado na cidade de Ubá." },
       { tag: 'gestao', title: 'I Meeting de Administração', desc: 'Evento idealizado para oferecer cursos de curta duração com o tema "Novas Tecnologias e Administração".' },
       { tag: 'ensino', title: 'Posse de Chefes de Departamento', desc: 'O reitor empossa novos chefes, incluindo o professor Walmer Faroni no Departamento de Administração (DAD).' },
       { tag: 'reconhecimento', title: 'Excelência em Administração', desc: 'O curso de Administração da UFV manteve a avaliação "A" consecutivamente desde 1997.' },
@@ -1020,6 +1020,13 @@ export const memorialData: MemorialData = {
     events: [
       { tag: 'ensino', title: 'Homenagens dos Formandos', desc: 'Novos profissionais prestam reconhecimento ao paraninfo Walmer Faroni e à Profa. Telma Regina.' },
       { tag: 'ensino', title: 'Empreendedorismo e Inovação', desc: 'Curso focado em inovação para profissionais ligados ao Centev/UFV e Incubadora de Empresas.' },
+      { "tag": "ensino", "title": "Mudança de Nomenclatura em Pós-Graduação", "desc": "Aprovação por unanimidade da alteração do nome do Curso de Pós-Graduação Lato Sensu de 'Gestão Empresarial' para 'Gestão e Diagnóstico Empresarial', por proposição do professor Jailson de Oliveira Arieira." },
+      { "tag": "ensino", "title": "Novas Turmas de Especialização 2002/2003", "desc": "Aprovação unânime da proposta da professora Telma Regina C.G. Barbosa para abertura de novas turmas em Gestão Estratégica e em Gestão e Diagnóstico Empresarial, incluindo homologação de calendário e custos." },
+      { "tag": "ensino", "title": "Parceria UFV e IETEC em Gestão Ambiental", "desc": "Apresentação da proposta do professor Flávio Alencar d' Araújo Couto para criação da pós-graduação lato sensu em Política e Gestão Ambiental, a ser oferecida em Belo Horizonte via convênio com o IETEC." },
+      { "tag": "gestao", "title": "Boas-vindas a Novos Docentes", "desc": "Acolhimento formal e boas-vindas aos quatro novos professores recém-contratados que iniciaram suas atividades no departamento no dia 01 de julho de 2002." },
+      { "tag": "gestao", "title": "Novo Coordenador da Biblioteca Setorial", "desc": "Comunicação da nomeação do Administrador Sérgio Augusto Pereira Monteiro para o cargo de coordenador da Biblioteca Setorial do DAD, em substituição à professora Eliene Cristina Barros Ribeiro." },
+      { "tag": "ensino", "title": "Oferta de Pós-Graduação para 2003", "desc": "Aprovação por unanimidade do oferecimento de duas novas turmas de pós-graduação lato sensu em Gestão Estratégica e em Diagnóstico Empresarial para o ano letivo de 2003." },
+      { "tag": "gestao", "title": "Diretrizes Acadêmicas e Consolidação de Cursos", "desc": "Discussão de informes do CCH em Guiricema, com destaque para o direcionamento estratégico voltado para a consolidação de cursos novos na instituição." },
     ],
     photos: [
       { url: '/2002 “Autoridades discutem o Centev”.jpg', caption: 'Autoridades discutem o Centev.' },
@@ -1031,6 +1038,10 @@ export const memorialData: MemorialData = {
   },
   2003: {
     events: [
+      { "tag": "ensino", "title": "Expansão da Pós-Graduação para Ubá", "desc": "Aprovação unânime para abertura de nova turma de Gestão e Diagnóstico Empresarial na cidade de Ubá (MG), com previsão de início em maio de 2003 e término em agosto de 2004." },
+      { "tag": "gestao", "title": "Reformulação do Núcleo de Estágio", "desc": "Comunicação sobre o andamento das tratativas e diretrizes institucionais acerca da reformulação do Núcleo de Estágio da UFV." },
+      { "tag": "infraestrutura", "title": "Convênio DAD e MASTERMAQ", "desc": "Formalização de parceria com a empresa MASTERMAQ para a cessão de softwares especializados voltados ao suporte da prática de contabilidade no departamento." },
+      { "tag": "ensino", "title": "Novas Ofertas e Curso em Gestão Municipal", "desc": "Aprovação unânime para abertura de turma em Gestão Estratégica e Diagnóstico Empresarial (2004-2006) e aprovação da primeira turma do novo curso de pós-graduação lato sensu em Gestão Municipal." },
       { tag: 'infraestrutura', title: 'Comemoração do 15º Aniversário do DAD', desc: 'Sessão solene celebra os 15 anos de consolidação do departamento como unidade de prestígio.' },
       { tag: 'ensino', title: 'Atividades do Curso de Administração', desc: 'Aula da Saudade ministrada pelo professor José de Arimateia de Oliveira.' },
     ],
@@ -1041,6 +1052,16 @@ export const memorialData: MemorialData = {
   },
   2004: {
     events: [
+      { "tag": "ensino", "title": "Projeto do Stricto Sensu em Administração Pública", "desc": "Apreciação e aprovação unânime do Projeto de Criação do Curso de Pós-Graduação Stricto Sensu focado na área de Administração Pública/Gestão Municipal." },
+      { "tag": "ensino", "title": "Alteração no Projeto do Stricto Sensu", "desc": "Aprovação unânime do novo escopo do projeto de Stricto Sensu (Processo n.º 2348/2004) e determinação do arquivamento do processo de criação inicial." },
+      { "tag": "gestao", "title": "Aprovação do Stricto Sensu no CCH", "desc": "Comunicação oficial de que o curso de Pós-Graduação Stricto Sensu em Administração obteve aprovação formal perante o Conselho Departamental do CCH." },
+      { "tag": "ensino", "title": "Homologação do Mestrado e Reconhecimento de Ciências Contábeis", "desc": "Boas-vindas a nova professora, homologação final da aprovação do Mestrado em Administração e divulgação da Portaria MEC n.º 1628 que oficializou o reconhecimento do curso de Ciências Contábeis." },
+      { "tag": "infraestrutura", "title": "Melhorias Físicas no DAD", "desc": "Informação sobre a execução dos serviços de pintura dos gabinetes dos professores do departamento." },
+      { "tag": "gestao", "title": "Dia do Administrador e Visita da Diretora do CCH", "desc": "Lembrança do Dia do Administrador e recepção do pedido de visita da Diretora do Centro de Ciências Humanas, Letras e Artes." },
+      { "tag": "gestao", "title": "Moções de Congratulação ao Departamento", "desc": "Recebimento de Moção do CCH pela aprovação do Mestrado em Administração Pública e Moção de Congratulação da Câmara Municipal de Viçosa pelo sucesso do I Seminário de Contabilidade." },
+      { "tag": "extensao", "title": "Avaliação CAPES e I Jornada Acadêmica", "desc": "Destaque para correspondência da CAPES sobre a avaliação do Mestrado em Administração Pública e anúncio de abertura da I Jornada Acadêmica de Administração." },
+      { "tag": "gestao", "title": "Integração de Professora Voluntária", "desc": "Aprovação unânime do processo de solicitação de uma docente para se integrar ao corpo docente do DAD na condição de professora voluntária." },
+      { "tag": "extensao", "title": "Treinamento para a Secretaria do Meio Ambiente", "desc": "Esclarecimentos sobre o Termo Aditivo ao Convênio entre IEF, UFV e SIF para treinamento de chefes e supervisores da Secretaria do Meio Ambiente de MG, realizado nas instalações da UFV." },
       { tag: 'gestao', title: 'Eleição para Reitor', desc: 'Definição da lista tríplice com vitória da chapa dos professores Carlos Sediyama e Cláudio Furtado Soares.' },
       { tag: 'ensino', title: 'Novos Chefes de Departamentos', desc: 'Professor Walmer Faroni é empossado como chefe do DAD para o novo quadriênio.' },
       { tag: 'gestao', title: 'Nova Diretoria da Funarbe', desc: 'Posse da nova gestão executiva com Orlando Monteiro da Silva como diretor-presidente.' },
@@ -1059,6 +1080,8 @@ export const memorialData: MemorialData = {
       { tag: 'ensino', title: 'Aulas da Saudade', desc: 'Homenagem ao professor Antônio de Figueiredo Vieira na última aula simbólica da turma.' },
       { tag: 'infraestrutura', title: 'Capacitação para Gestores', desc: 'Ciclo de palestras voltado para dirigentes, ministrado por professores experientes do DAD.' },
       { tag: 'gestao', title: 'Criação da Coopera', desc: 'Comissão instituída para otimização dos procedimentos e rotinas administrativas da universidade.' },
+      { tag: 'extensao', title: 'Convênio entre o DAD e a SEMAD', desc: 'No início de abril de 2005, o Departamento de Administração (DAD) da UFV realizou o curso "Desenvolvimento de Habilidades para Chefes e Supervisores". Fruto de um convênio com a Semad, o treinamento capacitou 58 diretores do IEF, da FEAM e da própria secretaria no Centro de Ensino de Extensão. Sob a condução de professores da universidade, as palestras abordaram temas cruciais como planejamento, motivação, gerenciamento e ética no serviço público.' },
+       { tag: 'extensao', title: 'Alinhamento Estratégico da Gestão Institucional', desc: 'Sob a coordenação da Pró-Reitoria de Planejamento e Orçamento, professores do Departamento de Administração (DAD) ministraram palestras sobre Planejamento Estratégico Institucional para as chefias da UFV. Integradas ao Plano de Gestão 2005–2008, as atividades abordaram a definição de missão, valores e metas institucionais. O encontro subsidiou debates subsequentes com os diretores de centros para desdobrar as diretrizes para todos os departamentos da universidade.' },
     ],
     photos: [
       { url: '/2005 “Formandos de Janeiro de 2005”.png', caption: 'Formandos de Janeiro de 2005.' },
@@ -1068,6 +1091,10 @@ export const memorialData: MemorialData = {
   },
   2006: {
     events: [
+      { "tag": "ensino", "title": "Criação do Curso em Controladoria e Finanças", "desc": "Aprovação unânime da proposta para a criação do Curso de Pós-Graduação Lato Sensu em Controladoria e Finanças, com previsão de início para novembro daquele ano." },
+      { "tag": "ensino", "title": "Implantação do Curso de Administração a Distância (EAD)", "desc": "Definições dos coordenadores e comissão para o curso EAD (Resolução 5/2006), com início em agosto nos polos de Viçosa e Florestal, além de autorização para compra de equipamentos e seleção de 11 tutores." },
+      { "tag": "infraestrutura", "title": "Reorganização do Espaço Físico do DAD", "desc": "Aprovação unânime de nova proposta de infraestrutura: manutenção da Biblioteca Setorial no local de origem e remanejamento das salas do PET, grupo de pesquisa, mestrado e coordenações." },
+      { "tag": "gestao", "title": "Nomeação de Novos Professores", "desc": "Comunicação oficial das portarias de nomeação dos professores Robson Zuccolotto e Magnus Luiz Emmendoerfer para o corpo docente." },
       { tag: 'ensino', title: 'Aulas da Saudade', desc: 'Homenagem ao professor Antônio de Figueiredo Vieira na última aula simbólica da turma.' },
       { tag: 'infraestrutura', title: 'Capacitação para Gestores', desc: 'Ciclo de palestras voltado para dirigentes, ministrado por professores experientes do DAD.' },
       { tag: 'gestao', title: 'Criação da Coopera', desc: 'Comissão instituída para otimização dos procedimentos e rotinas administrativas da universidade.' },
@@ -1080,6 +1107,13 @@ export const memorialData: MemorialData = {
   },
   2007: {
     events: [
+      { "tag": "infraestrutura", "title": "Homologação de Planta Baixa", "desc": "Aprovação unânime da homologação da planta baixa destinada à alteração da cozinha e da sala da chefia do DAD." },
+      { "tag": "ensino", "title": "Novas Turmas de Lato Sensu (2007-2009)", "desc": "Aprovação unânime da abertura de duas turmas para as especializações em Gestão Estratégica e em Gestão e Diagnóstico Empresarial." },
+      { "tag": "ensino", "title": "Vagas Adicionais no Mestrado em Administração", "desc": "Aprovação unânime do pedido da coordenação do programa de pós-graduação para a criação de cinco vagas adicionais para o mestrado com vigência a partir de 2008." },
+      { "tag": "ensino", "title": "Criação do Lato Sensu em Sustentabilidade", "desc": "Análise e aprovação unânime do projeto de criação do curso de pós-graduação Lato Sensu em Ambiente, Planejamento e Desenvolvimento Empresarial Sustentável." },
+      { "tag": "gestao", "title": "Mudança de Nome do Departamento", "desc": "Aprovação unânime da proposta de alteração da denominação do órgão, que passou a se chamar oficialmente Departamento de Administração e Contabilidade." },
+      { "tag": "gestao", "title": "Homenagem por Aposentadoria e Regimento Interno", "desc": "Entrega solene de placa de homenagem a uma professora por sua aposentadoria e aprovação unânime das alterações no Regimento Interno do Lato Sensu em Controladoria e Finanças." },
+      { "tag": "ensino", "title": "Curso para Servidores e Novas Turmas 2008-2010", "desc": "Aprovação de curso de Estratégias Comportamentais para servidores da UFV (180h), alterações no Regimento Interno Geral e abertura de turmas em Administração Estratégica e Gestão e Diagnóstico Empresarial." },
       { tag: 'infraestrutura', title: 'Novo prédio do DAD', desc: 'Inauguração do edifício-sede com salas modernas e novos laboratórios de informática.' },
       { tag: 'gestao', title: 'Cace Consultoria', desc: 'Consolidação da empresa júnior na prestação de serviços para a Zona da Mata mineira.' },
     ],
@@ -1090,6 +1124,13 @@ export const memorialData: MemorialData = {
   },
   2008: {
     events: [
+      { "tag": "infraestrutura", "title": "Deliberação sobre Espaço Físico (REUNI)", "desc": "Debate sobre a proposta do REUNI para abrigar Ciências Sociais e Economia; o Colegiado optou, por maioria, pela permanência na sede atual do departamento em vez de se deslocar para o novo prédio." },
+      { "tag": "gestao", "title": "Indicações para as Medalhas Peter Rolfs", "desc": "Aprovação unânime de indicações de docentes para concorrerem à Medalha de Ouro Peter Rolfs do Mérito em Ensino e à Medalha de Ouro Peter H. Rolfs do Mérito em Pesquisa." },
+      { "tag": "extensao", "title": "Anúncio do Fórum de Administração", "desc": "Comunicação aos membros do Colegiado sobre a realização do Fórum de Administração, agendado para os dias 22 e 23 de setembro de 2008." },
+      { "tag": "ensino", "title": "Criação do Bacharelado em Cooperativismo", "desc": "Comunicação oficial sobre a aprovação do curso de Bacharelado em Cooperativismo, estruturado em substituição ao antigo curso de Gestão de Cooperativas." },
+      { "tag": "extensao", "title": "15 Anos da CACE", "desc": "A professora Suely de Fátima Ramos Silveira compartilhou informes institucionais destacando a celebração dos 15 anos da Central de Empresas Juniores (CACE)." },
+      { "tag": "extensao", "title": "Comemorações DAD & PET 20 Anos", "desc": "Destaque aos preparativos do evento 'DAD & PET 20 Anos', aviso sobre a I Mostra de Administração Pública na Sala de Conferências e planejamento da confraternização natalina." },
+      { "tag": "extensao", "title": "Parabéns aos 20 anos do PET", "desc": "Manifestação formal da professora Nina Rosa da Silveira Cunha parabenizando o grupo PET e sua coordenação pelas festividades de 20 anos de existência." },
       { tag: 'ensino', title: 'Visita Internacional', desc: 'O professor Rafael Fernández Guerrero, da Espanha, visita a UFV para iniciar parcerias estratégicas.' },
     ],
     photos: [],
@@ -1097,6 +1138,9 @@ export const memorialData: MemorialData = {
   },
   2009: {
     events: [
+      { "tag": "gestao", "title": "Inauguração da Casa dos Prefeitos e Edital EAD", "desc": "Informação sobre a inauguração da Casa dos Prefeitos com convite ao DAD e anúncio de que o MEC abriria edital para cursos a distância em Administração Pública." },
+      { "tag": "gestao", "title": "Criação do IPPDS e Recursos do CT-INFRA", "desc": "Aprovação do referendo de criação do Instituto de Políticas Públicas e Desenvolvimento Sustentável da UFV (IPPDS) e anúncio de recursos do CT-INFRA/FINEP para obras no CCH." },
+      { "tag": "ensino", "title": "Calendário de Controladoria e Finanças", "desc": "Aprovação do calendário do curso de pós-graduação lato sensu em Controladoria e Finanças, com oferta definida para 10 de abril de 2010." },
       { tag: 'gestao', title: 'Posse do Professor Luiz Antônio Abrantes', desc: 'Instalação da primeira Pró-Reitoria de Gestão de Pessoas da história da UFV.' },
       { tag: 'extensao', title: 'Lançamento da Revista APGS', desc: 'Primeira edição da revista eletrônica Administração Pública e Gestão Social.' },
       { tag: 'reconhecimento', title: 'Mérito na Contabilidade', desc: 'Pesquisa sobre Lei de Responsabilidade Fiscal premiada na Convenção Mineira de Contabilidade.' },
@@ -1110,6 +1154,10 @@ export const memorialData: MemorialData = {
 
   2010: {
     events: [
+      { "tag": "ensino", "title": "Orçamentos de Pós-Graduação e Criação do NUPEC", "desc": "Aprovação dos orçamentos de Controladoria e Finanças, Gestão Empresarial e Ambiental, e Gestão Estratégica, além da criação e seleção de bolsistas para o Núcleo de Pesquisa em Contabilidade (NUPEC)." },
+      { "tag": "infraestrutura", "title": "Convênio Software com E & L e Semana Acadêmica", "desc": "Proposta de convênio com a E & L Produções de Software para o laboratório de informática e comunicação sobre a futura Semana Acadêmica conjunta com o Congresso de Gestão de Pessoas." },
+      { "tag": "gestao", "title": "Visita do Reitor e Futuros Cursos", "desc": "Visita oficial do Reitor, Vice-Reitora e Diretor do CCH. Discussão do Projeto Pedagógico de Ciências Contábeis, debate sobre futura graduação diurna em Administração e inserção de Administração Pública." },
+      { "tag": "ensino", "title": "Nova Turma de Controladoria e Certificações", "desc": "Aprovação de nova turma de Controladoria e Finanças (2011/2013) com ementas readequadas e aprovação da emissão de certificados para concluintes (2008-2010) de Gestão Estratégica e Gestão e Diagnóstico Empresarial." },
       { tag: 'gestao', title: 'Ações da Pró-Reitoria de Gestão de Pessoas com Luiz Abrantes', desc: 'O pró-reitor de Gestão de Pessoas da UFV, Luiz Antônio Abrantes, destacou em entrevista as atribuições e os projetos desenvolvidos por sua pasta, que foca no estabelecimento e na execução de políticas de desenvolvimento que contribuam para os objetivos institucionais. Entre as iniciativas sob sua gestão, ressaltam-se o aperfeiçoamento das políticas de treinamento e capacitação, o diálogo constante com entidades de classe e ações voltadas para a saúde ocupacional e qualidade de vida dos servidores, visando reduzir riscos laborais e promover o bem-estar biopsicossocial. Abrantes também enfatizou projetos como o "Minuto do Servidor", que utiliza vídeos curtos para valorizar o trabalho dos funcionários, e o "Funarserv", um programa em parceria com a Funarbe para operacionalizar cursos de aperfeiçoamento que integram servidores de diferentes setores da universidade.' },
       { tag: 'extensao', title: 'O II Emapegs e a Coordenação de Marco Aurélio', desc: 'O professor Marco Aurélio Marques Ferreira, do Departamento de Administração da UFV, atuou como coordenador do II Encontro Mineiro de Administração Pública, Economia Solidária e Gestão Social (Emapegs), realizado nos dias 10 e 11 de junho de 2010. O evento reuniu cerca de 200 participantes, entre alunos, pesquisadores e professores, para discutir avanços e desafios nessas áreas, contando com palestras e mesas de debate que abordaram o mercado de trabalho e as questões acadêmicas do setor. Marco Aurélio ressaltou que as discussões centrais do encontro seriam posteriormente organizadas e publicadas em formato de livro, consolidando o conhecimento gerado durante o evento, que teve o apoio de diversos órgãos da instituição e revistas científicas da área.' },
       { tag: 'ensino', title: 'História e Evolução Estrutural do CCH', desc: 'O Centro de Ciências Humanas teve sua origem como instituto in 1975, adotando a denominação atual de CCH em 1978, após uma reestruturação organizacional na UFV que substituiu institutos por centros de ciências. Inicialmente, a unidade contava com apenas quatro departamentos e cinco cursos — Administração, Economia, Economia Doméstica, Pedagogia e Letras — mas expandiu-se significativamente ao longo das décadas. Momentos marcantes dessa trajetória incluem a divisão do Departamento de Administração e Economia em 1988, a criação do curso de Direito em 1991 e uma forte expansão a partir dos anos 2000, com o surgimento de áreas como Comunicação Social, Geografia, História, Dança, Ciências Sociais e Educação Infantil.' },
@@ -1127,6 +1175,10 @@ export const memorialData: MemorialData = {
 
   2011: {
     events: [
+      { "tag": "gestao", "title": "Boas-vindas e Armários Privativos", "desc": "Boas-vindas oficiais à recém-chegada professora Fernanda Maria de Almeida e anúncio de compra de materiais para instalação de armários privativos nos gabinetes." },
+      { "tag": "extensao", "title": "Extensão no Coluni e Café Comemorativo", "desc": "Apresentação de projeto de extensão em inovação tecnológica no Coluni pelo prof. Rodrigo Gava e informe do prof. Wender Fraga sobre celebração festiva com café para aniversariantes." },
+      { "tag": "ensino", "title": "Criação do Bacharelado em Sistemas de Informação", "desc": "Aprovação unânime via ato ad referendum ratificando a homologação do projeto de criação do novo curso de graduação em Bacharelado em Sistemas de Informação no Campus Viçosa." },
+      { "tag": "ensino", "title": "Andamento de Curso e Dia do Administrador", "desc": "Informes da profa. Nina Rosa sobre o lato sensu em Gestão Estratégica e Ambiental e esclarecimentos sobre ações de divulgação e homenagem ao Dia do Administrador em parceria com o Conselho Regional." },
       { tag: 'ensino', title: 'Resumo do Livro e Temas Abordados', desc: 'A obra intitulada "Administração Pública, Gestão Social e Economia Solidária" foi organizada pelos professores Marco Aurélio Ferreira Marques, Magnus Luiz Emmendoerfer e Rodrigo Gava, da UFV. O objetivo do livro é analisar os avanços e desafios nas práticas profissionais e teóricas relacionadas à administração pública, gestão social e economia solidária. Para isso, reúne autores com diferentes experiências para discutir contradições do mundo contemporâneo em diversas regiões do Brasil, dando ênfase especial ao cenário de Minas Gerais.' },
       { tag: 'ensino', title: 'Origem dos Trabalhos e II Encontro Mineiro', desc: 'Segundo o professor Magnus, o livro é fruto de uma série de pesquisas realizadas em instituições mineiras de ensino e pesquisa nos últimos anos. Grande parte dos estudos presentes na obra foi apresentada originalmente por pesquisadores durante o II Encontro Mineiro de Administração Pública, Economia Solidária e Gestão Social. Esse evento ocorreu no campus da UFV entre os dias 10 e 11 de junho de 2010.' },
       { tag: 'extensao', title: 'Datas de Lançamento e Canais de Distribuição', desc: 'O livro teve um pré-lançamento em novembro de 2010 durante o Encontro Nacional de Administração Pública e Governança, mas sua distribuição ocorre ao longo de 2011. Além do lançamento previsto para o V Encontro Nacional de Pesquisadores em Gestão Social, in Florianópolis, entre 25 e 28 de maio de 2011, a obra será enviada para bibliotecas de universidades públicas em países de língua portuguesa. Atualmente, exemplares já estão disponíveis para consulta na Biblioteca Central da UFV.' },
@@ -1142,6 +1194,7 @@ export const memorialData: MemorialData = {
   },
   2012: {
     events: [
+      { "tag": "ensino", "title": "Aula Inaugural de Controladoria e Finanças", "desc": "O professor Wender Fraga Miranda ressaltou a realização da aula inaugural da nova turma (2012-2014) do curso de pós-graduação Lato Sensu em Controladoria e Finanças, iniciando as atividades com 53 alunos matriculados." },
       { tag: 'gestao', title: 'Posse da Nova Diretoria e Composição', desc: 'O Instituto de Políticas Públicas e Desenvolvimento Sustentável da Universidade Federal de Viçosa realizou a cerimônia de posse de sua nova diretoria, reconduzindo a professora Suely de Fátima Ramos Silveira, do Departamento de Administração, ao cargo de diretora para um novo mandato. A equipe diretiva é composta também pelo professor Evonir Batista de Oliveira, do Departamento de Economia Rural, que assumiu a função de vice-diretor, e pelo professor Alair Ferreira de Freitas, do Departamento de Administração e Contabilidade, que atua como secretário executivo do órgão. A solenidade ocorreu com a presença de membros da administração superior, incluindo a reitora Nilda de Fátima Ferreira Soares, consolidando a estrutura de governança do instituto para os próximos anos.' },
       { tag: 'gestao', title: 'Metas Estratégicas e Consolidação do IPPDS', desc: 'Durante seu pronunciamento, a diretora Suely Silveira enfatizou que o principal foco desta gestão é o fortalecimento e a consolidação do IPPDS como um centro de excelência em pesquisa e extensão voltado para a formulação e análise de políticas públicas. Entre as prioridades estabelecidas estão a ampliação das parcerias institucionais e a captação de recursos para projetos que promovam o desenvolvimento sustentável, integrando diferentes áreas do conhecimento da universidade. A reitora Nilda Soares destacou a importância estratégica do instituto para a UFV, ressaltando que o trabalho da diretoria é fundamental para projetar a competência técnica da instituição na solução de problemas sociais e governamentais, garantindo que o conhecimento gerado no campus chegue de forma efetiva à sociedade.' },
       { tag: 'reconhecimento', title: 'Homenagem à Professora Suely de Fátima Ramos Silveira', desc: 'A professora Suely de Fátima Ramos Silveira, vinculada ao Departamento de Administração, foi agraciada com a Medalha de Mérito em Extensão durante as festividades do 85º aniversário de fundação da Universidade Federal de Viçosa. Essa honraria reconhece sua trajetória de dedicação e as relevantes contribuições oferecidas à instituição ao longo de sua carreira, especialmente no âmbito das atividades extensionistas que aproximam a universidade da comunidade. A entrega da medalha ocorreu em uma sessão solene que reuniu autoridades, profissionais e membros da comunidade acadêmica para rememorar fatos históricos e prestar homenagens àqueles que ajudaron a construir a trajetória vitoriosa da UFV.' },
