@@ -829,7 +829,7 @@ const searchResults = useMemo(() => {
                     Estes departamentos pioneiros ancoravam cinco cursos: <strong>Administração</strong>, <strong>Economia</strong>,{' '}
                     <strong>Economia Doméstica</strong>, <strong>Letras</strong> e <strong>Pedagogia</strong>. O Departamento de Administração e Economia (DAE)
                     conduzia os cursos de Administração e Economia e se encarregava das disciplinas das áreas de Administração, Contabilidade,
-                    Direito, Economia e Ciências Sociais.
+                    Direito, Economia e Ciências Sociais. O Centro de Ciências Humanas teve sua origem como instituto in 1975, adotando a denominação atual de CCH em 1978, após uma reestruturação organizacional na UFV que substituiu institutos por centros de ciências. Inicialmente, a unidade contava com apenas quatro departamentos e cinco cursos — Administração, Economia, Economia Doméstica, Pedagogia e Letras — mas expandiu-se significativamente ao longo das décadas. Momentos marcantes dessa trajetória incluem a divisão do Departamento de Administração e Economia em 1988, a criação do curso de Direito em 1991 e uma forte expansão a partir dos anos 2000, com o surgimento de áreas como Comunicação Social, Geografia, História, Dança, Ciências Sociais e Educação Infantil.
                   </p>
                   <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
                     A Economia Doméstica e a Economia Rural, como extensões das Ciências Agrárias, foram os precursores do Centro de Ciências Humanas.
