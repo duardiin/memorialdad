@@ -15,6 +15,7 @@ import {
   History,
   Image as ImageIcon,
   Info,
+  Landmark,
   LayoutGrid,
   LogIn,
   LogOut,
@@ -30,9 +31,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
 import { allGalleryPhotos } from './data/allGalleryPhotos';
+import { chefesDepartamento } from './data/chefesData';
 import Fuse from 'fuse.js';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes';
 
 enum OperationType {
   CREATE = 'create',
@@ -366,6 +368,12 @@ const searchResults = useMemo(() => {
             Por Ano
           </button>
           <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'chefes' ? 'active' : ''}`}
+            onClick={() => setActivePanel('chefes')}
+          >
+            Chefias
+          </button>
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
             onClick={() => setActivePanel('quebec')}
           >
@@ -441,6 +449,7 @@ const searchResults = useMemo(() => {
                       { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-4 h-4" /> },
                       { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-4 h-4" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> },
+                      { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
                       { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> },
                       { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> }
                     ].map(item => (
@@ -1157,6 +1166,74 @@ const searchResults = useMemo(() => {
                   </div>
                 </div>
 
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'chefes' && (
+            <motion.div
+              key="chefes"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              {/* HEADER CARD */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Landmark className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Liderança Institucional</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Chefias do Departamento</h1>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Um registro dos professores e professoras que conduziram a chefia do DAD ao longo de sua história, do DAE até os dias atuais.
+                  </p>
+                </div>
+              </div>
+
+              {/* LISTA DE CHEFES */}
+              <div className="space-y-4">
+                {chefesDepartamento.length === 0 ? (
+                  <div className="card text-center py-10">
+                    <Landmark className="w-8 h-8 text-ufv-border mx-auto mb-3" />
+                    <p className="text-sm text-ufv-gray-light">Nenhuma chefia cadastrada ainda.</p>
+                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/chefesData.ts</code>.</p>
+                  </div>
+                ) : (
+                  chefesDepartamento
+                    .slice()
+                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
+                    .map((chefe) => (
+                      <div key={chefe.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                          {chefe.foto ? (
+                            <img src={chefe.foto} alt={chefe.nome} className="w-full h-full object-cover" />
+                          ) : (
+                            <Landmark className="w-7 h-7 text-ufv-green" />
+                          )}
+                        </div>
+                        <div className="flex-grow text-center sm:text-left">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                            <span className="font-serif text-lg font-bold text-ufv-gray">{chefe.nome}</span>
+                            <span className="event-tag tag-gestao self-center sm:self-auto">
+                              {chefe.periodoFim ? `${chefe.periodoInicio} – ${chefe.periodoFim}` : `${chefe.periodoInicio} – atual`}
+                            </span>
+                          </div>
+                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                            {chefe.cargo || 'Chefe do Departamento'}
+                          </div>
+                          {chefe.observacoes && (
+                            <p className="text-sm text-ufv-gray-light leading-relaxed">{chefe.observacoes}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))
+                )}
               </div>
             </motion.div>
           )}

@@ -45,6 +45,11 @@ export const memorialData: MemorialData = {
   },
   1977: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de MARIA DA GRACA NEMER JENTZSCH",
+        "desc": "Admissão do(a) docente MARIA DA GRACA NEMER JENTZSCH no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/12/1977."
+      },
       { tag: 'fundacao', title: 'Implantação do DAE', desc: 'Implantação do Departamento de Administração de Empresas e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano, nomeado pelo Reitor Antônio Fagundes de Sousa (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais. O Curso de Administração, com 25 vagas, passa a oferecer 50 vagas em seu Vestibular Unificado (23 de setembro de 1976 N.° 445). Para o Projeto Rondon foi indicado Carlos Alberto Freire Resende, integrante do DAE, para elaborar o programa de trabalho da equipe da UFV (11 de agosto de 1977 N.° 490).' },
     ],
     photos: [],
@@ -52,6 +57,11 @@ export const memorialData: MemorialData = {
   },
   1978: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de JACINTO LUIZ DA SILVA",
+        "desc": "Admissão do(a) docente JACINTO LUIZ DA SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/04/1978."
+      },
 
       { tag: 'gestao', title: 'Gestão e Liderança', desc: 'Alguns eventos marcaram o ano de 1978, consolidando o DAE e o CCH, com a solenidade de posse na Reitoria do Prof. Tancredo Almada Cruz como chefe do Departamento de Administração e Economia (DAE) (n. 542) e do Prof. Dilson Seabra Rocha como Diretor do Centro de Ciências Humanas, Letras e Artes (CCH). Esses e outros eventos foram abrilhantados com a apresentação do Coral da UFV, sob a regência do Prof. João Adamor Dias Neves, professor do DAE (nºs 532 e 544). Ainda nesse ano, o Prof. João Adamor Dias Neves representou a UFV no II Congresso Brasileiro de Treinamento e Desenvolvimento, uma vez que o referido professor lecionava disciplinas dessa área. O técnico do DAE, Carlos Alberto Freire Resende, torna-se Diretor do Campus Avançado de Altamira (n. 553).' },
 
@@ -67,6 +77,16 @@ export const memorialData: MemorialData = {
   },
   1979: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de NINA ROSA DA SILVEIRA CUNHA",
+        "desc": "Admissão do(a) docente NINA ROSA DA SILVEIRA CUNHA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/09/1979."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de ADRIEL RODRIGUES DE OLIVEIRA",
+        "desc": "Admissão do(a) docente ADRIEL RODRIGUES DE OLIVEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/03/1979."
+      },
       {
         tag: 'extensao',
         title: 'Homologação e Admissão de Docentes no DAE',
@@ -158,6 +178,21 @@ export const memorialData: MemorialData = {
   },
   1980: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de NANCI PEREIRA DE VASCONCELOS",
+        "desc": "Admissão do(a) docente NANCI PEREIRA DE VASCONCELOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/03/1980."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de MILTON RODRIGUES NATALINO ",
+        "desc": "Admissão do(a) docente MILTON RODRIGUES NATALINO 02/11/89 - 15/06/90 07/11/92 - 11/05/95 no Departamento de Administração e Contabilidade (DAD), com início das atividades em 24/03/1980."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de SERGIO AUGUSTO PEREIRA MONTEIRO",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) SERGIO AUGUSTO PEREIRA MONTEIRO, ocupando o cargo de ADMINISTRADOR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/11/1980."
+      },
       {
         tag: 'extensao',
         title: 'DAE Celebra Sucesso de Encontros de Aproximação com Estudantes',
@@ -280,6 +315,12 @@ export const memorialData: MemorialData = {
   },
   1982: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de LUIS CARLOS DE FREITAS",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) LUIS CARLOS DE FREITAS, ocupando o cargo de SERVENTE DE LIMPEZA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 08/07/1982."
+      },
+
       {
         tag: 'reconhecimento',
         title: 'Chefe de Gabinete da UFV recebe Homenagem e Ministra Aula Inaugural na FACCO',
@@ -504,6 +545,11 @@ export const memorialData: MemorialData = {
   },
   1985: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de MARCELO ANTONIO LOPES",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) MARCELO ANTONIO LOPES, ocupando o cargo de SERVENTE DE OBRAS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 10/01/1985."
+      },
       {
         tag: 'extensao',
         title: 'Marco Comemorativo: Oitavo Ano de Fundação do DAE',
@@ -733,7 +779,18 @@ export const memorialData: MemorialData = {
   },
   1989: {
     events: [
+   
+       {
+        "tag": "gestao",
+        "title": "Admissão de ANTONIO DE FIGUEIREDO VIEIRA",
+        "desc": "Admissão do(a) docente ANTONIO DE FIGUEIREDO VIEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 27/12/1989."
+      },
       {
+        "tag": "gestao",
+        "title": "Admissão de TELMA REGINA DA COSTA GUIMARÂES BARBOSA",
+        "desc": "Admissão do(a) docente TELMA REGINA DA COSTA GUIMARÂES BARBOSA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 02/05/1989."
+      },
+      { 
         tag: 'extensao',
         title: 'Relatos sobre o Espaço Físico do Prédio e Planejamento Integrado da Semana do Fazendeiro e Semana do Empresário',
         desc: 'A reunião do Colegiado do Departamento de Administração realizada na sala de reuniões do Departamento de Engenharia Florestal, foram apresentadas importantes deliberações relativas às instalações físicas e eventos de extensão do departamento. No âmbito da infraestrutura e espaço físico do DAD, o Senhor Presidente conduziu relatos informativos mapeados sob o item de assuntos gerais dedicados ao prédio e gerenciamento do espaço físico da unidade. Adicionalmente, discutiu-se em plenário a articulação de eventos institucionais de extensão com a proposta de unificar e realizar, na mesma data, as atividades comemorativas e programáticas voltadas para a Semana do Fazendieiro e a Semana do Empresário.'
@@ -820,6 +877,16 @@ export const memorialData: MemorialData = {
   },
   1991: {
     events: [
+         {
+        "tag": "gestao",
+        "title": "Admissão de DJAIR CESARIO DE ARAUJO",
+        "desc": "Admissão do(a) docente DJAIR CESARIO DE ARAUJO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 07/08/1991."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de JOSE ROBERTO REIS",
+        "desc": "Admissão do(a) docente JOSE ROBERTO REIS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/12/1991."
+      },
       { tag: 'extensao', title: 'V Semana do Empresário', desc: 'A Universidade Federal de Viçosa (UFV) realizará, de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes. n.1191' },
       { tag: 'extensao', title: 'XVII Encontro Nacional dos Estudantes de Administração', desc: 'Cerca de dois mil estudantes de diversas regiões do país são esperados em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. O evento é organizado pelo Centro Acadêmico da UFV, pela Executiva Nacional da categoria e pelo Departamento de Administração da instituição. n.1178' },
       { tag: 'ensino', title: 'TV Viçosa inicia suas transmissões', desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), estão praticamente concluídos e a estreia deve ocorrer nos próximos dias. A emissora terá programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho aproveitará funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. n.1199' },
@@ -848,6 +915,16 @@ export const memorialData: MemorialData = {
   },
   1993: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de SORAYA MACHADO FONTES",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) SORAYA MACHADO FONTES, ocupando o cargo de AUXILIAR EM ADMINISTRAÇÃO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/01/1993."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA",
+        "desc": "Admissão do(a) docente AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 05/08/1993."
+      },
       { tag: 'nomeacao', title: 'Contratação de Docente e Voto de Louvor', desc: 'Aprovação unânime da nomeação do técnico Afonso Augusto Teixeira de Freitas de Carvalho Lima para o cargo de professor. Na mesma data, foi aprovado um voto de louvor e homenagem à professora Graça pela sugestão de ampliar a participação do departamento na diretoria do Centro e em posições administrativas.' },
       { tag: 'homenagem', title: 'Voto de Louvor ao Conselheiro Evaldo Guimarães Barbosa', desc: 'Aprovação de voto de louvor, elogio e agradecimento especial ao conselheiro Evaldo Guimarães Barbosa, prestando uma homenagem formal pela sua dedicação e trabalho na melhoria do programa do PET.' },
       { tag: 'ensino', title: 'DAD promove palestra', desc: 'O DAD promoveu palestra sobre "Técnicas Gerenciais Japonesas" no auditório do Departamento de Engenharia Florestal no dia 10 de novembro.' },
@@ -859,6 +936,17 @@ export const memorialData: MemorialData = {
   },
   1994: {
     events: [
+      
+      {
+        "tag": "gestao",
+        "title": "Admissão de WALMER FARONI",
+        "desc": "Admissão do(a) docente WALMER FARONI no Departamento de Administração e Contabilidade (DAD), com início das atividades em 21/02/1994."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de PAULO SERGIO GREGORIO",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) PAULO SERGIO GREGORIO, ocupando o cargo de ASSISTENTE EM ADMINISTRAÇÃO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 10/02/1994."
+      },
 
       { tag: 'fundacao', title: 'Aprovação da Empresa Júnior na CEPE', desc: 'Ocorreu a aprovação da criação da Empresa Júnior de Consultoria em reunião realizada pela Coordenação de Ensino, Pesquisa e Extensão (CEPE) da UFV. O Presidente comunicou oficialmente ao colegiado a aprovação da criação da Empresa Júnior de Consultoria, chancelada no mês anterior pela CEPE.' },
 
@@ -893,6 +981,12 @@ export const memorialData: MemorialData = {
   },
   1996: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de LUIZ ANTONIO ABRANTES",
+        "desc": "Admissão do(a) docente LUIZ ANTONIO ABRANTES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/01/1996."
+      },
+
       { tag: 'nomeacao', title: 'Nomeação de Ricardo Correa Gomes', desc: 'Comunicação da nomeação de Ricardo Correa Gomes no Diário Oficial da União na área Contábil-Financeira.' },
       { tag: 'extensao', title: 'Homenagem ao CACE', desc: ' Registro de homenagem prestada pela Associação Comercial de Viçosa ao CACE.' },
       { tag: 'homenagem', title: 'Docentes homenageados pela ASPUV', desc: 'O Colegiado decidiu estender a homenagem da ASPUV a todos os professores da ativa e também, em memória, aos professores Roberto e Gualberto.' },
@@ -1011,6 +1105,16 @@ export const memorialData: MemorialData = {
   },
   2002: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de RODRIGO GAVA",
+        "desc": "Admissão do(a) docente RODRIGO GAVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/07/2002."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de SUELY DE FATIMA RAMOS SILVEIRA",
+        "desc": "Admissão do(a) docente SUELY DE FATIMA RAMOS SILVEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/07/2002."
+      },
       { tag: 'ensino', title: 'Homenagens dos Formandos', desc: 'Novos profissionais prestam reconhecimento ao paraninfo Walmer Faroni e à Profa. Telma Regina. (AVERIGUAR VERICIDADE)' },
       { tag: 'ensino', title: 'Empreendedorismo e Inovação', desc: 'Curso focado em inovação para profissionais ligados ao Centev/UFV e Incubadora de Empresas.' },
       { "tag": "ensino", "title": "Mudança de Nomenclatura em Pós-Graduação", "desc": "Aprovação por unanimidade da alteração do nome do Curso de Pós-Graduação Lato Sensu de 'Gestão Empresarial' para 'Gestão e Diagnóstico Empresarial', por proposição do professor Jailson de Oliveira Arieira." },
@@ -1045,6 +1149,16 @@ export const memorialData: MemorialData = {
   },
   2004: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de NÁLBIA DE ARAUJO SANTOS",
+        "desc": "Admissão do(a) docente NÁLBIA DE ARAUJO SANTOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 28/04/2004."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de LUIZA AMELIA DE ARRUDA LADEIRA",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) LUIZA AMELIA DE ARRUDA LADEIRA, ocupando o cargo de ASSISTENTE EM ADMINISTRAÇÃO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/06/2004."
+      },
       { "tag": "ensino", "title": "Projeto do Stricto Sensu em Administração Pública", "desc": "Apreciação e aprovação unânime do Projeto de Criação do Curso de Pós-Graduação Stricto Sensu focado na área de Administração Pública/Gestão Municipal." },
       { "tag": "ensino", "title": "Alteração no Projeto do Stricto Sensu", "desc": "Aprovação unânime do novo escopo do projeto de Stricto Sensu (Processo n.º 2348/2004) e determinação do arquivamento do processo de criação inicial." },
       { "tag": "gestao", "title": "Aprovação do Stricto Sensu no CCH", "desc": "Comunicação oficial de que o curso de Pós-Graduação Stricto Sensu em Administração obteve aprovação formal perante o Conselho Departamental do CCH." },
@@ -1069,6 +1183,11 @@ export const memorialData: MemorialData = {
   },
   2005: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de MARCO AURELIO MARQUES FERREIRA",
+        "desc": "Admissão do(a) docente MARCO AURELIO MARQUES FERREIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/09/2005."
+      },
       { tag: 'ensino', title: 'Aulas da Saudade', desc: 'Homenagem ao professor Antônio de Figueiredo Vieira na última aula simbólica da turma.' },
       { tag: 'infraestrutura', title: 'Capacitação para Gestores', desc: 'Ciclo de palestras voltado para dirigentes, ministrado por professores experientes do DAD.' },
       { tag: 'gestao', title: 'Criação da Coopera', desc: 'Comissão instituída para otimização dos procedimentos e rotinas administrativas da universidade.' },
@@ -1083,6 +1202,16 @@ export const memorialData: MemorialData = {
   },
   2006: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de MAGNUS LUIZ EMMENDOERFER",
+        "desc": "Admissão do(a) docente MAGNUS LUIZ EMMENDOERFER no Departamento de Administração e Contabilidade (DAD), com início das atividades em 04/08/2006."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de THIAGO DE MELO TEIXEIRA DA COSTA",
+        "desc": "Admissão do(a) docente THIAGO DE MELO TEIXEIRA DA COSTA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 07/11/2006."
+      },
       { "tag": "ensino", "title": "Criação do Curso em Controladoria e Finanças", "desc": "Aprovação unânime da proposta para a criação do Curso de Pós-Graduação Lato Sensu em Controladoria e Finanças, com previsão de início para novembro de 2006." },
       { "tag": "ensino", "title": "Implantação do Curso de Administração a Distância (EAD)", "desc": "Definições dos coordenadores e comissão para o curso EAD (Resolução 5/2006), com início em agosto nos polos de Viçosa e Florestal, além de autorização para compra de equipamentos e seleção de 11 tutores." },
       { "tag": "infraestrutura", "title": "Reorganização do Espaço Físico do DAD", "desc": "Aprovação unânime de nova proposta de infraestrutura: manutenção da Biblioteca Setorial no local de origem e remanejamento das salas do PET, grupo de pesquisa, mestrado e coordenações." },
@@ -1126,6 +1255,16 @@ export const memorialData: MemorialData = {
   },
   2009: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de SIMONE MARTINS 12/08/2015 - 28/08/2017",
+        "desc": "Admissão do(a) docente SIMONE MARTINS 12/08/2015 - 28/08/2017 no Departamento de Administração e Contabilidade (DAD), com início das atividades em 16/02/2009."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de WENDER FRAGA MIRANDA",
+        "desc": "Admissão do(a) docente WENDER FRAGA MIRANDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/07/2009."
+      },
       { tag: 'extensao', title: 'Dissertação do Mestrado em Administração Recebe Diploma de Honra ao Mérito em Convenção Mineira', desc: 'O trabalho intitulado "Contribuição de Melhoria e a Lei de Responsabilidade Fiscal: Um estudo de caso da Mesorregião da Zona da Mata Mineira", de autoria de Tainá Rodrigues Gomide Souza Pinto, figurou entre os premiados na Convenção Mineira de Contabilidade, sediada em Belo Horizonte entre os dias 21 e 23 de outubro. A pesquisa foi agraciada com o Diploma de Honra ao Mérito no Prêmio Internacional de Produção Contábil Técnico-Científica Prof. Dr. Antônio Lopes de Sá. O artigo premiado consiste em um recorte de sua dissertação desenvolvida no Programa de Mestrado em Administração da UFV, sob a orientação do professor Walmer Faroni. Nº 1.428 (12 de dezembro de 2009)' },
 
       { "tag": "gestao", "title": "Criação do IPPDS e Recursos do CT-INFRA", "desc": "17 de dezembro de 2009 – Ata nº 273/2009 O Colegiado aprovou o referendo referente à proposta de criação do Instituto de Políticas Públicas e Desenvolvimento Sustentável da UFV (IPPDS), uma iniciativa conjunta que envolve os departamentos de Administração, Economia, Economia Doméstica e Economia Rural. Também foi anunciada a aprovação de recursos financeiros do CT-INFRA/FINEP destinados às instalações físicas do Centro de Ciências Humanas, Letras e Artes, englobando a construção de um hall com lanchonete e recepção, um auditório, uma sala para computadores e uma biblioteca para os programas de pós-graduação. Por fim, foi aprovado o calendário do curso de pós-graduação lato sensu em Controladoria e Finanças, cuja oferta foi definida para o dia 10 de abril de 2010." },
@@ -1143,6 +1282,16 @@ export const memorialData: MemorialData = {
 
   2010: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de TAINA RODRIGUES GOMIDE SOUZA PINTO",
+        "desc": "Admissão do(a) docente TAINA RODRIGUES GOMIDE SOUZA PINTO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/03/2010."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de ANTONIO CARLOS BRUNOZI JUNIOR",
+        "desc": "Admissão do(a) docente ANTONIO CARLOS BRUNOZI JUNIOR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/07/2010."
+      },
       { "tag": "ensino", "title": "Orçamentos de Pós-Graduação e Criação do NUPEC", "desc": "16 de março de 2010 – Ata nº 274/2010. Foi formalizada a criação do Núcleo de Pesquisa em Contabilidade (NUPEC), voltado para a Iniciação Científica do curso de Ciências Contábeis." },
 
       { "tag": "gestao", "title": "Visita do Reitor e Futuros Cursos X", "desc": "12 de novembro de 2010 – Ata nº 278/2010 O Colegiado recebeu uma visita oficial do Magnífico Reitor e da Vice-Reitora da instituição, acompanhados pelo Diretor do Centro de Ciências Humanas, Letras e Artes. No encontro, discutiu-se o andamento do curso de Ciências Contábeis, cujas instâncias haviam aprovado o Projeto Pedagógico, e debateu-se a futura criação de uma graduação em Administração no horário diurno, bem como a inserção da área de Administração Pública na grade. Houve também relatos sobre a criação e o panorama do curso de pós-graduação em Administração Pública e o funcionamento do curso Lato Sensu em Controladoria e Finanças. X" },
@@ -1160,6 +1309,16 @@ export const memorialData: MemorialData = {
 
   2011: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de GISLAINE APARECIDA SANTANA SEDIYAMA",
+        "desc": "Admissão do(a) docente GISLAINE APARECIDA SANTANA SEDIYAMA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/03/2011."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de FERNANDA MARIA DE ALMEIDA",
+        "desc": "Admissão do(a) docente FERNANDA MARIA DE ALMEIDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 21/01/2011."
+      },
       { tag: 'ensino', title: 'Resumo do Livro e Temas Abordados', desc: 'A obra intitulada "Administração Pública, Gestão Social e Economia Solidária" foi organizada pelos professores Marco Aurélio Ferreira Marques, Magnus Luiz Emmendoerfer e Rodrigo Gava, da UFV.' },
       
        { tag: 'ensino', title: 'Lançamento de Curso e Divulgação no Dia do Administrador', desc: 'Lançamento de Curso e Divulgação no Dia do Administrador na Ata n.º 285/2011 (1 de setembro de 2011) Na reunião realizada no primeiro dia de setembro de dois mil e onze, no âmbito de novos cursos de pós-graduação, a professora Nina Rosa da Silveira Cunha expôs informações sobre o andamento do curso lato sensu em Gestão Estratégica e Ambiental. Na mesma oportunidade, tratando sobre o apoio institucional do departamento a eventos e datas comemorativas, o Senhor Presidente prestou esclarecimentos e informou aos presentes sobre as ações ativas de divulgação e homenagem ao Dia do Administrador, realizadas por meio de veiculações em jornal e outdoor em parceria com o Conselho Regional.' },
@@ -1170,6 +1329,11 @@ export const memorialData: MemorialData = {
   },
   2012: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de ALAN FERREIRA DE FREITAS",
+        "desc": "Admissão do(a) docente ALAN FERREIRA DE FREITAS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/02/2012."
+      },
     
       { tag: 'gestao', title: 'Recondução da professora Suely no IPPDS', desc: 'O Instituto de Políticas Públicas e Desenvolvimento Sustentável da Universidade Federal de Viçosa realizou a cerimônia de posse de sua nova diretoria, reconduzindo a professora Suely de Fátima Ramos Silveira, do Departamento de Administração, ao cargo de diretora para um novo mandato.' },
       { tag: 'reconhecimento', title: 'Homenagem à Professora Suely de Fátima Ramos Silveira', desc: 'A professora Suely de Fátima Ramos Silveira, vinculada ao Departamento de Administração, foi agraciada com a Medalha de Mérito em Extensão durante as festividades do 85º aniversário de fundação da Universidade Federal de Viçosa. Essa honraria reconhece sua trajetória de dedicação e as relevantes contribuições oferecidas à instituição ao longo de sua carreira, especialmente no âmbito das atividades extensionistas que aproximam a universidade da comunidade. A entrega da medalha ocorreu em uma sessão solene que reuniu autoridades, profissionais e membros da comunidade acadêmica para rememorar fatos históricos e prestar homenagens àqueles que ajudaram a construir a trajetória vitoriosa da UFV.' },
@@ -1180,6 +1344,16 @@ export const memorialData: MemorialData = {
   },
   2013: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de WESCLEY SILVA XAVIER",
+        "desc": "Admissão do(a) docente WESCLEY SILVA XAVIER no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/10/2013."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de JANSEN CARDOSO PEREIRA",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) JANSEN CARDOSO PEREIRA, ocupando o cargo de ADMINISTRADOR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 20/08/2013."
+      },
       { "tag": "gestao", "title": "Homenagens e Menções Honrosas", "desc": "Ata nº 294/2013 – 1º de março de 2013 Nesta reunião, o Colegiado registrou homenagens e menções honrosas a membros do corpo docente pelas suas conquistas acadêmicas, parabenizando o professor Magnus Luiz Emmendoerfer em decorrência da reclassificação da revista Administração Pública e Gestão Social como periódico B3 pela Qualis e também a professora Suely de Fátima Ramos Silveira por conta de sua indicação oficial como pesquisadora do CNPq." },
 
 
@@ -1218,6 +1392,16 @@ export const memorialData: MemorialData = {
   },
   2016: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de JOSIEL LOPES VALADARES 04/06/19 - 03/04/23",
+        "desc": "Admissão do(a) docente JOSIEL LOPES VALADARES 04/06/19 - 03/04/23 no Departamento de Administração e Contabilidade (DAD), com início das atividades em 15/04/2016."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de FERNANDA CRISTINA DA SILVA",
+        "desc": "Admissão do(a) docente FERNANDA CRISTINA DA SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 13/07/2016."
+      },
       { tag: 'gestao', title: 'Professor Magnus Luiz Emmendoerfer é o novo coordenador do Programa de Pós-Graduação Stricto Sensu', desc: 'ATA 317. 04 de março de 2016: No âmbito das nomeações, o professor Magnus Luiz Emmendoerfer foi formalizado como o novo coordenador do Programa de Pós-Graduação Stricto Sensu.' },
 
       { tag: 'gestao', title: ' Nova Coordenação de Curso', desc: 'ATA 319. 15 de abril de 2016: No âmbito acadêmico, o professor Djair Cesário de Araújo foi anunciado como o novo coordenador do curso de Administração.' },
@@ -1259,7 +1443,21 @@ export const memorialData: MemorialData = {
 
   2019: {
     events: [
-    
+      {
+        "tag": "gestao",
+        "title": "Admissão de LAYON CARLOS CEZAR",
+        "desc": "Admissão do(a) docente LAYON CARLOS CEZAR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/11/2019."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de DIEGO COSTA MENDES",
+        "desc": "Admissão do(a) docente DIEGO COSTA MENDES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/10/2019."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de ANA CLAUDIA AZEVEDO",
+        "desc": "Admissão do(a) docente ANA CLAUDIA AZEVEDO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/11/2019."
+      },  
       {
         tag: 'infraestrutura',
         title: 'Ocupação do Terceiro Andar do Acesso ao CCH1',
@@ -1287,6 +1485,16 @@ export const memorialData: MemorialData = {
   },
   2021: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de LEANDRO RIVELLI TEIXEIRA NOGUEIRA",
+        "desc": "Admissão do(a) docente LEANDRO RIVELLI TEIXEIRA NOGUEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/04/2021."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de LUANA FERREIRA DOS SANTOS",
+        "desc": "Admissão do(a) docente LUANA FERREIRA DOS SANTOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 08/01/2021."
+      },
       { "tag": "infraestrutura", "title": "Melhorias nas Instalações e Doação de Máquinas", "desc": "Ata 359/2021 – 26 de fevereiro de 2021. Melhoria das estruturas das salas da CACE, CECCO e PET e aprimoramento da rede de internet. " },
 
       { "tag": "infraestrutura", "title": "Produção de Documentário", "desc": "Ata 360/2021 – 26 de março de 2021. Indicação dos professores Afonso Augusto Teixeira de Freitas de Carvalho Lima, Nina Rosa da Silveira Cunha e Walmer Faroni para iniciar um trabalho de levantamento de informações dedicado a registrar a história do Departamento de Administração e Contabilidade." },
@@ -1336,6 +1544,16 @@ export const memorialData: MemorialData = {
   },
   2024: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de MARCONI SILVA MIRANDA",
+        "desc": "Admissão do(a) docente MARCONI SILVA MIRANDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 22/11/2024."
+      },
+      {
+        "tag": "gestao",
+        "title": "Admissão de YKARU GOMES WAGNER",
+        "desc": "Admissão do(a) servidor(a) técnico-administrativo(a) YKARU GOMES WAGNER, ocupando o cargo de ASSISTENTE EM ADMINISTRAÇÃO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/01/2024."
+      },
       { "tag": "gestao", "title": "Homenagem ao Dia das Mulheres", "desc": "Ata 394/2024 – 08 de março de 2024. Nesta data, o colegiado realizou uma homenagem a todas as mulheres em comemoração ao Dia Internacional das Mulheres. " },
 
 
@@ -1354,8 +1572,13 @@ export const memorialData: MemorialData = {
 
   2025: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Admissão de HENRIQUE CORDEIRO MARTINS",
+        "desc": "Admissão do(a) docente HENRIQUE CORDEIRO MARTINS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 20/05/2025."
+      },
 
-      { "tag": "gestao", "title": "Nomeação de Docente", "desc": "Ata 403/2025 – 09 de maio de 2025. Ocorreu o informe oficial de que a nomeação do professor Henrique Cordeiro Martins foi devidamente publicada no dia 15 de abril daquele ano. Para encerrar as atividades da reunião, foi prestada uma homenagem especial às mães em virtude da passagem do seu dia." },
+      { "tag": "gestao", "title": "homenagem especial às mães", "desc": "Ata 403/2025 – 09 de maio de 2025. Para encerrar as atividades da reunião, foi prestada uma homenagem especial às mães em virtude da passagem do seu dia." },
 
       { "tag": "infraestrutura", "title": "Condecoração do NAF", "desc": "Ata 404/2025 – 06 de junho de 2025. Registrou-se uma homenagem prestada pela Receita Federal, que condecorou o Núcleo de Apoio Contábil e Fiscal (NAF) da UFV em reconhecimento à parceria consolidada e pela relevante contribuição promovida em prol do progresso da educação e da cidadania fiscal brasileira." },
 
