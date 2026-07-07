@@ -1257,6 +1257,11 @@ export const memorialData: MemorialData = {
     events: [
       {
         "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Marco Aurélio Marques Ferreira é indicado editor-chefe da revista APGS."
+      },
+      {
+        "tag": "gestao",
         "title": "Admissão de SIMONE MARTINS 12/08/2015 - 28/08/2017",
         "desc": "Admissão do(a) docente SIMONE MARTINS 12/08/2015 - 28/08/2017 no Departamento de Administração e Contabilidade (DAD), com início das atividades em 16/02/2009."
       },
@@ -1329,6 +1334,12 @@ export const memorialData: MemorialData = {
   },
   2012: {
     events: [
+       {
+        "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Magnus Luiz Emmendoerfer é indicado editor-chefe da revista APGS."
+      },
+
       {
         "tag": "gestao",
         "title": "Admissão de ALAN FERREIRA DE FREITAS",
@@ -1366,6 +1377,7 @@ export const memorialData: MemorialData = {
 
   2014: {
     events: [
+      { "tag": "gestao", "title": "Nomeação de Professor Titular", "desc": "Nomeados como Titulares os professores Nina Rosa da Silveira Cunha e Walmer Faroni (06/06/2014); Telma Regina da Costa Guimarães Barbosa (19/09/2014) e Adriel Rodrigues de Oliveira (29/09/2014)." },
       
       { "tag": "infraestrutura", "title": "Obras do Anexo e Mudança de Departamento de Letras", "desc": "Ata nº 302/2014 (11 de junho de 2014) No início desta sessão, a presidência apresentou informes sobre as instalações físicas do departamento, destacando a conclusão da primeira etapa da obra do anexo do DAD, a qual ficava dependendo da liberação de recursos financeiros por parte da UFV para que pudesse ser finalizada. Adicionalmente, foi comunicada aos presentes a mudança do Departamento de Letras e a respectiva reforma do prédio." },
 
@@ -1376,7 +1388,13 @@ export const memorialData: MemorialData = {
 
   2015: {
     events: [
-   
+       {
+        "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Wescley Silva Xavier é indicado editor-chefe da revista APGS."
+      },
+        { "tag": "gestao", "title": "Nomeação de Professor Titular", "desc": "Nomeados como Titular o professor José Roberto Reis (14/07/2015)." },
+
       { "tag": "gestao", "title": "Comemoração de Aniversários", "desc": "Ata nº 310/2015 (25 de agosto de 2015)  ao departamento, que compreendem as comemorações dos 15 anos do Curso de Ciências Contábeis, 10 anos da Pós-Graduação em Administração, 40 anos do curso de Administração e os 50 anos do Departamento de Administração e Contabilidade." },
 
       { "tag": "ensino", "title": "Implantação do Curso de Doutorado", "desc": "Comunicação oficial sobre o início das atividades do novo curso de doutorado, com previsão de implantação para o primeiro semestre de 2016." },
@@ -1428,6 +1446,11 @@ export const memorialData: MemorialData = {
   },
   2018: {
     events: [
+      {
+        "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Josiel Lopes Valadares é indicado editor-chefe da revista APGS."
+      },
       { tag: 'gestao', title: 'Novos Integrantes', desc: 'Ata nº 335/2018. 22 de março de 2018: Nesta data, o Senhor Presidente deu as boas-vindas ao professor Antônio Carlos Brunozi Júnior como o novo integrante do Colegiado.' },
       { tag: 'gestao', title: 'Nomeação de Coordenadores de Administração e Contabilidade', desc: 'Ata nº 336/2018. 26 de abril de 2018: Durante a reunião, o Colegiado formalizou a nomeação de novos coordenadores para os cursos oferecidos pelo departamento, sendo designado o professor Evandro Rodrigues de Faria para a coordenação do curso de Administração e o professor Antônio Carlos Brunozi Júnior para a coordenação do curso de Ciências Contábeis.' },
 
@@ -1471,6 +1494,11 @@ export const memorialData: MemorialData = {
 
   2020: {
     events: [
+       {
+        "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Antônio Carlos Brunozi Junior é indicado editor-chefe da revista APGS."
+      },
       { "tag": "gestao", "title": "Inauguração de Auditório", "desc": "Ata 351/2020 – 13 de março de 2020. Entre os informes apresentados, destacou-se a inauguração do auditório do CCH1, espaço que passou a ser compartilhado com o DEE. Na mesma ocasião, a professora Tainá Rodrigues Gomide Souza Pinto informou o Colegiado a respeito do início das atividades e das aulas do curso MBA em Gestão Empresarial." },
 
       { "tag": "ensino", "title": "Aprovação da Pós-Graduação em Administração Pública Municipal", "desc": "Ata 352/2020 – 15 de maio de 2020. O curso de pós-graduação lato sensu em Administração Pública Municipal foi oficialmente aprovado pela PPG." },
@@ -1485,6 +1513,7 @@ export const memorialData: MemorialData = {
   },
   2021: {
     events: [
+        { "tag": "gestao", "title": "Nomeação de Professor Titular", "desc": "Nomeado como Titular o professor Marco Aurelio Marques Ferreira (05/12/2021)" },
       {
         "tag": "gestao",
         "title": "Admissão de LEANDRO RIVELLI TEIXEIRA NOGUEIRA",
@@ -1509,7 +1538,7 @@ export const memorialData: MemorialData = {
   },
   2022: {
     events: [
-
+      { "tag": "gestao", "title": "Nomeação de Professor Titular", "desc": "Nomeado como Titular o professor Luiz Antonio Abrantes (28/03/2022)." },
 
       { "tag": "ensino", "title": "Cátedra UNESCO", "desc": "Em vinte e cinco de março de dois mil e vinte e dois, o Colegiado homologou ad referendum o Acordo Internacional entre a UNESCO e a UFV para a Cátedra em Economia Criativa e Políticas Públicas." },
 
@@ -1544,6 +1573,11 @@ export const memorialData: MemorialData = {
   },
   2024: {
     events: [
+       {
+        "tag": "gestao",
+        "title": "Editor-Chefe da Revista Administração Pública Gestão Social (APGS)",
+        "desc": "O Professor Layon Carlos Cezar é indicado editor-chefe da revista APGS."
+      },
       {
         "tag": "gestao",
         "title": "Admissão de MARCONI SILVA MIRANDA",
@@ -1572,6 +1606,9 @@ export const memorialData: MemorialData = {
 
   2025: {
     events: [
+
+      { "tag": "gestao", "title": "Nomeação de Professor Titular", "desc": "Nomeados como Titulares os professores Rodrigo Gava (03/07/2025) e Magnus Luiz Emmendoerfer (14/09/2025)." },
+
       {
         "tag": "gestao",
         "title": "Admissão de HENRIQUE CORDEIRO MARTINS",

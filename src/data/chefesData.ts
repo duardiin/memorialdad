@@ -41,14 +41,30 @@ export const chefesDepartamento: ChefeDepartamento[] = [
   // },
   {
     id: "1",
-    nome: "Adriel Rodrigues de Oliveira",
-    periodoInicio: "08/11/1996",
-    periodoFim: "03/02/1998",
+    nome: "Marcos Tanure Sanabio",
+    periodoInicio: "10/08/1988",
+    periodoFim: "11/09/1989",
     cargo: "",
     observacoes: ""
   },
   {
     id: "2",
+    nome: "Roberto de Caralho Araújo",
+    periodoInicio: "12/09/1989",
+    periodoFim: "01/11/1989",
+    cargo: "",
+    observacoes: ""
+  },
+  {
+    id: "3",
+    nome: "Milton Rodrigues Natalino",
+    periodoInicio: "02/11/1989",
+    periodoFim: "15/06/1990",
+    cargo: "",
+    observacoes: ""
+  },
+  {
+    id: "4",
     nome: "Antonio de Figueredo Vieira",
     periodoInicio: "16/06/1990",
     periodoFim: "06/11/1992",
@@ -56,82 +72,66 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     observacoes: ""
   },
   {
-    id: "3",
-    nome: "Josiel Lopes Valadares",
-    periodoInicio: "06/07/2019",
-    periodoFim: "03/04/2023",
-    cargo: "",
-    observacoes: ""
-  },
-  {
-    id: "4",
-    nome: "Djair Lopes Valadares",
-    periodoInicio: "06/07/2011",
-    periodoFim: "",
-    cargo: "",
-    observacoes: ""
-  },
-  {
     id: "5",
-    nome: "Luiz Antonio Abrantes",
-    periodoInicio: "02/07/1992",
-    periodoFim: "14/12/2000",
+    nome: "Milton Rodrigues Natalino",
+    periodoInicio: "07/11/1992",
+    periodoFim: "11/05/1995",
     cargo: "",
     observacoes: ""
   },
   {
     id: "6",
-    nome: "Milton Rodrigues Natalino",
-    periodoInicio: "02/11/1989",
-    periodoFim: "15/06/1990",
-    cargo: "",
-    observacoes: ""
-  },
-   {
-    id: "7",
-    nome: "Milton Rodrigues Natalino",
-    periodoInicio: "07/02/1992",
-    periodoFim: "15/05/1995",
-    cargo: "",
-    observacoes: ""
-  },
-  {
-    id: "8",
-    nome: "Simone Martins",
-    periodoInicio: "12/08/2015",
-    periodoFim: "28/08/2017",
-    cargo: "",
-    observacoes: ""
-  },
-    {
-    id: "9",
-    nome: "Walmer Faroni",
-    periodoInicio: "15/12/2000",
-    periodoFim: "15/12/2004",
-    cargo: "",
-    observacoes: ""
-  },
-    {
-    id: "10",
     nome: "José Edson Lara",
     periodoInicio: "12/05/1995",
     periodoFim: "07/11/1996",
     cargo: "",
     observacoes: ""
   },
-   {
-    id: "11",
-    nome: "Roberto de Caralho Araújo",
-    periodoInicio: "12/09/1989",
-    periodoFim: "01/11/1989",
+  {
+    id: "7",
+    nome: "Adriel Rodrigues de Oliveira",
+    periodoInicio: "08/11/1996",
+    periodoFim: "03/02/1998",
     cargo: "",
     observacoes: ""
   },
-   {
-    id: "12",
+  {
+    id: "8",
     nome: "Ricardo Correa Gomes",
     periodoInicio: "04/02/1998",
     periodoFim: "01/07/1999",
+    cargo: "",
+    observacoes: ""
+  },
+  {
+    id: "9",
+    nome: "Luiz Antonio Abrantes",
+    periodoInicio: "02/07/1999",
+    periodoFim: "14/12/2000",
+    cargo: "",
+    observacoes: ""
+  },
+  {
+    id: "10",
+    nome: "Walmer Faroni",
+    periodoInicio: "15/12/2000",
+    periodoFim: "15/12/2004",
+    cargo: "",
+    observacoes: ""
+  },
+  {
+    id: "11",
+    nome: "Djair Cesário de Araujo",
+    periodoInicio: "21/02/2006",
+    periodoFim: "11/12/2008",
+    cargo: "",
+    observacoes: "Pro tempore de 21/02/2006 a 16/03/2006 e efetivo de 16/03/2006 a 11/12/2008; 11/12/2008 a 01/07/2011 e reconduzido em 11/07/2011 a 12/08/2015."
+  },
+  {
+    id: "12",
+    nome: "Simone Martins",
+    periodoInicio: "12/08/2015",
+    periodoFim: "28/08/2017",
     cargo: "",
     observacoes: ""
   },
@@ -145,10 +145,18 @@ export const chefesDepartamento: ChefeDepartamento[] = [
   },
   {
     id: "14",
-    nome: "Marcos Tanure Sanabio",
-    periodoInicio: "22/08/1988",
-    periodoFim: "11/09/1989",
+    nome: "Josiel Lopes Valadares",
+    periodoInicio: "04/06/2019",
+    periodoFim: "03/04/2023",
     cargo: "",
     observacoes: ""
   },
+  {
+    id: "15",
+    nome: "Ronan Capobiango",
+    periodoInicio: "03/04/2023",
+    periodoFim: null,
+    cargo: "",
+    observacoes: ""
+  }
 ];
