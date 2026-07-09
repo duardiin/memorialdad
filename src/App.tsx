@@ -8,6 +8,7 @@ import {
   BookOpen,
   Building2,
   Calendar,
+  ChevronDown,
   ChevronRight,
   Globe,
   GraduationCap,
@@ -32,9 +33,14 @@ import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
 import { allGalleryPhotos } from './data/allGalleryPhotos';
 import { chefesDepartamento } from './data/chefesData';
+import { professoresTitulares } from './data/professoresTitularesData';
+import { profissionaisAdmitidos } from './data/profissionaisAdmitidosData';
 import Fuse from 'fuse.js';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes' | 'professores' | 'profissionais';
+
+// Painéis que fazem parte do submenu "O DAD"
+const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais'];
 
 enum OperationType {
   CREATE = 'create',
@@ -80,6 +86,8 @@ export default function App() {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [isEventModalOpen, setIsEventModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isODadMenuOpen, setIsODadMenuOpen] = useState(false);
+  const [isMobileODadOpen, setIsMobileODadOpen] = useState(false);
   const [isGalleryUploadModalOpen, setIsGalleryUploadModalOpen] = useState(false);
   const [uploadData, setUploadData] = useState({ caption: '', file: null as File | null, base64: '' });
   const [galleryUploadData, setGalleryUploadData] = useState({ caption: '', title: '', file: null as File | null, base64: '' });
@@ -214,10 +222,7 @@ const searchResults = useMemo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
           <span className="text-center sm:text-left">Universidade Federal de Viçosa — Campus Viçosa, MG</span>
           <div className="flex items-center gap-4 sm:gap-6">
-            <div className="hidden xs:flex gap-4">
-              <a href="#" className="hover:text-ufv-gold-light">UFV.br</a>
-              <a href="#" className="hover:text-ufv-gold-light">Transparência</a>
-            </div>
+            
             <div className="hidden xs:block h-4 w-px bg-white/20"></div>
             {user ? (
               <div className="flex items-center gap-3">
@@ -245,12 +250,8 @@ const searchResults = useMemo(() => {
       <header className="bg-ufv-green pt-4 sticky top-0 z-50 shadow-lg border-b-4 border-ufv-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 pb-4">
           <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center border-2 border-ufv-gold shrink-0">
-              <svg viewBox="0 0 46 46" className="w-8 h-8 sm:w-12 sm:h-12">
-                <path d="M23 3 L40 10 L40 24 Q40 36 23 43 Q6 36 6 24 L6 10 Z" fill="#1E3A8A" stroke="#3B82F6" strokeWidth="1.5" />
-                <text x="23" y="22" textAnchor="middle" fontFamily="serif" fontSize="10" fontWeight="bold" fill="white">UFV</text>
-                <text x="23" y="33" textAnchor="middle" fontFamily="serif" fontSize="6" fill="#ffffff">1926</text>
-              </svg>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-transparent rounded-full flex items-center justify-center border-2 border-transparent shrink-0">
+             <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV"  />
             </div>
             <div className="text-white overflow-hidden">
               <span className="font-serif text-[10px] sm:text-sm font-light tracking-wider opacity-90 block truncate">Universidade Federal de Viçosa</span>
@@ -342,7 +343,7 @@ const searchResults = useMemo(() => {
         </div>
 
         {/* NAV TABS */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto no-scrollbar pb-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap gap-1 pb-1">
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'overview' ? 'active' : ''}`}
             onClick={() => setActivePanel('overview')}
@@ -367,12 +368,54 @@ const searchResults = useMemo(() => {
           >
             Por Ano
           </button>
-          <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'chefes' ? 'active' : ''}`}
-            onClick={() => setActivePanel('chefes')}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsODadMenuOpen(true)}
+            onMouseLeave={() => setIsODadMenuOpen(false)}
           >
-            Chefias
-          </button>
+            <button
+              className={`nav-item whitespace-nowrap flex items-center gap-1 ${O_DAD_PANELS.includes(activePanel) ? 'active' : ''}`}
+              onClick={() => setIsODadMenuOpen(v => !v)}
+              aria-haspopup="true"
+              aria-expanded={isODadMenuOpen}
+            >
+              O DAD
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isODadMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {isODadMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 top-full pt-2 z-[60] min-w-[240px]"
+                >
+                  <div className="bg-white rounded-lg shadow-2xl border border-ufv-border py-2 overflow-hidden">
+                    <button
+                      onClick={() => { setActivePanel('chefes'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'chefes' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Landmark className="w-4 h-4 shrink-0" /> Chefias
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('professores'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'professores' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <GraduationCap className="w-4 h-4 shrink-0" /> Professores Titulares
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('profissionais'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'profissionais' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Users className="w-4 h-4 shrink-0" /> Profissionais Admitidos
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
             onClick={() => setActivePanel('quebec')}
@@ -449,7 +492,64 @@ const searchResults = useMemo(() => {
                       { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-4 h-4" /> },
                       { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-4 h-4" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> },
-                      { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
+                    ].map(item => (
+                      <button
+                        key={item.id}
+                        onClick={() => {
+                          setActivePanel(item.id as PanelType);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all ${activePanel === item.id ? 'bg-ufv-green text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                      >
+                        {item.icon}
+                        <span className="font-medium">{item.label}</span>
+                      </button>
+                    ))}
+
+                    {/* SUBMENU O DAD */}
+                    <div>
+                      <button
+                        onClick={() => setIsMobileODadOpen(v => !v)}
+                        className={`w-full flex items-center justify-between gap-3 p-3 rounded-lg transition-all ${O_DAD_PANELS.includes(activePanel) ? 'bg-ufv-green text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                      >
+                        <span className="flex items-center gap-3">
+                          <Landmark className="w-4 h-4" />
+                          <span className="font-medium">O DAD</span>
+                        </span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${isMobileODadOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      <AnimatePresence>
+                        {isMobileODadOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="overflow-hidden pl-4 mt-1 space-y-1"
+                          >
+                            {[
+                              { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
+                              { id: 'professores', label: 'Professores Titulares', icon: <GraduationCap className="w-4 h-4" /> },
+                              { id: 'profissionais', label: 'Profissionais Admitidos', icon: <Users className="w-4 h-4" /> },
+                            ].map(item => (
+                              <button
+                                key={item.id}
+                                onClick={() => {
+                                  setActivePanel(item.id as PanelType);
+                                  setIsMobileMenuOpen(false);
+                                }}
+                                className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all text-sm ${activePanel === item.id ? 'bg-ufv-green/90 text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                              >
+                                {item.icon}
+                                <span className="font-medium">{item.label}</span>
+                              </button>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {[
                       { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> },
                       { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> }
                     ].map(item => (
@@ -1229,6 +1329,142 @@ const searchResults = useMemo(() => {
                           </div>
                           {chefe.observacoes && (
                             <p className="text-sm text-ufv-gray-light leading-relaxed">{chefe.observacoes}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))
+                )}
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'professores' && (
+            <motion.div
+              key="professores"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              {/* HEADER CARD */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <GraduationCap className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Professores Titulares</h1>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Corpo docente que alcançou a titularidade no Departamento, reconhecimento máximo da carreira acadêmica.
+                  </p>
+                </div>
+              </div>
+
+              {/* LISTA */}
+              <div className="space-y-4">
+                {professoresTitulares.length === 0 ? (
+                  <div className="card text-center py-10">
+                    <GraduationCap className="w-8 h-8 text-ufv-border mx-auto mb-3" />
+                    <p className="text-sm text-ufv-gray-light">Nenhum professor titular cadastrado ainda.</p>
+                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/professoresTitularesData.ts</code>.</p>
+                  </div>
+                ) : (
+                  professoresTitulares
+                    .slice()
+                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
+                    .map((prof) => (
+                      <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                          {prof.foto ? (
+                            <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                          ) : (
+                            <GraduationCap className="w-7 h-7 text-ufv-green" />
+                          )}
+                        </div>
+                        <div className="flex-grow text-center sm:text-left">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                            <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
+                            <span className="event-tag tag-ensino self-center sm:self-auto">
+                              Titular desde {prof.periodoInicio}
+                            </span>
+                          </div>
+                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                            {prof.cargo || 'Professor Titular'}
+                          </div>
+                          {prof.observacoes && (
+                            <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
+                          )}
+                        </div>
+                      </div>
+                    ))
+                )}
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'profissionais' && (
+            <motion.div
+              key="profissionais"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              {/* HEADER CARD */}
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Profissionais Admitidos</h1>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    Servidores técnico-administrativos que integraram e fortaleceram o Departamento ao longo dos anos.
+                  </p>
+                </div>
+              </div>
+
+              {/* LISTA */}
+              <div className="space-y-4">
+                {profissionaisAdmitidos.length === 0 ? (
+                  <div className="card text-center py-10">
+                    <Users className="w-8 h-8 text-ufv-border mx-auto mb-3" />
+                    <p className="text-sm text-ufv-gray-light">Nenhum profissional cadastrado ainda.</p>
+                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/profissionaisAdmitidosData.ts</code>.</p>
+                  </div>
+                ) : (
+                  profissionaisAdmitidos
+                    .slice()
+                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
+                    .map((prof) => (
+                      <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                          {prof.foto ? (
+                            <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                          ) : (
+                            <Users className="w-7 h-7 text-ufv-green" />
+                          )}
+                        </div>
+                        <div className="flex-grow text-center sm:text-left">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                            <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
+                            <span className="event-tag tag-gestao self-center sm:self-auto">
+                              {prof.periodoFim ? `${prof.periodoInicio} – ${prof.periodoFim}` : `Admitido em ${prof.periodoInicio}`}
+                            </span>
+                          </div>
+                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                            {prof.cargo || 'Profissional Admitido'}
+                          </div>
+                          {prof.observacoes && (
+                            <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
                           )}
                         </div>
                       </div>
