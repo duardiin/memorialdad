@@ -769,6 +769,7 @@ export const memorialData: MemorialData = {
         title: 'Tratativas para o novo prédio do Departamento de Administração',
         desc: '16 de dezembro de 1988 a ata número onze detalha a reunião do Colegiado do Departamento de Administração, realizada às dez horas na sala de reuniões do Departamento de Engenharia Florestal. No encerramento da sessão, o Senhor Presidente compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Magnífico Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras. Adicionalmente, no âmbito do desenvolvimento de novos cursos e atendendo a uma solicitação formal do Centro Acadêmico de Administração, debateu-se o planejamento e o oferecimento futuro do Curso de Informática Aplicada à Administração. '
       },
+      { tag: 'gestao', title: 'UFV Promove II Semana do Empresário em Julho', desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.' },
     ],
     photos: [
       { url: '/1988 “Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.”.jpg', caption: 'Os formandos e os homenageados da Turma de Janeiro de 1988 da Universidade Federal de Viçosa.' },
@@ -1038,7 +1039,7 @@ export const memorialData: MemorialData = {
       { tag: 'gestao', title: 'Implantação do PET na Administração', desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta.' },
       { tag: 'ensino', title: 'Palestra sobre Dinâmica de Investimento e Economia Capitalista', desc: 'O professor Newton Paulo Bueno proferiu uma palestra no auditório do Departamento de Economia Rural (DER) abordando o tema: "A dinâmica do investimento em economias capitalistas: um questionamento sobre o princípio do ajustamento do estoque de capital".' },
       { tag: 'ensino', title: 'Homenagem ao Professor Carlos Roberto Ramos', desc: 'Curso de Administração: O professor Carlos Roberto Ramos foi o homenageado escolhido especificamente pelos formandos do curso de Administração. Homenagem Especial: Além do professor, os próprios "formandos em Administração" foram citados como alvo de uma homenagem especial dentro do curso.' },
-      { tag: 'gestao', title: 'UFV Promove II Semana do Empresário em Julho', desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.' },
+  
       { tag: 'gestao', title: 'Novas Chefias', desc: 'Departamento de Administração (DAD): Assumiu como primeiro chefe o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE): Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira.' },
     ],
     photos: [
@@ -1229,11 +1230,11 @@ export const memorialData: MemorialData = {
   2007: {
     events: [
 
-      { "tag": "ensino", "title": "Novas Turmas de Lato Sensu (2007-2009)", "desc": "Aprovação unânime da abertura de duas turmas para as especializações em Gestão Estratégica e em Gestão e Diagnóstico Empresarial." },
+      { "tag": "ensino", "title": "Novas Turmas de Lato Sensu (2007-2009)", "desc": "Ata n. 250/2007 – 19 de janeiro de 2007. Aprovação unânime da abertura de duas turmas para as especializações em Gestão Estratégica e em Gestão e Diagnóstico Empresarial." },
 
-      { "tag": "gestao", "title": "Mudança de Nome do Departamento de Administração", "desc": "Aprovação unânime da proposta de alteração da denominação do nome do Departamendo de Administração, que passou a se chamar oficialmente Departamento de Administração e Contabilidade." },
+      { "tag": "gestao", "title": "Mudança de Nome do Departamento de Administração", "desc": "Ata n. 251/2007 – 07 de março de 2007. Aprovação unânime da proposta de alteração da denominação do nome do Departamendo de Administração, que passou a se chamar oficialmente Departamento de Administração e Contabilidade." },
 
-      { "tag": "gestao", "title": "Homenagem por Aposentadoria", "desc": "Entrega solene de placa de homenagem à professora Maria da Graça Nemer Jentzsch pela sua aposentadoria. 17 de julho de 2007" },
+      { "tag": "gestao", "title": "Homenagem por Aposentadoria", "desc": "17 de julho de 2007. Entrega solene de placa de homenagem à professora Maria da Graça Nemer Jentzsch pela sua aposentadoria. " },
 
       { tag: 'gestao', title: 'Cace Consultoria', desc: 'Consolidação da empresa júnior na prestação de serviços para a Zona da Mata mineira.' },
     ],
