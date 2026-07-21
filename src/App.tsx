@@ -18,8 +18,6 @@ import {
   Info,
   Landmark,
   LayoutGrid,
-  LogIn,
-  LogOut,
   Menu,
   Microscope,
   Plus,
@@ -28,7 +26,7 @@ import {
   X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
 import { allGalleryPhotos } from './data/allGalleryPhotos';
@@ -42,43 +40,12 @@ type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desm
 // Painéis que fazem parte do submenu "O DAD"
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais'];
 
-enum OperationType {
-  CREATE = 'create',
-  UPDATE = 'update',
-  DELETE = 'delete',
-  LIST = 'list',
-  GET = 'get',
-  WRITE = 'write',
-}
-
-interface FirestoreErrorInfo {
-  error: string;
-  operationType: OperationType;
-  path: string | null;
-  authInfo: {
-    userId: string | undefined;
-    email: string | null | undefined;
-    emailVerified: boolean | undefined;
-    isAnonymous: boolean | undefined;
-    tenantId: string | null | undefined;
-    providerInfo: {
-      providerId: string;
-      displayName: string | null;
-      email: string | null;
-      photoUrl: string | null;
-    }[];
-  }
-}
-
 export default function App() {
   const [activePanel, setActivePanel] = useState<PanelType>('overview');
   const [currentDecade, setCurrentDecade] = useState<number>(1970);
   const [selectedYear, setSelectedYear] = useState<number>(1974);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('all');
-
-  const [user, setUser] = useState<User | null>(null);
-  const [isAuthReady, setIsAuthReady] = useState(false);
 
   const [dbEvents, setDbEvents] = useState<Record<number, MemorialEvent[]>>({});
   const [dbPhotos, setDbPhotos] = useState<Record<number, MemorialPhoto[]>>({});
@@ -92,12 +59,9 @@ export default function App() {
   const [uploadData, setUploadData] = useState({ caption: '', file: null as File | null, base64: '' });
   const [galleryUploadData, setGalleryUploadData] = useState({ caption: '', title: '', file: null as File | null, base64: '' });
   const [eventData, setEventData] = useState<MemorialEvent>({ tag: 'ensino', title: '', desc: '' });
+  const [extraGalleryPhotos, setExtraGalleryPhotos] = useState<MemorialPhoto[]>([]);
 
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
-
-  useEffect(() => {
-  }, []);
-
 
   const yearsInDecade = useMemo(() => {
     return Array.from({ length: 10 }, (_, i) => currentDecade + i).filter(y => y <= 2026);
@@ -162,11 +126,15 @@ const searchResults = useMemo(() => {
     return [...originalPhotos, ...userPhotos];
   }, [selectedYear, dbPhotos]);
 
+  const combinedGalleryPhotos = useMemo(() => {
+    return [...allGalleryPhotos, ...extraGalleryPhotos];
+  }, [extraGalleryPhotos]);
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
 
-      // Limit size to ~700KB to stay safe within Firestore's 1MB limit (base64 adds overhead)
+      // Limit size to ~700KB to keep the app responsive with base64-encoded images
       if (file.size > 700 * 1024) {
         alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB para garantir o armazenamento.");
         return;
@@ -200,6 +168,39 @@ const searchResults = useMemo(() => {
     }
   };
 
+  const submitPhoto = () => {
+    if (!uploadData.file || !uploadData.caption) return;
+    const newPhoto: MemorialPhoto = { url: uploadData.base64, caption: uploadData.caption } as MemorialPhoto;
+    setDbPhotos({
+      ...dbPhotos,
+      [selectedYear]: [...(dbPhotos[selectedYear] || []), newPhoto]
+    });
+    setUploadData({ caption: '', file: null, base64: '' });
+    setIsUploadModalOpen(false);
+  };
+
+  const submitEvent = () => {
+    if (!eventData.title || !eventData.desc) return;
+    setDbEvents({
+      ...dbEvents,
+      [selectedYear]: [...(dbEvents[selectedYear] || []), eventData]
+    });
+    setEventData({ tag: 'ensino', title: '', desc: '' });
+    setIsEventModalOpen(false);
+  };
+
+  const submitGalleryPhoto = () => {
+    if (!galleryUploadData.file || !galleryUploadData.caption || !galleryUploadData.title) return;
+    const newPhoto: MemorialPhoto = {
+      id: `local-${Date.now()}`,
+      url: galleryUploadData.base64,
+      caption: galleryUploadData.caption,
+      title: galleryUploadData.title
+    } as MemorialPhoto;
+    setExtraGalleryPhotos([...extraGalleryPhotos, newPhoto]);
+    setGalleryUploadData({ caption: '', title: '', file: null, base64: '' });
+    setIsGalleryUploadModalOpen(false);
+  };
 
   const getTagIcon = (tag: string) => {
     switch (tag) {
@@ -221,28 +222,6 @@ const searchResults = useMemo(() => {
       <div className="bg-ufv-green-dark text-white/75 text-[10px] sm:text-xs py-1.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
           <span className="text-center sm:text-left">Universidade Federal de Viçosa — Campus Viçosa, MG</span>
-          <div className="flex items-center gap-4 sm:gap-6">
-            
-            <div className="hidden xs:block h-4 w-px bg-white/20"></div>
-            {user ? (
-              <div className="flex items-center gap-3">
-                <span className="text-white/90">Olá, {user.displayName?.split(' ')[0]}</span>
-                <button
-                  onClick={() => logout()}
-                  className="flex items-center gap-1.5 hover:text-ufv-gold-light transition-colors"
-                >
-                  <LogOut className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Sair
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => loginWithGoogle()}
-                className="flex items-center gap-1.5 hover:text-ufv-gold-light transition-colors"
-              >
-                <LogIn className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Entrar com Google
-              </button>
-            )}
-          </div>
         </div>
       </div>
 
@@ -588,40 +567,6 @@ const searchResults = useMemo(() => {
                   </div>
                 </div>
 
-                {user ? (
-                  <div className="pt-6 border-t border-ufv-border">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-ufv-green/10 flex items-center justify-center text-ufv-green font-bold">
-                        {user.displayName?.[0]}
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-ufv-gray">{user.displayName}</div>
-                        <div className="text-[10px] text-ufv-gray-light">{user.email}</div>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => {
-                        logout();
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className="w-full flex items-center justify-center gap-2 p-3 rounded-lg border border-red-100 text-red-600 hover:bg-red-50 transition-all font-medium"
-                    >
-                      <LogOut className="w-4 h-4" /> Sair da Conta
-                    </button>
-                  </div>
-                ) : (
-                  <div className="pt-6 border-t border-ufv-border">
-                    <button
-                      onClick={() => {
-                        loginWithGoogle();
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-ufv-green text-white hover:bg-ufv-green-dark transition-all font-medium"
-                    >
-                      <LogIn className="w-4 h-4" /> Entrar com Google
-                    </button>
-                  </div>
-                )}
               </div>
 
               <div className="p-6 bg-ufv-cream text-[10px] text-ufv-gray-light text-center">
@@ -1489,29 +1434,20 @@ const searchResults = useMemo(() => {
                   <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
                     <ImageIcon className="w-6 h-6" /> Acervo Fotográfico
                   </h2>
-                  <p className="text-sm text-ufv-gray-light mt-1">{allGalleryPhotos.length} foto(s) no acervo geral do memorial</p>
+                  <p className="text-sm text-ufv-gray-light mt-1">{combinedGalleryPhotos.length} foto(s) no acervo geral do memorial</p>
                 </div>
-                {user ? (
-                  <button
-                    onClick={() => setIsGalleryUploadModalOpen(true)}
-                    className="flex items-center justify-center gap-2 bg-ufv-green text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors shadow-sm"
-                  >
-                    <Plus className="w-4 h-4" /> Adicionar Foto
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => loginWithGoogle()}
-                    className="flex items-center justify-center gap-2 bg-ufv-border text-ufv-gray-light px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-border/80 transition-colors"
-                  >
-                    <LogIn className="w-4 h-4" /> Entrar para Contribuir
-                  </button>
-                )}
+                <button
+                  onClick={() => setIsGalleryUploadModalOpen(true)}
+                  className="flex items-center justify-center gap-2 bg-ufv-green text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors shadow-sm"
+                >
+                  <Plus className="w-4 h-4" /> Adicionar Foto
+                </button>
               </div>
 
               {/* GALLERY GRID */}
-              {allGalleryPhotos.length > 0 ? (
+              {combinedGalleryPhotos.length > 0 ? (
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-                  {allGalleryPhotos.map((photo) => (
+                  {combinedGalleryPhotos.map((photo) => (
                     <motion.div
                       key={photo.id}
                       className="..."
@@ -1543,21 +1479,12 @@ const searchResults = useMemo(() => {
                   <p className="text-sm text-ufv-gray-light max-w-sm mx-auto mb-6">
                     Nenhuma foto foi adicionada ao acervo ainda. Seja o primeiro a contribuir com a memória do DAD!
                   </p>
-                  {user ? (
-                    <button
-                      onClick={() => setIsGalleryUploadModalOpen(true)}
-                      className="inline-flex items-center gap-2 bg-ufv-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
-                    >
-                      <Plus className="w-4 h-4" /> Adicionar primeira foto
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => loginWithGoogle()}
-                      className="inline-flex items-center gap-2 bg-ufv-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
-                    >
-                      <LogIn className="w-4 h-4" /> Entrar para contribuir
-                    </button>
-                  )}
+                  <button
+                    onClick={() => setIsGalleryUploadModalOpen(true)}
+                    className="inline-flex items-center gap-2 bg-ufv-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
+                  >
+                    <Plus className="w-4 h-4" /> Adicionar primeira foto
+                  </button>
                 </div>
               )}
 
@@ -1731,21 +1658,12 @@ const searchResults = useMemo(() => {
                       <div className="text-xs sm:text-sm text-ufv-gray-light mt-1">Departamento de Administração e Contabilidade · UFV</div>
                     </div>
                     <div className="flex gap-2">
-                      {user ? (
-                        <button
-                          onClick={() => setIsEventModalOpen(true)}
-                          className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-gold text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-gold-light transition-colors"
-                        >
-                          <Plus className="w-4 h-4" /> Adicionar Registro
-                        </button>
-                      ) : (
-                        <button
-                          onClick={() => loginWithGoogle()}
-                          className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-border text-ufv-gray-light px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-border/80 transition-colors"
-                        >
-                          <LogIn className="w-4 h-4" /> Entrar para Contribuir
-                        </button>
-                      )}
+                      <button
+                        onClick={() => setIsEventModalOpen(true)}
+                        className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-gold text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-gold-light transition-colors"
+                      >
+                        <Plus className="w-4 h-4" /> Adicionar Registro
+                      </button>
                     </div>
                   </div>
 
@@ -1827,14 +1745,12 @@ const searchResults = useMemo(() => {
                       <h3 className="font-serif text-xl font-bold text-ufv-green flex items-center gap-2">
                         <ImageIcon className="w-5 h-5" /> Galeria de Fotos ({yearPhotos.length})
                       </h3>
-                      {user && (
-                        <button
-                          onClick={() => setIsUploadModalOpen(true)}
-                          className="w-full sm:w-auto flex items-center justify-center gap-2 bg-ufv-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
-                        >
-                          <Plus className="w-4 h-4" /> Contribuir com Foto
-                        </button>
-                      )}
+                      <button
+                        onClick={() => setIsUploadModalOpen(true)}
+                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-ufv-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
+                      >
+                        <Plus className="w-4 h-4" /> Contribuir com Foto
+                      </button>
                     </div>
 
                     {yearPhotos.length > 0 ? (
