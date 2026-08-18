@@ -33,11 +33,11 @@ import { allGalleryPhotos } from './data/allGalleryPhotos';
 import { chefesDepartamento } from './data/chefesData';
 import { professoresTitulares } from './data/professoresTitularesData';
 import { profissionaisAdmitidos } from './data/profissionaisAdmitidosData';
+import { EventDetailModal } from './data/EventDetailModal';
 import Fuse from 'fuse.js';
 
 type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes' | 'professores' | 'profissionais';
 
-// Painéis que fazem parte do submenu "O DAD"
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais'];
 
 export default function App() {
@@ -62,6 +62,9 @@ export default function App() {
   const [extraGalleryPhotos, setExtraGalleryPhotos] = useState<MemorialPhoto[]>([]);
 
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
+  
+  // Estado para abrir o Modal de Detalhes do Evento
+  const [selectedEventModal, setSelectedEventModal] = useState<{ event: MemorialEvent; year?: number } | null>(null);
 
   const yearsInDecade = useMemo(() => {
     return Array.from({ length: 10 }, (_, i) => currentDecade + i).filter(y => y <= 2026);
@@ -85,40 +88,37 @@ export default function App() {
   }, [selectedYear, activeFilter, dbEvents]);
 
   const allEventsForSearch = useMemo(() => {
-  const list: Array<{ year: number; event: MemorialEvent }> = [];
+    const list: Array<{ year: number; event: MemorialEvent }> = [];
 
-  Object.entries(memorialData).forEach(([year, data]) => {
-    data.events.forEach(event => list.push({ year: Number(year), event }));
-  });
+    Object.entries(memorialData).forEach(([year, data]) => {
+      data.events.forEach(event => list.push({ year: Number(year), event }));
+    });
 
-  Object.entries(dbEvents).forEach(([year, events]) => {
-    events.forEach(event => list.push({ year: Number(year), event }));
-  });
+    Object.entries(dbEvents).forEach(([year, events]) => {
+      events.forEach(event => list.push({ year: Number(year), event }));
+    });
 
-  return list;
-}, [dbEvents]);
+    return list;
+  }, [dbEvents]);
 
-// 2. Cria a instância do Fuse.js configurando os pesos de relevância da busca
-const fuse = useMemo(() => {
-  return new Fuse(allEventsForSearch, {
-    keys: [
-      { name: 'event.title', weight: 0.7 },
-      { name: 'event.desc', weight: 0.3 },
-      { name: 'year', weight: 0.5 },
-      { name: 'event.tag', weight: 0.2 }
-    ],
-    threshold: 0.35, // Controla a sensibilidade (0 = busca exata, 1 = aceita qualquer coisa)
-    ignoreLocation: true,
-  });
-}, [allEventsForSearch]);
+  const fuse = useMemo(() => {
+    return new Fuse(allEventsForSearch, {
+      keys: [
+        { name: 'event.title', weight: 0.7 },
+        { name: 'event.desc', weight: 0.3 },
+        { name: 'year', weight: 0.5 },
+        { name: 'event.tag', weight: 0.2 }
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+    });
+  }, [allEventsForSearch]);
 
-// 3. Executa a busca inteligente toda vez que o usuário digita algo
-const searchResults = useMemo(() => {
-  if (!searchQuery.trim()) return [];
-  
-  const results = fuse.search(searchQuery);
-  return results.map(result => result.item);
-}, [searchQuery, fuse]);
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const results = fuse.search(searchQuery);
+    return results.map(result => result.item);
+  }, [searchQuery, fuse]);
 
   const yearPhotos = useMemo(() => {
     const originalPhotos = memorialData[selectedYear]?.photos || [];
@@ -133,13 +133,10 @@ const searchResults = useMemo(() => {
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-
-      // Limit size to ~700KB to keep the app responsive with base64-encoded images
       if (file.size > 700 * 1024) {
-        alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB para garantir o armazenamento.");
+        alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB.");
         return;
       }
-
       const reader = new FileReader();
       reader.onloadend = () => {
         setUploadData({
@@ -151,7 +148,6 @@ const searchResults = useMemo(() => {
       reader.readAsDataURL(file);
     }
   };
-
 
   const handleGalleryFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -170,7 +166,7 @@ const searchResults = useMemo(() => {
 
   const submitPhoto = () => {
     if (!uploadData.file || !uploadData.caption) return;
-    const newPhoto: MemorialPhoto = { url: uploadData.base64, caption: uploadData.caption } as MemorialPhoto;
+    const newPhoto: MemorialPhoto = { url: uploadData.base64, caption: uploadData.caption };
     setDbPhotos({
       ...dbPhotos,
       [selectedYear]: [...(dbPhotos[selectedYear] || []), newPhoto]
@@ -196,7 +192,7 @@ const searchResults = useMemo(() => {
       url: galleryUploadData.base64,
       caption: galleryUploadData.caption,
       title: galleryUploadData.title
-    } as MemorialPhoto;
+    };
     setExtraGalleryPhotos([...extraGalleryPhotos, newPhoto]);
     setGalleryUploadData({ caption: '', title: '', file: null, base64: '' });
     setIsGalleryUploadModalOpen(false);
@@ -230,7 +226,7 @@ const searchResults = useMemo(() => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 pb-4">
           <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-transparent rounded-full flex items-center justify-center border-2 border-transparent shrink-0">
-             <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV"  />
+              <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV" />
             </div>
             <div className="text-white overflow-hidden">
               <span className="font-serif text-[10px] sm:text-sm font-light tracking-wider opacity-90 block truncate">Universidade Federal de Viçosa</span>
@@ -260,7 +256,7 @@ const searchResults = useMemo(() => {
                 )}
               </div>
 
-              {/* SEARCH RESULTS DROPDOWN */}
+              {/* DROPDOWN DE BUSCA */}
               {searchQuery.trim() && (
                 <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-ufv-border z-[200] max-h-[70vh] overflow-y-auto min-w-[320px] md:min-w-[420px]">
                   <div className="px-4 py-3 border-b border-ufv-border flex items-center justify-between bg-ufv-cream rounded-t-xl">
@@ -285,9 +281,7 @@ const searchResults = useMemo(() => {
                           key={i}
                           className="w-full text-left px-4 py-3.5 hover:bg-ufv-cream/60 transition-colors group"
                           onClick={() => {
-                            setActivePanel('years');
-                            setCurrentDecade(Math.floor(year / 10) * 10);
-                            setSelectedYear(year);
+                            setSelectedEventModal({ event, year });
                             setSearchQuery('');
                           }}
                         >
@@ -321,7 +315,7 @@ const searchResults = useMemo(() => {
           </div>
         </div>
 
-        {/* NAV TABS */}
+        {/* NAVEGAÇÃO DE ABAS */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap gap-1 pb-1">
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'overview' ? 'active' : ''}`}
@@ -429,7 +423,7 @@ const searchResults = useMemo(() => {
         </div>
       </header>
 
-      {/* MOBILE SIDEBAR */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -566,7 +560,6 @@ const searchResults = useMemo(() => {
                     ))}
                   </div>
                 </div>
-
               </div>
 
               <div className="p-6 bg-ufv-cream text-[10px] text-ufv-gray-light text-center">
@@ -644,12 +637,11 @@ const searchResults = useMemo(() => {
                     </p>
                   </div>
                 </div>
-               
 
                 <div className="card">
                   <h2 className="card-title">
                     <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
-                    Notícias
+                    Notícias e Documentos
                   </h2>
                   <div className="space-y-3">
                     {[
@@ -658,10 +650,9 @@ const searchResults = useMemo(() => {
                       { title: 'Criação do Curso de Ciências Contábeis', href: 'https://drive.google.com/file/d/1pMLkf3Oo0GsRm-MDJghAiqqZD8XsIY1s/view?usp=sharing' },
                       { title: 'Relatório de Atividade de Extensão', href: 'https://drive.google.com/file/d/1LNJB9rQCBQNrhq0F45nexkNSxz05ru1I/view?usp=sharing' },
                       { title: 'O Planejamento Estratégico e sua Aplicação na Organização Universitária', href: 'https://drive.google.com/file/d/1UILui-B0EgioEWPag5cvIu-LFPZLNcCY/view?usp=sharing' },
-                       { title: 'Decreto de 15 de julho de 1969', href: 'https://drive.google.com/file/d/1me5KgBsIgS96khG-4vUO1JpkfVKf_e2G/view?usp=sharing' },
-                       { title: 'Regulamentação do uso da biblioteca e laboratório de informática', href: 'https://drive.google.com/file/d/1Dv8SEC1a44m8tGYt_DFmzdumRzYjcRls/view?usp=sharing' },
-                        { title: 'Relação de Lotação do Departamento de Administração', href: 'https://drive.google.com/file/d/1mlF7PkAPCmMLgRISsl9AcN4H7jUEUrJQ/view?usp=sharing' },
-
+                      { title: 'Decreto de 15 de julho de 1969', href: 'https://drive.google.com/file/d/1me5KgBsIgS96khG-4vUO1JpkfVKf_e2G/view?usp=sharing' },
+                      { title: 'Regulamentação do uso da biblioteca e laboratório de informática', href: 'https://drive.google.com/file/d/1Dv8SEC1a44m8tGYt_DFmzdumRzYjcRls/view?usp=sharing' },
+                      { title: 'Relação de Lotação do Departamento de Administração', href: 'https://drive.google.com/file/d/1mlF7PkAPCmMLgRISsl9AcN4H7jUEUrJQ/view?usp=sharing' },
                     ].map((news, i) => (
                       <div key={i} className="flex items-center justify-between gap-4 py-3 border-b border-ufv-border last:border-none">
                         <div className="flex items-center gap-3">
@@ -674,7 +665,7 @@ const searchResults = useMemo(() => {
                           rel="noopener noreferrer"
                           className="shrink-0 flex items-center gap-1.5 text-xs font-semibold text-ufv-green border border-ufv-green rounded-full px-3 py-1 hover:bg-ufv-green hover:text-white transition-colors"
                         >
-                          Notícia completa <ChevronRight className="w-3 h-3" />
+                          Documento <ChevronRight className="w-3 h-3" />
                         </a>
                       </div>
                     ))}
@@ -747,7 +738,6 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto space-y-8"
             >
-              {/* HERO DO TEXTO */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
                 <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
                 <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
@@ -766,7 +756,6 @@ const searchResults = useMemo(() => {
                 </div>
               </div>
 
-              {/* ORIGENS DA UFV */}
               <div className="card">
                 <h2 className="card-title">
                   <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
@@ -796,7 +785,6 @@ const searchResults = useMemo(() => {
                 </div>
               </div>
 
-              {/* MARCOS HISTÓRICOS */}
               <div className="card">
                 <h2 className="card-title">
                   <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
@@ -831,9 +819,6 @@ const searchResults = useMemo(() => {
                     <p>
                       Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do{' '}
                       <strong>Instituto de Ciências Humanas</strong>, aprovado pelo CEPE (Ata 72/1975) e pelo CONSU (Ata 42/75).
-                      O anteprojeto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira,
-                      Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. A proposta foi aprovada por unanimidade
-                      no CONSU: <em>"apoiar a implantação do Instituto de Ciências Humanas"</em>.
                     </p>
                   </div>
                   <div className="border-l-4 border-ufv-gold pl-5">
@@ -848,15 +833,12 @@ const searchResults = useMemo(() => {
                     <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-1">1978</div>
                     <p>
                       Em razão das escolas superiores adotarem os centros como unidades acadêmicas, o antigo Instituto de Ciências Humanas
-                      tornou-se o <strong>Centro de Ciências Humanas</strong>, em 3 de outubro de 1978, no qual se inserem os Departamentos de
-                      Administração e Economia, de Educação, de Letras e Artes e de Economia Doméstica (Portaria nº 940).
-                      Nessa época foram criados também os demais Centros de Ciências (CCA, CCB e CCE).
+                      tornou-se o <strong>Centro de Ciências Humanas</strong>, em 3 de outubro de 1978.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* AUTORIA WALMER */}
               <div className="card">
                 <h2 className="card-title">
                   <div className="card-icon"><GraduationCap className="w-4 h-4 text-white" /></div>
@@ -870,24 +852,10 @@ const searchResults = useMemo(() => {
                     </p>
                     <p className="mb-3">
                       Da Economia Doméstica, surgiram os cursos de <strong>Letras</strong> e de <strong>Educação</strong>. Da Economia Rural, foram criados os cursos de{' '}
-                      <strong>Administração</strong>, <strong>Economia</strong>, <strong>Cooperativismo</strong> e, mais recentemente, o{' '}
+                      <strong>Administração</strong>, <strong>Economia</strong>, <strong>Cooperativismo</strong> e o{' '}
                       <strong>Curso de Gestão do Agronegócio</strong>.
                     </p>
-                    <p>
-                      A partir desses dois ramos, foram então desmembrados e estruturados os departamentos de Administração e Economia,
-                      de Educação, e de Letras e Artes que, juntamente com o Departamento de Economia Doméstica, passaram a integrar o{' '}
-                      <strong>Centro de Ciências Humanas, Letras e Artes</strong>.
-                    </p>
                   </div>
-                  <p>
-                    Estes departamentos pioneiros ancoravam cinco cursos: <strong>Administração</strong>, <strong>Economia</strong>,{' '}
-                    <strong>Economia Doméstica</strong>, <strong>Letras</strong> e <strong>Pedagogia</strong>. O Departamento de Administração e Economia (DAE)
-                    conduzia os cursos de Administração e Economia e se encarregava das disciplinas das áreas de Administração, Contabilidade,
-                    Direito, Economia e Ciências Sociais. O Centro de Ciências Humanas teve sua origem como instituto in 1975, adotando a denominação atual de CCH em 1978, após uma reestruturação organizacional na UFV que substituiu institutos por centros de ciências. Inicialmente, a unidade contava com apenas quatro departamentos e cinco cursos — Administração, Economia, Economia Doméstica, Pedagogia e Letras — mas expandiu-se significativamente ao longo das décadas. Momentos marcantes dessa trajetória incluem a divisão do Departamento de Administração e Economia em 1988, a criação do curso de Direito em 1991 e uma forte expansão a partir dos anos 2000, com o surgimento de áreas como Comunicação Social, Geografia, História, Dança, Ciências Sociais e Educação Infantil.
-                  </p>
-                  <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
-                    A Economia Doméstica e a Economia Rural, como extensões das Ciências Agrárias, foram os precursores do Centro de Ciências Humanas.
-                  </p>
                 </div>
               </div>
             </motion.div>
@@ -901,7 +869,6 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto"
             >
-              {/* HEADER CARD */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
                 <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
                 <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
@@ -914,59 +881,22 @@ const searchResults = useMemo(() => {
                   <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
                     A parceria que consolidou tecnologicamente a UFV e projetou o Departamento de Administração no cenário da cooperação internacional.
                   </p>
-                  <div className="flex flex-wrap gap-6 mt-6 pt-5 border-t border-white/15">
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1989</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Início da cooperação</span>
-                    </div>
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">UFV</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">↔ Université du Québec</span>
-                    </div>
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">DAD</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Protagonismo institucional</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              {/* ARTICLE BODY */}
               <div className="space-y-6">
-
-                {/* Intro */}
                 <div className="card">
                   <h2 className="card-title">
                     <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
-                    Memória UFV: O Impacto do "Projeto Quebec" na Consolidação Tecnológica e Institucional da Universidade
+                    Memória UFV: O Impacto do "Projeto Quebec"
                   </h2>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                     <p>
-                      <strong>VIÇOSA</strong> – No final da década de 1980, mais precisamente em torno de <strong>1989</strong>, a Universidade Federal de Viçosa (UFV) vivenciava um período efervescente de expansão científica. Foi nesse cenário de redemocratização e busca por modernização que ganhou força a cooperação internacional com instituições canadenses, um marco que impulsionou o avanço tecnológico de diversos setores da instituição e consolidou a projeção de seus novos departamentos acadêmicos.
-                    </p>
-                    <p>
-                      O movimento, que ficou conhecido nos bastidores da instituição como o reflexo do <strong>Projeto Quebec</strong>, teve um papel fundamental não apenas nas ciências exatas e biológicas, mas também nas ciências humanas e gerenciais, com o protagonismo direto do recém-desmembrado <strong>Departamento de Administração (DAD)</strong>.
+                      <strong>VIÇOSA</strong> – No final da década de 1980, mais precisamente em torno de <strong>1989</strong>, a Universidade Federal de Viçosa (UFV) vivenciava um período efervescente de expansão científica. Foi nesse cenário de redemocratização e busca por modernização que ganhou força a cooperação internacional com instituições canadenses, com protagonismo direto do <strong>Departamento de Administração (DAD)</strong>.
                     </p>
                   </div>
                 </div>
 
-                {/* Contexto */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Globe className="w-4 h-4 text-white" /></div>
-                    O Contexto: A Conexão Viçosa-Canadá
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      Em janeiro de <strong>1989</strong>, os informantes oficiais da UFV já destacavam que o Departamento de Administração (DAD) estabelecia formalmente as bases de um promissor intercâmbio com a <strong>Universidade de Québec</strong>. O ecossistema canadense daquela província era referência mundial em gestão organizacional, pequenas e médias empresas e inovação tecnológica industrial.
-                    </p>
-                    <p>
-                      Para a UFV, que estruturava suas frentes de ensino e extensão para além do setor puramente agrário, a parceria representava a oportunidade de absorver metodologias de ponta. A cooperação não se limitou a termos burocráticos: ela ganhou vida por meio de um intenso fluxo de pessoas e conhecimento.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Protagonismo Feminino */}
                 <div className="card">
                   <h2 className="card-title">
                     <div className="card-icon"><Users className="w-4 h-4 text-white" /></div>
@@ -974,68 +904,19 @@ const searchResults = useMemo(() => {
                   </h2>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                     <p>
-                      O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá com o objetivo de estreitar esses laços.
-                    </p>
-                    <p>
-                      Entre os nomes de destaque que lideraram e vivenciaram essa transformação no ambiente acadêmico de Viçosa, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Barbassa</strong>. Em uma época em que o campo da gestão e as missões internacionais de alta tecnologia ainda eram amplamente dominados por homens, a atuação de docentes como Nina Rosa foi emblemática para estruturar as bases de ensino, pesquisa e extensão que moldariam as décadas seguintes do departamento e do Centro de Ciências Humanas (CCH).
+                      O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá. Entre os nomes de destaque, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Barbassa</strong>.
                     </p>
                   </div>
                 </div>
 
-                {/* Efeitos Práticos */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Handshake className="w-4 h-4 text-white" /></div>
-                    Efeitos Práticos e Intercâmbio de Conhecimento
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>O convênio gerou frutos bilaterais robustos nos anos subsequentes:</p>
-                    <div className="space-y-4 mt-2">
-                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
-                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
-                          <GraduationCap className="w-5 h-5 text-ufv-green" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-ufv-gray mb-1">Capacitação Docente</div>
-                          <div className="text-sm text-ufv-gray-light leading-relaxed">A imersão técnica permitiu que o corpo docente da UFV trouxesse metodologias avançadas de ensino e pesquisa em administração voltada para a realidade de pequenos e médios negócios locais.</div>
-                        </div>
-                      </div>
-                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
-                        <div className="w-9 h-9 rounded-full bg-ufv-gold/15 flex items-center justify-center shrink-0 mt-0.5">
-                          <Globe className="w-5 h-5 text-ufv-gold" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-ufv-gray mb-1">Visitas Internacionais</div>
-                          <div className="text-sm text-ufv-gray-light leading-relaxed">O fluxo contínuo trouxe a Viçosa grandes referências canadenses. Em <strong>1990</strong>, o professor <strong>Gérald d'Amboise</strong>, renomado acadêmico da Universidade de Laval (Québec), esteve no campus ministrando palestras específicas sobre Pequenas e Médias Empresas para a comunidade acadêmica e empresários da região.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Legado */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Award className="w-4 h-4 text-white" /></div>
-                    O Legado Silencioso
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      Embora as menções diretas ao projeto pertençam aos recortes de jornais e arquivos históricos de 1989, o impacto prático moldou a UFV contemporânea. A cooperação marcou uma transição crucial na mentalidade da universidade: a mudança de um modelo de assistência técnica tradicional para <strong>parcerias horizontais de alta tecnologia industrial e de gestão</strong>.
-                    </p>
-                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
-                      Graças à audácia de professores e professoras que cruzaram o continente no final dos anos 80, os departamentos da UFV ganharam a maturidade necessária para transformar a instituição no polo de excelência e inovação que hoje celebra sua história.
-                    </p>
-                  </div>
-                </div>
-                      <a
-                      href="https://drive.google.com/file/d/12G0cwzmnwP6BNYCBhuiw3jqnp8KmITqn/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-ufv-green text-white px-4 py-2 rounded-lg hover:bg-ufv-green-dark transition-colors"
-                    >
-                      Notícia Completa
-                    </a>
+                <a
+                  href="https://drive.google.com/file/d/12G0cwzmnwP6BNYCBhuiw3jqnp8KmITqn/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-ufv-green text-white px-5 py-2.5 rounded-lg hover:bg-ufv-green-dark transition-colors font-semibold"
+                >
+                  Documento Completo
+                </a>
               </div>
             </motion.div>
           )}
@@ -1048,7 +929,6 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto"
             >
-              {/* HEADER CARD */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
                 <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
                 <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
@@ -1060,59 +940,10 @@ const searchResults = useMemo(() => {
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Marco Histórico · 1988</span>
                   </div>
                   <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">A Ascensão da Administração na UFV: O Desmembramento do DAE e a Consolidação do DAD</h1>
-                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Como a separação do Departamento de Administração e Economia moldou os rumos do ensino de gestão em Minas Gerais.
-                  </p>
-                  <div className="flex flex-wrap gap-6 mt-6 pt-5 border-t border-white/15">
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1977</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Criação do DAE</span>
-                    </div>
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">1988</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Desmembramento oficial</span>
-                    </div>
-                    <div>
-                      <span className="font-serif text-2xl font-bold text-ufv-gold-light block">26</span>
-                      <span className="text-[10px] text-white/65 font-medium tracking-wide">Professores permanentes</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              {/* ARTICLE BODY */}
               <div className="space-y-6">
-
-                {/* Introdução */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><History className="w-4 h-4 text-white" /></div>
-                    Visão Geral
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      <strong>VIÇOSA, MG</strong> – A estrutura administrativa da Universidade Federal de Viçosa (UFV) passou por uma transformação definitiva que moldou os rumos do ensino de gestão em Minas Gerais. O desmembramento do antigo Departamento de Administração e Economia (DAE), que deu origem ao Departamento de Administração (DAD) e ao Departamento de Economia (DEE), não foi apenas uma mudança burocrática, mas uma resposta à necessidade de maturidade acadêmica e especialização pedagógica.
-                    </p>
-                  </div>
-                </div>
-
-                {/* A Era do DAE */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><BookOpen className="w-4 h-4 text-white" /></div>
-                    O Antecedente: A Era do DAE (1977–1988)
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      A trajetória da Administração em Viçosa começou formalmente em <strong>1975</strong>, com a criação do curso de graduação sob a égide do Centro de Ciências Humanas, Letras e Artes. Dois anos depois, em <strong>10 de maio de 1977</strong>, foi implantado o Departamento de Administração e Economia (DAE), com a missão de gerir as duas áreas que, embora correlatas, já demonstravam vocações distintas.
-                    </p>
-                    <p>
-                      Durante pouco mais de uma década, o DAE serviu como um "incubador" para o pensamento administrativo. No entanto, o crescimento do número de alunos e a complexidade crescente das teorias organizacionais exigiam uma estrutura que permitisse à Administração caminhar com as próprias pernas.
-                    </p>
-                  </div>
-                </div>
-
-                {/* O Divisor de Águas */}
                 <div className="card">
                   <h2 className="card-title">
                     <div className="card-icon"><Award className="w-4 h-4 text-white" /></div>
@@ -1120,97 +951,19 @@ const searchResults = useMemo(() => {
                   </h2>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                     <p>
-                      O desmembramento oficial foi selado em <strong>30 de março de 1988</strong>. Naquela data, o Conselho Federal de Educação (CFE), por meio do <strong>Parecer nº 221/88</strong>, autorizou a divisão do DAE em duas unidades administrativas independentes.
-                    </p>
-                    <p>
-                      Esta separação permitiu que o recém-criado Departamento de Administração (DAD) passasse a focar exclusivamente na formação de gestores, expandindo seu escopo para além das técnicas de mercado e abraçando, mais tarde, o "Campo de Públicas" e a Gestão Social.
+                      O desmembramento oficial foi selado em <strong>30 de março de 1988</strong>. Naquela data, o Conselho Federal de Educação (CFE), por meio do <strong>Parecer nº 221/88</strong>, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
                     </p>
                   </div>
                 </div>
 
-                {/* Protagonistas */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Users className="w-4 h-4 text-white" /></div>
-                    Os Protagonistas e o Legado Docente
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>O fortalecimento do DAD deve-se a um corpo docente altamente qualificado, que atuou tanto na articulação política da separação quanto na construção da excelência acadêmica. Entre os nomes que registraram e lideraram essa evolução, destacam-se:</p>
-                    <div className="space-y-4 mt-2">
-                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
-                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
-                          <GraduationCap className="w-5 h-5 text-ufv-green" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-ufv-gray mb-1">Prof. Magnus Luiz Emmendoerfer</div>
-                          <div className="text-sm text-ufv-gray-light leading-relaxed">Uma figura central na documentação histórica do curso e na pesquisa em Administração Pública, sendo um dos responsáveis por sistematizar a memória institucional do departamento.</div>
-                        </div>
-                      </div>
-                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
-                        <div className="w-9 h-9 rounded-full bg-ufv-gold/15 flex items-center justify-center shrink-0 mt-0.5">
-                          <Users className="w-5 h-5 text-ufv-gold" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-ufv-gray mb-1">Profs. Marco Aurélio Marques Ferreira, Luiz Antônio Abrantes e Edson Arlindo Silva</div>
-                          <div className="text-sm text-ufv-gray-light leading-relaxed">Docentes que foram pilares na transição, ajudando a elevar o DAD ao patamar de referência nacional em gestão.</div>
-                        </div>
-                      </div>
-                      <div className="flex gap-4 p-4 bg-ufv-cream rounded-lg border border-ufv-border">
-                        <div className="w-9 h-9 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5">
-                          <Globe className="w-5 h-5 text-ufv-green" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-ufv-gray mb-1">Qualificação Internacional</div>
-                          <div className="text-sm text-ufv-gray-light leading-relaxed">O departamento consolidou-se com um quadro de <strong>26 professores permanentes</strong>. Um dado relevante é que <strong>30% destes docentes possuem doutorado no exterior</strong> (em países como EUA, Inglaterra, Espanha e França), trazendo uma perspectiva global para o interior de Minas Gerais.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Expansão */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Building2 className="w-4 h-4 text-white" /></div>
-                    Expansão Pós-Desmembramento: Direito e Contabilidade
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      O sucesso da autonomia do DAD foi tão expressivo que o departamento tornou-se um "berço" para outros cursos da UFV. Na <strong>década de 1990</strong>, o DAD propiciou a criação dos cursos de <strong>Direito</strong> e de <strong>Ciências Contábeis</strong>.
-                    </p>
-                    <p>
-                      Atualmente, o departamento é oficialmente denominado <strong>Departamento de Administração e Contabilidade (DAD)</strong>, mantendo sob sua gestão ambos os cursos e consolidando uma estrutura de ensino, pesquisa e extensão que atende a milhares de estudantes.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Campo de Públicas */}
-                <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Handshake className="w-4 h-4 text-white" /></div>
-                    A Consolidação no Campo de Públicas
-                  </h2>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      Um dos marcos mais recentes após a autonomia foi a criação, em <strong>2005</strong>, do <strong>Programa de Pós-graduação em Administração (PPGADM)</strong>. Diferente de outros programas, o DAD-UFV fez uma escolha estratégica: focar o mestrado na área de <strong>Administração Pública</strong>.
-                    </p>
-                    <p>
-                      Essa decisão influenciou diretamente a graduação. Hoje, embora o curso seja de Administração (Generalista), a matriz curricular de <strong>3.135 horas-aula</strong> é permeada por temas de interesse público, gestão social e desenvolvimento, preparando profissionais para atuar com excelência tanto no setor privado quanto no fortalecimento das instituições estatais brasileiras.
-                    </p>
-                    <p className="italic text-ufv-gray-light border-l-4 border-ufv-gold pl-4">
-                      A notícia do desmembramento, ocorrida há mais de três décadas, reverbera hoje em um departamento que é símbolo de pioneirismo e rigor acadêmico na UFV.
-                    </p>
-                    <a
-                      href="https://drive.google.com/file/d/11OFVzuJyKXlRgNeyjeaKnn2caECTCpnz/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-ufv-green text-white px-4 py-2 rounded-lg hover:bg-ufv-green-dark transition-colors"
-                    >
-                      Notícia Completa
-                    </a>
-                  </div>
-                </div>
-
+                <a
+                  href="https://drive.google.com/file/d/11OFVzuJyKXlRgNeyjeaKnn2caECTCpnz/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-ufv-green text-white px-5 py-2.5 rounded-lg hover:bg-ufv-green-dark transition-colors font-semibold"
+                >
+                  Documento Completo
+                </a>
               </div>
             </motion.div>
           )}
@@ -1223,10 +976,7 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto"
             >
-              {/* HEADER CARD */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
-                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
-                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
@@ -1235,50 +985,35 @@ const searchResults = useMemo(() => {
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Liderança Institucional</span>
                   </div>
                   <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Chefias do Departamento</h1>
-                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Um registro dos professores e professoras que conduziram a chefia do DAD ao longo de sua história, do DAE até os dias atuais.
-                  </p>
                 </div>
               </div>
 
-              {/* LISTA DE CHEFES */}
               <div className="space-y-4">
-                {chefesDepartamento.length === 0 ? (
-                  <div className="card text-center py-10">
-                    <Landmark className="w-8 h-8 text-ufv-border mx-auto mb-3" />
-                    <p className="text-sm text-ufv-gray-light">Nenhuma chefia cadastrada ainda.</p>
-                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/chefesData.ts</code>.</p>
-                  </div>
-                ) : (
-                  chefesDepartamento
-                    .slice()
-                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
-                    .map((chefe) => (
-                      <div key={chefe.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
-                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
-                          {chefe.foto ? (
-                            <img src={chefe.foto} alt={chefe.nome} className="w-full h-full object-cover" />
-                          ) : (
-                            <Landmark className="w-7 h-7 text-ufv-green" />
-                          )}
-                        </div>
-                        <div className="flex-grow text-center sm:text-left">
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
-                            <span className="font-serif text-lg font-bold text-ufv-gray">{chefe.nome}</span>
-                            <span className="event-tag tag-gestao self-center sm:self-auto">
-                              {chefe.periodoFim ? `${chefe.periodoInicio} – ${chefe.periodoFim}` : `${chefe.periodoInicio} – atual`}
-                            </span>
-                          </div>
-                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
-                            {chefe.cargo || 'Chefe do Departamento'}
-                          </div>
-                          {chefe.observacoes && (
-                            <p className="text-sm text-ufv-gray-light leading-relaxed">{chefe.observacoes}</p>
-                          )}
-                        </div>
+                {chefesDepartamento.map((chefe) => (
+                  <div key={chefe.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {chefe.foto ? (
+                        <img src={chefe.foto} alt={chefe.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <Landmark className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                        <span className="font-serif text-lg font-bold text-ufv-gray">{chefe.nome}</span>
+                        <span className="event-tag tag-gestao self-center sm:self-auto">
+                          {chefe.periodoFim ? `${chefe.periodoInicio} – ${chefe.periodoFim}` : `${chefe.periodoInicio} – atual`}
+                        </span>
                       </div>
-                    ))
-                )}
+                      <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                        {chefe.cargo || 'Chefe do Departamento'}
+                      </div>
+                      {chefe.observacoes && (
+                        <p className="text-sm text-ufv-gray-light leading-relaxed">{chefe.observacoes}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}
@@ -1291,10 +1026,7 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto"
             >
-              {/* HEADER CARD */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
-                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
-                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
@@ -1303,50 +1035,35 @@ const searchResults = useMemo(() => {
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
                   </div>
                   <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Professores Titulares</h1>
-                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Corpo docente que alcançou a titularidade no Departamento, reconhecimento máximo da carreira acadêmica.
-                  </p>
                 </div>
               </div>
 
-              {/* LISTA */}
               <div className="space-y-4">
-                {professoresTitulares.length === 0 ? (
-                  <div className="card text-center py-10">
-                    <GraduationCap className="w-8 h-8 text-ufv-border mx-auto mb-3" />
-                    <p className="text-sm text-ufv-gray-light">Nenhum professor titular cadastrado ainda.</p>
-                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/professoresTitularesData.ts</code>.</p>
-                  </div>
-                ) : (
-                  professoresTitulares
-                    .slice()
-                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
-                    .map((prof) => (
-                      <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
-                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
-                          {prof.foto ? (
-                            <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
-                          ) : (
-                            <GraduationCap className="w-7 h-7 text-ufv-green" />
-                          )}
-                        </div>
-                        <div className="flex-grow text-center sm:text-left">
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
-                            <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
-                            <span className="event-tag tag-ensino self-center sm:self-auto">
-                              Titular desde {prof.periodoInicio}
-                            </span>
-                          </div>
-                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
-                            {prof.cargo || 'Professor Titular'}
-                          </div>
-                          {prof.observacoes && (
-                            <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
-                          )}
-                        </div>
+                {professoresTitulares.map((prof) => (
+                  <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {prof.foto ? (
+                        <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <GraduationCap className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                        <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
+                        <span className="event-tag tag-ensino self-center sm:self-auto">
+                          Titular desde {prof.periodoInicio}
+                        </span>
                       </div>
-                    ))
-                )}
+                      <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                        {prof.cargo || 'Professor Titular'}
+                      </div>
+                      {prof.observacoes && (
+                        <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}
@@ -1359,10 +1076,7 @@ const searchResults = useMemo(() => {
               exit={{ opacity: 0, y: -10 }}
               className="max-w-4xl mx-auto"
             >
-              {/* HEADER CARD */}
               <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
-                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
-                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
@@ -1371,50 +1085,35 @@ const searchResults = useMemo(() => {
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
                   </div>
                   <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Profissionais Admitidos</h1>
-                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Servidores técnico-administrativos que integraram e fortaleceram o Departamento ao longo dos anos.
-                  </p>
                 </div>
               </div>
 
-              {/* LISTA */}
               <div className="space-y-4">
-                {profissionaisAdmitidos.length === 0 ? (
-                  <div className="card text-center py-10">
-                    <Users className="w-8 h-8 text-ufv-border mx-auto mb-3" />
-                    <p className="text-sm text-ufv-gray-light">Nenhum profissional cadastrado ainda.</p>
-                    <p className="text-xs text-ufv-gray-light mt-1">Adicione os registros em <code>src/data/profissionaisAdmitidosData.ts</code>.</p>
-                  </div>
-                ) : (
-                  profissionaisAdmitidos
-                    .slice()
-                    .sort((a, b) => b.periodoInicio - a.periodoInicio)
-                    .map((prof) => (
-                      <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
-                        <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
-                          {prof.foto ? (
-                            <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
-                          ) : (
-                            <Users className="w-7 h-7 text-ufv-green" />
-                          )}
-                        </div>
-                        <div className="flex-grow text-center sm:text-left">
-                          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
-                            <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
-                            <span className="event-tag tag-gestao self-center sm:self-auto">
-                              {prof.periodoFim ? `${prof.periodoInicio} – ${prof.periodoFim}` : `Admitido em ${prof.periodoInicio}`}
-                            </span>
-                          </div>
-                          <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
-                            {prof.cargo || 'Profissional Admitido'}
-                          </div>
-                          {prof.observacoes && (
-                            <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
-                          )}
-                        </div>
+                {profissionaisAdmitidos.map((prof) => (
+                  <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {prof.foto ? (
+                        <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <Users className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
+                        <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
+                        <span className="event-tag tag-gestao self-center sm:self-auto">
+                          {prof.periodoFim ? `${prof.periodoInicio} – ${prof.periodoFim}` : `Admitido em ${prof.periodoInicio}`}
+                        </span>
                       </div>
-                    ))
-                )}
+                      <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
+                        {prof.cargo || 'Profissional Admitido'}
+                      </div>
+                      {prof.observacoes && (
+                        <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}
@@ -1426,10 +1125,7 @@ const searchResults = useMemo(() => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
             >
-              {/* GALLERY HEADER */}
-
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
                     <ImageIcon className="w-6 h-6" /> Acervo Fotográfico
@@ -1444,21 +1140,19 @@ const searchResults = useMemo(() => {
                 </button>
               </div>
 
-              {/* GALLERY GRID */}
               {combinedGalleryPhotos.length > 0 ? (
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
                   {combinedGalleryPhotos.map((photo) => (
                     <motion.div
                       key={photo.id}
-                      className="..."
-                      onClick={() => setLightboxPhoto(photo)}
+                      className="bg-white border border-ufv-border rounded-xl overflow-hidden break-inside-avoid shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
+                      onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption, title: photo.title || '' })}
                     >
                       <div className="overflow-hidden bg-ufv-cream">
                         <img
                           src={photo.url}
                           alt={photo.caption}
                           className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          referrerPolicy="no-referrer"
                         />
                       </div>
                       <div className="p-4">
@@ -1477,18 +1171,12 @@ const searchResults = useMemo(() => {
                   <ImageIcon className="w-14 h-14 text-ufv-border mx-auto mb-4" />
                   <h3 className="font-serif text-xl text-ufv-gray mb-2">Acervo vazio</h3>
                   <p className="text-sm text-ufv-gray-light max-w-sm mx-auto mb-6">
-                    Nenhuma foto foi adicionada ao acervo ainda. Seja o primeiro a contribuir com a memória do DAD!
+                    Nenhuma foto foi adicionada ao acervo ainda.
                   </p>
-                  <button
-                    onClick={() => setIsGalleryUploadModalOpen(true)}
-                    className="inline-flex items-center gap-2 bg-ufv-green text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
-                  >
-                    <Plus className="w-4 h-4" /> Adicionar primeira foto
-                  </button>
                 </div>
               )}
 
-              {/* GALLERY UPLOAD MODAL */}
+              {/* MODAL UPLOAD DA GALERIA */}
               <AnimatePresence>
                 {isGalleryUploadModalOpen && (
                   <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
@@ -1537,7 +1225,7 @@ const searchResults = useMemo(() => {
                           <input
                             type="text"
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none"
-                            placeholder="Ex: Formatura Turma 1985, Inauguração do Lab..."
+                            placeholder="Ex: Formatura Turma 1985..."
                             value={galleryUploadData.title}
                             onChange={(e) => setGalleryUploadData({ ...galleryUploadData, title: e.target.value })}
                           />
@@ -1546,7 +1234,7 @@ const searchResults = useMemo(() => {
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Legenda / Contexto *</label>
                           <textarea
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none min-h-[100px]"
-                            placeholder="Descreva o que está acontecendo na foto, quem são as pessoas, o contexto histórico..."
+                            placeholder="Descreva a foto, quem são as pessoas..."
                             value={galleryUploadData.caption}
                             onChange={(e) => setGalleryUploadData({ ...galleryUploadData, caption: e.target.value })}
                           ></textarea>
@@ -1564,7 +1252,7 @@ const searchResults = useMemo(() => {
                 )}
               </AnimatePresence>
 
-              {/* LIGHTBOX */}
+              {/* LIGHTBOX GERAL */}
               <AnimatePresence>
                 {lightboxPhoto && (
                   <motion.div
@@ -1614,7 +1302,6 @@ const searchResults = useMemo(() => {
               className="grid grid-cols-1 lg:grid-cols-4 gap-8"
             >
               <div className="lg:col-span-3">
-                {/* DECADE SELECTOR */}
                 <div className="bg-white border border-ufv-border rounded-lg p-4 mb-8">
                   <div className="text-[11px] tracking-[1.5px] uppercase text-ufv-gray-light font-bold mb-3">Navegação por Década</div>
                   <div className="flex flex-wrap gap-2">
@@ -1630,7 +1317,6 @@ const searchResults = useMemo(() => {
                   </div>
                 </div>
 
-                {/* YEAR GRID */}
                 <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 sm:gap-2 mb-10">
                   {yearsInDecade.map(y => {
                     const hasData = !!memorialData[y];
@@ -1647,7 +1333,6 @@ const searchResults = useMemo(() => {
                   })}
                 </div>
 
-                {/* YEAR CONTENT */}
                 <div className="space-y-8">
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 sm:gap-5 pb-5 border-b-2 border-ufv-gold">
                     <div className="font-serif text-4xl sm:text-6xl font-bold text-ufv-green opacity-20 leading-none">{selectedYear}</div>
@@ -1688,16 +1373,30 @@ const searchResults = useMemo(() => {
                       </div>
 
                       {filteredEvents.length > 0 ? (
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                           {filteredEvents.map((e, i) => (
-                            <div key={i} className="flex gap-5 border-b border-ufv-border last:border-none pb-6 last:pb-0">
-                              <div className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 bg-ufv-green/10 text-ufv-green`}>
+                            <div 
+                              key={i} 
+                              onClick={() => setSelectedEventModal({ event: e, year: selectedYear })}
+                              className="flex gap-5 border-b border-ufv-border last:border-none pb-5 last:pb-0 cursor-pointer group hover:bg-ufv-cream/50 rounded-xl p-3.5 -mx-3.5 transition-all"
+                            >
+                              <div className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 bg-ufv-green/10 text-ufv-green group-hover:bg-ufv-green group-hover:text-white transition-colors`}>
                                 {getTagIcon(e.tag)}
                               </div>
-                              <div>
-                                <span className={`event-tag tag-${e.tag}`}>{e.tag}</span>
-                                <div className="font-semibold text-ufv-gray">{e.title}</div>
-                                <div className="text-sm text-ufv-gray-light mt-1 leading-relaxed">{e.desc}</div>
+                              <div className="flex-grow">
+                                <div className="flex items-center gap-2">
+                                  <span className={`event-tag tag-${e.tag}`}>{e.tag}</span>
+                                  {(e.photos?.length || e.externalLinks?.length || e.articleUrl) && (
+                                    <span className="text-[10px] text-ufv-gold font-bold uppercase tracking-wider bg-ufv-gold/10 px-2 py-0.5 rounded">
+                                      + Anexos / Mídias
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="font-semibold text-ufv-gray group-hover:text-ufv-green transition-colors mt-1">{e.title}</div>
+                                <div className="text-sm text-ufv-gray-light mt-1 leading-relaxed line-clamp-3">{e.desc}</div>
+                                <span className="text-xs text-ufv-green font-semibold mt-2 inline-flex items-center gap-1 group-hover:underline">
+                                  Ver detalhes do registro &rarr;
+                                </span>
                               </div>
                             </div>
                           ))}
@@ -1724,22 +1423,7 @@ const searchResults = useMemo(() => {
                     </div>
                   )}
 
-                  {/* ARTICLE LINK */}
-                  {(memorialData[selectedYear] as any)?.articleUrl && (
-                    <div className="flex justify-end">
-                      <a
-                        href={(memorialData[selectedYear] as any).articleUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-ufv-green text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors shadow-sm"
-                      >
-                        Leia a matéria completa
-                        <ChevronRight className="w-4 h-4" />
-                      </a>
-                    </div>
-                  )}
-
-                  {/* PHOTOS SECTION */}
+                  {/* FOTOS DO ANO */}
                   <div className="mt-12">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                       <h3 className="font-serif text-xl font-bold text-ufv-green flex items-center gap-2">
@@ -1759,14 +1443,14 @@ const searchResults = useMemo(() => {
                           <motion.div
                             key={i}
                             whileHover={{ y: -5 }}
-                            className="bg-white border border-ufv-border rounded-lg overflow-hidden shadow-sm"
+                            className="bg-white border border-ufv-border rounded-lg overflow-hidden shadow-sm cursor-pointer"
+                            onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption, title: photo.title || '' })}
                           >
                             <div className="aspect-video overflow-hidden bg-ufv-cream">
                               <img
                                 src={photo.url}
                                 alt={photo.caption}
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                                referrerPolicy="no-referrer"
                               />
                             </div>
                             <div className="p-4">
@@ -1788,7 +1472,7 @@ const searchResults = useMemo(() => {
                 </div>
               </div>
 
-              {/* UPLOAD MODAL */}
+              {/* MODAL NOVO REGISTRO ANO */}
               <AnimatePresence>
                 {isUploadModalOpen && (
                   <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
@@ -1837,7 +1521,7 @@ const searchResults = useMemo(() => {
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Legenda / Contexto</label>
                           <textarea
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none min-h-[100px]"
-                            placeholder="Descreva o que está acontecendo na foto, quem são as pessoas, etc."
+                            placeholder="Descreva a foto, pessoas presentes, contexto..."
                             value={uploadData.caption}
                             onChange={(e) => setUploadData({ ...uploadData, caption: e.target.value })}
                           ></textarea>
@@ -1855,7 +1539,7 @@ const searchResults = useMemo(() => {
                 )}
               </AnimatePresence>
 
-              {/* EVENT MODAL */}
+              {/* MODAL ADICIONAR EVENTO */}
               <AnimatePresence>
                 {isEventModalOpen && (
                   <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
@@ -1903,7 +1587,7 @@ const searchResults = useMemo(() => {
                           <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Descrição / Detalhes</label>
                           <textarea
                             className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none min-h-[100px]"
-                            placeholder="Descreva o marco histórico com mais detalhes..."
+                            placeholder="Descreva o marco histórico com detalhes..."
                             value={eventData.desc}
                             onChange={(e) => setEventData({ ...eventData, desc: e.target.value })}
                           ></textarea>
@@ -1959,6 +1643,12 @@ const searchResults = useMemo(() => {
         </AnimatePresence>
       </main>
 
+      {/* MODAL DE DETALHES DO EVENTO */}
+      <EventDetailModal
+        event={selectedEventModal?.event || null}
+        year={selectedEventModal?.year}
+        onClose={() => setSelectedEventModal(null)}
+      />
 
       {/* FOOTER */}
       <footer className="bg-ufv-green-dark text-white/65 py-12 px-6 text-sm border-t-4 border-ufv-gold">

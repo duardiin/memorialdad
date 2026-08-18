@@ -16,19 +16,64 @@ export const memorialData: MemorialData = {
     articleUrl: 'https://atom.ufv.br/index.php/1974-ufv-informa'
   },
 
-  1975: {
+ 1975: {
     events: [
-      { tag: 'fundacao', title: 'A Criação do Instituto de Ciências Humanas: Primeiros Passos e Aprovação', desc: 'O anteprojeto de implantação do Instituto foi elaboradopor um Grupo de Trabalho (Portaria 506/75), tendo como membrosBel. Hamilton Martins Silveira, Professores Juraci AurelianoTeixeira, Eloy Gava e Maria da Conceição Rolim Simões. Oplenário do CEPE aprovou na parte referente aosDepartamentos, como proposto, deixando a posteriori o examereferente aos currículos e planos de estudo. Na reunião doCONSU a proposta do Conselheiro M. Maestri foi aprovada porunanimidade: “apoiar a implantação do Instituto de Ciências Humanas”.' },
-
-      { tag: 'ensino', title: 'Início das primeiras turmas de Administração', desc: 'O curso de Administração recebe as primeiras turmas regulares, com currículo voltado à gestão rural.' },
-
+      {
+        tag: 'fundacao',
+        title: 'A Criação do Instituto de Ciências Humanas: Primeiros Passos e Aprovação',
+        desc: 'O anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: “apoiar a implantação do Instituto de Ciências Humanas”.',
+        // Fotos vinculadas especificamente a este evento (aparecem no modal)
+        photos: [
+          {
+            url: '/1975 - ATA 42.75.jpeg',
+            caption: 'Registro histórico das tratativas e implantação inicial do departamento e instituto.'
+          }
+        ],
+        // Links de documentos, atas ou matérias vinculadas ao evento
+        externalLinks: [
+          {
+            label: 'Portaria nº 506/75 (Arquivo Histórico)',
+            url: 'https://atom.ufv.br/index.php/1975-ufv-informa'
+          },
+          {
+            label: 'Ata de Aprovação do CONSU',
+            url: 'https://drive.google.com/file/d/exemplo-ata-consu/view'
+          }
+        ],
+        articleUrl: 'https://atom.ufv.br/index.php/1975-ufv-informa'
+      },
+      {
+        tag: 'ensino',
+        title: 'Início das primeiras turmas de Administração',
+        desc: 'O curso de Administração recebe as primeiras turmas regulares, com currículo voltado à gestão rural.',
+        photos: [
+          {
+            url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif',
+            caption: 'Primeiros discentes ingressantes no curso de Administração.'
+          }
+        ],
+        externalLinks: [
+          {
+            label: 'Grade Curricular Histórica de 1975',
+            url: 'https://dad.ufv.br/'
+          }
+        ]
+      }
     ],
+    // Galeria geral do ano de 1975 (mantida para a seção de fotos do ano)
     photos: [
-      { url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif', caption: 'Ampliação da oferta de vagas no Vestibular.' },
-      { url: '/1974 “Criação do Departamento”.avif', caption: 'Criação do Departamento.' },
+      {
+        url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif',
+        caption: 'Ampliação da oferta de vagas no Vestibular.'
+      },
+      {
+        url: '/1974 “Criação do Departamento”.avif',
+        caption: 'Criação do Departamento.'
+      }
     ],
     articleUrl: 'https://atom.ufv.br/index.php/1975-ufv-informa'
   },
+
   1976: {
     events: [
       { tag: 'gestao', title: 'Concurso Docente', desc: 'Implantação do Departamento de Administração de Empresas e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano, nomeado pelo Reitor  Antônio Fagundes de Sousa  (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais. ' },
