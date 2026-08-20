@@ -111,7 +111,7 @@ export const memorialData: MemorialData = {
       articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/0/f/50f5df33d815cc0efb414e84f7390e5a4c6007d406997062ff50f104c1815097/Edi____o_n478.pdf'
     },
      {
-      tag: 'Extensão',
+      tag: 'extensao',
       title: 'Indicação Projeto Rondon',
       desc: 'Para o Projeto Rondon foi indicado Carlos Alberto Freire Resende, integrante do DAE, para elaborar o programa de trabalho da equipe da UFV (11ago. n.490).',
       photos: [],
@@ -232,10 +232,14 @@ export const memorialData: MemorialData = {
     {
       tag: 'reconhecimento',
       title: 'Prof. João Adamor da UFV Recebe Menção Honrosa em Concurso Nacional',
-      desc: 'Acontecimento meritório para a UFV e o DAE foi a conquista pelo Prof. João Adamor Dias Neves do DAE da Menção Honrosa do III Concurso Nacional de Monografia sobre Administração para o Desenvolvimento, promovido pela Secretaria de Modernização e Reforma Administrativa, pertencente à Secretaria de Planejamento da Presidência da República. O referido Professor concorreu com o trabalho intitulado Avaliação de Desempenho de Professores e Técnicos da Universidade Federal de Viçosa. (18jan.n.564). (Linkar a foto do velho na mesa, jornal numero 571)',
-      photos: [],
+      desc: 'Acontecimento meritório para a UFV e o DAE foi a conquista pelo Prof. João Adamor Dias Neves do DAE da Menção Honrosa do III Concurso Nacional de Monografia sobre Administração para o Desenvolvimento, promovido pela Secretaria de Modernização e Reforma Administrativa, pertencente à Secretaria de Planejamento da Presidência da República. O referido Professor concorreu com o trabalho intitulado Avaliação de Desempenho de Professores e Técnicos da Universidade Federal de Viçosa. (18jan.n.564).',
+      photos: [{
+          url: '/1979 “Novos Diretores”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          caption: 'A posse dos novos diretores.'   // Legenda ou descrição da foto
+        }
+      ],
       externalLinks: [],
-      articleUrl: ''
+      articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/1/5/315a4978baa8c3e8ee2d94b1bbd7d7a785d41767e9f639294d00986c176e4a66/Edi____o_n564.pdf'
     },
     {
       tag: 'gestao',
@@ -243,23 +247,31 @@ export const memorialData: MemorialData = {
       desc: 'Também nesse ano foram nomeados pelo Ministro da Educação e Cultura e empossados pelo Reitor os novos Diretores dos CCA e do CCH os professores Renato Mário Del Giudice e Dilson Seabra Rocha. (08mar. n. 571).',
       photos: [],
       externalLinks: [],
-      articleUrl: ''
+      articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/1/7/e17d5e0550050665b589822c339c4a89aaf490c93b9f5b459e9b2f06033ed454/Edi____o_n571.pdf'
     },
     {
       tag: 'extensao',
       title: 'Acontecimentos Marcantes no DAE: Premiação, Novas Direções e Extensão em Marketing',
       desc: 'O DAE promoveu o Curso de Marketing Bancário dirigido a bancários e estudantes do curso de Administração de Empresas, ministrado por João Adamor Dias Neves, professor da disciplina Mercadologia. Participaram do curso, representantes dos Bancos do Brasil, Bradesco e Real, bem como pessoas de Ponte Nova, Raul Soares, Teixeiras e Viçosa. O objetivo do curso foi o de compreender e de utilizar os princípios básicos de Marketing de Serviços nas atividades bancárias com nova mentalidade em relação a técnicas e métodos tecnológicos. (n. 578, n. 582).',
       photos: [],
-      externalLinks: [],
-      articleUrl: ''
+      externalLinks: [{
+        label: 'Jornal', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/c/c/6ccf6016e1ce5fb8e3dabb2aacd72289c6796e5dca0770c5d796e7932505abc7/Edi____o_n582.pdf'
+      }],
+      articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/7/7/d77ef843e46d928f442c825415d1bc8e5b8dd221ea1321a7d732e4319b892992/Edi____o_n578.pdf'
     },
     {
       tag: 'cultura',
       title: 'Ciência, Liderança e Arte: O Ano de Ouro do DAE e do Coral da UFV',
       desc: 'O professor João Adamor Dias Neves regeu o Coral, abrilhantando as comemorações do 1º aniversário do Coral da UFV (03mai. n. 579). E, posteriormente, se apresentou, a convite do Coral Monlevade, no município de João Monlevade, que comemorou os seus 16 anos e da Federação Mineira de Conjuntos Corais (17mai. n. 581).',
-      photos: [],
-      externalLinks: [],
-      articleUrl: ''
+           photos: [{
+          url: '/1979 “1º aniversário do Coral da UFV.”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          caption: 'Foi um sucessoa apresentaçáão do Coral da UFV.'   // Legenda ou descrição da foto
+        }
+      ],
+      externalLinks: [{
+        label: 'Jornal', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/f/3/ef35dd44ff7d8aa53ebdce592d91db8a4795be01406a833279b31a9c2091e79f/Edi____o_n581.pdf'
+      }],
+      articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/3/b/53b44469e99f99d6225b6574abb041c21ee866104b4f2eccc00899b9c2817f32/Edi____o_n579.pdf'
     },
     {
       tag: 'extensao',
