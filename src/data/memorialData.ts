@@ -58,7 +58,7 @@ export const memorialData: MemorialData = {
     {
       tag: 'gestao',
       title: 'Admissão de Evaldo',
-      desc: 'Admissão do docente Evaldo no Departamento de  Administração e Economia (DAE), com início das atividades em 11/01/1976.',
+      desc: 'Admissão do docente Evaldo no Departamento de  Administração e Economia (DAE), com início das atividades em 01/11/1976.',
       photos: [],
       externalLinks: [],
       articleUrl: ''
