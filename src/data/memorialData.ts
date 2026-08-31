@@ -8,9 +8,9 @@ export const memorialData: MemorialData = {
   1974: {
     events: [
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Gênese do Curso de Administração',
-        desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
+        desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321). (COLOCAR O JORNAL)',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -23,9 +23,9 @@ export const memorialData: MemorialData = {
   1975: {
     events: [
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'A Criação do Instituto de Ciências Humanas: Primeira Passos e Aprovação',
-        desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75). (Colocar a ATA (está no seu Whatsapp))\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
+        desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75).)\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
         photos: [{
           url: 'public/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'ATA 42/75'   // Legenda ou descrição da foto
@@ -34,7 +34,7 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/b/3/ab3e2c941dd8e96fbadc03dc9761e014427d3fb1ea8939b02c7be861f5753f89/Edi____o_n395.pdf'
       },
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Criação do Curso de Administração',
         desc: 'O Curso de Administração de Empresas estava apto a formar bacharel em Administração Pública e de Empresas, estando credenciado para os cargos técnicos de Administração do Serviço Público Federal, Estadual, Municipal, Autárquico e outros, exercendo funções de chefia ou direção, assessoramento e consultoria. Em complemento, o profissional poderia realizar pesquisas, estudos, análises, interpretação, planejamento, Implantação, соordenação e controle dos trabalhos nos campos de administração geral e outros conexos. Estava também credenciado para o magistério em matérias técnicas do campo de Administração na Organização. (12set. n.395)',
         photos: [],
@@ -42,9 +42,9 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/b/3/ab3e2c941dd8e96fbadc03dc9761e014427d3fb1ea8939b02c7be861f5753f89/Edi____o_n395.pdf'
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Início das primeiras turmas de Administração',
-        desc: 'O curso de Administração recebe as primeiras turmas regulares. (12set. n.395)',
+        desc: 'O curso de Administração recebe as primeiras turmas regulares, sendo 25 vagas para o curso de Administração de Empresas e 25 vagas para o curso de Ciências Econômicas. (12set. n.395)',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -57,15 +57,15 @@ export const memorialData: MemorialData = {
   1976: {
     events: [
       {
-        tag: 'gestao',
-        title: 'Admissão de Evaldo',
-        desc: 'Admissão do docente Evaldo no Departamento de  Administração e Economia (DAE), com início das atividades em 01/11/1976.',
+        tag: '',
+        title: 'EVALDO GUIMARÃES BARBOSA',
+        desc: 'Admissão do docente Evaldo Guimarães Barbosa no Departamento de  Administração e Economia (DAE), com início das atividades em 01/11/1976.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Primeiro Vestibular',
         desc: 'Foram oferecidas 25 vagas no vestibular de 1976 para o Curso de Administração de Empresas e 25 para o curso de Ciências Econômicas (02jan. n.409)',
         photos: [],
@@ -73,15 +73,15 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/9/1/d91b0ad695cd2f0a5139e81f6f482ae50931a8e2a640b9219ecdf4840b6f05b1/Edi____o_n409.pdf'
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'A Comissão de Implantação e a Estruturação Administrativa do ICH',
-        desc: 'Pela Portaria nº 70 de 11 de fevereiro de 1976, o Reitor designou os Professores Evonir Batista de Oliveira, Juraci Aureliano Teixeira, Sônia Coelho de Alvarenga e Maria da Conceição Rolim Simões para, em comissão, equacionamento das as providências à efetiva implantação do Instituto de Ciências Humanas, apresentando a relação numérica e nominal dos componentes de cada Departamento do Instituto, com discriminação e remanejamento de pessoal, caso necessário, à lotação dos vários Departamentos do Instituto.',
+        desc: 'Pela Portaria nº 70 de 11 de fevereiro de 1976, o Reitor designou os Professores Evonir Batista de Oliveira, Juraci Aureliano Teixeira, Sônia Coelho de Alvarenga e Maria da Conceição Rolim Simões para, em comissão, equacionamento das providências à efetiva implantação do Instituto de Ciências Humanas, apresentando a relação numérica e nominal dos componentes de cada Departamento do Instituto, com discriminação e remanejamento de pessoal, caso necessário, à lotação dos vários Departamentos do Instituto.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Concurso Docente',
         desc: 'Os recém-criados cursos de Administração de Empresas e de Ciências Econômicas (DAE), cada qual, foi contemplado com 1 vaga para Professor Assistente (29jul. n. 437).',
         photos: [],
@@ -89,9 +89,9 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/f/3/6f36866d488283761f6173e291566e4ba50ee066c9fcd15dfcbc6df7b75ca5fb/Edi____o_n437.pdf'
       },
       {
-        tag: 'ensino',
-        title: 'Fortalecimento Institucional',
-        desc: 'O Curso de Administração com 25 vagas passa a oferecer 50 vagas em seu Vestibular Unificado de 1977 (23set. n.445).',
+        tag: '',
+        title: 'Ampliação de Vagas',
+        desc: 'O Curso de Administração e o Curso de Ciências Econômicas com 25 vagas passaram a oferecer 50 vagas cada no Vestibular Unificado de 1977 (23set. n.445).',
         photos: [],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/f/8/0f84fe04fa4f52463fcd1dec80b3d545cb953b82d760bfeaabc76ad46ea9cff1/Edi____o_n445.pdf'
@@ -104,15 +104,15 @@ export const memorialData: MemorialData = {
   1977: {
     events: [
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Implantação do DAE',
-        desc: 'Implantação do Departamento de Administração e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano, (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração de Empresas e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais. O Curso de Administração, com 25 vagas, passa a oferecer 50 vagas em seu Vestibular Unificado (23 set. n. 445).',
+        desc: 'Implantação do Departamento de Administração e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano, (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração de Empresas e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais.',
         photos: [],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/0/f/50f5df33d815cc0efb414e84f7390e5a4c6007d406997062ff50f104c1815097/Edi____o_n478.pdf'
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Indicação Projeto Rondon',
         desc: 'Para o Projeto Rondon foi indicado Carlos Alberto Freire Resende, integrante do DAE, para elaborar o programa de trabalho da equipe da UFV (11ago. n.490).',
         photos: [],
@@ -120,8 +120,8 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/5/0/e50f424095bb6fed23bd71c1bca011e6f11238276f1c6d5028d3c9b343a6a3f9/Edi____o_n490.pdf'
       },
       {
-        tag: 'gestao',
-        title: 'Admissão de MARIA DA GRACA NEMER JENTZSCH',
+        tag: '',
+        title: 'MARIA DA GRACA NEMER JENTZSCH',
         desc: 'Admissão da docente MARIA DA GRACA NEMER JENTZSCH no Departamento de Administração e Economia (DAE), com início das atividades em 01/12/1977.',
         photos: [],
         externalLinks: [],
@@ -135,15 +135,15 @@ export const memorialData: MemorialData = {
   1978: {
     events: [
       {
-        tag: 'gestao',
-        title: 'Admissão de JACINTO LUIZ DA SILVA',
+        tag: '',
+        title: 'JACINTO LUIZ DA SILVA',
         desc: 'Admissão do docente JACINTO LUIZ DA SILVA no Departamento de  Administração e Economia (DAE), com início das atividades em 03/04/1978.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Gestão e Liderança',
         desc: 'Alguns eventos marcaram o ano de 1978, consolidando o DAE e o CCH, com a solenidade de posse na Reitoria do Prof. Tancredo Almada Cruz como chefe do Departamento de Administração e Economia (DAE) (n. 542) e do Prof. Dilson Seabra Rocha como Diretor do Centro de Ciências Humanas, Letras e Artes (CCH). Esses e outros eventos foram abrilhantados com a apresentação do Coral da UFV, sob a regência do Prof. João Adamor Dias Neves, professor do DAE (nºs 532 e 544). Ainda nesse ano, o Prof. João Adamor Dias Neves representou a UFV no II Congresso Brasileiro de Treinamento e Desenvolvimento, uma vez que o referido professor lecionava disciplinas dessa área. O técnico do DAE, Carlos Alberto Freire Resende, torna-se Diretor do Campus Avançado de Altamira (n. 553).',
         photos: [{
@@ -184,7 +184,7 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de ADRIEL RODRIGUES DE OLIVEIRA',
+        title: 'ADRIEL RODRIGUES DE OLIVEIRA',
         desc: 'Admissão do docente ADRIEL RODRIGUES DE OLIVEIRA no Departamento de Administração e Economia (DAE), com início das atividades em 01/03/1979.',
         photos: [],
         externalLinks: [],
@@ -192,15 +192,31 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de Docentes no DAE',
-        desc: 'Em 02 de março de 1979, o Departamento de Administração e Economia (DAE) sob a presidência do Professor Tancredo Almada Cruz, foi lido o Relatório dos Trabalhos da Comissão de Seleção DAE/UFV/79, o qual aprovou por unanimidade os currículos, a nomeação e admissão dos professores Maria de Fátima Teixeira Santos, José Reinaldo Pinheiro Diniz e Alberto Esperança.',
+        title: 'MARIA DE FÁTIMA TEIXEIRA SANTOS',
+        desc: 'Admissão da docente MARIA DE FÁTIMA TEIXEIRA SANTOS no Departamento de Administração e Economia (DAE), com início das atividades em 01/03/1979.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
       {
         tag: 'gestao',
-        title: 'Admissão de NINA ROSA DA SILVEIRA CUNHA',
+        title: 'JOSÉ REINALDO PINHEIRO DINIZ',
+        desc: 'Admissão do docente JOSÉ REINALDO PINHEIRO DINIZ no Departamento de Administração e Economia (DAE), com início das atividades em 01/03/1979.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: 'gestao',
+        title: 'ALBERTO ESPERANÇA',
+        desc: 'Admissão da docente ALBERTO ESPERANÇA no Departamento de Administração e Economia (DAE), com início das atividades em 01/03/1979.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: 'gestao',
+        title: 'NINA ROSA DA SILVEIRA CUNHA',
         desc: 'Admissão da docente NINA ROSA DA SILVEIRA CUNHA no Departamento de Administração e Economia (DAE), com início das atividades em 17/09/1979.',
         photos: [],
         externalLinks: [],
@@ -209,14 +225,14 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Inclusão em Comissão e Programação da I Semana do Administrador',
-        desc: '21 a 26 de Maio de 1979 foi programada a realização da I Semana do Administrador, uma celebração institucional composta por um cronograma diário ATA N.4',
+        desc: '21 a 26 de Maio de 1979 foi programada a realização da I Semana do Administrador, uma celebração institucional composta por um cronograma diário. ATA N.4',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
       {
         tag: 'gestao',
-        title: 'Admissão de GUALBERTO FERREIRA DA SILVA',
+        title: 'GUALBERTO FERREIRA DA SILVA',
         desc: 'Admissão do docente GUALBERTO FERREIRA DA SILVA no Departamento de Administração e Economia (DAE), com início das atividades em 05/06/1979.',
         photos: [],
         externalLinks: [],
@@ -234,10 +250,7 @@ export const memorialData: MemorialData = {
         tag: 'reconhecimento',
         title: 'Prof. João Adamor da UFV Recebe Menção Honrosa em Concurso Nacional',
         desc: 'Acontecimento meritório para a UFV e o DAE foi a conquista pelo Prof. João Adamor Dias Neves do DAE da Menção Honrosa do III Concurso Nacional de Monografia sobre Administração para o Desenvolvimento, promovido pela Secretaria de Modernização e Reforma Administrativa, pertencente à Secretaria de Planejamento da Presidência da República. O referido Professor concorreu com o trabalho intitulado Avaliação de Desempenho de Professores e Técnicos da Universidade Federal de Viçosa. (18jan.n.564).',
-        photos: [{
-          url: '/1979 “Novos Diretores”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
-          caption: 'A posse dos novos diretores.'   // Legenda ou descrição da foto
-        }
+        photos: [
         ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/1/5/315a4978baa8c3e8ee2d94b1bbd7d7a785d41767e9f639294d00986c176e4a66/Edi____o_n564.pdf'
@@ -246,7 +259,10 @@ export const memorialData: MemorialData = {
         tag: 'gestao',
         title: 'UFV em Destaque: Menção Honrosa Nacional e Posse de Novos Diretores de Centro',
         desc: 'Também nesse ano foram nomeados pelo Ministro da Educação e Cultura e empossados pelo Reitor os novos Diretores dos CCA e do CCH os professores Renato Mário Del Giudice e Dilson Seabra Rocha. (08mar. n. 571).',
-        photos: [],
+        photos: [{
+          url: '/1979 “Novos Diretores”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          caption: 'A posse dos novos diretores.'   // Legenda ou descrição da foto
+        }],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/1/7/e17d5e0550050665b589822c339c4a89aaf490c93b9f5b459e9b2f06033ed454/Edi____o_n571.pdf'
       },
@@ -342,7 +358,7 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de NANCI PEREIRA DE VASCONCELOS',
+        title: 'NANCI PEREIRA DE VASCONCELOS',
         desc: 'Admissão da docente NANCI PEREIRA DE VASCONCELOS no Departamento de Administração e Economia (DAE), com início das atividades em 17/03/1980.',
         photos: [],
         externalLinks: [],
@@ -350,7 +366,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de MILTON RODRIGUES NATALINO',
+        title: 'MILTON RODRIGUES NATALINO',
         desc: 'Admissão do docente MILTON RODRIGUES NATALINO  no Departamento de Administração e Economia (DAE), com início das atividades em 24/03/1980.',
         photos: [],
         externalLinks: [],
@@ -358,8 +374,8 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de SERGIO AUGUSTO PEREIRA MONTEIRO',
-        desc: 'Admissão do servidor técnico-administrativo SÉRGIO AUGUSTO PEREIRA MONTEIRO, ocupando o cargo de ADMINISTRADOR no Departamento de Administração e Economia (DAE), com início das atividades em 06/11/1980.',
+        title: 'SERGIO AUGUSTO PEREIRA MONTEIRO',
+        desc: 'Admissão do servidor técnico-administrativo SÉRGIO AUGUSTO PEREIRA MONTEIRO, no Departamento de Administração e Economia (DAE), com início das atividades em 06/11/1980.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -367,7 +383,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Eloy Alves Filho',
-        desc: 'Foi empossado "pro tempore" na chefia do Departamento de Administração e Economia o Prof. Eloy Alves Filho, substituindo o Prof. Tancredo Almada Cruz, em treinamento. (06mar. n.623).',
+        desc: 'Foi empossado "pro tempore" na chefia do Departamento de Administração e Economia o Prof. Eloy Alves Filho, substituindo o Prof. Tancredo Almada Cruz, em treinamento. (06mar. n.623). (MUDAR A FOTO)',
         photos: [{
           url: '/1979 “Novos Diretores”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'Novos Diretores'   // Legenda ou descrição da foto
@@ -421,7 +437,7 @@ export const memorialData: MemorialData = {
           label: 'Jornal 650', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/2/c/22cc4f1f56cb2b5c2fd545df33d9d55a34c796a6e4cdd6482a3318132bfbda6e/Edi____o_n650.pdf'
         },
         {
-          label: 'Jornal 657', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/7/1/a71a323bf853d9fb08578f9a29ecc38029f45781e7060e12e9970c9e44b04783/Edi____o_n658.pdf'
+          label: 'Jornal 658', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/7/1/a71a323bf853d9fb08578f9a29ecc38029f45781e7060e12e9970c9e44b04783/Edi____o_n658.pdf'
         }],
         articleUrl: ''
       }
@@ -456,7 +472,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'II Semana do Administrador Reúne Grandes Nomes do Cenário Nacional para Debater o Panorama da Área',
-        desc: 'Em comemoração à II Semana do Administrador o DAE promoveu o evento com o tema "Panorama Atual da Administração no Brasil", com participação de 300 autoridades e empresários de Viçosa e região, professores e alunos. Foram ministradas várias palestras, tendo como palestrantes Agrícola de Souza Bethlem, Professor do Mestrado de Administração da COPPE/COPPEAD que discorreu sobre o Panorama Atual da Administração no Brasil; Mário Leme Galvão e Luiz Torello falaram sobre a administração da empresa estatal da EMBRAER; Hélcio Guimarães discorreu sobre a Desburocratização e Administração; e o empresário Gabriel Donato de Andrade, da Construtora Andrade Gutierrez S. A. e da Cooperativa Agroflorestal Ltda. falou sobre a Administração da Empresa Privada Brasileira e o Cooperativismo; o Secretário de Administração do Estado de Minas Gerais, deputado José Machado Sobrinho sobre Administração Pública; o Presidente da FIAT Automóveis S.A. Miguel Augusto Gonçalves de Souza falou sobre Administração da Empresa Multinacional na Atual Conjuntura Econômica; e o presidente do Conselho Federal de Técnicos de Administração, Guilherme Quintanilha de Almeida discorreu sobre a Administração na Média Empresa Brasileira e o papel do Técnico de Administração. (14mai. n.686. 28mai. n.687).',
+        desc: 'Em comemoração à II Semana do Administrador o DAE promoveu o evento com o tema "Panorama Atual da Administração no Brasil", com participação de 300 autoridades e empresários de Viçosa e região, professores e alunos. Foram ministradas várias palestras, tendo como palestrantes Agrícola de Souza Bethlem, Professor do Mestrado de Administração da COPPE/COPPEAD que discorreu sobre o Panorama Atual da Administração no Brasil; Mário Leme Galvão e Luiz Torello falaram sobre a administração da empresa estatal da EMBRAER; Hélcio Guimarães discorreu sobre a Desburocratização e Administração; e o empresário Gabriel Donato de Andrade, da Construtora Andrade Gutierrez S. A. e da Cooperativa Agroflorestal Ltda. falou sobre a Administração da Empresa Privada Brasileira e o Cooperativismo; o Secretário de Administração do Estado de Minas Gerais, deputado José Machado Sobrinho sobre Administração Pública; o Presidente da FIAT Automóveis S.A. Miguel Augusto Gonçalves de Souza falou sobre Administração da Empresa Multinacional na Atual Conjuntura Econômica; e o presidente do Conselho Federal de Técnicos de Administração, Guilherme Quintanilha de Almeida discorreu sobre a Administração na Média Empresa Brasileira e o papel do Técnico de Administração. (14mai. n.686. 28mai. n.687). (CONFERIR O LINK DO 686)',
         photos: [{
           url: '/1981- Semana do Administrador.png',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'O plenário na solenidade de abertura da II Semana do Administrador.'   // Legenda ou descrição da foto
@@ -494,7 +510,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'ensino',
         title: 'Convênio DAE/FUNARBE: Recursos para Biblioteca e Contratação de Docentes',
-        desc: 'Em 05 de junho de 1981, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca.',
+        desc: 'Em 05 de junho de 1981, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca. (CONFERIR A ATA)',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -556,7 +572,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Professor Gilson Faria Potsch Magalhães Assume a Chefia do DAE',
-        desc: 'Tomou posse como chefe do Departamento de Administração e Economia o Prof. Gilson Faria Potsch Magalhães. (26nov. n.713). Foto PG 4.',
+        desc: 'Tomou posse como chefe do Departamento de Administração e Economia o Prof. Gilson Faria Potsch Magalhães. (26nov. n.713).',
         photos: [{ url: '/1981 - Posse Gilson.png', caption: 'Os professores José Henrique de Oliveira e Gilson Faria Potsch Ma- galháes, na solenidade de posse, com o vice-reitor Joaquim Aleixo de Souza' }],
         externalLinks: [{ label: 'Jornal 713', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/a/2/ea215ea81f95766eb7c665ecf2163f6f38f09651db872bae6bc060b81fae118d/Edi____o_n713.pdf' }],
         articleUrl: ''
@@ -649,8 +665,8 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de LUIS CARLOS DE FREITAS',
-        desc: 'Admissão do servidor técnico-administrativo LUIS CARLOS DE FREITAS, ocupando o cargo de SERVENTE DE LIMPEZA no Departamento de Administração e Economia (DAE), com início das atividades em 08/07/1982.',
+        title: 'LUIS CARLOS DE FREITAS',
+        desc: 'Admissão do servidor técnico-administrativo LUIS CARLOS DE FREITAS, no Departamento de Administração e Economia (DAE), com início das atividades em 08/07/1982.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -702,7 +718,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'UFV realiza II Ciclo de Estudos Jurídicos com a presença de renomados especialistas',
-        desc: 'Com cinco palestras, seguidas de debates, e com a participação de professores e estudantes, advogados e empresários da região, o DAE realizou o II Ciclo de Estudos Jurídicos. O evento foi coordenado pela Profa. Valéria Aroeira Braga Valéria Duarte Ferreira, Profa. Maria Elena Barbassa, presidente da Comissão de Extensão do DAE; e os Juízes de Direito, Júlio Henrique Prado Bueno e Wander Paulo Marotta Моreira. O Professor Jair Leonardo Lopes, titular de Direito Penal da UFMG e ex-desembargador do Tribunal de Justiça, falou sobre Direito Penal Econômico; o professor Osmar Brina discorreu sobre Sociedade Anônima, e o professor Paulo Emílio Ribeiro de Vilhena abordou o tema Principio de Direito do Trabalho. Os professores José Alfredo Baracho e Paulo Neves de Carvalho falaram, respectivamente, sobre Federalismo e Administração Municipal em Perspectiva. (21out. n.760).',
+        desc: 'Com cinco palestras, seguidas de debates, e com a participação de professores e estudantes, advogados e empresários da região, o DAE realizou o II Ciclo de Estudos Jurídicos. O evento foi coordenado pela Profa. Valéria Aroeira Braga Valéria Duarte Ferreira, Profa. Maria Elena Barbassa, presidente da Comissão de Extensão do DAE; e os Juízes de Direito, Júlio Henrique Prado Bueno e Wander Paulo Marotta Моreira. O Professor Jair Leonardo Lopes, titular de Direito Penal da UFMG e ex-desembargador do Tribunal de Justiça, falou sobre Direito Penal Econômico; o professor Osmar Brina discorreu sobre Sociedade Anônima, e o professor Paulo Emílio Ribeiro de Vilhena abordou o tema Principio de Direito do Trabalho. Os professores José Alfredo Baracho e Paulo Neves de Carvalho falaram, respectivamente, sobre Federalismo e Administração Municipal em Perspectiva. (21out. n.760). (COLOCAR A FOTO)',
         photos: [],
         externalLinks: [{ label: 'Jornal 760', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/b/7/eb72d157a7cef8856b08a8308f0c8189c413c91656c70bc0cc916c6c6c9a7fba/Edi____o_n760.pdf' }],
         articleUrl: ''
@@ -769,7 +785,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Instituição da Data Oficial de Aniversário do DAE',
-        desc: 'Em 10 de maio de 1983, ficou formalmente instituído o dia 10 de maio como a data oficial de aniversário e comemoração do DAE. A celebração foi estabelecida pelo fato de o departamento ter sido originalmente implantado e instalado nesta respectiva data.',
+        desc: 'Em 10 de maio de 1983, ficou formalmente instituído o dia 10 de maio como a data oficial de aniversário e comemoração do DAE. A celebração foi estabelecida pelo fato de o departamento ter sido originalmente implantado e instalado nesta respectiva data. (PROCURAR ATA)' ,
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -822,7 +838,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'DAE Promoveu Palestra Sobre o Novo Currículo de Economia',
-        desc: 'DAE promove palestra sobre o novo currículo do curso de Economia, com o ex-diretor da Capes, Cláudio de Moura Castro, atual secretário executivo do Conselho Nacional de Recursos Humanos do Ipea/Seplan. O objetivo foi proferir uma palestra sobre o tema «Concepção do Novo Currículo de Economia», com a presença de professores e estudantes dos cursos de Administração e Economia. (1ºset. n.806). FOTO PG.2 "CURRICULO DE ECONOMIA)',
+        desc: 'DAE promove palestra sobre o novo currículo do curso de Economia, com o ex-diretor da Capes, Cláudio de Moura Castro, atual secretário executivo do Conselho Nacional de Recursos Humanos do Ipea/Seplan. O objetivo foi proferir uma palestra sobre o tema «Concepção do Novo Currículo de Economia», com a presença de professores e estudantes dos cursos de Administração e Economia. (1ºset. n.806).)',
         photos: [{ url: '1983 - Currículo de Economia.png', caption: 'Os professores Gilson Faria Potsch Magalhães, chefe do DAE, o palestrante Cláudio de Moura Castro e Juraci Aureliano Teixeira, diretor do Centro de Ciências Humanas, Letras e Artes da UFV.' }],
         externalLinks: [{ label: 'Jornal 806', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/3/2/432f1c8d5e9a1b7c3d4e5f6a7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2/Edi____o_n806.pdf' }],
         articleUrl: ''
@@ -830,9 +846,11 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Professores do DAE Ministraram Curso de Administração Financeira em São Lourenço',
-        desc: 'Professores do DAE ministraram o Curso de Administração Financeira em São Lourenço para micro, pequenas e médias empresas. A promoção foi da Educação & Cultura S/C- Educa e do DAE, mediante convênio. Foram ministradas aulas pelos professores José Clévio Dias Casali e Milton Rodrigues Natalino, sob a coordenação da professora Nina Rosa da Silveira Cunha. O programa do curso incluiu as seguintes matérias: Noções de Contabilidade, Patrimônio e Balanço, Análise de Balanço, Orçamento de Caixa T.R.I. (R.O.I., Taxa de Retorno de Investimento e Método "Du Pont" de Análise). (24set. n.779).',
+        desc: 'Professores do DAE ministraram o Curso de Administração Financeira em São Lourenço para micro, pequenas e médias empresas. A promoção foi da Educação & Cultura S/C- Educa e do DAE, mediante convênio. Foram ministradas aulas pelos professores José Clévio Dias Casali e Milton Rodrigues Natalino, sob a coordenação da professora Nina Rosa da Silveira Cunha. O programa do curso incluiu as seguintes matérias: Noções de Contabilidade, Patrimônio e Balanço, Análise de Balanço, Orçamento de Caixa T.R.I. (R.O.I., Taxa de Retorno de Investimento e Método "Du Pont" de Análise). (24set. n.779). (ADICIONAR FOTO PG5 818)',
         photos: [],
-        externalLinks: [{ label: 'Jornal 779', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/f/c/afca3444757a500bf525ec35064be4deff2794a9b545efbc79ca040a37b15125/Edi____o_n779.pdf' }],
+        externalLinks: [{ label: 'Jornal 779', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/f/c/afca3444757a500bf525ec35064be4deff2794a9b545efbc79ca040a37b15125/Edi____o_n779.pdf' },
+          { label: 'Jornal 818', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/6/d/66dd2e09a0c4a4ef87c6d047449a78b6f87807754aaefa0a318c39b7e3bc3dce/Edi____o_n818.pdf' }
+        ],
         articleUrl: ''
       },
       {
@@ -857,7 +875,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Alunos do DAE Organizaram Palestra com Especialista da Alcan',
-        desc: 'O gerente de Métodos da Alcan Alumínio do Brasil, Paulo Sá Grise (foto), fez palestra, abordando a "Produtividade Industrial", numa iniciativa das acadêmicas Maria do C. Bartolomeu, Zélia A. M. Oliveira, Maria I. Feliciana, Afonso Rocha, Júlio C. Pena e Irene D. Alves, sob a coordenação do professor José Edson Lara, do DAE, responsável pela área de Administração da Produção. (24nov. n.818). ',
+        desc: 'O gerente de Métodos da Alcan Alumínio do Brasil, Paulo Sá Grise (foto), fez palestra, abordando a "Produtividade Industrial", numa iniciativa das acadêmicas Maria do C. Bartolomeu, Zélia A. M. Oliveira, Maria I. Feliciana, Afonso Rocha, Júlio C. Pena e Irene D. Alves, sob a coordenação do professor José Edson Lara, do DAE, responsável pela área de Administração da Produção. (24nov. n.818). (FOTO PG 5 DA ALCAN) ',
         photos: [],
         externalLinks: [{ label: 'Jornal 818', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/6/d/66dd2e09a0c4a4ef87c6d047449a78b6f87807754aaefa0a318c39b7e3bc3dce/Edi____o_n818.pdf' }],
         articleUrl: ''
@@ -878,23 +896,15 @@ export const memorialData: MemorialData = {
         // Título principal exibido no card e no cabeçalho do modal
         title: 'Cálculo do Índice Mensal de Preços ao Consumidor em Viçosa pelo DAE',
         // Texto com o relato histórico completo exibido dentro do modal
-        desc: 'O DAE calcula o índice mensal de preços ao consumidor em Viçosa, a taxa de elevação do custo de vida na cidade, obtido com o processamento dos preços de cada um dos itens da cesta básica. A pesquisa realiza-se com recursos do Conselho Nacional de Desenvolvimento e Tecnológico CNPq, sob a coordenação do Prof. Tancredo Almada Cruz. (03abr. n.889 e 25abr. n.892) (NÃO TEM ESSES JORNAIS)',
+        desc: 'O DAE calcula o índice mensal de preços ao consumidor em Viçosa, a taxa de elevação do custo de vida na cidade, obtido com o processamento dos preços de cada um dos itens da cesta básica. A pesquisa realiza-se com recursos do Conselho Nacional de Desenvolvimento e Tecnológico CNPq, sob a coordenação do Prof. Tancredo Almada Cruz. ',
         // [OPCIONAL] Fotos exclusivas deste evento (aparecem em miniatura no modal e abrem no lightbox)
         photos: [],
         // [OPCIONAL] Lista de links úteis (Google Drive, atas, PDFs, portarias, páginas externas)
-        externalLinks: [{ label: 'Jornal', url: 'https://atom.ufv.br/index.php/1984-ufv-informa' },
-        ],
+        externalLinks: [],
         // [OPCIONAL] Link direto para a matéria do evento (gera o botão verde de destaque no modal)
         articleUrl: ''
       },
-      {
-        tag: 'extensao',
-        title: 'Curso de Mercado de Capitais',
-        desc: 'O DAE promoveu o treinamento de estudantes na Bolsa, com o Curso de Mercado de Capitais. O economista Renato Cortes Teixeira da Bolsa de Valores do Rio de Janeiro enfocou: Mercado Financeiro, Sistema Financeiro Nacional, A Empresa e o Mercado de Ações, Bolsa de Valores, o Investidor e Desafio da Bolsa para Universitários. Este último é um programa da Bolsa de Valores do Rio de Janeiro que vem sendo feito junto a várias instituições. O Desafio da Bolsa foi disputado por equipes de universitários, com aplicações simuladas de Mercado de Capitais envolvendo situações, empresas e números reais. A equipe de estudantes enviou, via Bolsa de Valores de Minas-Espirito Santo e Brasília, em Belo Horizonte, ordens de compra e venda de papéis na Bolsa do Rio, concorrendo com colegas de várias instituições VER FOTO P.1 (09mai. n.894).',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      }
+      
     ],
     // GALERIA GERAL DO ANO (Fotos que aparecem no grid inferior da aba "Por Ano", independentes de um evento específico)
     photos: [],
@@ -906,7 +916,7 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de MARCELO ANTONIO LOPES',
+        title: 'MARCELO ANTONIO LOPES',
         desc: 'Admissão do servidor técnico-administrativo MARCELO ANTONIO LOPES no DAE, com início das atividades em 10/01/1985.',
         photos: [],
         externalLinks: [],
@@ -921,9 +931,9 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
-        title: 'DAE Recorre a Respaldo Jurídico para Contratar Professora Sílvia Toyoshima',
-        desc: 'Admissão de SÍLVIA HARUMI TOYOSHIMA \nAdmissão da docente Sílvia Harumi Toyoshima no DAE, com início das atividades em 10/01/1985.',
+        tag: 'extensao',
+        title: 'Curso de Mercado de Capitais',
+        desc: 'O DAE promoveu o treinamento de estudantes na Bolsa, com o Curso de Mercado de Capitais. O economista Renato Cortes Teixeira da Bolsa de Valores do Rio de Janeiro enfocou: Mercado Financeiro, Sistema Financeiro Nacional, A Empresa e o Mercado de Ações, Bolsa de Valores, o Investidor e Desafio da Bolsa para Universitários. Este último é um programa da Bolsa de Valores do Rio de Janeiro que vem sendo feito junto a várias instituições. O Desafio da Bolsa foi disputado por equipes de universitários, com aplicações simuladas de Mercado de Capitais envolvendo situações, empresas e números reais. A equipe de estudantes enviou, via Bolsa de Valores de Minas-Espirito Santo e Brasília, em Belo Horizonte, ordens de compra e venda de papéis na Bolsa do Rio, concorrendo com colegas de várias instituições VER FOTO P.1 (09mai. n.894).',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -939,7 +949,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Posse dos novos diretores dos Centros de Ciências da UFV',
-        desc: 'No CCH, tomou posse o Prof. Gilson Faria Potsch Magalhães. VER FOTO P.4 (04jul. n.902).',
+        desc: 'No CCH, tomou posse o Prof. Gilson Faria Potsch Magalhães. (04jul. n.902).',
         photos: [{ url: '/1985 - Vice Reitor.png', caption: 'O professor Gilson Faria Potsch Magalhães, do DAE, empossado como novo diretor do Centro de Ciências Humanas, Letras e Artes da UFV.' }],
         externalLinks: [{ label: 'Jornal 902', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/3/b/63b24fc991e63fed1676f92effb0a12eba88e5aa2d85213492bb4870978b733c/Edi____o_n___902.pdf' }],
         articleUrl: ''
@@ -947,7 +957,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Posse do Chefe do Departamento de Administração e Economia',
-        desc: 'Tomou posse em 13 de novembro como Chefe do Departamento de Administração e Economia o professor Tancredo Almada Cruz VER FOTO P.1  14nov. n.921).',
+        desc: 'Tomou posse em 13 de novembro como Chefe do Departamento de Administração e Economia o professor Tancredo Almada Cruz. 14nov. n.921).',
         photos: [{ url: '/1985 - Tancredo.png', caption: 'O professor Tancredo Almada Cruz, empossado como Chefe do Departamento de Administração e Economia da UFV.' }],
         externalLinks: [{ label: 'Jornal 921', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/b/d/cbd729ad3454b25aa9ba1044b2490bc61cc809353b3a1df470bd29a1923d90a0/Edi____o_n___921.pdf' }],
         articleUrl: ''
@@ -1059,7 +1069,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'NAIPE é Inaugurado - PARTE III',
-        desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, inaugurou, o Núcleo de Assistência Integral à Pequena Empresa (NAIPE), nas dependências do Departamento de Administração e Economia da UFV. O evento fez parte do I Encontro de Empresários da Zona da Mata. O NAIPE é fruto do convênio assinado entre a UFV/DAE,  BDMG, CEAG-MG e o INDI, atendendo aos interessados, nas instalações recém-inauguradas no DAE. О Reitor descerrou a placa de inauguração do Núcleo juntamente com Jairo Teixeira, dirigente do BDMG. Após o descerramento da placa, Jairo Teixeira enfatizou a importância do convênio assinado, ao mesmo tempo em que destacou um maior fomento ao ensino proporcionado pela UFV. O dirigente do BDMG colocou o Banco “à disposição total da UFV, no momento em que se deseja fortalecer a integração do órgão com esta Universidade”. Em seguida, o Reitor congratulou-se com o DAE que, “numa hora muito feliz e própria, procurou o caminho do comprometimento com a comunidade, ampliando a sua atuação e dando-lhe condições de desenvolvimento”. (14ago. n.960).',
+        desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, inaugurou, o Núcleo de Assistência Integral à Pequena Empresa (NAIPE), nas dependências do Departamento de Administração e Economia da UFV. O evento fez parte do I Encontro de Empresários da Zona da Mata. O NAIPE é fruto do convênio assinado entre a UFV/DAE,  BDMG, CEAG-MG e o INDI, atendendo aos interessados, nas instalações recém-inauguradas no DAE. О Reitor descerrou a placa de inauguração do Núcleo juntamente com Jairo Teixeira, dirigente do BDMG. Após o descerramento da placa, Jairo Teixeira enfatizou a importância do convênio assinado, ao mesmo tempo em que destacou um maior fomento ao ensino proporcionado pela UFV. O dirigente do BDMG colocou o Banco “à disposição total da UFV, no momento em que se deseja fortalecer a integração do órgão com esta Universidade”. Em seguida, o Reitor congratulou-se com o DAE que, “numa hora muito feliz e própria, procurou o caminho do comprometimento com a comunidade, ampliando a sua atuação e dando-lhe condições de desenvolvimento”. (14ago. n.960). (COLOCAR FOTO)',
         photos: [],
         externalLinks: [{label: 'Jornal 960', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/9/4/39410b986241ac56b91f36f225a543a6b83639f90fbba114679fec2017136a32/Edi____o_n960.pdf'}],
         articleUrl: ''
@@ -1100,7 +1110,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'NAIPE e DAE Convidam Empresários para Seis Cursos de Gestão',
-        desc: 'O DAE convidou empresários e futuros empresários para os cursos que o Núcleo de Assistência Integral à Pequena Empresa (NAIPE) estava oferecendo. Foram, ao todo, seis cursos: Administração da Pequena Empresa, Administração de Pessoal, Sistema de Informações Contábeis, Análise de Custos, Administração de Estoques e Administração de Vendas. O Curso «Administração da Pequena Empresa» foi ministrado pela professora Nina Rosa Silveira Cunha; o Curso Administração de Pessoal, ministrado pelo professor Juarez Magalhães Rodrigues; Sistema de Informações Contábeis, pela professora Nanci Pereira de Vasconcelos; Análise de Custos, pelo professor José Clévio Dias Casali; "Administração de Estoques" pelo professor Márcio Jose Ozório Gonçalves; e "Administração de Vendas", pelo professor José Edson Lara, todos do DAE/UFV. (25set. n.966; 16out. n.969 e 06nov. n.972). OBSERVAÇÃO: INSERIR DOCUMENTOS PME NR',
+        desc: 'O DAE convidou empresários e futuros empresários para os cursos que o Núcleo de Assistência Integral à Pequena Empresa (NAIPE) estava oferecendo. Foram, ao todo, seis cursos: Administração da Pequena Empresa, Administração de Pessoal, Sistema de Informações Contábeis, Análise de Custos, Administração de Estoques e Administração de Vendas. O Curso «Administração da Pequena Empresa» foi ministrado pela professora Nina Rosa Silveira Cunha; o Curso Administração de Pessoal, ministrado pelo professor Juarez Magalhães Rodrigues; Sistema de Informações Contábeis, pela professora Nanci Pereira de Vasconcelos; Análise de Custos, pelo professor José Clévio Dias Casali; "Administração de Estoques" pelo professor Márcio Jose Ozório Gonçalves; e "Administração de Vendas", pelo professor José Edson Lara, todos do DAE/UFV. (25set. n.966; 16out. n.969 e 06nov. n.972).',
         photos: [],
         externalLinks: [{label: 'Jornal 966', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/d/9/4d973ae1bc0afe22cd8f02dddac3d290b2cb9392b5fabff7d0a65e8956d006bf/Edi____o_n966.pdf'},
         {label: 'Jornal 969', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/b/4/6/b469c58750283fdda4a2a6cfd8ce8657c07d7e7bfe6ccddc33c54fdcb3e743e6/Edi____o_n969.pdf'},
@@ -1120,6 +1130,14 @@ export const memorialData: MemorialData = {
         desc: 'O Reitor da Universidade Federal de Viçosa (UFV), professor Geraldo Martins Chaves, deu posse a José Edson Lara como o novo Diretor administrativo-financeiro da Fundação Arthur Bernardes-FUNARBE. (15jan. n.982).',
         photos: [{url: '/1987 “O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.”.jpg', caption: 'O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.'}],
         externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
+        articleUrl: ''
+      },
+       {
+        tag: 'gestao',
+        title: 'UFV Promove II Semana do Empresário em Julho',
+        desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário. \nEssa informação deve ser de 1987',
+        photos: [],
+        externalLinks: [],
         articleUrl: ''
       },
       {
@@ -1242,6 +1260,14 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
+       {
+        tag: 'gestao',
+        title: 'Implantação do PET na Administração',
+        desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
       {
         tag: 'extensao',
         title: 'VIII Semana do Administrador',
@@ -1270,6 +1296,14 @@ export const memorialData: MemorialData = {
         tag: 'ensino',
         title: 'O Curso de Administração da UFV participa do PET',
         desc: 'Um dos primeiros Programas Especiais de Treinamento (PET) do Brasil na área de Administração, o Curso de Administração da UFV participa do PET em nível nacional, uma vez que o Departamento de Administração (DAD) teve sua proposta aprovada pela CAPES. O PET/Administração teve como orientador o Prof. Adriel Rodrigues de Oliveira, tutor do Programa e responsável pela iniciativa da proposta a CAPES. (24nov. n.1079).',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+       {
+        tag: 'gestao',
+        title: 'Novas Chefias',
+        desc: 'Assumiu como primeiro chefe do Departamento de Administração (DAD) o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE) Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira, ocorrido em 19 de agosto de 1988, por ocasião do desmembramento do DAE. (CONFERIR)',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -1671,14 +1705,6 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'extensao',
-        title: 'DAD promove palestra',
-        desc: 'O DAD promoveu palestra sobre "Técnicas Gerenciais Japonesas" no auditório do Departamento de Engenharia Florestal no dia 10 de novembro. Não tem o nome dos Professores (Procurar e acrescentar)',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'extensao',
         title: 'UFES Busca Integração com a UFV/DAD',
         desc: 'Com o objetivo de conhecer a sólida experiência da UFV na realização de eventos corporativos e de extensão, representantes da Universidade Federal do Espírito Santo (UFES) realizaram uma visita oficial ao campus de Viçosa. A equipe da UFES reuniu-se com docentes e técnicos da Comissão de Extensão do DAD, formalizando convite para a equipe do DAD ministrar palestras na UFES. Tiveram participação os professores e técnicos Cássia Viviani Silva Santiago, José Roberto Reis, Afonso Augusto Teixeira de Freitas de Carvalho Lima e Beatriz de Freitas Dias. n. 1261',
         photos: [{ url: '/1993 - UFES UFV.png', caption: 'O grupo foi recebido na Imprensa Universitaria pelo diretor, professor José Geraldo Femandes de Araújo.' }],
@@ -1688,7 +1714,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Técnicas Gerenciais Japonesas',
-        desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento foi promovido pelo DAD/PET e coordenado pelo professor José Edson Lara. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no Armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito.',
+        desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento foi promovido pelo DAD/PET e coordenado pelo professor José Edson Lara. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no Armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito. (Colocar Foto) (10 dez n. 1271)',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -1719,7 +1745,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'fundacao',
-        title: 'Aprovação da Empresa Júnior na CEPE',
+        title: 'Aprovação da Empresa Júnior no CEPE',
         desc: 'Ocorreu a aprovação da criação da Empresa Júnior de Consultoria em reunião realizada pela Coordenação de Ensino, Pesquisa e Extensão (CEPE) da UFV.',
         photos: [],
         externalLinks: [],
@@ -1983,44 +2009,13 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'homenagem',
-        title: 'Projeto PROIN e Parabenização pelo Resultado no Provão',
+        title: 'Programa de Apoio à Integração Graduação/Pós-Graduação (PROIN) e Parabenização pelo Resultado no Provão',
         desc: 'Atualizações sobre o status do Projeto PROIN e congratulações do Reitor parabenizando os professores do DAD pelo expressivo resultado obtido no Exame Nacional de Cursos (Provão).',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
-      {
-        tag: 'ensino',
-        title: 'Primeiros Selecionados',
-        desc: 'Uma Comissão de Seleção presidida pelo professor Adriel selecionou os quatro primeiros estudantes da turma de 1988 para integrarem o programa:  Carla Carvalho Malaquias, Edson Mauro Santos, Geraldo Magela de Abreu e Geraldo Vieira Júnior. (CONFERIR O ANO CORRETO)',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'Implantação do PET na Administração',
-        desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta. (Notícia de 1988)\nRelatado por Nina',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'UFV Promove II Semana do Empresário em Julho',
-        desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário. \nEssa informação deve ser de 1987',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'Novas Chefias',
-        desc: 'Assumiu como primeiro chefe do Departamento de Administração (DAD) o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE) Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira, ocorrido em 19 de agosto de 1988, por ocasião do desmembramento do DAE. (CONFERIR)',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      }
+     
     ],
     photos: [
       { url: '', caption: '1 Encontro de Administração Municipal da Zona da Mata' },
@@ -2040,7 +2035,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'ensino',
         title: 'Aula Inaugural da Pós-Graduação em Gestão Estratégica',
-        desc: 'Realização da aula inaugural do Curso de Pós-Graduação Lato Sensu em Gestão Estratégica, com preenchimento total das vagas ofertadas.\n\n(PROCURAR MAIS COISAS DE 1999)',
+        desc: 'Realização da aula inaugural do Curso de Pós-Graduação Lato Sensu em Gestão Estratégica, com preenchimento total das vagas ofertadas.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2057,14 +2052,7 @@ export const memorialData: MemorialData = {
   2000: {
     // 6 registros neste ano
     events: [
-      {
-        tag: 'ensino',
-        title: 'Segunda Turma de Gestão Estratégica e Novo Laboratório',
-        desc: 'Avaliação do projeto de Pós-Graduação para a Agência de Desenvolvimento de Ubá (2ª turma em Gestão Estratégica). Efetivação do novo Laboratório de Informática estruturado com recursos do PROIN.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
+     
       {
         tag: 'infraestrutura',
         title: 'Agradecimento por Instalação da Sala do CACE',
@@ -2476,7 +2464,7 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de SIMONE MARTINS',
+        title: 'SIMONE MARTINS',
         desc: 'Admissão da docente SIMONE MARTINS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 16/02/2009.',
         photos: [],
         externalLinks: [],
@@ -2484,7 +2472,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de WENDER FRAGA MIRANDA',
+        title: 'WENDER FRAGA MIRANDA',
         desc: 'Admissão do docente WENDER FRAGA MIRANDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/07/2009.',
         photos: [],
         externalLinks: [],
@@ -2545,7 +2533,7 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de TAINÁ RODRIGUES GOMIDE SOUZA PINTO',
+        title: 'TAINÁ RODRIGUES GOMIDE SOUZA PINTO',
         desc: 'Admissão da docente TAINÁ RODRIGUES GOMIDE SOUZA PINTO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/03/2010.',
         photos: [],
         externalLinks: [],
@@ -2553,7 +2541,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de ANTÔNIO CARLOS BRUNOZI JÚNIOR',
+        title: 'ANTÔNIO CARLOS BRUNOZI JÚNIOR',
         desc: 'Admissão do docente ANTÔNIO CARLOS BRUNOZI JÚNIOR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/07/2010.',
         photos: [],
         externalLinks: [],
@@ -2651,7 +2639,7 @@ export const memorialData: MemorialData = {
     },
       {
         tag: 'ensino',
-        title: 'Resumo do Livro Administração Pública, Gestão Social e Economia Solidária',
+        title: 'Livro Administração Pública, Gestão Social e Economia Solidária',
         desc: 'A obra intitulada "Administração Pública, Gestão Social e Economia Solidária" foi organizada pelos professores Marco Aurélio Ferreira Marques, Magnus Luiz Emmendoerfer e Rodrigo Gava, do DAD UFV.',
         photos: [],
         externalLinks: [],
@@ -3446,7 +3434,7 @@ export const memorialData: MemorialData = {
         title: 'Excelência na Pós-Graduação',
         desc: 'O Programa de Pós-Graduação em Administração (PPGAdm) conquista o Conceito 5 na avaliação quadrienal da CAPES.',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Conceito 5', url:'https://dad.ufv.br/informativo/o-programa-de-pos-graduacao-em-administracao-ufv-ppgadm-obteve-conceito-5/'}],
         articleUrl: ''
       }
     ],

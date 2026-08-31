@@ -633,7 +633,7 @@ export default function App() {
                       O Memorial do Departamento de Administração e Contabilidade (DAD) da Universidade Federal de Viçosa constitui um espaço de preservação da memória institucional do departamento, fundado em <strong>1974</strong>.
                     </p>
                     <p>
-                      Ao longo de mais de cinco décadas, o DAD consolidou-se como um dos principais centros de formação em Administração e Ciências Contábeis, contribuindo para o desenvolvimento regional por meio da produção científica e formação de excelência.
+                      Ao longo de cinco décadas, o DAD consolidou-se como um dos principais centros de formação em Administração e Ciências Contábeis, contribuindo para o desenvolvimento regional e nacional por meio da produção científica e formação de excelência.
                     </p>
                   </div>
                 </div>
