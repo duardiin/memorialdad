@@ -681,7 +681,6 @@ export default function App() {
                     {[
                       { year: '1974', tag: 'fundacao', title: 'Criação do Departamento', desc: 'O DAD foi criado a partir da reorganização acadêmica da UFV.' },
                       { year: '1988', tag: 'ensino', title: 'Curso de Ciências Contábeis', desc: 'Implantação do curso de graduação em Ciências Contábeis.' },
-                      { year: '2024', tag: 'reconhecimento', title: 'Jubileu de Ouro', desc: 'Celebração de 50 anos de história e contribuição acadêmica.' }
                     ].map((m, i) => (
                       <div key={i} className="flex gap-5">
                         <div className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 ${m.tag === 'fundacao' || m.tag === 'reconhecimento' ? 'bg-ufv-gold' : 'bg-ufv-green/10'}`}>
@@ -892,7 +891,7 @@ export default function App() {
                   </h2>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                     <p>
-                      <strong>VIÇOSA</strong> – No final da década de 1980, mais precisamente em torno de <strong>1989</strong>, a Universidade Federal de Viçosa (UFV) vivenciava um período efervescente de expansão científica. Foi nesse cenário de redemocratização e busca por modernização que ganhou força a cooperação internacional com instituições canadenses, com protagonismo direto do <strong>Departamento de Administração (DAD)</strong>.
+                      <strong>VIÇOSA</strong> – No final da década de 1980, mais precisamente em torno de <strong>1989</strong>, a Universidade Federal de Viçosa (UFV) vivenciava um período efervescente de expansão acadêmica/cientifica. Foi nesse cenário de redemocratização e busca por modernização que ganhou força a cooperação internacional com instituições canadenses, com protagonismo direto do <strong>Departamento de Administração (DAD)</strong>.
                     </p>
                   </div>
                 </div>
@@ -904,7 +903,7 @@ export default function App() {
                   </h2>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                     <p>
-                      O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá. Entre os nomes de destaque, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Barbassa</strong>.
+                      O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá. Entre os nomes de destaque, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Elena Barbassa</strong>.
                     </p>
                   </div>
                 </div>

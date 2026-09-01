@@ -1126,9 +1126,17 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Posse de José Edson Lara como Diretor Administrativo-Financeiro',
+        title: 'Posse de José Edson Lara como Diretor Administrativo-Financeiro da Funarbe',
         desc: 'O Reitor da Universidade Federal de Viçosa (UFV), professor Geraldo Martins Chaves, deu posse a José Edson Lara como o novo Diretor administrativo-financeiro da Fundação Arthur Bernardes-FUNARBE. (15jan. n.982).',
         photos: [{url: '/1987 “O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.”.jpg', caption: 'O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.'}],
+        externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
+        articleUrl: ''
+      },
+      {
+        tag: 'gestao',
+        title: 'Cursos do NAIPE',
+        desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos. nº 982',
+        photos: [],
         externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
         articleUrl: ''
       },
@@ -1140,11 +1148,19 @@ export const memorialData: MemorialData = {
         externalLinks: [{label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'}],
         articleUrl: ''
       },
+        {
+        tag: 'gestao',
+        title: 'Núcleo de Treinamento Profissional em Contabilidade',
+        desc: 'O DAE iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial. 26.fev nº 988',
+        photos: [],
+        externalLinks: [{label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'}],
+        articleUrl: ''
+      },
       {
         tag: 'extensao',
         title: 'I Semana do Empresário',
         desc: 'A I Semana do Empresário, evento promovido pelo DAE foi realizada de quatro a sete de agosto na UFV, e teve como objetivo a aproximação de empresários e executivos com a UFV e o DAE, além de transmitir aos produtores urbanos conhecimentos técnicos e gerenciais, com a realização de cursos, palestras, debates, mesas-redondas e exposição de produtos. Os cursos foram nas áreas de produção, marketing, administração de operações, finanças, recursos humanos, pequenas e médias empresas, dentre outros.  (12fev. n.986; 21mai. n.1000; 02jul. n.1006; 16jul. n.1008; 30jul. n. 1010; 06ago. n.1011 e 13ago. n.1013).',
-        photos: [],
+        photos: [{url: '/1987 - 1 Semana do Empresario.png', caption: 'I Semana do Empresário.'}],
         externalLinks: [{label: 'Jornal 986', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/b/e/dbec296ab4065f5119abf8c22865871ed641b84e5bdae4927f10550d6b3c3d02/Edi____o_n986.pdf'}, 
           {label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'},
           {label: 'Jornal 1000', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/5/d/d5d901f1a1d1c53c274407ad402ef9635f2be5004380a652df571f0a76ff77e1/Edi____o_n1000.pdf'},
@@ -1157,27 +1173,11 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
-        title: 'I Semana do Empresário e Atuação do DAE/CEE',
-        desc: 'O Departamento de Administração e Economia (DAE) e o Conselho de Extensão (CEE) da UFV promoveram, entre 12 e 18 de julho, a I Semana do Empresário. O evento teve como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais.',
-        photos: [],
-        externalLinks: [{label: 'Jornal 983', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/f/3/5f31a0a33db6ab574ed3eedc42e8753d3b0f84ec1f450cca4712481fbbfe41d7/Edi____o_n983_pdf.pdf'}],
-        articleUrl: ''
-      },
-      {
         tag: 'gestao',
-        title: 'Cursos do NAIPE',
-        desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos. nº 982',
+        title: 'Participação no Projeto Rondon',
+        desc: 'O DAE encerrou sua participação no Projeto Rondon, ministrando Treinamento para empresários de Micro, Pequenas e Médias Empresas. (19mar. ed.991).',
         photos: [],
-        externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'Núcleo de Treinamento Profissional em Contabilidade',
-        desc: 'O DAE iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial. nº 988',
-        photos: [],
-        externalLinks: [{label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'}],
+        externalLinks: [{label: 'Jornal 991', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/2/e/82e2c465cd784e16c1d3b31f26e7505b29f119cb08bad2562e1fe424e5b25266/Edi____o_n991pdf.pdf'}],
         articleUrl: ''
       },
     ],
@@ -1198,17 +1198,9 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'extensao',
-        title: 'Nova Diretoria da FUNARBE',
-        desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria. A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação. (04fev. n.1037).',
-        photos: [],
-        externalLinks: [{label: 'Jornal 1037', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/a/e/caea8f4816505150dba7b7a7e3fb5a11e5302bbc9a3251c239270ec0b7576115/Edi____o_n1037.pdf' }],
-        articleUrl: ''
-      },
-      {
-        tag: 'extensao',
         title: 'I Encontro de Administração Municipal',
         desc: 'Entre os dias 16 e 18 de março, a UFV promoveu o I Encontro de Administração Municipal. O objetivo foi reunir prefeitos e técnicos da Zona da Mata para analisar problemas locais e buscar soluções com suporte universitário. A iniciativa faz parte da filosofia da instituição de integrar-se ativamente ao desenvolvimento da sua região. Os principais problemas da administração municipal foram discutidos na UFV, durante a Assembleia Geral da Federação Mineira das Associações Microrregionais. O Encontro trouxe a Viçosa prefeitos e assessores de municípios da Zona da Mata Norte. Predominaram assuntos como a municipalização da saúde e da educação e a situação das prefeituras diante da nova perspectiva, sendo defendida a participação do município no bolo tributário. (18fev. n.1039; 12mai. n.1051; 19mai. n.1053).',
-        photos: [],
+        photos: [{url: '/1987 - 1 Encontro de Adm Municipal.png', caption: 'I Encontro de Administração Municipal'}],
         externalLinks: [{label: 'Jornal 1039', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/2/6/526d4123fdfff9eca8d73edea64290b2db73327ea372af173ba5d7f2df7de2be/Edi____o_n1039.pdf' },
         {label: 'Jornal 1051', url: 'hhttps://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/7/5/c75b3cb323ac2c2f7ba6351c2cd14e5bfdaa382653b1e8273904f02930353607/Edi____o_n1051.pdf'},
         {label: 'Jornal 1053', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/9/7/3978c353ca3639959df2f815724359f81cd7ec3d55a4ad4afe6ecc71090b0884/Edi____o_n1053.pdf'}
@@ -1225,25 +1217,9 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'ensino',
-        title: 'Propostas de Expansão Acadêmica e Avaliação da Área de Administração',
-        desc: 'Março de 1988 Durante as deliberações do colegiado, o DAE deu um importante passo em direção à expansão de suas atividades de ensino com a apresentação e discussão de uma proposta preliminar voltada para a criação do novo Curso de Direito na instituição.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'UFV Propõe Criação do Curso de Ciências Contábeis para Suprir Demanda Regional',
-        desc: 'O Departamento de Administração e Economia (DAE) encaminhou, em abril de 1988, uma proposta preliminar para a implementação do curso de graduação em Ciências Contábeis. A iniciativa, assinada pelos professores Nanci Pereira de Vasconcelos e Milton Rodrigues Natalino, visa preencher uma lacuna na área de ciências humanas da instituição.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'ensino',
         title: 'Professor do DAE fala sobre dinâmica do investimento em economias capitalistas',
         desc: 'O professor Newton Paulo Bueno, do DAE, debateu a dinâmica do investimento em economias capitalistas em palestra na UFV. (21abr. n.1048).',
-        photos: [],
+        photos: [{url: '/1988 - PET.png', caption: 'O grupo de estudantes selecionados, juntamente com o professor Adriel Rodrigues de Oliveira'}],
         externalLinks: [{label: 'Jornal 1048', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/e/9/ae9a23ea48efadc0ec72556a2477543983fe77a5bf7a5b5c34256f7c18bdd394/Edi____o_n1048.pdf'}],
         articleUrl: ''
       },
@@ -1259,24 +1235,16 @@ export const memorialData: MemorialData = {
         tag: 'gestao',
         title: 'Implantação do PET na Administração',
         desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta. n. 1079',
-        photos: [],
+        photos: [{url: '/1988 - PET.png', caption: 'O grupo de estudantes selecionados, juntamente com o professor Adriel Rodrigues de Oliveira'}],
         externalLinks: [{label: 'Jornal 1079', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/3/a/c3ab63df995a03ab8744aee632f9b825979979a052ee3cd9e92e48a65ba254a9/Edi____o_n1079.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'VIII Semana do Administrador',
-        desc: 'O Centro Acadêmico de Administração promoveu, de 16 a 19 de agosto, a VIII Semana do Administrador. (04ago. n.1063).',
+        desc: 'O Centro Acadêmico de Administração promoverá em 16 a 19 de agosto, a VIII Semana do Administrador. (04ago. n.1063).',
         photos: [],
         externalLinks: [{label: 'Jornal 1063', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/6/d/f6de6f266b217542bddd2bfae8d9dc34824ad7bae5f4208ff1acc66d63373da3/Edi____o_n1063.pdf'}],
-        articleUrl: ''
-      },
-      {
-        tag: 'reconhecimento',
-        title: 'Homenagem ao Professor Carlos Roberto Ramos',
-        desc: 'Durante as festividades de formatura da Turma de Janeiro de 1988 da Universidade Federal de Viçosa (UFV), os formandos de cada curso escolheram seus homenageados. No curso de Administração, o professor Carlos Roberto Ramos foi o homenageado escolhido. Na mesma ocasião, os formandos em Administração também receberam uma homenagem especial. n.1033',
-        photos: [],
-        externalLinks: [{label: 'Jornal 1033', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/0/2/202d4847f11c29d983d2f33411915e32f509643ef6f56e656f0f1f077b371567/Edi____o_n1033.pdf'}],
         articleUrl: ''
       },
       {
@@ -1288,25 +1256,9 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
-        title: 'O Curso de Administração da UFV participa do PET',
-        desc: 'Um dos primeiros Programas Especiais de Treinamento (PET) do Brasil na área de Administração, o Curso de Administração da UFV participa do PET em nível nacional, uma vez que o Departamento de Administração (DAD) teve sua proposta aprovada pela CAPES. O PET/Administração teve como orientador o Prof. Adriel Rodrigues de Oliveira, tutor do Programa e responsável pela iniciativa da proposta a CAPES. (24nov. n.1079).',
-        photos: [],
-        externalLinks: [{label: 'Jornal 1079', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/3/a/c3ab63df995a03ab8744aee632f9b825979979a052ee3cd9e92e48a65ba254a9/Edi____o_n1079.pdf'}],
-        articleUrl: ''
-      },
-       {
-        tag: 'gestao',
-        title: 'Novas Chefias',
-        desc: 'Assumiu como primeiro chefe do Departamento de Administração (DAD) o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE) Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira, ocorrido em 19 de agosto de 1988, por ocasião do desmembramento do DAE. 20/out. n.1074',
-        photos: [],
-        externalLinks: [{label: 'Jornal 1074', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/c/0/ac0cb25a2d3fdd5956e1063701e5acaaf99f1716aacc254787eac3a508c56740/Edi____o_n1074.pdf'}],
-        articleUrl: ''
-      },
-      {
         tag: 'infraestrutura',
         title: 'Tratativas para o novo prédio do Departamento de Administração',
-        desc: 'Em 16 de dezembro de 1988, a ata número onze, na reunião do Colegiado do Departamento de Administração, o Senhor Presidente Prof. Marcos Tanure Sanábio compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras. Adicionalmente, no âmbito do desenvolvimento de novos cursos e atendendo a uma solicitação formal do Centro Acadêmico de Administração, debateu-se o planejamento e o oferecimento futuro do Curso de Informática Aplicada à Administração.',
+        desc: 'Em 16 de dezembro de 1988, a ata número onze, na reunião do Colegiado do Departamento de Administração, o Senhor Presidente Prof. Marcos Tanure Sanábio compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -1340,16 +1292,8 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
-        title: 'Propostas de criação das disciplinas de Informática Aplicada e Novos Empreendimentos',
-        desc: 'Em 14 de abril de 1989, nesta reunião, o Senhor Presidente Prof. Marcos Tanure Sanábio evidenciou ao Colegiado a necessidade interna de se viabilizar a criação de novas disciplinas específicas para a grade do curso de Administração, citando formalmente os títulos de Informática Aplicada e Novos Empreendimentos. Em consonância com a demanda, a professora Nina Rosa realizou a apresentação de um programa analítico voltado para a Criação de Empresas, que havia sido elaborado por ela.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
         tag: 'gestao',
-        title: 'Admissão de TELMA REGINA DA COSTA GUIMARÂES BARBOSA',
+        title: 'TELMA REGINA DA COSTA GUIMARÂES BARBOSA',
         desc: 'Admissão da docente TELMA REGINA DA COSTA GUIMARÂES BARBOSA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 02/05/1989.',
         photos: [],
         externalLinks: [],
@@ -1357,7 +1301,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'gestao',
-        title: 'Admissão de EVALDO GUIMARÃES BARBOSA',
+        title: 'EVALDO GUIMARÃES BARBOSA',
         desc: 'Admissão do docente EVALDO GUIMARÃES BARBOSA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/11/1989.',
         photos: [],
         externalLinks: [],
@@ -1367,8 +1311,8 @@ export const memorialData: MemorialData = {
         tag: 'extensao',
         title: 'Professoras da UFV visitam Universidades do Canadá',
         desc: 'Em 1989, a Universidade Federal de Viçosa (UFV) deu um passo histórico rumo ao fortalecimento do empreendedorismo regional ao iniciar uma cooperação técnica com a Universidade de Quebec, Chicoutimi, no Canadá. O pontapé inicial ocorreu quando as professoras Maria Elena Barbassa e Nina Rosa visitaram a instituição canadense para negociar a parceria. Logo em seguida, em março do mesmo ano, professores da Universidade de Quebec retribuíram a visita, indo até o Departamento de Administração da UFV para firmar o intercâmbio. O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa em Viçosa. Para consolidar o centro e capacitar o corpo docente, o projeto previa o treinamento de professores da UFV em nível de doutorado no Canadá, além da implementação pioneira de cursos de mestrado (com previsão de início para 1991) e doutorado na universidade mineira. Além do ganho acadêmico, a iniciativa buscava implantar, de forma pioneira, "Incubatórios de Empresa" (as chamadas incubadoras), com o propósito de fomentar o empreendedorismo local e gerar novos empregos no município de Viçosa. (23jun. n.1107).',
-        photos: [],
-        externalLinks: [],
+        photos: [{url: '/1989 “As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa”.jpg', caption:'As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa'}],
+        externalLinks: [{label: 'Jornal 1107', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/6/9/f69812fe99f3c615bb5f1bc80e9326046aff8bafa6566c4bf2941a7bedc3f7f3/Edi____o_n1107.pdf'}],
         articleUrl: ''
       },
       {
@@ -1382,24 +1326,29 @@ export const memorialData: MemorialData = {
       {
         tag: 'gestao',
         title: 'Reitor empossa novos chefes de departamento da UFV',
-        desc: 'O reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. O reitor destacou que o processo respeitou a vontade da maioria e deve focar no trabalho institucional diante da crise nas universidades. Entre os empossados está o professor Roberto de Carvalho Araújo do Departamento de Administração. (15set. nº 1117).',
-        photos: [],
-        externalLinks: [],
+        desc: 'O Reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. Entre os empossados está o professor Roberto de Carvalho Araújo do Departamento de Administração. (15set. nº 1117).',
+        photos: [{url: '/1989 - Novos Chefes.png', caption:'Reitor empossa novos chefes de departamento da UFV '}],
+        externalLinks: [{label: 'Jornal 1117', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/f/4/4f452339214fcdfefb843da87f88d04e9a34ce13d2012f1ecc5b9a15a96774fb/Edi____o_n1117.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'III Semana do Empresário',
         desc: 'A III Semana do Empresário ocorreu de 10 a 14 de julho na UFV, focando em empresários e profissionais do setor. O evento ofereceu cursos de curta duração sobre temas como administração em tempos de crise, informática aplicada, marketing para pequenas empresas, novos empresários, franquia comercial, racionalização do consumo de energia, montagem e desenvolvimento de indústria, matemática financeira para empresários, gerenciamento de estoques, política governamental e de desenvolvimento tecnológico na indústria brasileira, Paralelamente, durante a III Semana houve uma exposição de produtos e serviços aberta ao público no Centro de Vivência. A organização contou com o apoio da Associação Comercial de Viçosa e do CEAG-MG, e do Instituto de Desenvolvimento Industrial de Minas Gerais-INDI. (15mai. nº 1102, 25set. nº1118 e 13out. nº 1120).',
-        photos: [],
-        externalLinks: [],
+        photos: [{url: '/1989 - Semana do Empresario.png', caption:'Estande de exposição no centro de vivência'},
+          {url: '/1989 - Autoridades Semana do Empresario.png', caption:'Autoridades Presentes na III Semana do Empresário'}
+        ],
+        externalLinks: [{label: 'Jornal 1102', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/4/0/5403e540ec3fefd6f8059489dc7ea39fe8fbd57b6d23bea2a5d348ac12b0350e/Edi____o_n1102.pdf'},
+          {label: 'Jornal 1118', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/f/0/df08e086955190a58841c2ccd30caaf35f83dd8cedd5320e7b47ec70d8317da7/Edi____o_n1118.pdf'},
+          {label: 'Jornal 1120', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/c/c/3cc6a86241a32b3a2fbde1ee1d49dc71efa2ea4e1466e4ab2dab00531fd2104e/Edi____o_n1120.pdf'}
+        ],
         articleUrl: ''
       },
       {
         tag: 'infraestrutura',
         title: 'Aprovação da ocupação do DAD no novo prédio e curso de extensão concluído',
         desc: 'Em 19 de outubro de 1989, em relação ao espaço físico departamental, o Senhor Presidente Prof. Marcos Tanure Sanábio apresentou ao Colegiado a planta do prédio do DAD, informando que a comissão da obra se reuniu com o arquiteto Paulo, da prefeitura universitária, que solicitou dados sobre as divisões internas conforme as necessidades. Após debates, o Colegiado aprovou por maioria que o DAD ficasse instalado nas dependências do terceiro andar e na parte térrea (garagem) da nova edificação. Também nesta data, a professora Nina Rosa informou a conclusão do segundo curso de extensão em Informática Aplicada à Administração.',
-        photos: [],
+        photos: [{url: '/1989 “Construção do Departamento de Administração e Economia”.jpg', caption:'Construção do Departamento de Administração'}],
         externalLinks: [],
         articleUrl: ''
       },
@@ -1407,34 +1356,35 @@ export const memorialData: MemorialData = {
         tag: 'infraestrutura',
         title: 'Departamentos de Administração e Economia terão novas sedes',
         desc: 'As novas sedes dos Departamentos de Administração e de Economia da UFV estão em fase adiantada, com o primeiro pavimento de uma estrutura de 3.410 m² quase concluído atrás do Edifício Reinaldo de Jesus Araújo. O projeto prevê, no térreo, 24 gabinetes duplos, áreas administrativas, laboratórios e salas de leitura e computação. Os andares superiores deverão abrigar os departamentos de Letras e Artes e de Educação. (23out. nº1121).',
-        photos: [],
-        externalLinks: [],
+        photos: [{url: '/1989 “Construção do Departamento de Administração e Economia”.jpg', caption:'Construção do Departamento de Administração'}],
+        externalLinks: [{label: 'Jornal 1121', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/7/1/6/71663aec6743c1a13e1e357cad3855b94565f490f652c374259c93b65af32a2f/Edi____o_n1121.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'Professor Gualberto Ferreira da Silva Lança Apostila pela Imprensa Universitária',
         desc: 'O professor Gualberto Ferreira da Silva do DAE lançou a apostila "Tabelas Financeiras–Juros Compostos" pela Imprensa Universitária, que traz tabelas financeiras calculadas em microcomputador ao longo de 254 páginas. (01dez. nº 1127).',
-        photos: [],
-        externalLinks: [],
+        photos: [{url: '/1989 - Apostila.png', caption:'Apostila "Tabelas Financeiras"'}],
+        externalLinks: [{label: 'Jornal 1127', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/9/5/89574db2a5f9e435347cc97fc439213d2f4cd4445078d0c9aa3401ad5b9cd47b/Edi____o_n1127.pdf'}],
+        articleUrl: ''
+      },
+       {
+        tag: 'reconhecimento',
+        title: 'Falecimento do professor Roberto de Carvalho Araújo',
+        desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da Universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos. (29dez. nº 1130).',
+        photos: [{url: '/1989 “O professor Roberto de Carvalho Araújo. ”.jpg', caption: 'Roberto de Carvalho Araújo'}],
+        externalLinks: [{label: 'Jornal 1130', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/c/3/fc3bff5f194f835b024830ecf7755431f89ce9a67f218f03f07d130f1ce1ccb7/Edi____o_n1130.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'gestao',
-        title: 'Admissão de ANTONIO DE FIGUEIREDO VIEIRA',
+        title: 'ANTONIO DE FIGUEIREDO VIEIRA',
         desc: 'Admissão do docente ANTONIO DE FIGUEIREDO VIEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 27/12/1989.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
-      {
-        tag: 'reconhecimento',
-        title: 'Falecimento do professor Roberto de Carvalho Araújo',
-        desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da Universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos. (29dez. nº 1130).',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      }
+     
     ],
     photos: [
       {
@@ -1468,15 +1418,7 @@ export const memorialData: MemorialData = {
         title: 'UFV perde mais um professor',
         desc: 'O professor Gualberto Ferreira da Silva faleceu aos 51 anos, no dia 9 de janeiro, no Rio de Janeiro. Natural da capital carioca e mestre pela COPPE/UFRJ, ele atuava como professor assistente VI no Departamento de Administração da UFV desde 1979. Sua formação incluía o bacharelado em Administração pela FCEPRJ, concluído em 1977. (12jan. n.1131).',
         photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'extensao',
-        title: 'Boas-vindas a novo docente no DAD',
-        desc: 'A professora Maria Elena Barbassa solicitou e registrou em ata um voto de boas-vindas ao professor Antônio de Figueiredo Vieira.',
-        photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1131', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/7/8/278b03e1c885d863bdb16cdd23e6ead5f6f63dcf12c4b2bd2d2bba665d9856d1/Edi____o_n1131.pdf'}],
         articleUrl: ''
       },
       {
@@ -1490,9 +1432,9 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Professor Canadense visita a UFV',
-        desc: 'O professor canadense André Courtemanche, da Universidade de Quebec, visitou a UFV entre 14 de abril e 4 de maio de 1990 para discutir um programa de cooperação técnica. O projeto prevê o treinamento de doutorado para professores do Departamento de Administração e a criação de um mestrado focado em pequenas e médias empresas. A parceria visa transformar o Naipe em um centro de excelência e incentivar a criação de novas empresas na região. (18mai. n.1147).  VER FOTO P.4',
-        photos: [],
-        externalLinks: [],
+        desc: 'O professor canadense André Courtemanche, da Universidade de Quebec, visitou a UFV entre 14 de abril e 4 de maio de 1990 para discutir um programa de cooperação técnica. O projeto prevê o treinamento de doutorado para professores do Departamento de Administração e a criação de um mestrado focado em pequenas e médias empresas. A parceria visa transformar o Naipe em um centro de excelência e incentivar a criação de novas empresas na região. (18mai. n.1147).',
+        photos: [{url: '/1990 “André Courtemanche”.jpg', caption: 'André Courtemanche'}],
+        externalLinks: [{label: 'Jornal 1147', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/7/5/3/7539e652c1344b226a1c8c341226392909eec7da7823e02d1ee16f5799a0f888/Edi____o_n1147.pdf'}],
         articleUrl: ''
       },
       {
@@ -1505,18 +1447,13 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'extensao',
-        title: 'IV Semana do Empresário',
-        desc: 'A IV Semana do Empresário ocorreu de 2 a 5 de outubro de 1990 na UFV, oferecendo 16 cursos de curta duração sobre gestão, informática e marketing. O evento reuniu empresários, gerentes e profissionais para debater o setor e expor produtos em áreas cedidas pela universidade. A organização foi uma parceria entre o Conselho de Extensão, o Departamento de Administração e o Naipe, com apoio de entidades como a ACV, o Ceag-MG e o INDI. 03ago.  n.1158).',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'extensao',
         title: 'Departamento de Administração e a IV Semana do Empresário',
         desc: 'O Departamento de Administração da UFV e o Núcleo de Assistência Integral à Pequena Empresa (Naipe), com apoio da Associação Comercial de Viçosa, do Senac e do Senar, promoveram a IV Semana do Empresário, oferecendo 16 cursos de capacitação e áreas para exposição de produtos, visando a integração de empresários e executivos com » Universidade e incentivar o intercâmbio entre pequenas e microempresas. Cerca de 150 empresários se inscreveram e 263 pessoas participaram dos cursos, refletindo a frequência de um empresário em mais de um curso, Os participantes em sua maioria eram de pequenos e médios empresários da microrregião. (03ago. 1158; 10ago. nº1159 e 23ago. n.1161).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1158', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/b/2/6b2eb26e23bf377e3eb47d0100c720afbe863152ebf38da518937ab958d1030c/Edi____o_n1158.pdf'},
+          {label: 'Jornal 1159', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/1/e/4/1e47cdfc39f647cb2b90c76ebf0ccb59b4a4bc0992837bc6611213ecb938c970/Edi____o_n1159.pdf'},
+          {label: 'Jornal 1161', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/5/9/559224383e8969c517ecdc96c54f05dd823e8f7406adfd4edba146359b680610/Edi____o_n1161.pdf'}
+        ],
         articleUrl: ''
       },
       {
@@ -1529,42 +1466,26 @@ export const memorialData: MemorialData = {
       },
       {
         tag: 'extensao',
-        title: 'Perfil do Departamento de Administração',
+        title: 'Reportagem sobre o departamento de Administração: sua estrutura e demais características',
         desc: 'Reportagem inédita sobre o Departamento de Administração \n \n(31ago. nº1163). ?????',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1163', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/1/9/8/19870b0a477e1ebdca1ad8decb7a1b264e9b2591d34be7bd2e4dfbbf4be29628/Edi____o_n1163.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'ensino',
-        title: 'Professor Milton Rodrigues Natalino Lança Apostila Pela Imprensa Universitária do',
-        desc: 'O Professor Milton Rodrigues Natalino do Departamento de Administração (DAD) assina a 295* apostila editada pela Imprensa Universitária, intitulada “Contabilidade geral”. (10set. n.1164).',
-        photos: [],
-        externalLinks: [],
+        title: 'Professor Milton Rodrigues Natalino Lança Apostila Pela Imprensa Universitária',
+        desc: 'O Professor Milton Rodrigues Natalino do Departamento de Administração (DAD) publicou a apostila editada pela Imprensa Universitária, intitulada “Contabilidade geral”. (10set. n.1164).',
+        photos: [{url: '/1990 - Apostila.png', caption: 'Apostila Contabilidade geral'}],
+        externalLinks: [{label: 'Jornal 1164', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/4/7/e47872466be165673f77136f6bd9d86afd41fb5ccdc13dc77c4b1c894cd2facf/Edi____o_n1164.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'Professor canadense fala sobre Pequena e Média Empresa',
-        desc: 'A pequena e média empresa canadense foi tema da mesa-redonda. e que contou com a participação do professor Gérald d’Amboise, professor da Universidade de Laval, em Québec, Canadá e diretor do Grupo de Estudos sobre Pequenas e Médias Empresas.  Participaram do encontro o professor Juraci Aureliano Teixeira, professor Antonio de Figueiredo Vieira, das professoras Maria Elena Barbassa e Nina Rosa da Silveira Cunha do DAD. Ele falou cerca de quatro horas neste encontro, discorrendo sobre a PME no Canadá e, depois, fez uma análise comparativa com a realidade brasileira dessas empresas. Segundo a professora Maria Elena, concluiu-se que existe muita semelhança entre as PMEs canadenses e brasileiras no tocante aos aspectos comportamentais e estruturais. “A grande diferença entre os dois países nessa área é com relação ao apoio governamental que, no Canadá, é superior”, destacou. O DAD está negociando um projeto de cooperação técnica entre a UFV e universidades canadenses, daí a vinda do professor Gérald d\' Amboise. A Universidade de Laval é considerada um centro de excelência em estudos aplicados à PME “Pretendemos transformar o Núcleo de Apoio Integral à Pequena Empresa, o NAIPE, também em um centro de excelência, nos mesmos moldes de órgãos canadenses dessa natureza”, revelou Maria Elena. (10set. n.1164).  Foto p. 5.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'ensino',
-        title: 'Criação da comissão do curso de Direito e definição de prioridades institucionais',
-        desc: 'Em 12 de outubro de 1990, o professor José Maria expôs os detalhes de uma reunião na SEGEPLAN, na qual foi transmitido o desejo do magnífico Reitor de que o novo curso de Direito fosse implantado na UFV com início já no segundo semestre de 1991.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'infraestrutura',
-        title: 'Conclusão do laboratório de microcomputadores do DAD e aquisição de novas máquinas',
-        desc: 'Em 7 de dezembro de 1990, no que tange ao aprimoramento do espaço físico e suporte às atividades acadêmicas do departamento, foi registrada em ata a conclusão da obra física do laboratório de microcomputadores do DAD. Paralelamente à finalização desse espaço, foi anunciada a compra de trinta e cinco novas máquinas destinadas ao Núcleo de Treinamento Profissional.',
-        photos: [],
-        externalLinks: [],
+        desc: 'A pequena e média empresa canadense foi tema da mesa-redonda. e que contou com a participação do professor Gérald d’Amboise, professor da Universidade de Laval, em Québec, Canadá e diretor do Grupo de Estudos sobre Pequenas e Médias Empresas.  Participaram do encontro o professor Juraci Aureliano Teixeira, professor Antonio de Figueiredo Vieira, das professoras Maria Elena Barbassa e Nina Rosa da Silveira Cunha do DAD. Ele falou cerca de quatro horas neste encontro, discorrendo sobre a PME no Canadá e, depois, fez uma análise comparativa com a realidade brasileira dessas empresas. Segundo a professora Maria Elena, concluiu-se que existe muita semelhança entre as PMEs canadenses e brasileiras no tocante aos aspectos comportamentais e estruturais. “A grande diferença entre os dois países nessa área é com relação ao apoio governamental que, no Canadá, é superior”, destacou. O DAD está negociando um projeto de cooperação técnica entre a UFV e universidades canadenses, daí a vinda do professor Gérald d\' Amboise. A Universidade de Laval é considerada um centro de excelência em estudos aplicados à PME “Pretendemos transformar o Núcleo de Apoio Integral à Pequena Empresa, o NAIPE, também em um centro de excelência, nos mesmos moldes de órgãos canadenses dessa natureza”, revelou Maria Elena. (10set. n.1164).',
+        photos: [{url: '/1990 - Pequena e Media empresa.png', caption: 'O professor Gerald discorreu sobre a PME no Canadá aos professores que participaram da mesa-redonda.'}],
+        externalLinks: [{label: 'Jornal 1164', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/4/7/e47872466be165673f77136f6bd9d86afd41fb5ccdc13dc77c4b1c894cd2facf/Edi____o_n1164.pdf'}],
         articleUrl: ''
       },
       {
@@ -1572,7 +1493,7 @@ export const memorialData: MemorialData = {
         title: 'Professor do DAD ministra curso na UFJF',
         desc: 'O Professor Marcos Tanure Sanábio ministrou o curso sobre Habilidades Gerenciais e Produtividade no Programa de Treinamento, para diretores e gerentes de várias unidades, conforme Convênio entre a UFV e a UFJF. (27dez. n.1176).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1176', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/1/0/5107da4e89d7f3ea621deb8db019f5e3777e71156c5771c761348db654aa0138/Edi____o_n1176.pdf'}],
         articleUrl: ''
       }
     ],
@@ -1589,16 +1510,8 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: 'gestao',
-        title: 'Admissão de DJAIR CESARIO DE ARAUJO',
+        title: 'DJAIR CESARIO DE ARAUJO',
         desc: 'Admissão do docente DJAIR CESARIO DE ARAUJO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 07/08/1991.',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'gestao',
-        title: 'Admissão de JOSE ROBERTO REIS',
-        desc: 'Admissão do docente JOSE ROBERTO REIS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/12/1991.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -1606,23 +1519,35 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'XVII Encontro Nacional dos Estudantes de Administração',
-        desc: 'Cerca de dois mil estudantes de diversas regiões do país foram esperados em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. (25jan. nº 1179 e 06mai. nº 1190).',
+        desc: 'Cerca de dois mil estudantes de diversas regiões do país foram recebidos em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. (25jan. nº 1179 e 06mai. nº 1190).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [
+          {label: 'Jornal 1179', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/7/a/97a2f85b668a1bf0d7d15c37a77b8dbe367705e881e318ba357b16ea3cb5269d/Edi____o_n___1179_ocr.pdf'},
+          {label: 'Jornal 1190', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/c/f/acfd3e71bdd96fe9c0f8292730d65c6c1d0c7e5c005008468247591f5af61d58/Edi____o_n1190.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'V Semana do Empresário',
-        desc: 'A Universidade Federal de Viçosa (UFV) realizou de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes. (10mai. nº 1191 e 18jun. nº 1196).',
+        desc: 'O DAD realizou de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes. (10mai. nº 1191 e 18jun. nº 1196).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1191', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/9/9/899fcd5eb0d874620d6f939eb3f275e1f29c76e3203833b14193b486c0886c60/Edi____o_n1191.pdf'},
+          {label: 'Jornal 1196', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/a/8/aa87055db663b53806895da846a821c56b1f6242b1daff4c394a529d1d897214/Edi____o_n1196.pdf'}
+        ],
         articleUrl: ''
       },
       {
         tag: 'extensao',
         title: 'TV Viçosa iniciou suas transmissões',
-        desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), foram concluídos. A emissora teve a programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho, coordenada pela Prof. Carlos Alberto Freire Resende do DAD, aproveitou funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. (12abr. nº119 e 29ago. nº 1199).',
+        desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), foram concluídos. A emissora teve a programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho, coordenada pela Prof. Carlos Alberto Freire Resende do DAD, aproveitou funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. (29ago. nº 1199).',
+        photos: [],
+        externalLinks: [{label: 'Jornal 1199', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/4/8/2485442f866976ef52569bd14ab90397d6fd86b5984baa3e2d9630213f2499ea/Edi____o_n1199.pdf'} ],
+        articleUrl: ''
+      },
+      {
+        tag: 'gestao',
+        title: 'JOSE ROBERTO REIS',
+        desc: 'Admissão do docente JOSE ROBERTO REIS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/12/1991.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -1638,7 +1563,7 @@ export const memorialData: MemorialData = {
         tag: 'fundacao',
         title: 'Inaugurado o Prédio do CCH',
         desc: 'No dia 11 de setembro de 1992, às 14 horas, foi inaugurado o edifício CCH que passou a abrigar os Departamentos de Administração, Economia, Letras e Artes. A solenidade de inauguração foi conduzida pelo então reitor da UFV, professor Antônio Fagundes de Sousa, também estiveram presentes o diretor-geral do jornal Estado de Minas, João Bosco Martins Sales, o diretor do CCH, prof. Juraci Aureliano Teixeira, do chefe do DEE, prof. Eloy Alves Filho e Prof. Antônio de Figueiredo Vieira, chefe do DAD. n.1241',
-        photos: [{ url: '/1989 “Construção do Departamento de Administração e Economia”.jpg', caption: 'Inauguração do Prédio do CCH.' }],
+        photos: [{ url: '/1992 - Predio pronto.png', caption: 'Inauguração do Prédio do CCH.' }],
         externalLinks: [{ label: 'Jornal 1241', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/2/5/025da97ed19e5463545a492c268660c1f0f8c496e4bc98ca4969fb92d8d7ed8c/Edi____o_n1241.pdf' }],
         articleUrl: ''
       },
@@ -2296,22 +2221,10 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
-      {
-        tag: 'reconhecimento',
-        title: 'Homenagem com a Medalha Bello Lisboa - Profª Nina Rosa Silveira Cunha',
-      // Texto com o relato histórico completo exibido dentro do modal
-      desc: 'Homenageada com a Medalha Bello Lisboa, UFV.',
-      // [OPCIONAL] Fotos exclusivas deste evento (aparecem em miniatura no modal e abrem no lightbox)
-      photos: [],
-      // [OPCIONAL] Lista de links úteis (Google Drive, atas, PDFs, portarias, páginas externas)
-      externalLinks: [],
-      // [OPCIONAL] Link direto para a matéria do evento (gera o botão verde de destaque no modal)
-      articleUrl: ''
-    },
     {
       tag: 'reconhecimento',
-      title: 'Homenagem nos 25 anos do AGROS - Profª Nina Rosa Silveira Cunha',
-      desc: 'Homenageada na qualidade de ex-conselheira nos\n25 anos de fundação do AGROS.',
+      title: 'Homenagem nos 25 anos do AGROS - Profª Nina Rosa da Silveira Cunha',
+      desc: 'Homenageada na qualidade de ex-conselheira nos 25 anos de fundação do AGROS.',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -2746,8 +2659,8 @@ export const memorialData: MemorialData = {
     },
       {
       tag: 'reconhecimento',
-      title: 'Diploma de Honra ao Mérito - Profª Nina Rosa Silveira Cunha',
-      desc: 'Contemplada com o Diploma de Honra ao\nMérito em nome da Divisão de Saúde da Universidade\nFederal de Viçosa, Fundação Hemominas - Hemonúcleo de\nPonte Nova - MG',
+      title: 'Diploma de Honra ao Mérito - Profª Nina Rosa da Silveira Cunha',
+      desc: 'A professora Nina Rosa do Departamendo de Administração e Contabilidade foi contemplada com o Diploma de Honra ao Mérito em nome da Divisão de Saúde da Universidade Federal de Viçosa, Fundação Hemominas - Hemonúcleo de Ponte Nova - MG',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -2784,14 +2697,6 @@ export const memorialData: MemorialData = {
         externalLinks: [{ label: 'Ata nº 302/2014', url: 'https://docs.google.com/document/d/1xwrjEYq4QD5jn9Py9S-k7ymEZxL3OXSY/edit?usp=sharing&ouid=117232787169035636664&rtpof=true&sd=true' }],
         articleUrl: ''
       },
-      {
-      tag: 'reconhecimento',
-      title: 'Diploma de Honra ao Mérito - Profª Nina Rosa Silveira Cunha',
-      desc: 'Contemplada com o Diploma de Honra ao\nMérito em nome da Divisão de Saúde da Universidade\nFederal de Viçosa, Fundação Hemominas - Hemonúcleo de\nPonte Nova - MG',
-      photos: [],
-      externalLinks: [],
-      articleUrl: ''
-    },
     {
       tag: 'pesquisa',
       title: 'Gestão Pública do Turismo no Brasil: teorias, metodologias e aplicações',
