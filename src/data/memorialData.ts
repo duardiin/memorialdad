@@ -10,14 +10,14 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Gênese do Curso de Administração',
-        desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321). (COLOCAR O JORNAL)',
+        desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       }
     ],
     photos: [],
-    articleUrl: ''
+    articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/2/7/427a9528694d18179e601a9dbd1dd0ad3bd6e3d4a9883acea2fa9cda6441ee46/Edi____o_n321.pdf'
   },
 
   1975: {
@@ -1132,20 +1132,12 @@ export const memorialData: MemorialData = {
         externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
         articleUrl: ''
       },
-       {
-        tag: 'gestao',
-        title: 'UFV Promove II Semana do Empresário em Julho',
-        desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário. \nEssa informação deve ser de 1987',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
       {
         tag: 'reconhecimento',
         title: 'Professora Nanci à Frente do Novo Núcleo de Treinamento do DAE',
         desc: 'Sob a coordenação da professora Nanci Pereira de Vasconcelos, o Departamento de Administração e Economia (DAE) da UFV implementou o Núcleo de Treinamento Profissional na área de Contabilidade. (26fev. n.988).',
-        photos: [],
-        externalLinks: [],
+        photos: [{url: '/1987 - Professora Nanci.png', caption: 'A professora Nanci Pereira de Vasconcelos, à frente do novo Núcleo de Treinamento do DAE.'}],
+        externalLinks: [{label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'}],
         articleUrl: ''
       },
       {
@@ -1153,41 +1145,41 @@ export const memorialData: MemorialData = {
         title: 'I Semana do Empresário',
         desc: 'A I Semana do Empresário, evento promovido pelo DAE foi realizada de quatro a sete de agosto na UFV, e teve como objetivo a aproximação de empresários e executivos com a UFV e o DAE, além de transmitir aos produtores urbanos conhecimentos técnicos e gerenciais, com a realização de cursos, palestras, debates, mesas-redondas e exposição de produtos. Os cursos foram nas áreas de produção, marketing, administração de operações, finanças, recursos humanos, pequenas e médias empresas, dentre outros.  (12fev. n.986; 21mai. n.1000; 02jul. n.1006; 16jul. n.1008; 30jul. n. 1010; 06ago. n.1011 e 13ago. n.1013).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 986', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/b/e/dbec296ab4065f5119abf8c22865871ed641b84e5bdae4927f10550d6b3c3d02/Edi____o_n986.pdf'}, 
+          {label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'},
+          {label: 'Jornal 1000', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/5/d/d5d901f1a1d1c53c274407ad402ef9635f2be5004380a652df571f0a76ff77e1/Edi____o_n1000.pdf'},
+          {label: 'Jornal 1006', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/3/5/d352345ed1df20896d23366665b0d0326131957d110a0fc1530bbbdcaaedee40/Edi____o_n1006.pdf'},
+          {label: 'Jornal 1008', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/9/f/39f374ae9f0bedcc9be69055c66f31237c98f1bbb9fdbc9f88a6992a50ab1565/Edi____o_n1008pdf.pdf'},
+          {label: 'Jornal 1010', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/f/5/0f527340189b064ce6e0803ce5597865ea7f19f95dbd2f132a17c028fc9dca3e/Edi____o_n1010.pdf'},
+          {label: 'Jornal 1011', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/7/6/7/767790257f69d56701b78a7165e5de629dd613c30889f3577dc396f0c04925ad/Edi____o_n1011.pdf'},
+          {label: 'Jornal 1013', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/0/e/80eaadfd38673b3bfd1c11d7d95799adc161a6b0aad85412e15db89d3ba20498/Edi____o_n1013.pdf'}
+        ],
         articleUrl: ''
       },
       {
         tag: 'ensino',
         title: 'I Semana do Empresário e Atuação do DAE/CEE',
-        desc: 'O Departamento de Administração e Economia (DAE) e o Conselho de Extensão (CEE) da UFV promoveram, entre 12 e 18 de julho, a I Semana do Empresário. O evento teve como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais. Ed.983 ???? Confirmar e acrescentar',
+        desc: 'O Departamento de Administração e Economia (DAE) e o Conselho de Extensão (CEE) da UFV promoveram, entre 12 e 18 de julho, a I Semana do Empresário. O evento teve como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais.',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 983', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/f/3/5f31a0a33db6ab574ed3eedc42e8753d3b0f84ec1f450cca4712481fbbfe41d7/Edi____o_n983_pdf.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'gestao',
         title: 'Cursos do NAIPE',
-        desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos.  FONTE?',
+        desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos. nº 982',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 982', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/6/9/269a2f2274d2c9a059582c91c515499478bf3dd605bfe4a8bc17b11cbf41d231/Edi____o_n982.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'gestao',
         title: 'Núcleo de Treinamento Profissional em Contabilidade',
-        desc: 'O DAE iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial. FONTE?',
+        desc: 'O DAE iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial. nº 988',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 988', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/9/8/b/98b9c28718e088e5eab8019468625badd836e461369050a421fba60c3ae4d931/Edi____o_n988pdf.pdf'}],
         articleUrl: ''
       },
-      {
-        tag: 'extensao',
-        title: 'Participação no Projeto Rondon',
-        desc: 'O DAE encerrou sua participação no Projeto Rondon, ministrando Treinamento para empresários de Micro, Pequenas e Médias \nEmpresas.  FONTE?',
-        photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      }
     ],
     photos: [
       {
@@ -1209,7 +1201,7 @@ export const memorialData: MemorialData = {
         title: 'Nova Diretoria da FUNARBE',
         desc: 'O professor José Edson Lara assumiu o cargo de diretor administrativo-financeiro da Fundação Arthur Bernardes (FUNARBE) em 1º de agosto. Empossado pelo Reitor Geraldo Martins Chaves, ele compõe a nova diretoria. A nova gestão trabalhará sob um estatuto reformulado que visa dar maior independência à Fundação. (04fev. n.1037).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1037', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/a/e/caea8f4816505150dba7b7a7e3fb5a11e5302bbc9a3251c239270ec0b7576115/Edi____o_n1037.pdf' }],
         articleUrl: ''
       },
       {
@@ -1217,7 +1209,18 @@ export const memorialData: MemorialData = {
         title: 'I Encontro de Administração Municipal',
         desc: 'Entre os dias 16 e 18 de março, a UFV promoveu o I Encontro de Administração Municipal. O objetivo foi reunir prefeitos e técnicos da Zona da Mata para analisar problemas locais e buscar soluções com suporte universitário. A iniciativa faz parte da filosofia da instituição de integrar-se ativamente ao desenvolvimento da sua região. Os principais problemas da administração municipal foram discutidos na UFV, durante a Assembleia Geral da Federação Mineira das Associações Microrregionais. O Encontro trouxe a Viçosa prefeitos e assessores de municípios da Zona da Mata Norte. Predominaram assuntos como a municipalização da saúde e da educação e a situação das prefeituras diante da nova perspectiva, sendo defendida a participação do município no bolo tributário. (18fev. n.1039; 12mai. n.1051; 19mai. n.1053).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1039', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/2/6/526d4123fdfff9eca8d73edea64290b2db73327ea372af173ba5d7f2df7de2be/Edi____o_n1039.pdf' },
+        {label: 'Jornal 1051', url: 'hhttps://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/7/5/c75b3cb323ac2c2f7ba6351c2cd14e5bfdaa382653b1e8273904f02930353607/Edi____o_n1051.pdf'},
+        {label: 'Jornal 1053', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/9/7/3978c353ca3639959df2f815724359f81cd7ec3d55a4ad4afe6ecc71090b0884/Edi____o_n1053.pdf'}
+        ],
+        articleUrl: ''
+      },
+      {
+        tag: 'gestao',
+        title: 'UFV Promove II Semana do Empresário em Julho',
+        desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.  nº 1055',
+        photos: [],
+        externalLinks: [{label: 'Jornal 1055', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/1/b/7/1b7c5a94fd34f6a0a654c6f58ccf3101bed78ca19f7496336ab0c757d7fe7721/Edi____o_n1055.pdf'}],
         articleUrl: ''
       },
       {
@@ -1241,31 +1244,23 @@ export const memorialData: MemorialData = {
         title: 'Professor do DAE fala sobre dinâmica do investimento em economias capitalistas',
         desc: 'O professor Newton Paulo Bueno, do DAE, debateu a dinâmica do investimento em economias capitalistas em palestra na UFV. (21abr. n.1048).',
         photos: [],
-        externalLinks: [],
-        articleUrl: ''
-      },
-      {
-        tag: 'extensao',
-        title: 'II Semana do Empresário',
-        desc: 'O DAE da UFV realizou de 10 a 14 de julho a II Semana do Empresário. O evento buscou integrar empresários e executivos à universidade através de cursos sobre análise de custos, informática e planejamento para pequenas e médias empresas. (14abr. n.1047; 12mai. n.1051).',
-        photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1048', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/e/9/ae9a23ea48efadc0ec72556a2477543983fe77a5bf7a5b5c34256f7c18bdd394/Edi____o_n1048.pdf'}],
         articleUrl: ''
       },
       {
         tag: 'ensino',
         title: 'Il Encontro Mineiro sobre Ensino de Economia',
-        desc: 'Realizado nos dias 18 e 19 de agosto de 1988, o evento ocorreu no Centro de Ensino de Extensão da UFV. Com o tema central "Técnicas de Pesquisa e Monografia".',
+        desc: 'Realizado nos dias 18 e 19 de agosto de 1988, o evento ocorreu no Centro de Ensino de Extensão da UFV. Com o tema central "Técnicas de Pesquisa e Monografia". n.1065',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1065', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/5/e/e5e5e7770c04bbef361e2d41c5045d5d32069657464c87a60cf877298f3db36a/Edi____o_n1065.pdf'}],
         articleUrl: ''
       },
        {
         tag: 'gestao',
         title: 'Implantação do PET na Administração',
-        desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta.',
+        desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta. n. 1079',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1079', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/3/a/c3ab63df995a03ab8744aee632f9b825979979a052ee3cd9e92e48a65ba254a9/Edi____o_n1079.pdf'}],
         articleUrl: ''
       },
       {
@@ -1273,7 +1268,7 @@ export const memorialData: MemorialData = {
         title: 'VIII Semana do Administrador',
         desc: 'O Centro Acadêmico de Administração promoveu, de 16 a 19 de agosto, a VIII Semana do Administrador. (04ago. n.1063).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1063', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/6/d/f6de6f266b217542bddd2bfae8d9dc34824ad7bae5f4208ff1acc66d63373da3/Edi____o_n1063.pdf'}],
         articleUrl: ''
       },
       {
@@ -1281,7 +1276,7 @@ export const memorialData: MemorialData = {
         title: 'Homenagem ao Professor Carlos Roberto Ramos',
         desc: 'Durante as festividades de formatura da Turma de Janeiro de 1988 da Universidade Federal de Viçosa (UFV), os formandos de cada curso escolheram seus homenageados. No curso de Administração, o professor Carlos Roberto Ramos foi o homenageado escolhido. Na mesma ocasião, os formandos em Administração também receberam uma homenagem especial. n.1033',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1033', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/0/2/202d4847f11c29d983d2f33411915e32f509643ef6f56e656f0f1f077b371567/Edi____o_n1033.pdf'}],
         articleUrl: ''
       },
       {
@@ -1289,7 +1284,7 @@ export const memorialData: MemorialData = {
         title: 'Posses do DAD 1ª Chefia e do DEE 1ª Chefia',
         desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia (DAE), oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração. (20out. n.1074).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1074', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/c/0/ac0cb25a2d3fdd5956e1063701e5acaaf99f1716aacc254787eac3a508c56740/Edi____o_n1074.pdf'}],
         articleUrl: ''
       },
       {
@@ -1297,15 +1292,15 @@ export const memorialData: MemorialData = {
         title: 'O Curso de Administração da UFV participa do PET',
         desc: 'Um dos primeiros Programas Especiais de Treinamento (PET) do Brasil na área de Administração, o Curso de Administração da UFV participa do PET em nível nacional, uma vez que o Departamento de Administração (DAD) teve sua proposta aprovada pela CAPES. O PET/Administração teve como orientador o Prof. Adriel Rodrigues de Oliveira, tutor do Programa e responsável pela iniciativa da proposta a CAPES. (24nov. n.1079).',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1079', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/3/a/c3ab63df995a03ab8744aee632f9b825979979a052ee3cd9e92e48a65ba254a9/Edi____o_n1079.pdf'}],
         articleUrl: ''
       },
        {
         tag: 'gestao',
         title: 'Novas Chefias',
-        desc: 'Assumiu como primeiro chefe do Departamento de Administração (DAD) o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE) Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira, ocorrido em 19 de agosto de 1988, por ocasião do desmembramento do DAE. (CONFERIR)',
+        desc: 'Assumiu como primeiro chefe do Departamento de Administração (DAD) o professor Marcos Tanure Sanábio.  Departamento de Economia (DEE) Assumiu como primeiro chefe o professor Juraci Aureliano Teixeira, ocorrido em 19 de agosto de 1988, por ocasião do desmembramento do DAE. 20/out. n.1074',
         photos: [],
-        externalLinks: [],
+        externalLinks: [{label: 'Jornal 1074', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/c/0/ac0cb25a2d3fdd5956e1063701e5acaaf99f1716aacc254787eac3a508c56740/Edi____o_n1074.pdf'}],
         articleUrl: ''
       },
       {
