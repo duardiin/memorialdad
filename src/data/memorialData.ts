@@ -1518,7 +1518,7 @@ export const memorialData: MemorialData = {
   1992: {
     events: [
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Inaugurado o Prédio do CCH',
         desc: 'No dia 11 de setembro de 1992, às 14 horas, foi inaugurado o edifício CCH que passou a abrigar os Departamentos de Administração, Economia, Letras e Artes. A solenidade de inauguração foi conduzida pelo então reitor da UFV, professor Antônio Fagundes de Sousa, também estiveram presentes o diretor-geral do jornal Estado de Minas, João Bosco Martins Sales, o diretor do CCH, prof. Juraci Aureliano Teixeira, do chefe do DEE, prof. Eloy Alves Filho e Prof. Antônio de Figueiredo Vieira, chefe do DAD. n.1241',
         photos: [{ url: '/1992 - Predio pronto.png', caption: 'Inauguração do Prédio do CCH.' }],
@@ -1526,7 +1526,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'SEMINÁRIO SOBRE QUALIDADE TOTAL NAS ORGANIZAÇÕES',
         desc: 'A professora Maria Elena Barbassa foi a coordenadora do seminário sobre “qualidade total nas organizações”, proferido pelo professor norte-americano Ronald F. Farina na UFV. O evento abordou uma visão sistêmica da qualidade em todos os setores, visando melhorar o desempenho e a eficiência institucional. n. 1224',
         photos: [],
