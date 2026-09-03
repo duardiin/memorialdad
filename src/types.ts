@@ -26,7 +26,7 @@ export type EventTag =
 
 export interface MemorialEvent {
   id?: string;
-  tag: EventTag;
+  tag: string;
   title: string;
   desc: string;
   dateStr?: string;
