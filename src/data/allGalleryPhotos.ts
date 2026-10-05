@@ -427,6 +427,66 @@ export const allGalleryPhotos: GalleryPhoto[] = [
 	url: '/C337 - Professor Tancredo Almada Cruz.jpg',
 	title: 'Professor Tancredo Almada Cruz.',
 	caption: 'Professor Tancredo Almada Cruz.'
+},
+{
+	id: 'photo-144',
+	url: '/Dirigentes do canada.jpeg',
+	title: 'Dirigentes do Canadá.',
+	caption: 'Dirigentes do Canadá.'
+},
+{
+	id: 'photo-145',
+	url: '/Semana de administração.jpeg',
+	title: 'Semana de Administração.',
+	caption: 'Semana de Administração.'
+},
+{
+	id: 'photo-146',
+	url: '/Semana do adm.jpeg',
+	title: 'Semana do Administrador.',
+	caption: 'Semana do Administrador.'
+},
+{
+	id: 'photo-147',
+	url: '/2 semana do economistaa.jpeg',
+	title: 'II Semana do Economista.',
+	caption: 'II Semana do Economista.'
+},
+{
+	id: 'photo-148',
+	url: '/3 semana adm.jpeg',
+	title: 'III Semana do Administrador.',
+	caption: 'III Semana do Administrador.'
+},
+{
+	id: 'photo-149',
+	url: '/Quinta semana do empresario.jpeg',
+	title: 'V Semana do Empresário.',
+	caption: 'V Semana do Empresário.'
+},
+{
+	id: 'photo-150',
+	url: '/2 semana do economista.jpeg',
+	title: 'II Semana do Economista.',
+	caption: 'II Semana do Economista.'
+},
+{
+	id: 'photo-151',
+	url: '/2 semana Adm.jpeg',
+	title: 'II Semana do Administrador.',
+	caption: 'II Semana do Administrador.'
+},
+{
+	id: 'photo-152',
+	url: '/Posse Prof Dejair.jpeg',
+	title: 'Posse do Professor Dejair.',
+	caption: 'Posse do Professor Dejair.'
+},
+{
+	id: 'photo-153',
+	url: '/Seminario do DAD 2002.jpeg',
+	title: 'Seminário do DAD 2002.',
+	caption: 'Seminário do DAD 2002.'
 }
 ];
 

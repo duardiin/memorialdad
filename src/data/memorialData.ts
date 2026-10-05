@@ -11,7 +11,11 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Gênese do Curso de Administração',
         desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
-        photos: [],
+        photos: [{
+          url: '/1974 “Criação do Departamento”.avif',
+          caption: 'Criação do Departamento'
+        }
+        ],
         externalLinks: [],
         articleUrl: ''
       }
@@ -27,8 +31,8 @@ export const memorialData: MemorialData = {
         title: 'A Criação do Instituto de Ciências Humanas: Primeira Passos e Aprovação',
         desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75).)\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
         photos: [{
-          url: 'public/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
-          caption: 'ATA 42/75'   // Legenda ou descrição da foto
+          url: '/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          caption: 'ATA 42/75'  // Legenda ou descrição da foto
         }],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/b/3/ab3e2c941dd8e96fbadc03dc9761e014427d3fb1ea8939b02c7be861f5753f89/Edi____o_n395.pdf'
@@ -68,7 +72,8 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Primeiro Vestibular',
         desc: 'Foram oferecidas 25 vagas no vestibular de 1976 para o Curso de Administração de Empresas e 25 para o curso de Ciências Econômicas (02jan. n.409)',
-        photos: [],
+        photos: [   
+        ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/9/1/d91b0ad695cd2f0a5139e81f6f482ae50931a8e2a640b9219ecdf4840b6f05b1/Edi____o_n409.pdf'
       },
@@ -92,7 +97,12 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Ampliação de Vagas',
         desc: 'O Curso de Administração e o Curso de Ciências Econômicas com 25 vagas passaram a oferecer 50 vagas cada no Vestibular Unificado de 1977 (23set. n.445).',
-        photos: [],
+        photos: [
+          {
+          url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif',
+          caption: 'Ampliação da oferta de vagas no Vestibular'
+        }
+        ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/f/8/0f84fe04fa4f52463fcd1dec80b3d545cb953b82d760bfeaabc76ad46ea9cff1/Edi____o_n445.pdf'
       }
@@ -167,10 +177,7 @@ export const memorialData: MemorialData = {
         title: 'A Transição de Instituto para Centro de Ciências Humanas (1978)',
         desc: 'Em razão das escolas superiores adotarem os centros como unidades acadêmicas, o antigo Instituto de Ciências Humanas tornou-se o Centro de Ciências Humanas, em 3 de outubro de 1978, e no qual se inserem os Departamentos de Administração e Economia, de Educação e de Letras e Artes e de Economia Doméstica (Portaria nº 940). Nessa época foram criados também os demais Centros de Ciências (CCA, CCB e CCE).',
         photos: [
-          { url: '', caption: 'Coral da UFV.' },
-          { url: '', caption: 'Direção do CCH.' },
-          { url: '', caption: 'O professor João Adamor Dias Neves recebeu Menção Honrosa' },
-          { url: '', caption: 'O técnico Carlos Alberto Freire Resende' }
+          { url: '/1978 “Direção do CCH”.avif', caption: 'Direção do CCH.' },
         ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/index.php/1978-ufv-informa'
@@ -978,7 +985,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'O DAE tem programa para empresário em potencial.',
         desc: 'Com o objetivo de dar oportunidade aos empresários em potencial para montar seus próprios negócios, em qualquer setor de atividade, proporcionando-lhes apoio gerencial, técnico financeiro, o DAE apresentou o Programa Novo Empresários, com o apoio do Centro de Pequena e Média Empresa (CEAG-MG), do Banco de Desenvolvimento do Estado Minas Geral e pelo Instituto de Desenvolvimento Industrial (INDI). A exposição sobre as características do programa ficou а cargo do diretor-executivo do CEAG-MG, Mauro Batista Santos Ferreira, especificando a sistemática adotada por quem esteja pretendendo constituir uma empresa. Falaram ainda os representantes dos diversos órgãos presentes (BDMG, INDI, Cia. de Distritos Industriais e Fundação Centro Tecnológico de Minas Gerais CETEC). Os interessados puderam apresentar suas propostas aos promotores do encontro, em diversos projetos nos mais diversos setores, podendo beneficiar-se com as facilidades do programa. (13mar. n.938; 20mar. n.939; e 26mar. n.940).',
-        photos: [{ url: 'public/1986 - Empresario em potencial.png', caption: 'O Vice-Reitor Cid Martins Batista abre os trabalhos.' }],
+        photos: [{ url: '/1986 - Empresario em potencial.png', caption: 'O Vice-Reitor Cid Martins Batista abre os trabalhos.' }],
         externalLinks: [{ label: 'Jornal 938', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/2/6/626ebf73ef8775e6704f3ce3f76ba128135cf0ef7782a99b59242ccb3396ef12/Edi____o_n938.pdf' },
         { label: 'Jornal 939', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/4/e/64e474c6f710f7ddbe33040595334ba89d40c981e889504f33f4aafba7e914bf/Edi____o_n939.pdf' },
         { label: 'Jornal 940', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/0/2/002fe8a9c47e3c43de15efd53879f3ec674c0043ac3749170cd3c7c38478925e/Edi____o_n940.pdf' }],
@@ -1017,7 +1024,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'DAE e Centro Acadêmico Realizam Curso de Programação e Controle da Produção Industrial',
         desc: 'O DAE e o Centro Acadêmico de Administração realizaram o Curso de Programação e Controle da Produção Industrial, e trataram sobre temas diversos como gráficos de controle de qualidade, controle de qualidade na indústria de alimentos, problemas na área de produção, desenvolvimento operacional do produto, programação da produção, produtividade e manutenção. A programação foi encerrada pelo professor Ior Titton, da Fundação João Pinheiro, que abordou Problemas nas Áreas de Produção, Desenvolvimento Operacional de Produto, Programação da Produção e Produtividade e Manutenção. (15mai. n.947 e 29mai. n. 949)',
-        photos: [{url: 'public/1986 - programação.png', caption: 'Oprofessor Tancredo Almada Cruz, chefe do Departamento de Administração e Economia, fala durante a abertura do curso.'}],
+        photos: [{url: '/1986 - programação.png', caption: 'Oprofessor Tancredo Almada Cruz, chefe do Departamento de Administração e Economia, fala durante a abertura do curso.'}],
         externalLinks: [{label: 'Jornal 947', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/7/d/27d582a3791b0c4b3da70f31c90453b95a8e749fe8564b6917135e8d3d1fb447/Edi____o_n947.pdf'},
         {label: 'Jornal 949', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/9/3/893fa343615ddb1f442adab8251620ce197f823458ea5c7ad040edaeaf6e43ec/Edi____o_n949.pdf'}],
         articleUrl: ''
