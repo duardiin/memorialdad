@@ -11,7 +11,10 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Gênese do Curso de Administração',
         desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
-        photos: [],
+        photos: [{
+          url: '/1974 “Criação do Departamento”.avif',
+          caption: 'Criação do Curso'   // Legenda ou descrição da foto
+        }],
         externalLinks: [],
         articleUrl: ''
       }
@@ -27,7 +30,7 @@ export const memorialData: MemorialData = {
         title: 'A Criação do Instituto de Ciências Humanas: Primeira Passos e Aprovação',
         desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75).)\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
         photos: [{
-          url: 'public/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          url: '/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'ATA 42/75'   // Legenda ou descrição da foto
         }],
         externalLinks: [],
@@ -92,7 +95,8 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Ampliação de Vagas',
         desc: 'O Curso de Administração e o Curso de Ciências Econômicas com 25 vagas passaram a oferecer 50 vagas cada no Vestibular Unificado de 1977 (23set. n.445).',
-        photos: [],
+        photos: [{ url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif', caption: 'Ampliação de Vagas' 
+        }],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/f/8/0f84fe04fa4f52463fcd1dec80b3d545cb953b82d760bfeaabc76ad46ea9cff1/Edi____o_n445.pdf'
       }
@@ -167,10 +171,7 @@ export const memorialData: MemorialData = {
         title: 'A Transição de Instituto para Centro de Ciências Humanas (1978)',
         desc: 'Em razão das escolas superiores adotarem os centros como unidades acadêmicas, o antigo Instituto de Ciências Humanas tornou-se o Centro de Ciências Humanas, em 3 de outubro de 1978, e no qual se inserem os Departamentos de Administração e Economia, de Educação e de Letras e Artes e de Economia Doméstica (Portaria nº 940). Nessa época foram criados também os demais Centros de Ciências (CCA, CCB e CCE).',
         photos: [
-          { url: '', caption: 'Coral da UFV.' },
-          { url: '', caption: 'Direção do CCH.' },
-          { url: '', caption: 'O professor João Adamor Dias Neves recebeu Menção Honrosa' },
-          { url: '', caption: 'O técnico Carlos Alberto Freire Resende' }
+          { url: '/1978 “Direção do CCH”.avif', caption: 'Direção do CCH.' },
         ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/index.php/1978-ufv-informa'
@@ -340,7 +341,18 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/4/b/c4bd7ebbb98fed9c064f30882630650b87e4fba4661717dc649470a854a9a946/Edi____o_n599.pdf'
-      }
+      },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1979 e menção ao primeiro formando de Administração',
+      desc: 'Prof. João Adamor Dias Neves\nProf. José Mansur Nascif\nProf. Aula da Saudade\n\nMenção especial ao primeiro e único formando do Curso de Administração – Daniel Lima Carneiro',
+      photos: [{
+        url: '/P107 (2) - Posse Daniel Lima Carneiro.jpg',
+        caption: 'Primeiro formando do Curso de Administração – Daniel Lima Carneiro'}
+      ],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
      
@@ -423,6 +435,14 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1980',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+      {
         tag: '',
         title: 'Profa. Maria Elena Barbassa coordenou Executivo Game',
         desc: 'Outro evento promovido pelo DAE foi o Método Estudo de Caso, com a coordenação da Profa. Maria Elena Barbassa e ministrado pelo Prof. Maurício Roberto Vieira, Coordenador do Curso de Mestrado em Administração de Empresas da UFMG e coordenador da Central Regional de Casos de Minas Gerais. Participaram do Seminário professores do DAE, da Educação e membros da SEGEPLAN. A promoção do Seminário ficou por conta da UFV e da CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior). O Prof. Maurício Roberto Vieira também fez palestra para os professores e alunos do DAE sobre o tema "A Administração de Empresas no Brasil e o Ensino da Administração". (11set. n.650 e  06nov. n.658).',
@@ -434,7 +454,15 @@ export const memorialData: MemorialData = {
           label: 'Jornal 658', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/7/1/a71a323bf853d9fb08578f9a29ecc38029f45781e7060e12e9970c9e44b04783/Edi____o_n658.pdf'
         }],
         articleUrl: ''
-      }
+      },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1980',
+      desc: 'Prof. Evaldo Guimarães Barbosa\nProfª. Maria Helena Barbassa -  Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -504,11 +532,19 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Convênio DAE/FUNARBE: Recursos para Biblioteca e Contratação de Docentes',
-        desc: 'Em 05 de junho de 1981, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca. (CONFERIR A ATA)',
+        desc: 'Em 05 de junho de 1981, o chefe do departamento informou sobre um importante convênio firmado com a Companhia Canavieira de Mineração, via FUNARBE. O DAE recebeu dotação de duzentos mil cruzeiros para novos livros na biblioteca.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
       },
+      {
+      tag: 'Colação de Grau · Julho de 1981',
+      title: 'Homenagens da Colação de Grau de Julho de 1981',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'Prof. Gilson Faria Potsch Magalhães assume chefia do DAE',
@@ -586,7 +622,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 716', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/0/a/d0ad2b3f77fd42c3757298855b0b5f42d2d04bd228bd78a8b9ae29a8a44fac65/Edi____o_n716.pdf' }],
         articleUrl: ''
-      }
+      },
+       {
+      tag: 'Colação de Grau · Dezembro de 1981',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1981',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/1981-ufv-informa'
@@ -657,6 +701,14 @@ export const memorialData: MemorialData = {
         ],
         articleUrl: ''
       },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1982',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'LUIS CARLOS DE FREITAS',
@@ -732,7 +784,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 764', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/7/e/47ef22f1995767c0635689f52020a28d21b528f9a7447c6fd4f32eecca21eed2/Edi____o_n764.pdf' }],
         articleUrl: ''
-      }
+      },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1982',
+      desc: 'Prof. Maria Helena Barbassa\nProf. José Edson Lara\nProf. Marcos Tanura Sanábio - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
     ],
     photos: [
       
@@ -812,6 +872,14 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1983',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+      {
         tag: '',
         title: 'Curso no Centreinar Capacitou Estudantes do DAE em Armazenagem',
         desc: 'Foi realizado o Curso de Administração de Unidades Armazenadoras, com a participação de 24 estudantes de Administração e Economia. Em virtude de um acordo entre o DAE e o Centreinar, teve como objetivo proporcionar aos alunos uma visão panorâmica dos aspectos econômicos e técnicos da armazenagem de produtos agrícolas, tornando-os capazes de exercer atividades administrativas em unidades armazenadoras. A coordenação foi do técnico Roberto Proença Passarinho, do Centreinar, e do professor José Edson Lara, do DAE. (07jul. n.798).',
@@ -871,7 +939,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 818', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/6/d/66dd2e09a0c4a4ef87c6d047449a78b6f87807754aaefa0a318c39b7e3bc3dce/Edi____o_n818.pdf' }],
         articleUrl: ''
-      }
+      },
+       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1983',
+      desc: 'Profª. Valéria Aroeira Braga Duarte Ferreira\nProf. Adriel Rodrigues de Oliveira\nProf. Orlando Monteiro da Silva\nProf. João Adamor Dias Neves - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       
@@ -881,6 +957,14 @@ export const memorialData: MemorialData = {
   1984: {
     // LISTA DE EVENTOS DO ANO (Cada item vira um card na timeline/busca e abre o modal)
     events: [
+      {
+      tag: 'Colação de Grau · Julho de 1984',
+      title: 'Homenagens da Colação de Grau de Julho de 1984',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         // Categoria do evento: define a cor da etiqueta e o ícone (ex: 'fundacao', 'ensino', 'gestao', etc.)
         tag: '',
@@ -895,6 +979,14 @@ export const memorialData: MemorialData = {
         // [OPCIONAL] Link direto para a matéria do evento (gera o botão verde de destaque no modal)
         articleUrl: ''
       },
+      {
+      tag: 'Colação de Grau · Dezembro de 1984',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1984',
+      desc: 'Prof. Prof. José Clévio Dias Casali\nTéc. Maria das Graças de Oliveira\nProf. José Edson Lara - Prof. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
       
     ],
     // GALERIA GERAL DO ANO (Fotos que aparecem no grid inferior da aba "Por Ano", independentes de um evento específico)
@@ -937,6 +1029,14 @@ export const memorialData: MemorialData = {
         externalLinks: [{ label: 'Jornal 899', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/d/3/ad388386acca5c231d4d524f902ec2a83bfc1b3bf96b5e35f7c31781c87ecf37/Edi____o_n___899.pdf' }],
         articleUrl: ''
       },
+       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1985',
+      desc: 'Prof. Adolfo Egídio Reis\nProf. Adriel Rodrigues de Oliveira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'Posse dos novos diretores dos Centros de Ciências da UFV',
@@ -952,7 +1052,15 @@ export const memorialData: MemorialData = {
         photos: [{ url: '/1985 - Tancredo.png', caption: 'O professor Tancredo Almada Cruz, empossado como Chefe do Departamento de Administração e Economia da UFV.' }],
         externalLinks: [{ label: 'Jornal 921', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/b/d/cbd729ad3454b25aa9ba1044b2490bc61cc809353b3a1df470bd29a1923d90a0/Edi____o_n___921.pdf' }],
         articleUrl: ''
-      }
+      },
+       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1985',
+      desc: 'Prof. Gualberto Ferreira da Silva\nProf. José Clévio Dias Casali\nProfª. Maria Helena Barbassa - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -978,7 +1086,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'O DAE tem programa para empresário em potencial.',
         desc: 'Com o objetivo de dar oportunidade aos empresários em potencial para montar seus próprios negócios, em qualquer setor de atividade, proporcionando-lhes apoio gerencial, técnico financeiro, o DAE apresentou o Programa Novo Empresários, com o apoio do Centro de Pequena e Média Empresa (CEAG-MG), do Banco de Desenvolvimento do Estado Minas Geral e pelo Instituto de Desenvolvimento Industrial (INDI). A exposição sobre as características do programa ficou а cargo do diretor-executivo do CEAG-MG, Mauro Batista Santos Ferreira, especificando a sistemática adotada por quem esteja pretendendo constituir uma empresa. Falaram ainda os representantes dos diversos órgãos presentes (BDMG, INDI, Cia. de Distritos Industriais e Fundação Centro Tecnológico de Minas Gerais CETEC). Os interessados puderam apresentar suas propostas aos promotores do encontro, em diversos projetos nos mais diversos setores, podendo beneficiar-se com as facilidades do programa. (13mar. n.938; 20mar. n.939; e 26mar. n.940).',
-        photos: [{ url: 'public/1986 - Empresario em potencial.png', caption: 'O Vice-Reitor Cid Martins Batista abre os trabalhos.' }],
+        photos: [{ url: '/1986 - Empresario em potencial.png', caption: 'O Vice-Reitor Cid Martins Batista abre os trabalhos.' }],
         externalLinks: [{ label: 'Jornal 938', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/2/6/626ebf73ef8775e6704f3ce3f76ba128135cf0ef7782a99b59242ccb3396ef12/Edi____o_n938.pdf' },
         { label: 'Jornal 939', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/4/e/64e474c6f710f7ddbe33040595334ba89d40c981e889504f33f4aafba7e914bf/Edi____o_n939.pdf' },
         { label: 'Jornal 940', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/0/2/002fe8a9c47e3c43de15efd53879f3ec674c0043ac3749170cd3c7c38478925e/Edi____o_n940.pdf' }],
@@ -1017,7 +1125,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'DAE e Centro Acadêmico Realizam Curso de Programação e Controle da Produção Industrial',
         desc: 'O DAE e o Centro Acadêmico de Administração realizaram o Curso de Programação e Controle da Produção Industrial, e trataram sobre temas diversos como gráficos de controle de qualidade, controle de qualidade na indústria de alimentos, problemas na área de produção, desenvolvimento operacional do produto, programação da produção, produtividade e manutenção. A programação foi encerrada pelo professor Ior Titton, da Fundação João Pinheiro, que abordou Problemas nas Áreas de Produção, Desenvolvimento Operacional de Produto, Programação da Produção e Produtividade e Manutenção. (15mai. n.947 e 29mai. n. 949)',
-        photos: [{url: 'public/1986 - programação.png', caption: 'Oprofessor Tancredo Almada Cruz, chefe do Departamento de Administração e Economia, fala durante a abertura do curso.'}],
+        photos: [{url: '/1986 - programação.png', caption: 'Oprofessor Tancredo Almada Cruz, chefe do Departamento de Administração e Economia, fala durante a abertura do curso.'}],
         externalLinks: [{label: 'Jornal 947', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/7/d/27d582a3791b0c4b3da70f31c90453b95a8e749fe8564b6917135e8d3d1fb447/Edi____o_n947.pdf'},
         {label: 'Jornal 949', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/9/3/893fa343615ddb1f442adab8251620ce197f823458ea5c7ad040edaeaf6e43ec/Edi____o_n949.pdf'}],
         articleUrl: ''
@@ -1040,6 +1148,14 @@ export const memorialData: MemorialData = {
         {label: 'Jornal 950', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/1/5/b/15b2378f0631883eaf291928e89cc8be6451c98bcae47e92ac888f495ace7615/Edi____o_n950.pdf'}],
         articleUrl: ''
       },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1986',
+      desc: 'Prof. Prof. Gualberto Ferreira da Silva\nProf. José Clévio dias Casali\nProfª. Maria Helena Barbassa -  Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'I Encontro de Empresários da Zona da Mata Inaugura o NAIPE - PARTE I',
@@ -1107,7 +1223,15 @@ export const memorialData: MemorialData = {
         {label: 'Jornal 969', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/b/4/6/b469c58750283fdda4a2a6cfd8ce8657c07d7e7bfe6ccddc33c54fdcb3e743e6/Edi____o_n969.pdf'},
         {label: 'Jornal 972', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/d/e/4de904a48bf4064b4e76e6e3690d9f7a9b284cb2e1d5af70cb2a4a54c4f78597/Edi____o_n972.pdf'}],
         articleUrl: ''
-      }
+      },
+       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1986',
+      desc: 'Prof. Adriel Rodrigues de Oliveira\nProfª. Nina Rosa da Silveira Cunha - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/1986-ufv-informa'
@@ -1164,6 +1288,14 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1987',
+      desc: 'Prof. Carlos Roberto Ramos\nProfª. Nina Rosa da Silveira Cunha\nProf. Roberto de Carvalho Araújo - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+      {
         tag: 'gestao',
         title: 'Participação no Projeto Rondon',
         desc: 'O DAE encerrou sua participação no Projeto Rondon, ministrando Treinamento para empresários de Micro, Pequenas e Médias Empresas. (19mar. ed.991).',
@@ -1171,6 +1303,14 @@ export const memorialData: MemorialData = {
         externalLinks: [{label: 'Jornal 991', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/8/2/e/82e2c465cd784e16c1d3b31f26e7505b29f119cb08bad2562e1fe424e5b25266/Edi____o_n991pdf.pdf'}],
         articleUrl: ''
       },
+       {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1987',
+      desc: 'Profª. Valéria Aroeira Braga Duarte Ferreira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       {
@@ -1198,6 +1338,14 @@ export const memorialData: MemorialData = {
         ],
         articleUrl: ''
       },
+     {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Julho de 1988',
+      desc: 'Prof. Carlos Roberto Ramos\nProfª. Maria Helena Barbassa\nProfª. Vera Lúcia Travençolo Muniz\nProf. Juarez Magalhães Rodrigues - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: 'gestao',
         title: 'UFV Promove II Semana do Empresário em Julho',
@@ -1253,7 +1401,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+      {
+      tag: '',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1988',
+      desc: 'Prof. Gualberto Ferreira da Silva\nProf. José Edson Lara\nProfª. Maria Helena Barbassa\nProf. Juarez Magalhães Rodrigues - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       
@@ -1295,6 +1451,14 @@ export const memorialData: MemorialData = {
         externalLinks: [{label: 'Jornal 1107', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/6/9/f69812fe99f3c615bb5f1bc80e9326046aff8bafa6566c4bf2941a7bedc3f7f3/Edi____o_n1107.pdf'}],
         articleUrl: ''
       },
+       {
+      tag: 'Colação de Grau · Julho de 1989',
+      title: 'Homenagens da Colação de Grau de Julho de 1989',
+      desc: 'Prof. José Edson Lara\nProf. Marcos Tanure Sanábio\nProf. Adriel Rodrigues de Oliveira - Prof. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: 'ensino',
         title: 'UFV e Québec: Um Marco na Administração',
@@ -1364,6 +1528,14 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
+       {
+      tag: 'Colação de Grau · Dezembro de 1989',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1989',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
      
     ],
     photos: [
@@ -1398,6 +1570,14 @@ export const memorialData: MemorialData = {
         externalLinks: [{label: 'Jornal 1147', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/7/5/3/7539e652c1344b226a1c8c341226392909eec7da7823e02d1ee16f5799a0f888/Edi____o_n1147.pdf'}],
         articleUrl: ''
       },
+      {
+      tag: 'Colação de Grau · Julho de 1990',
+      title: 'Homenagens da Colação de Grau de Julho de 1990',
+      desc: 'Prof. Juarez Magalhães Rodrigues\nProfª. Maria Helena Barbassa\nProfª. Valéria Aroeira Braga Duarte Ferreira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'Estudos de viabilidade para a criação dos cursos de Direito e Ciências Contábeis',
@@ -1456,7 +1636,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{label: 'Jornal 1176', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/1/0/5107da4e89d7f3ea621deb8db019f5e3777e71156c5771c761348db654aa0138/Edi____o_n1176.pdf'}],
         articleUrl: ''
-      }
+      },
+       {
+      tag: 'Colação de Grau · Dezembro de 1990',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1990',
+      desc: 'Prof. Antônio de Figueiredo Vieira\nProfª. Nina Rosa da Silveira Cunha\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
      
@@ -3491,5 +3679,53 @@ export const memorialData: MemorialData = {
     photos: [
     ],
     articleUrl: ''
-  }
+  },
+  2026: {
+  // 5 registros neste ano
+  events: [
+    {
+      tag: '',
+      title: 'Selo Árvore, comissão dos 50 anos do DAD e recepção aos novos estudantes',
+      desc: 'No âmbito das ações institucionais e comemorativas do Departamento de Administração e Contabilidade (DAD), o colegiado recebeu informes sobre a realização da recepção aos novos estudantes organizada pelas coordenações, CACE, CECCO e PET. Destacou-se o reconhecimento ambiental do departamento com a conquista do Selo Árvore no programa UFV + Sustentável, bem como a apresentação dos projetos da sala de metodologia ativa e a remodelação do hall do segundo e terceiro andar elaborados pela TETU Jr. Foi anunciada a constituição da comissão responsável pelas comemorações dos 50 anos do DAD, composta pelos docentes Diego Costa Mendes, Ana Cláudia Azevedo, Antônio Carlos Brunozi Junior e Gislaine Aparecida Santana Sediyama, pelo administrador Jansen Cardoso Pereira e pela representante estudantil Simone Milagres da Silva, contando ainda com a colaboração dos professores aposentados Afonso Augusto Teixeira de Freitas de Carvalho Lima, Nina Rosa da Silveira Cunha e Walmer Faroni. Na mesma ocasião, foi informada a realização do evento Contabilize para os dias 27 e 28 de maio de 2026. Por fim, foram mencionadas a atualização da sala de metodologia ativa, a especificação técnica do estúdio e o acolhimento formal das professoras Simone Martins e Tainá Rodrigues Gomide Souza Pinto no retorno de seus períodos de pós-doutorado. Ata 409/2026 · 20 de março de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: '',
+      title: 'Aprovação da reforma do hall e do evento integrador ICCEPP-UNESCO, SIEBCI e SINAPs',
+      desc: 'Foi realizada a apresentação e aprovação do projeto arquitetônico e do orçamento para a reforma do hall do segundo e terceiro pavimento do DAD, desenvolvidos pela empresa junção TETU Jr. No âmbito das celebrações, reforçou-se o convite para o evento Contabilize programado para os dias 27 e 28 de maio. Durante a sessão, o presidente realizou homenagens às mães. Houve também a apresentação do aplicativo DADTech pelo estagiário do laboratório de informática, Carlos Eduardo Corrêa, referente ao sistema de chamadas de manutenção de tecnologia da informação. No tocante a eventos e parcerias, foi aprovada a realização do evento integrador composto pela III International Conference of Creative Economy and Public Policies (ICCEPP-UNESCO), em conjunto com o Simpósio Internacional de Educação Básica, Criativa e Inovadora (SIEBCI) e os XI Seminários InterNacionais de Administração Pública (SINAPs). Ata 410/2026 · 08 de maio de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: '',
+      title: 'Parabenização pelos eventos Cátedra Unesco e Contabilize e indicações às Medalhas Peter Henry Rolfs',
+      desc: 'A presidência parabenizou os organizadores do evento Rede Unesco Cátedra Unesco em Economia Criativa e Políticas Públicas, realizado no IPPDS, e do evento Contabilize, que contou com a presença da presidência e vice-presidência do Conselho Regional de Contabilidade de Minas Gerais (CRCMG). Também foram informadas atualizações no projeto dos espaços físicos do DAD conduzidas pela TETU Jr. Destacaram-se as homenagens e indicações do professor Magnus Luiz Emmendoerfer e da técnica-administrativa Soraya Machado Fontes às Medalhas de Ouro Peter Henry Rolfs do Mérito em Pesquisa e do Mérito Administrativo de 2026, respectivamente. Ata 411/2026 · 12 de junho de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: '',
+      title: 'Aditivo contratual dos eventos ICCEPP-UNESCO e orçamento para os 50 anos do DAD',
+      desc: 'O colegiado aprovou o aditivo de contrato para a gestão financeira e administrativa de recursos para o evento integrador International Conference of Creative Economy and Public Policies (ICCEPP-UNESCO) e eventos específicos SIEBCI, SINAPs e SIPPTur. Foi aprovado um orçamento prévio de R$ 30.000,00 para a comissão organizadora das comemorações dos 50 anos do DAD, agendadas para o período de 3 a 7 de novembro de 2026. Registrou-se ainda a visita de estudantes do curso técnico em Administração de Jequeri-MG às instalações do DAD, com participação da coordenação do curso e das entidades CACE e CECCO. Ata 412/2026 · 03 de julho de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: '',
+      title: 'Melhorias na infraestrutura física do DAD e do prédio CCH1',
+      desc: 'Foram apresentados informes sobre melhorias na infraestrutura física do departamento, englobando a substituição de piso na entrada do segundo e terceiro pavimentos, a melhoria do sinal e acesso à internet no prédio do CCH1 em parceria com o CCH e a PPO, além de andamentos no projeto geral de reforma do prédio do CCH1. Ata 413/2026 · 14 de agosto de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
+  ],
+  photos: [
+  ],
+  articleUrl: ''
+}
 };
