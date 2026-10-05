@@ -11,10 +11,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Gênese do Curso de Administração',
         desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
-        photos: [{
-          url: '/1974 “Criação do Departamento”.avif',
-          caption: 'Criação do Curso'   // Legenda ou descrição da foto
-        }],
+        photos: [],
         externalLinks: [],
         articleUrl: ''
       }
@@ -30,7 +27,7 @@ export const memorialData: MemorialData = {
         title: 'A Criação do Instituto de Ciências Humanas: Primeira Passos e Aprovação',
         desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75).)\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
         photos: [{
-          url: '/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          url: 'public/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'ATA 42/75'   // Legenda ou descrição da foto
         }],
         externalLinks: [],
@@ -71,7 +68,8 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Primeiro Vestibular',
         desc: 'Foram oferecidas 25 vagas no vestibular de 1976 para o Curso de Administração de Empresas e 25 para o curso de Ciências Econômicas (02jan. n.409)',
-        photos: [],
+        photos: [   
+        ],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/9/1/d91b0ad695cd2f0a5139e81f6f482ae50931a8e2a640b9219ecdf4840b6f05b1/Edi____o_n409.pdf'
       },
@@ -95,8 +93,7 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Ampliação de Vagas',
         desc: 'O Curso de Administração e o Curso de Ciências Econômicas com 25 vagas passaram a oferecer 50 vagas cada no Vestibular Unificado de 1977 (23set. n.445).',
-        photos: [{ url: '/1974 “Ampliação da oferta de vagas no Vestibular”.avif', caption: 'Ampliação de Vagas' 
-        }],
+        photos: [],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/f/8/0f84fe04fa4f52463fcd1dec80b3d545cb953b82d760bfeaabc76ad46ea9cff1/Edi____o_n445.pdf'
       }
