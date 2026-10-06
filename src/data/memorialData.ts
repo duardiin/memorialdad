@@ -1680,6 +1680,14 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
+      tag: 'Colação de Grau · Julho de 1991',
+      title: 'Homenagens da Colação de Grau de Julho de 1991',
+      desc: 'Prof. Adriel Rodrigues de Oliveira\nProf. Antônio de Figueiredo Vieira\nProfª. Nancy Pereira de Vasconcelos - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+      {
         tag: 'extensao',
         title: 'TV Viçosa iniciou suas transmissões',
         desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), foram concluídos. A emissora teve a programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho, coordenada pela Prof. Carlos Alberto Freire Resende do DAD, aproveitou funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. (29ago. nº 1199).',
@@ -1694,7 +1702,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+      {
+      tag: 'Colação de Grau · Dezembro de 1991',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1991',
+      desc: 'Prof. José Clévio Dias Casali\nProfª. Nancy Pereira de Vasconcelos - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -1702,6 +1718,14 @@ export const memorialData: MemorialData = {
 
   1992: {
     events: [
+      {
+      tag: 'Colação de Grau · Julho de 1992',
+      title: 'Homenagens da Colação de Grau de Julho de 1992',
+      desc: 'Profª. Maria Helena Barbassa\nProfª. Valéria Aroeira Braga Duarte Ferreira\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: '',
         title: 'Inaugurado o Prédio do CCH',
@@ -1741,7 +1765,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 1220', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/d/7/9/d7928bb4aa7e58c55d0caf33687fdef6b62283c51d9124a23ccd663d21d02e49/Edi____o_n1220.pdf' }],
         articleUrl: ''
-      }
+      },
+      {
+      tag: 'Colação de Grau · Dezembro de 1992',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1992',
+      desc: 'Prof. Afonso Augusto Teixeira de Freitas de Carvalho Lima\nProfª. Nancy Pereira de Vasconcelos\nTéc. Carlos Alberto Freire Resende - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -1767,6 +1799,14 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
+      tag: 'Colação de Grau · Julho de 1993',
+      title: 'Homenagens da Colação de Grau de Julho de 1993',
+      desc: 'Prof. Profª. Maria Helena Barbassa\nProf. Albino Sérgio Dias Casali\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+      {
         tag: 'extensao',
         title: 'UFES Busca Integração com a UFV/DAD',
         desc: 'Com o objetivo de conhecer a sólida experiência da UFV na realização de eventos corporativos e de extensão, representantes da Universidade Federal do Espírito Santo (UFES) realizaram uma visita oficial ao campus de Viçosa. A equipe da UFES reuniu-se com docentes e técnicos da Comissão de Extensão do DAD, formalizando convite para a equipe do DAD ministrar palestras na UFES. Tiveram participação os professores e técnicos Cássia Viviani Silva Santiago, José Roberto Reis, Afonso Augusto Teixeira de Freitas de Carvalho Lima e Beatriz de Freitas Dias. n. 1261',
@@ -1777,11 +1817,19 @@ export const memorialData: MemorialData = {
       {
         tag: 'extensao',
         title: 'Técnicas Gerenciais Japonesas',
-        desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento foi promovido pelo DAD/PET e coordenado pelo professor José Edson Lara. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no Armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito. (Colocar Foto) (10 dez n. 1271)',
-        photos: [],
-        externalLinks: [],
+        desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento foi promovido pelo DAD/PET e coordenado pelo professor José Edson Lara. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no Armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito.(10 dez n. 1271)',
+        photos: [{ url: '/1993 Tecnicas Japonesas.png', caption: 'O administrador de empresas Sérgio Maia Botelho' }],
+        externalLinks: [{ label: 'Jornal 1271', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/f/b/6/fb639bc7338364275cac992c68297f150fbbcfe80cc75352941e904e27822c2a/Edi____o_n1271.pdf' }],
         articleUrl: ''
-      }
+      },
+       {
+      tag: 'Colação de Grau · Dezembro de 1993',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1993',
+      desc: 'Prof. Antônio de Figueiredo Vieira\nProfaª. Nina Rosa da Silveira Cunha\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -1825,11 +1873,19 @@ export const memorialData: MemorialData = {
       {
         tag: 'ensino',
         title: 'Primeira revista do PET',
-        desc: 'O DAD lançou a primeira edição da Revista do PET Administração, sob a coordenação do professor José Edson Lara. A publicação visa divulgar as atividades de ensino, pesquisa e extensão desenvolvidas pelo grupo, além de oferecer um espaço para produções científicas de estudantes e professores.  n. 1288 (COLOCAR FOTO)',
+        desc: 'O DAD lançou a primeira edição da Revista do PET Administração, sob a coordenação do professor José Edson Lara. A publicação visa divulgar as atividades de ensino, pesquisa e extensão desenvolvidas pelo grupo, além de oferecer um espaço para produções científicas de estudantes e professores.  n. 1288',
         photos: [{ url: '/1994 - Revista PET Administração.png', caption: 'Lançamento da primeira edição da Revista do PET Administração.' }],
         externalLinks: [{ label: 'Jornal 1288', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/5/c/a5ccfa4ae170dc54a6c114a8ae64cf7cb5dab27e19d7e324c17622b74f1b82a2/Edi____o_n1288.pdf' }],
         articleUrl: ''
       },
+       {
+      tag: 'Colação de Grau · Julho de 1994',
+      title: 'Homenagens da Colação de Grau de Julho de 1994',
+      desc: 'Prof. Luciano Zille Pereira\nProf. Roberto Serpa Dias\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
       {
         tag: 'fundacao',
         title: 'Criação do Centro Acadêmico de Consultoria – CACE',
@@ -1845,7 +1901,15 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 1279', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/2/9/8/2989ba3332da1f4e1e43d78584929a4e443d7eed9ea451f8d9e30f39a22b6ba9/Edi____o_n1279.pdf' }],
         articleUrl: ''
-      }
+      },
+       {
+      tag: 'homenagem',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1994',
+      desc: 'Prof. Antînio de Figueiredo Vieira\nProf. José Roberto Reis\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       

@@ -33,12 +33,18 @@ import { allGalleryPhotos } from './data/allGalleryPhotos';
 import { chefesDepartamento } from './data/chefesData';
 import { professoresTitulares } from './data/professoresTitularesData';
 import { profissionaisAdmitidos } from './data/profissionaisAdmitidosData';
+import { colacoesGrau } from './data/homenageadosData';
 import { EventDetailModal } from './data/EventDetailModal';
 import Fuse from 'fuse.js';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes' | 'professores' | 'profissionais';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes' | 'professores' | 'profissionais' | 'homenageados';
 
-const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais'];
+const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais', 'homenageados'];
+
+const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
+
+const normalizeText = (text: string) =>
+  text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 export default function App() {
   const [activePanel, setActivePanel] = useState<PanelType>('overview');
@@ -55,6 +61,8 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isODadMenuOpen, setIsODadMenuOpen] = useState(false);
   const [isMobileODadOpen, setIsMobileODadOpen] = useState(false);
+  const [homenageadosQuery, setHomenageadosQuery] = useState('');
+  const [homenageadosDecade, setHomenageadosDecade] = useState<number | null>(null);
   const [isGalleryUploadModalOpen, setIsGalleryUploadModalOpen] = useState(false);
   const [uploadData, setUploadData] = useState({ caption: '', file: null as File | null, base64: '' });
   const [galleryUploadData, setGalleryUploadData] = useState({ caption: '', title: '', file: null as File | null, base64: '' });
@@ -129,6 +137,25 @@ export default function App() {
   const combinedGalleryPhotos = useMemo(() => {
     return [...allGalleryPhotos, ...extraGalleryPhotos];
   }, [extraGalleryPhotos]);
+
+  const filteredColacoes = useMemo(() => {
+    const query = normalizeText(homenageadosQuery.trim());
+    return colacoesGrau.filter(colacao => {
+      if (homenageadosDecade !== null && Math.floor(colacao.ano / 10) * 10 !== homenageadosDecade) {
+        return false;
+      }
+      if (!query) return true;
+      const haystack = normalizeText(
+        [
+          colacao.data,
+          String(colacao.ano),
+          colacao.nota || '',
+          ...colacao.grupos.flatMap(grupo => [grupo.curso || '', ...grupo.linhas]),
+        ].join(' ')
+      );
+      return haystack.includes(query);
+    });
+  }, [homenageadosQuery, homenageadosDecade]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -384,6 +411,12 @@ export default function App() {
                     >
                       <Users className="w-4 h-4 shrink-0" /> Profissionais Admitidos
                     </button>
+                    <button
+                      onClick={() => { setActivePanel('homenageados'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'homenageados' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Award className="w-4 h-4 shrink-0" /> Profissionais Homenageados
+                    </button>
                   </div>
                 </motion.div>
               )}
@@ -504,6 +537,7 @@ export default function App() {
                               { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
                               { id: 'professores', label: 'Professores Titulares', icon: <GraduationCap className="w-4 h-4" /> },
                               { id: 'profissionais', label: 'Profissionais Admitidos', icon: <Users className="w-4 h-4" /> },
+                              { id: 'homenageados', label: 'Profissionais Homenageados', icon: <Award className="w-4 h-4" /> },
                             ].map(item => (
                               <button
                                 key={item.id}
@@ -1135,6 +1169,128 @@ A cooperação internacional já foi formalizada através de cartas de intençã
             </motion.div>
           )}
 
+          {activePanel === 'homenageados' && (
+            <motion.div
+              key="homenageados"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Profissionais Homenageados</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Professores, técnicos e paraninfos homenageados nas colações de grau, de 1979 até hoje.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-6 space-y-3">
+                <div className="relative">
+                  <Search className="w-4 h-4 text-ufv-gray-light absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    value={homenageadosQuery}
+                    onChange={(e) => setHomenageadosQuery(e.target.value)}
+                    placeholder="Buscar por nome, ano ou curso..."
+                    className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-ufv-border bg-white text-sm text-ufv-gray focus:outline-none focus:ring-2 focus:ring-ufv-green/30 focus:border-ufv-green"
+                  />
+                  {homenageadosQuery && (
+                    <button
+                      onClick={() => setHomenageadosQuery('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-ufv-gray-light hover:text-ufv-green"
+                      aria-label="Limpar busca"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => setHomenageadosDecade(null)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${homenageadosDecade === null ? 'bg-ufv-green text-white border-ufv-green' : 'bg-white text-ufv-gray border-ufv-border hover:bg-ufv-cream'}`}
+                  >
+                    Todas
+                  </button>
+                  {HOMENAGEADOS_DECADES.map(decade => (
+                    <button
+                      key={decade}
+                      onClick={() => setHomenageadosDecade(decade)}
+                      className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors ${homenageadosDecade === decade ? 'bg-ufv-green text-white border-ufv-green' : 'bg-white text-ufv-gray border-ufv-border hover:bg-ufv-cream'}`}
+                    >
+                      {decade}s
+                    </button>
+                  ))}
+                </div>
+
+                <p className="text-xs text-ufv-gray-light">
+                  {filteredColacoes.length} colação(ões) de grau
+                </p>
+              </div>
+
+              {filteredColacoes.length > 0 ? (
+                <div className="space-y-4">
+                  {filteredColacoes.map((colacao, index) => {
+                    const isFirstOfYear = index === 0 || filteredColacoes[index - 1].ano !== colacao.ano;
+                    return (
+                      <div key={colacao.id}>
+                        {isFirstOfYear && (
+                          <h2 className="font-serif text-xl font-bold text-ufv-green mt-4 mb-3">{colacao.ano}</h2>
+                        )}
+                        <div className="card">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-9 h-9 rounded-full bg-ufv-green/10 border border-ufv-green/20 flex items-center justify-center shrink-0">
+                              <Award className="w-4 h-4 text-ufv-green" />
+                            </div>
+                            <div>
+                              <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide">Colação de Grau</div>
+                              <span className="event-tag tag-gestao">{colacao.data}</span>
+                            </div>
+                          </div>
+
+                          <div className="space-y-4">
+                            {colacao.grupos.map((grupo, grupoIndex) => (
+                              <div key={grupoIndex}>
+                                {grupo.curso && (
+                                  <div className="text-sm font-bold text-ufv-green mb-1.5">{grupo.curso}</div>
+                                )}
+                                <ul className="space-y-1">
+                                  {grupo.linhas.map((linha, linhaIndex) => (
+                                    <li key={linhaIndex} className="text-sm text-ufv-gray leading-relaxed">
+                                      {linha}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+
+                          {colacao.nota && (
+                            <p className="mt-4 pt-3 border-t border-ufv-border text-sm text-ufv-gray-light leading-relaxed">
+                              {colacao.nota}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="card text-center text-sm text-ufv-gray-light py-10">
+                  Nenhuma colação encontrada para esse filtro.
+                </div>
+              )}
+            </motion.div>
+          )}
+
           {activePanel === 'photos' && (
             <motion.div
               key="photos"
@@ -1376,9 +1532,9 @@ A cooperação internacional já foi formalizada através de cartas de intençã
                           className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-all whitespace-nowrap ${activeFilter === 'all' ? 'text-ufv-green border-ufv-green' : 'text-ufv-gray-light border-transparent'}`}
                           onClick={() => setActiveFilter('all')}
                         >
-                          Eventos
+                          Notícias
                         </button>
-                        {['fundacao', 'ensino', 'pesquisa', 'extensao', 'gestao'].map(tag => (
+                        {['homenagens',].map(tag => (
                           <button
                             key={tag}
                             className={`text-xs font-bold uppercase tracking-wider pb-2 border-b-2 transition-all whitespace-nowrap ${activeFilter === tag ? 'text-ufv-green border-ufv-green' : 'text-ufv-gray-light border-transparent'}`}
