@@ -26,7 +26,7 @@ import {
   X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { memorialData } from './data/memorialData';
 import { MemorialEvent, MemorialPhoto } from './types';
 import { allGalleryPhotos } from './data/allGalleryPhotos';
@@ -48,6 +48,23 @@ const normalizeText = (text: string) =>
 
 export default function App() {
   const [activePanel, setActivePanel] = useState<PanelType>('overview');
+
+  // Pop-up introdutório: abre automaticamente ao carregar o site
+  const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
+
+  useEffect(() => {
+    if (!isWelcomeOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsWelcomeOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isWelcomeOpen]);
   const [currentDecade, setCurrentDecade] = useState<number>(1970);
   const [selectedYear, setSelectedYear] = useState<number>(1974);
   const [searchQuery, setSearchQuery] = useState('');
@@ -1815,6 +1832,74 @@ A cooperação internacional já foi formalizada através de cartas de intençã
           )}
         </AnimatePresence>
       </main>
+
+      {/* POP-UP INTRODUTÓRIO */}
+      <AnimatePresence>
+        {isWelcomeOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[300] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsWelcomeOpen(false)}
+          >
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="welcome-title"
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.25 }}
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative border-b-4 border-ufv-gold"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white p-6 sm:p-8 relative overflow-hidden">
+                <div className="absolute -right-10 -top-10 w-40 h-40 border-[28px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-14 w-28 h-28 border-[18px] border-ufv-gold/10 rounded-full"></div>
+                <button
+                  onClick={() => setIsWelcomeOpen(false)}
+                  className="absolute top-4 right-4 p-1.5 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10"
+                  aria-label="Fechar"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Landmark className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">DAD · 50 anos · 2026</span>
+                  </div>
+                  <h2 id="welcome-title" className="font-serif text-2xl sm:text-3xl font-bold leading-tight">
+                    Memorial DAD
+                  </h2>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8">
+                <div className="space-y-5 text-ufv-gray text-[15px] leading-relaxed">
+                  <p>
+                    Olá, seja bem vindo(a) ao <strong>Memorial DAD</strong>, sistema concebido para se tornar um repositório permanente de informações que ajudem a construir uma memória sólida e consistente do DAD a partir da comemoração de seus 50 anos de existência, completos em 2026. A expectativa é de que seu conteúdo passe a ser continuamente alimentado, não só para retratar acontecimentos vindouros, mas também para preencher lacunas eventualmente encontradas nas múltiplas bases de dados, formais ou não, utilizadas como fonte.
+                  </p>
+                  <p className="font-semibold text-ufv-green">
+                    Desejamos-lhe uma agradável e produtiva experiência!
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setIsWelcomeOpen(false)}
+                  autoFocus
+                  className="mt-7 w-full sm:w-auto sm:min-w-[200px] sm:float-right bg-ufv-green text-white px-6 py-3 rounded-lg font-bold hover:bg-ufv-green-dark transition-colors shadow-sm"
+                >
+                  Entrar no Memorial
+                </button>
+                <div className="clear-both"></div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* MODAL DE DETALHES DO EVENTO */}
       <EventDetailModal

@@ -21,7 +21,7 @@ export type EventTag =
   | 'parceria'
   | 'cultura'
   | 'nomeacao'
-  | 'homenagem'
+  | 'homenagens'
   | 'comemoracao';
 
 export interface MemorialEvent {

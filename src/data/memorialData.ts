@@ -340,13 +340,10 @@ export const memorialData: MemorialData = {
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/4/b/c4bd7ebbb98fed9c064f30882630650b87e4fba4661717dc649470a854a9a946/Edi____o_n599.pdf'
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1979 e menção ao primeiro formando de Administração',
       desc: 'Prof. João Adamor Dias Neves\nProf. José Mansur Nascif\nProf. Aula da Saudade\n\nMenção especial ao primeiro e único formando do Curso de Administração – Daniel Lima Carneiro',
-      photos: [{
-        url: '/P107 (2) - Posse Daniel Lima Carneiro.jpg',
-        caption: 'Primeiro formando do Curso de Administração – Daniel Lima Carneiro'}
-      ],
+      photos: [],
       externalLinks: [],
       articleUrl: ''
     }
@@ -432,7 +429,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1980',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -453,7 +450,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1980',
       desc: 'Prof. Evaldo Guimarães Barbosa\nProfª. Maria Helena Barbassa -  Aula da Saudade',
       photos: [],
@@ -535,7 +532,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Julho de 1981',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1981',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -621,7 +618,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Dezembro de 1981',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1981',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -699,7 +696,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1982',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -783,7 +780,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1982',
       desc: 'Prof. Maria Helena Barbassa\nProf. José Edson Lara\nProf. Marcos Tanura Sanábio - Aula da Saudade',
       photos: [],
@@ -869,7 +866,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1983',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -938,7 +935,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1983',
       desc: 'Profª. Valéria Aroeira Braga Duarte Ferreira\nProf. Adriel Rodrigues de Oliveira\nProf. Orlando Monteiro da Silva\nProf. João Adamor Dias Neves - Aula da Saudade',
       photos: [],
@@ -955,7 +952,7 @@ export const memorialData: MemorialData = {
     // LISTA DE EVENTOS DO ANO (Cada item vira um card na timeline/busca e abre o modal)
     events: [
       {
-      tag: 'Colação de Grau · Julho de 1984',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1984',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -977,7 +974,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Dezembro de 1984',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1984',
       desc: 'Prof. Prof. José Clévio Dias Casali\nTéc. Maria das Graças de Oliveira\nProf. José Edson Lara - Prof. Aula da Saudade',
       photos: [],
@@ -1027,7 +1024,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1985',
       desc: 'Prof. Adolfo Egídio Reis\nProf. Adriel Rodrigues de Oliveira - Aula da Saudade',
       photos: [],
@@ -1051,7 +1048,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1985',
       desc: 'Prof. Gualberto Ferreira da Silva\nProf. José Clévio Dias Casali\nProfª. Maria Helena Barbassa - Aula da Saudade',
       photos: [],
@@ -1146,7 +1143,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1986',
       desc: 'Prof. Prof. Gualberto Ferreira da Silva\nProf. José Clévio dias Casali\nProfª. Maria Helena Barbassa -  Aula da Saudade',
       photos: [],
@@ -1222,7 +1219,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1986',
       desc: 'Prof. Adriel Rodrigues de Oliveira\nProfª. Nina Rosa da Silveira Cunha - Aula da Saudade',
       photos: [],
@@ -1285,7 +1282,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1987',
       desc: 'Prof. Carlos Roberto Ramos\nProfª. Nina Rosa da Silveira Cunha\nProf. Roberto de Carvalho Araújo - Aula da Saudade',
       photos: [],
@@ -1301,7 +1298,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1987',
       desc: 'Profª. Valéria Aroeira Braga Duarte Ferreira - Aula da Saudade',
       photos: [],
@@ -1336,7 +1333,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
      {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1988',
       desc: 'Prof. Carlos Roberto Ramos\nProfª. Maria Helena Barbassa\nProfª. Vera Lúcia Travençolo Muniz\nProf. Juarez Magalhães Rodrigues - Aula da Saudade',
       photos: [],
@@ -1400,7 +1397,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: '',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1988',
       desc: 'Prof. Gualberto Ferreira da Silva\nProf. José Edson Lara\nProfª. Maria Helena Barbassa\nProf. Juarez Magalhães Rodrigues - Aula da Saudade',
       photos: [],
@@ -1449,7 +1446,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Julho de 1989',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1989',
       desc: 'Prof. José Edson Lara\nProf. Marcos Tanure Sanábio\nProf. Adriel Rodrigues de Oliveira - Prof. Aula da Saudade',
       photos: [],
@@ -1526,7 +1523,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Dezembro de 1989',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1989',
       desc: 'Prof.\nProf. Aula da Saudade',
       photos: [],
@@ -1568,7 +1565,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Julho de 1990',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1990',
       desc: 'Prof. Juarez Magalhães Rodrigues\nProfª. Maria Helena Barbassa\nProfª. Valéria Aroeira Braga Duarte Ferreira - Aula da Saudade',
       photos: [],
@@ -1635,7 +1632,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Dezembro de 1990',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1990',
       desc: 'Prof. Antônio de Figueiredo Vieira\nProfª. Nina Rosa da Silveira Cunha\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1680,7 +1677,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Julho de 1991',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1991',
       desc: 'Prof. Adriel Rodrigues de Oliveira\nProf. Antônio de Figueiredo Vieira\nProfª. Nancy Pereira de Vasconcelos - Aula da Saudade',
       photos: [],
@@ -1704,7 +1701,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Dezembro de 1991',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1991',
       desc: 'Prof. José Clévio Dias Casali\nProfª. Nancy Pereira de Vasconcelos - Aula da Saudade',
       photos: [],
@@ -1719,7 +1716,7 @@ export const memorialData: MemorialData = {
   1992: {
     events: [
       {
-      tag: 'Colação de Grau · Julho de 1992',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1992',
       desc: 'Profª. Maria Helena Barbassa\nProfª. Valéria Aroeira Braga Duarte Ferreira\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1767,7 +1764,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Dezembro de 1992',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1992',
       desc: 'Prof. Afonso Augusto Teixeira de Freitas de Carvalho Lima\nProfª. Nancy Pereira de Vasconcelos\nTéc. Carlos Alberto Freire Resende - Aula da Saudade',
       photos: [],
@@ -1799,7 +1796,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'Colação de Grau · Julho de 1993',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1993',
       desc: 'Prof. Profª. Maria Helena Barbassa\nProf. Albino Sérgio Dias Casali\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1823,7 +1820,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Dezembro de 1993',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1993',
       desc: 'Prof. Antônio de Figueiredo Vieira\nProfaª. Nina Rosa da Silveira Cunha\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1879,7 +1876,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'Colação de Grau · Julho de 1994',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1994',
       desc: 'Prof. Luciano Zille Pereira\nProf. Roberto Serpa Dias\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1903,7 +1900,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-      tag: 'homenagem',
+      tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1994',
       desc: 'Prof. Antînio de Figueiredo Vieira\nProf. José Roberto Reis\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
       photos: [],
@@ -1911,9 +1908,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     }
     ],
-    photos: [
-      
-    ],
+    photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/1994-jornal-da-ufv'
   },
 
