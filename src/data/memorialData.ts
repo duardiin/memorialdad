@@ -3741,16 +3741,33 @@ export const memorialData: MemorialData = {
   events: [
     {
       tag: '',
-      title: 'Selo Árvore, comissão dos 50 anos do DAD e recepção aos novos estudantes',
-      desc: 'No âmbito das ações institucionais e comemorativas do Departamento de Administração e Contabilidade (DAD), o colegiado recebeu informes sobre a realização da recepção aos novos estudantes organizada pelas coordenações, CACE, CECCO e PET. Destacou-se o reconhecimento ambiental do departamento com a conquista do Selo Árvore no programa UFV + Sustentável, bem como a apresentação dos projetos da sala de metodologia ativa e a remodelação do hall do segundo e terceiro andar elaborados pela TETU Jr. Foi anunciada a constituição da comissão responsável pelas comemorações dos 50 anos do DAD, composta pelos docentes Diego Costa Mendes, Ana Cláudia Azevedo, Antônio Carlos Brunozi Junior e Gislaine Aparecida Santana Sediyama, pelo administrador Jansen Cardoso Pereira e pela representante estudantil Simone Milagres da Silva, contando ainda com a colaboração dos professores aposentados Afonso Augusto Teixeira de Freitas de Carvalho Lima, Nina Rosa da Silveira Cunha e Walmer Faroni. Na mesma ocasião, foi informada a realização do evento Contabilize para os dias 27 e 28 de maio de 2026. Por fim, foram mencionadas a atualização da sala de metodologia ativa, a especificação técnica do estúdio e o acolhimento formal das professoras Simone Martins e Tainá Rodrigues Gomide Souza Pinto no retorno de seus períodos de pós-doutorado. Ata 409/2026 · 20 de março de 2026',
+      title: 'Reconhecimento ao DAD pela conquista do Selo Árvore',
+      desc: 'No âmbito das ações institucionais e comemorativas do Departamento de Administração e Contabilidade (DAD), o colegiado recebeu informes sobre a realização da recepção aos novos estudantes organizada pelas coordenações, CACE, CECCO e PET. Destacou-se o reconhecimento ambiental do departamento com a conquista do Selo Árvore no programa UFV + Sustentável, bem como a apresentação dos projetos da sala de metodologia ativa e a remodelação do hall do segundo e terceiro andar elaborados pela TETU Jr. Ata 409/2026 · 20 de março de 2026',
       photos: [],
       externalLinks: [],
       articleUrl: ''
     },
     {
       tag: '',
-      title: 'Aprovação da reforma do hall e do evento integrador ICCEPP-UNESCO, SIEBCI e SINAPs',
-      desc: 'Foi realizada a apresentação e aprovação do projeto arquitetônico e do orçamento para a reforma do hall do segundo e terceiro pavimento do DAD, desenvolvidos pela empresa junção TETU Jr. No âmbito das celebrações, reforçou-se o convite para o evento Contabilize programado para os dias 27 e 28 de maio. Durante a sessão, o presidente realizou homenagens às mães. Houve também a apresentação do aplicativo DADTech pelo estagiário do laboratório de informática, Carlos Eduardo Corrêa, referente ao sistema de chamadas de manutenção de tecnologia da informação. No tocante a eventos e parcerias, foi aprovada a realização do evento integrador composto pela III International Conference of Creative Economy and Public Policies (ICCEPP-UNESCO), em conjunto com o Simpósio Internacional de Educação Básica, Criativa e Inovadora (SIEBCI) e os XI Seminários InterNacionais de Administração Pública (SINAPs). Ata 410/2026 · 08 de maio de 2026',
+      title: 'Comissão dos 50 anos do DAD',
+      desc: 'Foi anunciada a constituição da comissão responsável pelas comemorações dos 50 anos do DAD, composta pelos docentes Diego Costa Mendes, Ana Cláudia Azevedo, Antônio Carlos Brunozi Junior e Gislaine Aparecida Santana Sediyama, pelo administrador Jansen Cardoso Pereira e pela representante estudantil Simone Milagres da Silva, contando ainda com a colaboração dos professores aposentados Afonso Augusto Teixeira de Freitas de Carvalho Lima, Nina Rosa da Silveira Cunha, Walmer Faroni e o estagiário Eduardo Jesus. Na mesma ocasião, foi informada a realização do evento Contabilize para os dias 27 e 28 de maio de 2026. Ata 409/2026 · 20 de março de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    
+    {
+      tag: '',
+      title: 'Aprovação da reforma do hall e Aplicativo DadTech',
+      desc: 'Foi realizada a apresentação e aprovação do projeto arquitetônico e do orçamento para a reforma do hall do segundo e terceiro pavimento do DAD, desenvolvidos pela empresa junção TETU Jr. No âmbito das celebrações, reforçou-se o convite para o evento Contabilize programado para os dias 27 e 28 de maio. Durante a sessão, o presidente realizou homenagens às mães. Houve também a apresentação do aplicativo DADTech pelo estagiário Eduardo Jesus do laboratório de informática, Carlos Eduardo Corrêa, referente ao sistema de chamadas de manutenção de tecnologia da informação',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: '',
+      title: 'Evento integrador ICCEPP-UNESCO, SIEBCI e SINAPs',
+      desc: 'Foi aprovada a realização do evento integrador composto pela III International Conference of Creative Economy and Public Policies (ICCEPP-UNESCO), em conjunto com o Simpósio Internacional de Educação Básica, Criativa e Inovadora (SIEBCI) e os XI Seminários InterNacionais de Administração Pública (SINAPs). Ata 410/2026 · 08 de maio de 2026',
       photos: [],
       externalLinks: [],
       articleUrl: ''

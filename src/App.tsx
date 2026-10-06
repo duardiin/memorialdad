@@ -1872,7 +1872,7 @@ A cooperação internacional já foi formalizada através de cartas de intençã
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">DAD · 50 anos · 2026</span>
                   </div>
                   <h2 id="welcome-title" className="font-serif text-2xl sm:text-3xl font-bold leading-tight">
-                    Memorial DAD
+                    Memorialia DAD
                   </h2>
                 </div>
               </div>
@@ -1880,7 +1880,7 @@ A cooperação internacional já foi formalizada através de cartas de intençã
               <div className="p-6 sm:p-8">
                 <div className="space-y-5 text-ufv-gray text-[15px] leading-relaxed">
                   <p>
-                    Olá, seja bem vindo(a) ao <strong>Memorial DAD</strong>, sistema concebido para se tornar um repositório permanente de informações que ajudem a construir uma memória sólida e consistente do DAD a partir da comemoração de seus 50 anos de existência, completos em 2026. A expectativa é de que seu conteúdo passe a ser continuamente alimentado, não só para retratar acontecimentos vindouros, mas também para preencher lacunas eventualmente encontradas nas múltiplas bases de dados, formais ou não, utilizadas como fonte.
+                    Olá, seja bem vindo(a) ao <strong>Memorialia DAD</strong>, sistema concebido para se tornar um repositório permanente de informações que ajudem a construir uma memória sólida e consistente do DAD a partir da comemoração de seus 50 anos de existência, completos em 2026. A expectativa é de que seu conteúdo passe a ser continuamente alimentado, não só para retratar acontecimentos vindouros, mas também para preencher lacunas eventualmente encontradas nas múltiplas bases de dados, formais ou não, utilizadas como fonte.
                   </p>
                   <p className="font-semibold text-ufv-green">
                     Desejamos-lhe uma agradável e produtiva experiência!
