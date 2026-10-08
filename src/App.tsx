@@ -16,6 +16,7 @@ import {
   History,
   Image as ImageIcon,
   Info,
+  Italic,
   Landmark,
   LayoutGrid,
   Menu,
@@ -1013,21 +1014,28 @@ export default function App() {
 
               <div className="space-y-6">
                 <div className="card">
-                  <h2 className="card-title">
-                    <div className="card-icon"><Award className="w-4 h-4 text-white" /></div>
-                    O Divisor de Águas: O Parecer 221/88
-                  </h2>
+
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>
-                      O desmembramento oficial foi selado em <strong>30 de março de 1988</strong>. Naquela data, o Conselho Federal de Educação (CFE), por meio do <strong>Parecer nº 221/88</strong>, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
+                  </div>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência, os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração ou Departamento de Ciências Administrativas (?) (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
+                      </p>
+                  </div>
+                  <strong> Maio de 1988,</strong> marco da transformação do DAD, o momento culminante e ápice de seu notável percurso até os dias atuais.
+                  <div>
+                    <p>A divisão ocorreu de forma amigável com a criação de mais uma Chefia de Departamento e uma Chefia de Seção, com a distribuição das disciplinas, de bens patrimoniais (critério de vincular o bem ao servidor que mais o utiliza, os bens comuns distribuídos equitativamente ou por meio de sorteio, e, aquisição de bens patrimoniais adicionais), lotação de pessoal e espaço físico que continuaria provisoriamente no mesmo local até que se construísse a nova sede.
+                     </p>
+                     <p> A condução dessa grande empreitada ficou a cargo da Comissão constituída pela Portaria 418/88/UFV, com o aval de todos os professores e servidores do DAE que já almejavam há algum tempo essa independência e com a chancela dos Professores <strong>Juraci Aureliano Teixeira e Gualberto Ferreira da Silva</strong>, cujo trabalho respaldou essa nova trajetória institucional.</p>
+                    <p className="mt-6">
+                      <strong>*COLOCAR ESPAÇO DE DUAS LINHAS O Divisor de Águas: O Parecer 221/88 </strong>
+                       O desmembramento oficial foi selado em 30 de março de 1988. Naquela data, o Conselho Federal de Educação (CFE), por meio do Parecer nº 221/88, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
                     </p>
+
+                    <img src="/planta DAD.jfif" alt="Planta inicial do departamento de administração e do departamento de economia" />
+                    <img src="/Planta inicial do departamento de administração e do departamento de economia.jpeg" alt="Planta inicial do departamento de administração e do departamento de economia" />
                   </div>
-                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração ou Departamento de Ciências Administrativas (?) (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
-                      <strong> Maio de 1988!</strong> Marco da transformação do DAD, o momento culminante e ápice de seu notável percurso até os dias atuais.
-                      A divisão ocorreu de forma amigável com a criação de mais uma Chefia de Departamento e uma Chefia de Seção, com a distribuição das disciplinas, de bens patrimoniais (critério de vincular o bem ao servidor que mais o utiliza, os bens comuns distribuídos equitativamente ou por meio de sorteio, e, aquisição de bens patrimoniais adicionais), lotação de pessoal e espaço físico que continuaria provisoriamente no mesmo local até que se construísse a nova sede.
-                      A condução dessa grande empreitada ficou a cargo da Comissão constituída pela Portaria 418/88/UFV, com o aval de todos os professores e servidores do DAE que já almejavam há algum tempo essa independência e com a chancela dos Professores <strong>Juraci Aureliano Teixeira e Gualberto Ferreira da Silva</strong>, cujo trabalho respaldou essa nova trajetória institucional.</p>
-                  </div>
+                  <img src="/planta DAD.jfif" alt="/Planta inicial do departamento de administração e do departamento de economia" />
+                  <img src="public/Planta inicial do departamento de administração e do departamento de economia.jpeg" alt="/Planta inicial do departamento de administração e do departamento de economia" />
 
                 </div>
 

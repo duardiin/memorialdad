@@ -45,7 +45,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "10/08/1988",
     periodoFim: "11/09/1989",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Marcos Tanure.jpeg"
   },
   {
     id: "2",
@@ -53,15 +54,18 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "12/09/1989",
     periodoFim: "01/11/1989",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Roberto de Caralho Araújo.jpeg"
   },
   {
     id: "3",
     nome: "Milton Rodrigues Natalino",
-    periodoInicio: "02/11/1989",
-    periodoFim: "15/06/1990",
+    periodoInicio: "02/11/1989 - 15/06/1990",
+    periodoFim: "07/11/1992 - 11/05/1995",
+    
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Milton Rodrigues Natalino.jpeg"
   },
   {
     id: "4",
@@ -69,15 +73,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "16/06/1990",
     periodoFim: "06/11/1992",
     cargo: "",
-    observacoes: ""
-  },
-  {
-    id: "5",
-    nome: "Milton Rodrigues Natalino",
-    periodoInicio: "07/11/1992",
-    periodoFim: "11/05/1995",
-    cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Antonio de Figueredo Vieira.jpeg"
   },
   {
     id: "6",
@@ -85,7 +82,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "12/05/1995",
     periodoFim: "07/11/1996",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/José Edson Lara.jpeg"
   },
   {
     id: "7",
@@ -93,15 +91,17 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "08/11/1996",
     periodoFim: "03/02/1998",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Adriel-Rodrigues.jpeg"
   },
   {
     id: "8",
-    nome: "Ricardo Correa Gomes",
+    nome: "Ricardo Corrêa Gomes",
     periodoInicio: "04/02/1998",
     periodoFim: "01/07/1999",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Ricardo Correa Gomes.jpeg"
   },
   {
     id: "9",
@@ -109,7 +109,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "02/07/1999",
     periodoFim: "14/12/2000",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Luiz Antonio Abrantes.jpeg"
   },
   {
     id: "10",
@@ -117,7 +118,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "15/12/2000",
     periodoFim: "15/12/2004",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Walmer.jpeg"
   },
   {
     id: "11",
@@ -125,7 +127,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "21/02/2006",
     periodoFim: "11/12/2008",
     cargo: "",
-    observacoes: "Pro tempore de 21/02/2006 a 16/03/2006 e efetivo de 16/03/2006 a 11/12/2008; 11/12/2008 a 01/07/2011 e reconduzido em 11/07/2011 a 12/08/2015."
+    observacoes: "Pro tempore de 21/02/2006 a 16/03/2006 e efetivo de 16/03/2006 a 11/12/2008; 11/12/2008 a 01/07/2011 e reconduzido em 11/07/2011 a 12/08/2015.",
+    foto: "/Djair Cesário de Araujo.jpeg"
   },
   {
     id: "12",
@@ -133,7 +136,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "12/08/2015",
     periodoFim: "28/08/2017",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Simone Martins.jfif"
   },
   {
     id: "13",
@@ -141,7 +145,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "29/08/2017",
     periodoFim: "04/06/2019",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Bruno Tavares.jfif"
   },
   {
     id: "14",
@@ -149,7 +154,8 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "04/06/2019",
     periodoFim: "03/04/2023",
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Josiel Lopes Valadares.jfif"
   },
   {
     id: "15",
@@ -157,6 +163,7 @@ export const chefesDepartamento: ChefeDepartamento[] = [
     periodoInicio: "03/04/2023",
     periodoFim: null,
     cargo: "",
-    observacoes: ""
+    observacoes: "",
+    foto: "/Ronan Capobiango.png"
   }
 ];

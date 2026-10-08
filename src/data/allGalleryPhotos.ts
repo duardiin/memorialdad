@@ -238,7 +238,7 @@ export const allGalleryPhotos: GalleryPhoto[] = [
 },
 {
 	id: 'photo-112',
-	url: '/P28 - Posse Professor Marcos Tanure San….jpg', // TODO: nome truncado no print
+	url: '/P28 - Posse Professor Marcos Tanure Sanabio.jpg', // TODO: nome truncado no print
 	title: 'Posse do Professor Marcos Tanure San…',
 	caption: 'Posse do Professor Marcos Tanure San…'
 },

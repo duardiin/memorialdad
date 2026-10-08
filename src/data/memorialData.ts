@@ -550,8 +550,8 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'II Semana do Economista',
-        desc: 'Com o tema Perspectiva da Economia Brasileira foi realizada a II Semana do Economista promovida pelo DAE.  (13ago. nº 698 e 20ago. nº699). *Atenção: inserir aqui o programa, as fotos e outros exemplares dos eventos. (ADICIONAR A FOTO DA CAPA QUE ESTÁ NO WHATSAPP, UMA CAPA AZUL) E FOTO PG.1 JORNAL 699',
-        photos: [],
+        desc: 'Com o tema Perspectiva da Economia Brasileira foi realizada a II Semana do Economista promovida pelo DAE.  (13ago. nº 698 e 20ago. nº699). *Atenção: inserir aqui o programa, as fotos e outros exemplares dos eventos. E FOTO PG.1 JORNAL 699',
+        photos: [{ url: '/2 semanaa do economistaa.jpeg', caption: 'Segunda semana do economista.' }],
         externalLinks: [],
         articleUrl: ''
       },
@@ -666,8 +666,8 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
-        title: 'A Consolidação das Ciências Sociais Aplicadas na UFV (1979-1982): Da Pesquisa Premiada à Prática Industrial',
-        desc: 'O DAE promoveu o Seminário «Avaliação de Desempenho", ministrado pelo professor João Adamor Dias Neves, com participação de empresários e pessoas da área de Recursos Humanos. (20mai n. 738).',
+        title: 'Seminário "Avaliação de Desempenho"',
+        desc: 'O DAE promoveu o Seminário «"Avaliação de Desempenho", ministrado pelo professor João Adamor Dias Neves, com participação de empresários e pessoas da área de Recursos Humanos. (20mai n. 738).',
         photos: [{ url: '/1982 - Avaliação de Desempenho.jpeg', caption: 'Seminário «Avaliação de Desempenho" promovido pelo DAE.' }],
         externalLinks: [{ label: 'Jornal 738', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/a/5/ca58bd0f16fb4de7407155b077c90fdee15cdf0d81d4f6638c6747a34810817f/Edi____o_n738.pdf' }],
         articleUrl: ''
@@ -1386,7 +1386,7 @@ export const memorialData: MemorialData = {
         tag: 'gestao',
         title: 'Posses do DAD 1ª Chefia e do DEE 1ª Chefia',
         desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia (DAE), oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração. (20out. n.1074).',
-        photos: [],
+        photos: [{url: "/Posse econ e adm 1988.jpg", caption: "Primeiros Chefes"}],
         externalLinks: [{label: 'Jornal 1074', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/c/0/ac0cb25a2d3fdd5956e1063701e5acaaf99f1716aacc254787eac3a508c56740/Edi____o_n1074.pdf'}],
         articleUrl: ''
       },
@@ -2207,6 +2207,14 @@ export const memorialData: MemorialData = {
         title: 'Demanda de Pós-Graduação em Ponte Nova',
         desc: 'Professores do DAD debatem solicitação da Faculdade de Ciências Contábeis (FACCO) de Ponte Nova (MG) para o oferecimento de uma turma de Pós-Graduação Lato Sensu.',
         photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+       {
+        tag: 'ensino',
+        title: 'Utilização de Recursos',
+        desc: 'Foi Promovido um Curso teórico e prático para capacitar alunos, professores, contadores e demais interessados a utilizarem os recursos da calculadora financeira HP-12C na resolução de problemas nas operações finanaceiras. 28 de abril',
+        photos: [{ url: '/2001 - Utilização de Recursos.jpeg', caption: 'Panfleto do Curso.' }],
         externalLinks: [],
         articleUrl: ''
       },
