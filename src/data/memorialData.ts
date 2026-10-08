@@ -27,7 +27,7 @@ export const memorialData: MemorialData = {
         title: 'A Criação do Instituto de Ciências Humanas: Primeira Passos e Aprovação',
         desc: 'Da Escola Superior de Ciências Domésticas germinaram as Ciências Humanas com a implantação do Instituto de Ciências Humanas, aprovado em duas instâncias: CEPE (Ata 72 de 1975) e CONSU (Ata 42/75).)\nO anteprojeto de implantação do Instituto foi elaborado por um Grupo de Trabalho (Portaria 506/75), tendo como membros Bel. Hamilton Martins Silveira, Professores Juraci Aureliano Teixeira, Eloy Gava e Maria da Conceição Rolim Simões. O plenário do CEPE aprovou na parte referente aos Departamentos, como proposto, deixando a posteriori o exame referente aos currículos e planos de estudo. Na reunião do CONSU a proposta do Conselheiro M. Maestri foi aprovada por unanimidade: "apoiar a implantação do Instituto de Ciências Humanas".',
         photos: [{
-          url: 'public/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
+          url: '/1975 - ATA 42.75.jpeg',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'ATA 42/75'   // Legenda ou descrição da foto
         }],
         externalLinks: [],
@@ -741,7 +741,9 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'I Ciclo de Estudos Contábeis na UFV debateu inovação e análise financeira',
         desc: 'I Ciclo de Estudos Contábeis foi destinado a professores, estudantes, empresários, contadores da região e funcionários da UFV e contou com as seguintes palestras: "Demonstrações Financeiras: Um Enfoque Gerencial", pelo chefe da Divisão de Contabilidade Central da Petrobrás, Gilberto Amaro Rodrigues; "O Desempenho da Função Contábil e o Uso de Processamento Eletrônico de Dados", pelo chefe da Divisão de Contabilidade da Sede da Petrobrás, Eurico Ribeiro, ambos do Rio de Janeiro. O evento contou ainda com as palestras "Sociedades Coligadas, Controladoras e Controladas", "Equivalência Patrimonial" e "Consolidação das Demonstrações Financeiras". O Seminário de Análise Financeira foi conduzido pelos Profs. Adriel Rodrigues de Oliveira, José Clévio Dias Casali e Milton Rodrigues Natalino do DAE, que abordaram os tópicos: Patrimônio, Demonstrativos Financeiros de acordo com a Nova Lei das Sociedades Anónimas, Análises Horizontal e Vertical, Análise por Índices, Capital de Giro: Apuração e Projeção; Sistema Du pont de Análise e Fluxo de Caixa. O Seminário teve como objetivo de promover a reciclagem dos participantes no que tange à nomenclatura dos demonstrativos financeiros e iniciá-los em conceitos e técnicas de análise. (29set. n. 757). (21out. n.760). ',
-        photos: [{ url: '/1982 - I Ciclo de Estudos Contábeis.jpg', caption: 'I Ciclo de Estudos Contábeis na UFV.' },],
+        photos: [{ url: '/1982 - I Ciclo de Estudos Contábeis.jpg', caption: 'I Ciclo de Estudos Contábeis na UFV.' },
+          { url: '/1982 - Análise Financeira.jpeg', caption: 'I Ciclo de Estudos Contábeis na UFV.' },
+        ],
         externalLinks: [{ label: 'Jornal 757', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/b/4/1/b41aea5e955829e4dc9f3530126a241b94cdc999c4e342dfac222ffd3680ab54/Edi____o_n757.pdf' },
         { label: 'Jornal 760', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/e/b/7/eb72d157a7cef8856b08a8308f0c8189c413c91656c70bc0cc916c6c6c9a7fba/Edi____o_n760.pdf' }
         ],

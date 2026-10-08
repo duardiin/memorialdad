@@ -87,7 +87,7 @@ export default function App() {
   const [extraGalleryPhotos, setExtraGalleryPhotos] = useState<MemorialPhoto[]>([]);
 
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
-  
+
   // Estado para abrir o Modal de Detalhes do Evento
   const [selectedEventModal, setSelectedEventModal] = useState<{ event: MemorialEvent; year?: number } | null>(null);
 
@@ -958,22 +958,22 @@ export default function App() {
                     </p>
                     <p>UFV e Universidade de Quebec Avançam em Parceria Internacional para Impulsionar Pequenas e Médias Empresas na Zona da Mata
 
-VIÇOSA (MG) – A Universidade Federal de Viçosa (UFV) está a consolidar um ambicioso programa de cooperação técnica internacional com a Universidade de Quebec, através do campus de Chicoutimi (UQAC), no Canadá. O projeto bilateral visa transformar o panorama socioeconómico da Zona da Mata mineira por meio da capacitação académica e do fortalecimento das Pequenas e Médias Empresas (PMEs).12
+                      VIÇOSA (MG) – A Universidade Federal de Viçosa (UFV) está a consolidar um ambicioso programa de cooperação técnica internacional com a Universidade de Quebec, através do campus de Chicoutimi (UQAC), no Canadá. O projeto bilateral visa transformar o panorama socioeconómico da Zona da Mata mineira por meio da capacitação académica e do fortalecimento das Pequenas e Médias Empresas (PMEs).12
 
-A iniciativa ganhou novo fôlego com a recente visita de três semanas do professor André Courtemanche, antigo diretor do Departamento de Ciências Económicas e Administrativas da UQAC, à UFV. Durante a sua estadia, o docente reuniu-se com dirigentes e professores locais para detalhar as diretrizes de execução do programa.34
-Os Três Pilares do Projeto
-Desenvolvido pelas professoras Maria Elena Barbassa e Nina Rosa da Silveira Cunha, do Departamento de Administração (DAD) da UFV, o pré-projeto foca-se em metas estratégicas de longo prazo:5
-Doutoramento de Docentes: Previsão de formação e aperfeiçoamento de 6 a 8 professores do DAD em nível de Ph.D. no Canadá, direcionados para universidades associadas como a Universidade de Quebec em Montreal, as HEC de Montreal e a Universidade Laval.6
-Mestrado Inédito em Gestão de PMEs: Implantação de um curso de pós-graduação (M.Sc.) em Administração de Pequenas e Médias Empresas na UFV. O currículo estruturado prevê áreas de concentração voltadas para Recursos Humanos, Finanças, Mercadologia e Sistemas de Informação. A primeira turma cumprirá parte dos estudos no Canadá.789
-Centro de Excelência e Incubadora: Transformação do atual Núcleo de Apoio Integral ao Pequeno Empresário (NAIPE) da UFV num Centro de Excelência em Estudos Aplicados à PME. O plano inclui a criação de uma incubadora de empresas para transferir e adaptar a experiência canadiana à realidade empresarial brasileira.1011
-Resposta a uma Procura Regional Estratégica
-A urgência do projeto justifica-se pelos dados económicos da região. No Brasil, as PMEs representam 98% do tecido empresarial e são responsáveis por mais de 72% dos postos de trabalho. Na região de Viçosa, contudo, os empresários enfrentam graves entraves como a obsolescência de equipamentos, dificuldades de comercialização, falta de capital circulante e escassez de mão-de-obra qualificada devido ao êxodo rural para grandes centros.21213
+                      A iniciativa ganhou novo fôlego com a recente visita de três semanas do professor André Courtemanche, antigo diretor do Departamento de Ciências Económicas e Administrativas da UQAC, à UFV. Durante a sua estadia, o docente reuniu-se com dirigentes e professores locais para detalhar as diretrizes de execução do programa.34
+                      Os Três Pilares do Projeto
+                      Desenvolvido pelas professoras Maria Elena Barbassa e Nina Rosa da Silveira Cunha, do Departamento de Administração (DAD) da UFV, o pré-projeto foca-se em metas estratégicas de longo prazo:5
+                      Doutoramento de Docentes: Previsão de formação e aperfeiçoamento de 6 a 8 professores do DAD em nível de Ph.D. no Canadá, direcionados para universidades associadas como a Universidade de Quebec em Montreal, as HEC de Montreal e a Universidade Laval.6
+                      Mestrado Inédito em Gestão de PMEs: Implantação de um curso de pós-graduação (M.Sc.) em Administração de Pequenas e Médias Empresas na UFV. O currículo estruturado prevê áreas de concentração voltadas para Recursos Humanos, Finanças, Mercadologia e Sistemas de Informação. A primeira turma cumprirá parte dos estudos no Canadá.789
+                      Centro de Excelência e Incubadora: Transformação do atual Núcleo de Apoio Integral ao Pequeno Empresário (NAIPE) da UFV num Centro de Excelência em Estudos Aplicados à PME. O plano inclui a criação de uma incubadora de empresas para transferir e adaptar a experiência canadiana à realidade empresarial brasileira.1011
+                      Resposta a uma Procura Regional Estratégica
+                      A urgência do projeto justifica-se pelos dados económicos da região. No Brasil, as PMEs representam 98% do tecido empresarial e são responsáveis por mais de 72% dos postos de trabalho. Na região de Viçosa, contudo, os empresários enfrentam graves entraves como a obsolescência de equipamentos, dificuldades de comercialização, falta de capital circulante e escassez de mão-de-obra qualificada devido ao êxodo rural para grandes centros.21213
 
-Com a consolidação do Centro de Excelência, o NAIPE — que já atua ativamente na promoção de cursos e na prestação de consultorias — pretende expandir o seu raio de ação. A meta é aperfeiçoar cerca de 200 empreendedores regionais e aconselhar 30 empresas anualmente, absorvendo também estudantes de administração em estágios práticos.1415
-Infraestrutura e Próximos Passos
-Apesar do otimismo, o projeto enfrenta desafios estruturais. As negociações avançam para obter o apoio financeiro de agências como a canadiana ACDI (CIDA) e as brasileiras CAPES e CNPq. O orçamento global delineado também prevê a captação de recursos junto do Canadá para a retoma e conclusão do edifício do Departamento de Administração da UFV, cujas obras foram interrompidas por restrições financeiras, restando ainda 67% da estrutura por finalizar. O plano inclui ainda a compra de 25 computadores para equipar um novo laboratório de informática para a pós-graduação.1617
+                      Com a consolidação do Centro de Excelência, o NAIPE — que já atua ativamente na promoção de cursos e na prestação de consultorias — pretende expandir o seu raio de ação. A meta é aperfeiçoar cerca de 200 empreendedores regionais e aconselhar 30 empresas anualmente, absorvendo também estudantes de administração em estágios práticos.1415
+                      Infraestrutura e Próximos Passos
+                      Apesar do otimismo, o projeto enfrenta desafios estruturais. As negociações avançam para obter o apoio financeiro de agências como a canadiana ACDI (CIDA) e as brasileiras CAPES e CNPq. O orçamento global delineado também prevê a captação de recursos junto do Canadá para a retoma e conclusão do edifício do Departamento de Administração da UFV, cujas obras foram interrompidas por restrições financeiras, restando ainda 67% da estrutura por finalizar. O plano inclui ainda a compra de 25 computadores para equipar um novo laboratório de informática para a pós-graduação.1617
 
-A cooperação internacional já foi formalizada através de cartas de intenção assinadas pelo Reitor da UFV, António Fagundes de Sousa, e pelo Reitor da UQAC, Hubert Laforge. Espera-se que, no prazo de quatro a cinco anos após o início efetivo, o programa alcance a sua total autonomia académica e financeira.</p>
+                      A cooperação internacional já foi formalizada através de cartas de intenção assinadas pelo Reitor da UFV, António Fagundes de Sousa, e pelo Reitor da UQAC, Hubert Laforge. Espera-se que, no prazo de quatro a cinco anos após o início efetivo, o programa alcance a sua total autonomia académica e financeira.</p>
                   </div>
                 </div>
 
@@ -1022,6 +1022,13 @@ A cooperação internacional já foi formalizada através de cartas de intençã
                       O desmembramento oficial foi selado em <strong>30 de março de 1988</strong>. Naquela data, o Conselho Federal de Educação (CFE), por meio do <strong>Parecer nº 221/88</strong>, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
                     </p>
                   </div>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração ou Departamento de Ciências Administrativas (?) (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
+                      <strong> Maio de 1988!</strong> Marco da transformação do DAD, o momento culminante e ápice de seu notável percurso até os dias atuais.
+                      A divisão ocorreu de forma amigável com a criação de mais uma Chefia de Departamento e uma Chefia de Seção, com a distribuição das disciplinas, de bens patrimoniais (critério de vincular o bem ao servidor que mais o utiliza, os bens comuns distribuídos equitativamente ou por meio de sorteio, e, aquisição de bens patrimoniais adicionais), lotação de pessoal e espaço físico que continuaria provisoriamente no mesmo local até que se construísse a nova sede.
+                      A condução dessa grande empreitada ficou a cargo da Comissão constituída pela Portaria 418/88/UFV, com o aval de todos os professores e servidores do DAE que já almejavam há algum tempo essa independência e com a chancela dos Professores <strong>Juraci Aureliano Teixeira e Gualberto Ferreira da Silva</strong>, cujo trabalho respaldou essa nova trajetória institucional.</p>
+                  </div>
+
                 </div>
 
                 <a
@@ -1565,8 +1572,8 @@ A cooperação internacional já foi formalizada através de cartas de intençã
                       {filteredEvents.length > 0 ? (
                         <div className="space-y-4">
                           {filteredEvents.map((e, i) => (
-                            <div 
-                              key={i} 
+                            <div
+                              key={i}
                               onClick={() => setSelectedEventModal({ event: e, year: selectedYear })}
                               className="flex gap-5 border-b border-ufv-border last:border-none pb-5 last:pb-0 cursor-pointer group hover:bg-ufv-cream/50 rounded-xl p-3.5 -mx-3.5 transition-all"
                             >
