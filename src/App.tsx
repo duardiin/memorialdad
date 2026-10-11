@@ -44,6 +44,21 @@ const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais', 'ho
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
+const plantasDAD = [
+  {
+    id: 'photo-planta-1',
+    url: '/planta DAD.jfif',
+    title: 'Planta inicial do DAD',
+    caption: 'Planta inicial do Departamento de Administração.'
+  },
+  {
+    id: 'photo-planta-2',
+    url: '/Planta inicial do departamento de administração e do departamento de economia.jpeg',
+    title: 'Planta inicial do DAD e do DEE',
+    caption: 'Planta inicial do Departamento de Administração e do Departamento de Economia.'
+  }
+];
+
 const normalizeText = (text: string) =>
   text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
@@ -1021,21 +1036,36 @@ export default function App() {
                     <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência, os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração ou Departamento de Ciências Administrativas (?) (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
                       </p>
                   </div>
-                  <strong> Maio de 1988,</strong> marco da transformação do DAD, o momento culminante e ápice de seu notável percurso até os dias atuais.
+                  <div className="mt-4">
+                    <strong> Maio de 1988,</strong> marco da transformação do DAD, o momento culminante e ápice de seu notável percurso até os dias atuais.</div>
+                  
                   <div>
-                    <p>A divisão ocorreu de forma amigável com a criação de mais uma Chefia de Departamento e uma Chefia de Seção, com a distribuição das disciplinas, de bens patrimoniais (critério de vincular o bem ao servidor que mais o utiliza, os bens comuns distribuídos equitativamente ou por meio de sorteio, e, aquisição de bens patrimoniais adicionais), lotação de pessoal e espaço físico que continuaria provisoriamente no mesmo local até que se construísse a nova sede.
+                    <p className="mt-4">A divisão ocorreu de forma amigável com a criação de mais uma Chefia de Departamento e uma Chefia de Seção, com a distribuição das disciplinas, de bens patrimoniais (critério de vincular o bem ao servidor que mais o utiliza, os bens comuns distribuídos equitativamente ou por meio de sorteio, e, aquisição de bens patrimoniais adicionais), lotação de pessoal e espaço físico que continuaria provisoriamente no mesmo local até que se construísse a nova sede.
                      </p>
                      <p> A condução dessa grande empreitada ficou a cargo da Comissão constituída pela Portaria 418/88/UFV, com o aval de todos os professores e servidores do DAE que já almejavam há algum tempo essa independência e com a chancela dos Professores <strong>Juraci Aureliano Teixeira e Gualberto Ferreira da Silva</strong>, cujo trabalho respaldou essa nova trajetória institucional.</p>
-                    <p className="mt-6">
-                      <strong>*COLOCAR ESPAÇO DE DUAS LINHAS O Divisor de Águas: O Parecer 221/88 </strong>
-                       O desmembramento oficial foi selado em 30 de março de 1988. Naquela data, o Conselho Federal de Educação (CFE), por meio do Parecer nº 221/88, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
+                    <p className="mt-12 text-right italic">
+                      <strong>O Divisor de Águas: O Parecer 221/88 </strong>
+                      O desmembramento oficial foi selado em 30 de março de 1988. Naquela data, o Conselho Federal de Educação (CFE), por meio do Parecer nº 221/88, autorizou a divisão do DAE em duas unidades administrativas independentes: Departamento de Administração (DAD) e Departamento de Economia (DEE).
                     </p>
 
-                    <img src="/planta DAD.jfif" alt="Planta inicial do departamento de administração e do departamento de economia" />
-                    <img src="/Planta inicial do departamento de administração e do departamento de economia.jpeg" alt="Planta inicial do departamento de administração e do departamento de economia" />
+                    <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-6">
+                      {plantasDAD.map((foto) => (
+                        <figure
+                          key={foto.id}
+                          className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md transition-shadow hover:shadow-lg"
+                        >
+                          <img
+                            src={encodeURI(foto.url)}
+                            alt={foto.title}
+                            className="h-64 w-full bg-gray-50 object-contain"
+                          />
+                          <figcaption className="px-4 py-3 text-center text-sm italic text-gray-600">
+                            {foto.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
                   </div>
-                  <img src="/planta DAD.jfif" alt="/Planta inicial do departamento de administração e do departamento de economia" />
-                  <img src="public/Planta inicial do departamento de administração e do departamento de economia.jpeg" alt="/Planta inicial do departamento de administração e do departamento de economia" />
 
                 </div>
 
