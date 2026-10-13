@@ -105,7 +105,7 @@ export const professoresAtuais: ProfessorAtual[] = [
       'M.S. Administração, 2011, Universidade Federal de Viçosa',
       'D.S. Administração Pública, 2015, Fundação Getulio Vargas',
     ],
-    foto: '/Fernanda Cristina da Silva.jpg'
+    foto: '/Fernanda Cristina.jpeg'
   },
   {
     id: 'fernanda-maria-de-almeida',

@@ -30,14 +30,14 @@ export const professoresTitulares: ProfessorTitular[] = [
     id: "nina-rosa-silveira-cunha",
     nome: "NINA ROSA DA SILVEIRA CUNHA",
     periodoInicio: 2014,
-    cargo: "Professor Titular",
+    cargo: "Professora Titular",
     foto: "/Nina Rosa.jpg"
   },
   {
     id: "telma-regina-costa-guimaraes-barbosa",
     nome: "TELMA REGINA DA COSTA GUIMARÃES BARBOSA",
     periodoInicio: 2014,
-    cargo: "Professor Titular",
+    cargo: "Professora Titular",
     foto: "/TELMA REGINA DA COSTA GUIMARÃES BARBOSA.jfif"
   },
   {
