@@ -466,10 +466,10 @@ export default function App() {
             </AnimatePresence>
           </div>
           <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
-            onClick={() => setActivePanel('quebec')}
+            className={`nav-item whitespace-nowrap ${activePanel === 'naipe' ? 'active' : ''}`}
+            onClick={() => setActivePanel('naipe')}
           >
-            🍁 Projeto Quebec
+            NAIPE
           </button>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'desmembramento' ? 'active' : ''}`}
@@ -478,10 +478,10 @@ export default function App() {
             O Desmembramento do DAE
           </button>
           <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'naipe' ? 'active' : ''}`}
-            onClick={() => setActivePanel('naipe')}
+            className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
+            onClick={() => setActivePanel('quebec')}
           >
-            NAIPE
+            🍁 Projeto Quebec
           </button>
           <div className="hidden sm:flex items-center">
             <div className="w-px h-6 bg-white/15 self-center mx-2 shrink-0"></div>
@@ -607,9 +607,9 @@ export default function App() {
                     </div>
 
                     {[
-                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> },
+                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-4 h-4" /> },
                       { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> },
-                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-4 h-4" /> }
+                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> }
                     ].map(item => (
                       <button
                         key={item.id}
