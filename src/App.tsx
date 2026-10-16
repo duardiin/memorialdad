@@ -6,6 +6,7 @@
 import {
   Award,
   BookOpen,
+  Briefcase,
   Building2,
   Calendar,
   ChevronDown,
@@ -38,7 +39,7 @@ import { colacoesGrau } from './data/homenageadosData';
 import { EventDetailModal } from './data/EventDetailModal';
 import Fuse from 'fuse.js';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'chefes' | 'professores' | 'profissionais' | 'homenageados';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'profissionais' | 'homenageados';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'profissionais', 'homenageados'];
 
@@ -467,6 +468,12 @@ export default function App() {
           >
             O Desmembramento do DAE
           </button>
+          <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'naipe' ? 'active' : ''}`}
+            onClick={() => setActivePanel('naipe')}
+          >
+            NAIPE
+          </button>
           <div className="hidden sm:flex items-center">
             <div className="w-px h-6 bg-white/15 self-center mx-2 shrink-0"></div>
             <span className="text-[10px] tracking-[1.5px] uppercase text-white/35 font-semibold self-center mr-2 whitespace-nowrap">Décadas</span>
@@ -591,7 +598,8 @@ export default function App() {
 
                     {[
                       { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> },
-                      { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> }
+                      { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> },
+                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-4 h-4" /> }
                     ].map(item => (
                       <button
                         key={item.id}
@@ -1081,6 +1089,53 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'naipe' && (
+            <motion.div
+              key="naipe"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="absolute -right-10 -top-10 w-48 h-48 border-[30px] border-white/5 rounded-full"></div>
+                <div className="absolute right-16 -bottom-16 w-32 h-32 border-[20px] border-ufv-gold/10 rounded-full"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Briefcase className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Marco Histórico · 1986</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">NAIPE – Núcleo de Assistência Integral da Pequena e Média Empresa</h1>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="card">
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>O Departamento de Administração, consciente da exigência e da predominância de micro, pequenas e médias empresas no País, procurou diferenciar suas atividades com vistas a suprir esse mercado específico, criando em <strong>11 de Julho de 1986</strong> o <strong>Núcleo de Assistência Integral da Pequena e Média Empresa – NAIPE</strong>. A iniciativa foi pioneira no âmbito das escolas brasileiras de Administração e teve como objetivo desenvolver programas e ações de apoio a essas empresas, em âmbito gerencial, financeiro e técnico, bem como estimular a criação de novos empreendimentos e desenvolvimento de empreendedores.</p>
+                    <p>Fruto do Convênio com o <strong>CEAG-MG (atual SEBRAE-MG), BDMG e INDI</strong>, o NAIPE teve como protagonistas os professores <strong>Adriel Rodrigues de Oliveira, Maria Elena Barbassa e Nina Rosa da Silveira Cunha</strong>, cuja atuação foi fundamental para a concretização da iniciativa.</p>
+                    <p className="mt-8 italic">
+                      Informações complementares desse momento histórico são ilustradas na tag “<strong>Linha do Tempo</strong>”, no ano de <strong>1986</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    setActivePanel('years');
+                    setCurrentDecade(1980);
+                    setSelectedYear(1986);
+                  }}
+                  className="inline-block bg-ufv-green text-white px-5 py-2.5 rounded-lg hover:bg-ufv-green-dark transition-colors font-semibold"
+                >
+                  Notícia
+                </button>
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'chefes' && (
             <motion.div
               key="chefes"
@@ -1381,7 +1436,7 @@ export default function App() {
                     <motion.div
                       key={photo.id}
                       className="bg-white border border-ufv-border rounded-xl overflow-hidden break-inside-avoid shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
-                      onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption, title: photo.title || '' })}
+                      onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption || '', title: photo.title || '' })}
                     >
                       <div className="overflow-hidden bg-ufv-cream">
                         <img
