@@ -487,7 +487,229 @@ export const allGalleryPhotos: GalleryPhoto[] = [
 	url: '/Seminario do DAD 2002.jpeg',
 	title: 'Seminário do DAD 2002.',
 	caption: 'Seminário do DAD 2002.'
-}
+},
+{
+    id: 'photo-154',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.09.jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-155',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.09 (1).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-156',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.09 (2).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-157',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.09 (3).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-158',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10.jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-159',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (1).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-160',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (2).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-161',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (3).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-162',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (4).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-163',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (5).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-164',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (6).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-165',
+    url: '/WhatsApp Image 2026-10-11 at 16.02.10 (7).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-166',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.27.jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-167',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.27 (1).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-168',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28.jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-169',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (1).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-170',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (2).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-171',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (3).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-172',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (4).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-173',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (5).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-174',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (6).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-175',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (7).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-176',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (8).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-177',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (9).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-178',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (10).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-179',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (11).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-180',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (12).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-181',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.28 (13).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-182',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55.jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-183',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (1).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-184',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (2).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-185',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (3).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-186',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (4).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-187',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (5).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-188',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (6).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-189',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (7).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
+  {
+    id: 'photo-190',
+    url: '/WhatsApp Image 2026-10-11 at 16.14.55 (8).jpeg',
+    title: 'Registro histórico do DAD',
+    caption: 'Registro fotográfico do acervo do DAD.'
+  },
 ];
 
 

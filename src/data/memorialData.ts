@@ -431,7 +431,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1980',
-      desc: 'Prof.\nProf. Aula da Saudade',
+      desc: 'Prof. Jacinto Luiz da Silva\nProf. João Adamor Dias Neves',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -452,7 +452,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1980',
-      desc: 'Prof. Evaldo Guimarães Barbosa\nProfª. Maria Helena Barbassa -  Aula da Saudade',
+      desc: 'Prof. Evaldo Guimarães Barbosa\nProfª. Maria Elena Barbassa -  Aula da Saudade',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -534,7 +534,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1981',
-      desc: 'Prof.\nProf. Aula da Saudade',
+      desc: 'Prof. Adolfo Egídio Reis \nProf. José Edson Lara',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -698,7 +698,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1982',
-      desc: 'Prof.\nProf. Aula da Saudade',
+      desc: 'Prof. Alberto Maya de Miranda (especial)\nProf. José Edson Lara\nProf. Marcos Tanure Sanábio',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -784,7 +784,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1982',
-      desc: 'Prof. Maria Helena Barbassa\nProf. José Edson Lara\nProf. Marcos Tanura Sanábio - Aula da Saudade',
+      desc: 'Prof. Maria Elena Barbassa\nProf. José Edson Lara\nProf. Marcos Tanure Sanábio - Aula da Saudade',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -833,7 +833,7 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Instituição da Data Oficial de Aniversário do DAE',
-        desc: 'Em 10 de maio de 1983, ficou formalmente instituído o dia 10 de maio como a data oficial de aniversário e comemoração do DAE. A celebração foi estabelecida pelo fato de o departamento ter sido originalmente implantado e instalado nesta respectiva data. (PROCURAR ATA)' ,
+        desc: 'Em 10 de maio de 1983, ficou formalmente instituído o dia 10 de maio como a data oficial de aniversário e comemoração do DAE. A celebração foi estabelecida pelo fato de o departamento ter sido originalmente implantado e instalado nesta respectiva data.' ,
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -841,7 +841,7 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'IV Semana do Administrador Discutiu Pequenas e Médias Empresas',
-        desc: 'O empresário Nicolau Martino debateu na IV Semana do Administrador o tema central "Administração na Pequena e Média Empresa" e teve como palestrantes o administrador de empresas Luiz Inácio Tadeu Muraro e o empresário José de Almeida Neto. Sobre "Computadores: Panorama Nacional" foi abordado por Luís Julião Braga, técnico da Central de Processamento de Dados da UFV e Paulo Bastos Tigre, do Instituto de Economia Industrial da UFRJ. Os demais palestrantes convidados foram: Alderino Vieira Ferraz, de Guarani-MG, que fez um "Depoimento de um empresário da Zona da Mata sobre sua experiência em consórcio para exportação"; Francisco José de Almeida Neto, de Ponte Nova- MG, sobre "Dificuldades da Pequena e Média Empresa no Interior"; e Nicolau Martino Netto, sobre "Aspectos de Treinamento de Pessoal em P.M.C." (12mai. n.790; 19mai. n.791 e. 4 26mai. n.792).',
+        desc: 'O empresário Nicolau Martino debateu na IV Semana do Administrador o tema central "Administração na Pequena e Média Empresa" e teve como palestrantes o administrador de empresas Luiz Inácio Tadeu Muraro e o empresário José de Almeida Neto. Sobre "Computadores: Panorama Nacional" foi abordado por Luís Julião Braga, técnico da Central de Processamento de Dados da UFV e Paulo Bastos Tigre, do Instituto de Economia Industrial da UFRJ. Os demais palestrantes convidados foram: Alderino Vieira Ferraz, de Guarani-MG, que fez um "Depoimento de um empresário da Zona da Mata sobre sua experiência em consórcio para exportação"; Francisco José de Almeida Neto, de Ponte Nova- MG, sobre "Dificuldades da Pequena e Média Empresa no Interior"; e Nicolau Martino Netto, sobre "Aspectos de Treinamento de Pessoal em P.M.C." (12mai. n.790; 19mai. n.791 e 26mai. n.792).',
         photos: [{ url: '/1983 - IV Semana do Administrador.png', caption: 'Na sessão de abertura, o conferencista Luiz Inácio Tadeu Muraro, o Reitor Antônio Fagundes de Sousa, que presidiu os trabalhos, o professor Gilson Faria Potsch Magalhães e a empresária Rosa Maria. Bouchardet. ' },
         { url: '/1983 - IV Semana do Administrador Capa.jpeg', caption: 'IV Semana do Administrador' },
         ],
@@ -870,7 +870,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Julho de 1983',
-      desc: 'Prof.\nProf. Aula da Saudade',
+      desc: 'Prof. José Clevio Dias Casalli\nJoão Adamor Dias Neves\n Maria Elena Barbassa',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -1128,8 +1128,8 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
-        title: 'Criação da Semana do Empresário e Inauguração do Núcleo de Assistência',
-        desc: 'Em junho de 1986, o DAE expandiu suas atividades ao aprovar a criação da Semana do Empresário. Em termos de infraestrutura, anunciou para agosto a inauguração do Núcleo de Assistência Integral à Pequena Empresa no DAE, planejado para ocorrer junto com o Encontro de Empresários da Zona da Mata.',
+        title: 'Criação da Semana do Empresário e Inauguração do Núcleo de Assistência Integral à PME',
+        desc: 'Em junho de 1986, o DAE expandiu suas atividades ao aprovar a criação da Semana do Empresário. Em termos de infraestrutura, anunciou para agosto a inauguração do Núcleo de Assistência Integral à Pequena e Média Empresa no DAE, planejado para ocorrer junto com o Encontro de Empresários da Zona da Mata.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
