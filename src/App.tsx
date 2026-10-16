@@ -26,6 +26,7 @@ import {
   Phone,
   Plus,
   Search,
+  UserCog,
   Users,
   X
 } from 'lucide-react';
@@ -37,14 +38,15 @@ import { allGalleryPhotos } from './data/allGalleryPhotos';
 import { chefesDepartamento } from './data/chefesData';
 import { professoresTitulares } from './data/professoresTitularesData';
 import { professoresAtuais } from './data/professoresAtuaisData';
+import { tecnicosAtuais } from './data/tecnicosAtuaisData';
 import { profissionaisAdmitidos } from './data/profissionaisAdmitidosData';
 import { colacoesGrau } from './data/homenageadosData';
 import { EventDetailModal } from './data/EventDetailModal';
 import Fuse from 'fuse.js';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'profissionais' | 'homenageados';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'profissionais' | 'homenageados';
 
-const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'profissionais', 'homenageados'];
+const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'tecnicosAtuais', 'profissionais', 'homenageados'];
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
@@ -172,7 +174,10 @@ export default function App() {
   }, [selectedYear, dbPhotos]);
 
   const combinedGalleryPhotos = useMemo(() => {
-    return [...allGalleryPhotos, ...extraGalleryPhotos];
+    // Fotos coloridas primeiro, depois preto e branco; dentro de cada grupo mantém a ordem original.
+    const photos = [...allGalleryPhotos, ...extraGalleryPhotos];
+    const semCor = (p: (typeof photos)[number]) => 'colorida' in p && p.colorida === false;
+    return [...photos.filter(p => !semCor(p)), ...photos.filter(semCor)];
   }, [extraGalleryPhotos]);
 
   const filteredColacoes = useMemo(() => {
@@ -449,6 +454,12 @@ export default function App() {
                       <Users className="w-4 h-4 shrink-0" /> Professores Atuais
                     </button>
                     <button
+                      onClick={() => { setActivePanel('tecnicosAtuais'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'tecnicosAtuais' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <UserCog className="w-4 h-4 shrink-0" /> Técnicos Administrativos Atuais
+                    </button>
+                    <button
                       onClick={() => { setActivePanel('profissionais'); setIsODadMenuOpen(false); }}
                       className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'profissionais' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
                     >
@@ -586,6 +597,7 @@ export default function App() {
                               { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
                               { id: 'professores', label: 'Professores Titulares', icon: <GraduationCap className="w-4 h-4" /> },
                               { id: 'professoresAtuais', label: 'Professores Atuais', icon: <Users className="w-4 h-4" /> },
+                              { id: 'tecnicosAtuais', label: 'Técnicos Administrativos Atuais', icon: <UserCog className="w-4 h-4" /> },
                               { id: 'profissionais', label: 'Profissionais Admitidos', icon: <Users className="w-4 h-4" /> },
                               { id: 'homenageados', label: 'Profissionais Homenageados', icon: <Award className="w-4 h-4" /> },
                             ].map(item => (
@@ -990,24 +1002,87 @@ export default function App() {
                     <p>
                       O coração do projeto batia através do intercâmbio docente. Em <strong>23 de junho de 1989</strong>, um comitê de professoras da UFV realizou uma histórica viagem oficial para visitar universidades no Canadá. Entre os nomes de destaque, figuram as professoras <strong>Nina Rosa</strong> e <strong>Maria Elena Barbassa</strong>.
                     </p>
-                    <p>UFV e Universidade de Quebec Avançam em Parceria Internacional para Impulsionar Pequenas e Médias Empresas na Zona da Mata
+                  </div>
+                </div>
 
-                      VIÇOSA (MG) – A Universidade Federal de Viçosa (UFV) está a consolidar um ambicioso programa de cooperação técnica internacional com a Universidade de Quebec, através do campus de Chicoutimi (UQAC), no Canadá. O projeto bilateral visa transformar o panorama socioeconómico da Zona da Mata mineira por meio da capacitação académica e do fortalecimento das Pequenas e Médias Empresas (PMEs).12
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Handshake className="w-4 h-4 text-white" /></div>
+                    UFV e Universidade de Quebec Avançam em Parceria Internacional para Impulsionar Pequenas e Médias Empresas na Zona da Mata
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      <strong>VIÇOSA (MG)</strong> – A Universidade Federal de Viçosa (UFV) está a consolidar um ambicioso programa de <strong>cooperação técnica internacional</strong> com a <strong>Universidade de Quebec</strong>, através do campus de <strong>Chicoutimi (UQAC)</strong>, no Canadá. O projeto bilateral visa transformar o panorama socioeconómico da <strong>Zona da Mata mineira</strong> por meio da capacitação académica e do fortalecimento das <strong>Pequenas e Médias Empresas (PMEs)</strong>.<sup className="text-[10px] text-ufv-gold ml-0.5">12</sup>
+                    </p>
+                    <div className="bg-ufv-cream border border-ufv-border rounded-lg p-5">
+                      <p className="text-sm">
+                        A iniciativa ganhou novo fôlego com a recente visita de três semanas do professor <strong>André Courtemanche</strong>, antigo diretor do Departamento de Ciências Económicas e Administrativas da UQAC, à UFV. Durante a sua estadia, o docente reuniu-se com dirigentes e professores locais para detalhar as diretrizes de execução do programa.<sup className="text-[10px] text-ufv-gold ml-0.5">34</sup>
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                      A iniciativa ganhou novo fôlego com a recente visita de três semanas do professor André Courtemanche, antigo diretor do Departamento de Ciências Económicas e Administrativas da UQAC, à UFV. Durante a sua estadia, o docente reuniu-se com dirigentes e professores locais para detalhar as diretrizes de execução do programa.34
-                      Os Três Pilares do Projeto
-                      Desenvolvido pelas professoras Maria Elena Barbassa e Nina Rosa da Silveira Cunha, do Departamento de Administração (DAD) da UFV, o pré-projeto foca-se em metas estratégicas de longo prazo:5
-                      Doutoramento de Docentes: Previsão de formação e aperfeiçoamento de 6 a 8 professores do DAD em nível de Ph.D. no Canadá, direcionados para universidades associadas como a Universidade de Quebec em Montreal, as HEC de Montreal e a Universidade Laval.6
-                      Mestrado Inédito em Gestão de PMEs: Implantação de um curso de pós-graduação (M.Sc.) em Administração de Pequenas e Médias Empresas na UFV. O currículo estruturado prevê áreas de concentração voltadas para Recursos Humanos, Finanças, Mercadologia e Sistemas de Informação. A primeira turma cumprirá parte dos estudos no Canadá.789
-                      Centro de Excelência e Incubadora: Transformação do atual Núcleo de Apoio Integral ao Pequeno Empresário (NAIPE) da UFV num Centro de Excelência em Estudos Aplicados à PME. O plano inclui a criação de uma incubadora de empresas para transferir e adaptar a experiência canadiana à realidade empresarial brasileira.1011
-                      Resposta a uma Procura Regional Estratégica
-                      A urgência do projeto justifica-se pelos dados económicos da região. No Brasil, as PMEs representam 98% do tecido empresarial e são responsáveis por mais de 72% dos postos de trabalho. Na região de Viçosa, contudo, os empresários enfrentam graves entraves como a obsolescência de equipamentos, dificuldades de comercialização, falta de capital circulante e escassez de mão-de-obra qualificada devido ao êxodo rural para grandes centros.21213
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Landmark className="w-4 h-4 text-white" /></div>
+                    Os Três Pilares do Projeto
+                  </h2>
+                  <div className="space-y-6 mt-2 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      Desenvolvido pelas professoras <strong>Maria Elena Barbassa</strong> e <strong>Nina Rosa da Silveira Cunha</strong>, do Departamento de Administração (DAD) da UFV, o pré-projeto foca-se em metas estratégicas de longo prazo:<sup className="text-[10px] text-ufv-gold ml-0.5">5</sup>
+                    </p>
+                    <div className="border-l-4 border-ufv-gold pl-5">
+                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-1">Doutoramento de Docentes</div>
+                      <p>
+                        Previsão de formação e aperfeiçoamento de <strong>6 a 8 professores do DAD</strong> em nível de <strong>Ph.D. no Canadá</strong>, direcionados para universidades associadas como a Universidade de Quebec em Montreal, as HEC de Montreal e a Universidade Laval.<sup className="text-[10px] text-ufv-gold ml-0.5">6</sup>
+                      </p>
+                    </div>
+                    <div className="border-l-4 border-ufv-green pl-5">
+                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-green mb-1">Mestrado Inédito em Gestão de PMEs</div>
+                      <p>
+                        Implantação de um curso de <strong>pós-graduação (M.Sc.) em Administração de Pequenas e Médias Empresas</strong> na UFV. O currículo estruturado prevê áreas de concentração voltadas para Recursos Humanos, Finanças, Mercadologia e Sistemas de Informação. A primeira turma cumprirá parte dos estudos no Canadá.<sup className="text-[10px] text-ufv-gold ml-0.5">789</sup>
+                      </p>
+                    </div>
+                    <div className="border-l-4 border-ufv-gold pl-5">
+                      <div className="text-[11px] tracking-[2px] uppercase font-bold text-ufv-gold mb-1">Centro de Excelência e Incubadora</div>
+                      <p>
+                        Transformação do atual Núcleo de Apoio Integral ao Pequeno Empresário <strong>(NAIPE)</strong> da UFV num <strong>Centro de Excelência em Estudos Aplicados à PME</strong>. O plano inclui a criação de uma <strong>incubadora de empresas</strong> para transferir e adaptar a experiência canadiana à realidade empresarial brasileira.<sup className="text-[10px] text-ufv-gold ml-0.5">1011</sup>
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                      Com a consolidação do Centro de Excelência, o NAIPE — que já atua ativamente na promoção de cursos e na prestação de consultorias — pretende expandir o seu raio de ação. A meta é aperfeiçoar cerca de 200 empreendedores regionais e aconselhar 30 empresas anualmente, absorvendo também estudantes de administração em estágios práticos.1415
-                      Infraestrutura e Próximos Passos
-                      Apesar do otimismo, o projeto enfrenta desafios estruturais. As negociações avançam para obter o apoio financeiro de agências como a canadiana ACDI (CIDA) e as brasileiras CAPES e CNPq. O orçamento global delineado também prevê a captação de recursos junto do Canadá para a retoma e conclusão do edifício do Departamento de Administração da UFV, cujas obras foram interrompidas por restrições financeiras, restando ainda 67% da estrutura por finalizar. O plano inclui ainda a compra de 25 computadores para equipar um novo laboratório de informática para a pós-graduação.1617
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Briefcase className="w-4 h-4 text-white" /></div>
+                    Resposta a uma Procura Regional Estratégica
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      A urgência do projeto justifica-se pelos dados económicos da região. No Brasil, as PMEs representam <strong>98% do tecido empresarial</strong> e são responsáveis por <strong>mais de 72% dos postos de trabalho</strong>. Na região de Viçosa, contudo, os empresários enfrentam graves entraves como a obsolescência de equipamentos, dificuldades de comercialização, falta de capital circulante e escassez de mão-de-obra qualificada devido ao êxodo rural para grandes centros.<sup className="text-[10px] text-ufv-gold ml-0.5">21213</sup>
+                    </p>
+                    <div className="border border-ufv-border rounded-lg p-5 bg-ufv-cream/40">
+                      <p>
+                        Com a consolidação do Centro de Excelência, o NAIPE — que já atua ativamente na promoção de cursos e na prestação de consultorias — pretende expandir o seu raio de ação. A meta é aperfeiçoar cerca de <strong>200 empreendedores regionais</strong> e aconselhar <strong>30 empresas anualmente</strong>, absorvendo também estudantes de administração em estágios práticos.<sup className="text-[10px] text-ufv-gold ml-0.5">1415</sup>
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-                      A cooperação internacional já foi formalizada através de cartas de intenção assinadas pelo Reitor da UFV, António Fagundes de Sousa, e pelo Reitor da UQAC, Hubert Laforge. Espera-se que, no prazo de quatro a cinco anos após o início efetivo, o programa alcance a sua total autonomia académica e financeira.</p>
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Building2 className="w-4 h-4 text-white" /></div>
+                    Infraestrutura e Próximos Passos
+                  </h2>
+                  <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
+                    <p>
+                      Apesar do otimismo, o projeto enfrenta desafios estruturais. As negociações avançam para obter o apoio financeiro de agências como a canadiana <strong>ACDI (CIDA)</strong> e as brasileiras <strong>CAPES</strong> e <strong>CNPq</strong>. O orçamento global delineado também prevê a captação de recursos junto do Canadá para a retoma e conclusão do <strong>edifício do Departamento de Administração da UFV</strong>, cujas obras foram interrompidas por restrições financeiras, restando ainda <strong>67% da estrutura</strong> por finalizar. O plano inclui ainda a compra de <strong>25 computadores</strong> para equipar um novo laboratório de informática para a pós-graduação.<sup className="text-[10px] text-ufv-gold ml-0.5">1617</sup>
+                    </p>
+                    <div className="bg-ufv-cream border border-ufv-border rounded-lg p-5">
+                      <p className="text-sm">
+                        A cooperação internacional já foi formalizada através de <strong>cartas de intenção</strong> assinadas pelo Reitor da UFV, <strong>António Fagundes de Sousa</strong>, e pelo Reitor da UQAC, <strong>Hubert Laforge</strong>. Espera-se que, no prazo de quatro a cinco anos após o início efetivo, o programa alcance a sua total autonomia académica e financeira.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -1308,6 +1383,58 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'tecnicosAtuais' && (
+            <motion.div
+              key="tecnicosAtuais"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <UserCog className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Técnicos Administrativos Atuais</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Servidores técnico-administrativos em exercício no Departamento de Administração e Contabilidade.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {tecnicosAtuais.map((tec) => (
+                  <div key={tec.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {tec.foto ? (
+                        <img src={tec.foto} alt={tec.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <UserCog className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <span className="font-serif text-lg font-bold text-ufv-gray block mb-1">{tec.nome}</span>
+                      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-4 gap-y-1 text-xs text-ufv-gold font-semibold items-center sm:items-start">
+                        <a href={`mailto:${tec.email}`} className="inline-flex items-center gap-1.5 hover:underline">
+                          <Mail className="w-3.5 h-3.5" /> {tec.email}
+                        </a>
+                        {tec.telefone && (
+                          <span className="inline-flex items-center gap-1.5">
+                            <Phone className="w-3.5 h-3.5" /> {tec.telefone}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'profissionais' && (
             <motion.div
               key="profissionais"
@@ -1503,27 +1630,30 @@ export default function App() {
               </div>
 
               {combinedGalleryPhotos.length > 0 ? (
-                <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {combinedGalleryPhotos.map((photo) => (
                     <motion.div
                       key={photo.id}
-                      className="bg-white border border-ufv-border rounded-xl overflow-hidden break-inside-avoid shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
+                      className="bg-white border border-ufv-border rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-shadow cursor-pointer group"
                       onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption || '', title: photo.title || '' })}
                     >
-                      <div className="overflow-hidden bg-ufv-cream">
+                      <div className="overflow-hidden bg-ufv-cream aspect-[4/3]">
                         <img
                           src={photo.url}
-                          alt={photo.caption}
-                          className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          alt={photo.caption || photo.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="p-4">
                         {photo.title && (
                           <div className="font-semibold text-ufv-gray text-sm mb-1">{photo.title}</div>
                         )}
-                        <p className="text-xs text-ufv-gray-light italic leading-relaxed">
-                          &ldquo;{photo.caption}&rdquo;
-                        </p>
+                        {photo.caption && photo.caption.trim() !== photo.title?.trim() && (
+                          <p className="text-xs text-ufv-gray-light italic leading-relaxed">
+                            &ldquo;{photo.caption}&rdquo;
+                          </p>
+                        )}
                       </div>
                     </motion.div>
                   ))}
