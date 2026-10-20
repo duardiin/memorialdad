@@ -9,16 +9,7 @@ export interface ProfessorAtual {
 }
 
 export const professoresAtuais: ProfessorAtual[] = [
-  {
-    id: 'adriele-aparecida-gomes-de-bem',
-    nome: 'Adriele Aparecida Gomes de Bem',
-    email: 'adriele.bem@ufv.br',
-    formacao: [
-      'Superior em Administração, 2021, Universidade Federal de Viçosa',
-      'M.S. Administração, 2024, Universidade Federal de Viçosa',
-    ],
-    foto: '/adriele aparecida.jpg'
-  },
+
   {
     id: 'alan-ferreira-de-freitas',
     nome: 'Alan Ferreira de Freitas',
@@ -77,15 +68,6 @@ export const professoresAtuais: ProfessorAtual[] = [
       'D.S. Administração, 2019, Universidade Federal de Pernambuco',
     ],
     foto: '/Diego Costa Mendes.jpg'
-  },
-  {
-    id: 'emanuela-cristina-chiconeli-silva-inez',
-    nome: 'Emanuela Cristina Chiconeli Silva Inez',
-    email: 'emanuela.silva@ufv.br',
-    formacao: [
-      'Superior em Ciências Contábeis, 2024, Universidade Federal de Viçosa',
-    ],
-    foto: '/Emanuela Cristina Chiconeli Silva Inez.jpg'
   },
   {
     id: 'evandro-rodrigues-de-faria',
@@ -241,15 +223,6 @@ export const professoresAtuais: ProfessorAtual[] = [
       'D.S. Ciências Contábeis, 2012, USP',
     ],
     foto: '/Nalbia de Araújo Santos.jpg'
-  },
-  {
-    id: 'pedro-henrique-jesus-oliveira',
-    nome: 'Pedro Henrique Jesus Oliveira',
-    email: 'pedro.henrique.oliveira@ufv.br',
-    formacao: [
-      'Superior em Ciências Contábeis, 2019, Univiçosa',
-    ],
-    foto: '/Pedro Henrique Jesus Oliveira.jpg'
   },
   {
     id: 'rodrigo-gava',

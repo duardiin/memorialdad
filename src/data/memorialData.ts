@@ -13,7 +13,7 @@ export const memorialData: MemorialData = {
         desc: 'O Conselho de Graduação estudou a viabilidade de implantação do Curso de Administração de Empresas, para o qual também se pensou em uma possível diversificação em  Administração de Empresas Rurais (06 set. nº 321).',
         photos: [],
         externalLinks: [],
-        articleUrl: ''
+        articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/4/2/7/427a9528694d18179e601a9dbd1dd0ad3bd6e3d4a9883acea2fa9cda6441ee46/Edi____o_n321.pdf'
       }
     ],
     photos: [],
@@ -44,10 +44,10 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Início das primeiras turmas de Administração',
-        desc: 'O curso de Administração recebe as primeiras turmas regulares, sendo 25 vagas para o curso de Administração de Empresas e 25 vagas para o curso de Ciências Econômicas. (12set. n.395)',
+        desc: 'O Departamento de Administração e Economia recebe as primeiras turmas regulares, sendo 25 vagas para o curso de Administração de Empresas e 25 vagas para o curso de Ciências Econômicas. (12set. n.395)',
         photos: [],
         externalLinks: [],
-        articleUrl: ''
+        articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/a/b/3/ab3e2c941dd8e96fbadc03dc9761e014427d3fb1ea8939b02c7be861f5753f89/Edi____o_n395.pdf'
       }
     ],
     photos: [],
@@ -107,7 +107,7 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Implantação do DAE',
-        desc: 'Implantação do Departamento de Administração e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano, (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração de Empresas e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais.',
+        desc: 'Implantação do Departamento de Administração e de Economia (DAE) e a constituição de suas respectivas Câmaras Curriculares, com nomeação do primeiro chefe do DAE, Prof. Juraci Aureliano Teixeira, (19 de maio de 1977 N.° 478). O Departamento de Administração e Economia (DAE) agregava os cursos de Administração de Empresas e Economia, responsáveis pelas disciplinas das áreas de Administração, Contabilidade, Direito, Economia e Ciências Sociais.',
         photos: [],
         externalLinks: [],
         articleUrl: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/5/0/f/50f5df33d815cc0efb414e84f7390e5a4c6007d406997062ff50f104c1815097/Edi____o_n478.pdf'
@@ -342,7 +342,7 @@ export const memorialData: MemorialData = {
       {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1979 e menção ao primeiro formando de Administração',
-      desc: 'Prof. João Adamor Dias Neves\nProf. José Mansur Nascif\nProf. Aula da Saudade\n\nMenção especial ao primeiro e único formando do Curso de Administração – Daniel Lima Carneiro',
+      desc: 'Prof. João Adamor Dias Neves\nProf. José Mansur Nascif\nAula da Saudade\n\nMenção especial ao primeiro e único formando do Curso de Administração – Daniel Lima Carneiro',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -383,7 +383,7 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Eloy Alves Filho',
-        desc: 'Foi empossado "pro tempore" na chefia do Departamento de Administração e Economia o Prof. Eloy Alves Filho, substituindo o Prof. Tancredo Almada Cruz, em treinamento. (06mar. n.623). (MUDAR A FOTO)',
+        desc: 'Foi empossado "pro tempore" na chefia do Departamento de Administração e Economia o Prof. Eloy Alves Filho, substituindo o Prof. Tancredo Almada Cruz, em treinamento. (06mar. n.623).',
         photos: [{
           url: '/1979 “Novos Diretores”.webp',      // Caminho do arquivo da imagem (ex: '/foto.jpg')
           caption: 'Novos Diretores'   // Legenda ou descrição da foto
@@ -2052,7 +2052,7 @@ export const memorialData: MemorialData = {
       {
         tag: 'ensino',
         title: 'Aprovação da Especialização em Administração Municipal',
-        desc: 'Aprovação da implantação do curso de especialização Lato-Sensu em Administração Municipal, com carga horária de 400 horas-aulas com disciplinas aos sábados. (PROCURAR QUAL ATA)',
+        desc: 'Aprovação da implantação do curso de especialização Lato-Sensu em Administração Municipal, com carga horária de 400 horas-aulas com disciplinas aos sábados.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2126,6 +2126,14 @@ export const memorialData: MemorialData = {
         tag: 'homenagem',
         title: 'Programa de Apoio à Integração Graduação/Pós-Graduação (PROIN) e Parabenização pelo Resultado no Provão',
         desc: 'Atualizações sobre o status do Projeto PROIN e congratulações do Reitor parabenizando os professores do DAD pelo expressivo resultado obtido no Exame Nacional de Cursos (Provão).',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'Minuto Gerencial',
+        desc: 'Foi lançado o Minuto Gerencial, uma série de orientações para o público ouvinte da Rádio Universitária. Os textos tiveram a participação efetiva dos alunos, que  abordaram temas como A Qualidade do Ponto de Vista do Cliente, Como Tratar o Cliente, Informação e Qualidade, Atendimento por  Telefone,  5 S, dentre outros.',
         photos: [],
         externalLinks: [],
         articleUrl: ''

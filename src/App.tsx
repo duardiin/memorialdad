@@ -1126,7 +1126,7 @@ export default function App() {
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
                   </div>
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência, os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração ou Departamento de Ciências Administrativas (?) (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
+                    <p>Ao longo dos <strong>14 anos</strong> de harmoniosa convivência, os cursos de <strong>Administração de Empresas e de Ciências Econômicas</strong> compartilharam a estrutura do Departamento de Administração e Economia (DAE). Em razão da expansão das atividades de ensino, pesquisa e extensão, os dois cursos tornaram-se independentes, conquistando autonomia, o que resultou em duas estruturas distintas: Departamento de Administração (DAD) e Departamento de Economia (DEE), cada qual seguindo trajetórias diferentes.
                       </p>
                   </div>
                   <div className="mt-4">
@@ -1199,10 +1199,10 @@ export default function App() {
               <div className="space-y-6">
                 <div className="card">
                   <div className="space-y-4 text-ufv-gray text-[15px] leading-relaxed">
-                    <p>O Departamento de Administração, consciente da exigência e da predominância de micro, pequenas e médias empresas no País, procurou diferenciar suas atividades com vistas a suprir esse mercado específico, criando em <strong>11 de Julho de 1986</strong> o <strong>Núcleo de Assistência Integral da Pequena e Média Empresa – NAIPE</strong>. A iniciativa foi pioneira no âmbito das escolas brasileiras de Administração e teve como objetivo desenvolver programas e ações de apoio a essas empresas, em âmbito gerencial, financeiro e técnico, bem como estimular a criação de novos empreendimentos e desenvolvimento de empreendedores.</p>
+                    <p>O Departamento de Administração, consciente da exigência e da predominância de micro, pequenas e médias empresas no País, procurou diferenciar suas atividades com vistas a suprir esse mercado específico, criando em <strong>11 de Julho de 1986</strong> o <strong>Núcleo de Assistência Integral da Pequena e Média Empresa – NAIPE</strong>. A iniciativa foi pioneira no âmbito das escolas brasileiras de Administração e teve como objetivo desenvolver programas e ações de apoio a essas empresas, na áreas gerencial, financeira e técnica, bem como estimular a criação de novos empreendimentos e desenvolvimento de empreendedores.</p>
                     <p>Fruto do Convênio com o <strong>CEAG-MG (atual SEBRAE-MG), BDMG e INDI</strong>, o NAIPE teve como protagonistas os professores <strong>Adriel Rodrigues de Oliveira, Maria Elena Barbassa e Nina Rosa da Silveira Cunha</strong>, cuja atuação foi fundamental para a concretização da iniciativa.</p>
                     <p className="mt-8 italic">
-                      Informações complementares desse momento histórico são ilustradas na tag “<strong>Linha do Tempo</strong>”, no ano de <strong>1986</strong>.
+                      Informações complementares desse momento histórico são ilustradas na aba “<strong>Linha do Tempo</strong>”, no ano de <strong>1986</strong>.
                     </p>
                   </div>
                 </div>
@@ -1337,7 +1337,7 @@ export default function App() {
                     </div>
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
                   </div>
-                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Professores Atuais</h1>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Professores Efetivos em 2026</h1>
                   <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
                     Corpo docente em exercício no Departamento de Administração e Contabilidade.
                   </p>
@@ -1399,7 +1399,7 @@ export default function App() {
                     </div>
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
                   </div>
-                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Técnicos Administrativos Atuais</h1>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Técnicos Administrativos em 2026</h1>
                   <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
                     Servidores técnico-administrativos em exercício no Departamento de Administração e Contabilidade.
                   </p>
@@ -2174,7 +2174,7 @@ export default function App() {
                     <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">DAD · 50 anos · 2026</span>
                   </div>
                   <h2 id="welcome-title" className="font-serif text-2xl sm:text-3xl font-bold leading-tight">
-                    Memorialia DAD
+                    Memorabilia DAD
                   </h2>
                 </div>
               </div>
@@ -2182,7 +2182,7 @@ export default function App() {
               <div className="p-6 sm:p-8">
                 <div className="space-y-5 text-ufv-gray text-[15px] leading-relaxed">
                   <p>
-                    Olá, seja bem vindo(a) ao <strong>Memorialia DAD</strong>, sistema concebido para se tornar um repositório permanente de informações que ajudem a construir uma memória sólida e consistente do DAD a partir da comemoração de seus 50 anos de existência, completos em 2026. A expectativa é de que seu conteúdo passe a ser continuamente alimentado, não só para retratar acontecimentos vindouros, mas também para preencher lacunas eventualmente encontradas nas múltiplas bases de dados, formais ou não, utilizadas como fonte.
+                    Olá, seja bem vindo(a) ao <strong>Memorabilia DAD</strong>, sistema concebido para se tornar um repositório permanente de informações que ajudem a construir uma memória sólida e consistente do DAD a partir da comemoração de seus 50 anos de existência, completos em 2026. A expectativa é de que seu conteúdo passe a ser continuamente alimentado, não só para retratar acontecimentos vindouros, mas também para preencher lacunas eventualmente encontradas nas múltiplas bases de dados, formais ou não, utilizadas como fonte.
                   </p>
                   <p className="font-semibold text-ufv-green">
                     Desejamos-lhe uma agradável e produtiva experiência!
