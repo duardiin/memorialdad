@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "teste-do-painel-sera-excluido-08593db8",
+    "year": 2026,
+    "tag": "",
+    "title": "TESTE DO PAINEL (será excluído)",
+    "desc": "Teste automático.",
+    "photos": [
+      {
+        "url": "/uploads/noticias/2026/teste-da13fbd0.png",
+        "caption": "teste"
+      }
+    ],
+    "externalLinks": [],
+    "articleUrl": "",
+    "_meta": {
+      "criadoEm": "2026-10-21T19:33:14.085Z",
+      "criadoPor": "Conta principal"
+    }
+  }
+]
