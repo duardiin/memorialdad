@@ -60,8 +60,17 @@ const criarArmazenamentoGitHub = (token: string, repo: string, branch: string): 
     return resposta;
   };
 
+  const conferirCredenciais = (resposta: Response) => {
+    if (resposta.status === 401) {
+      throw new ErroConfiguracao(
+        'O token do GitHub (GITHUB_TOKEN) é inválido ou venceu. Gere um novo token e atualize na Vercel (veja PAINEL-ADMIN.md).'
+      );
+    }
+  };
+
   const ghJson = async (rota: string, init: RequestInit = {}) => {
     const resposta = await gh(rota, init);
+    conferirCredenciais(resposta);
     if (!resposta.ok) {
       const corpo = await resposta.text();
       const erro = new ErroArmazenamento(`GitHub ${resposta.status} em ${rota}: ${corpo.slice(0, 300)}`);
@@ -78,6 +87,7 @@ const criarArmazenamentoGitHub = (token: string, repo: string, branch: string): 
       'application/vnd.github.raw+json'
     );
     if (resposta.status === 404) return null;
+    conferirCredenciais(resposta);
     if (!resposta.ok) throw new ErroArmazenamento(`GitHub ${resposta.status} ao ler ${caminho}`);
     return resposta.text();
   };
