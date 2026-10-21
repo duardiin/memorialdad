@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "testando-920ede3b",
+    "year": 2026,
+    "tag": "",
+    "title": "Testando",
+    "desc": "criado o painel admin para o proximo troxa que pegar isso",
+    "photos": [],
+    "externalLinks": [],
+    "articleUrl": "",
+    "_meta": {
+      "criadoEm": "2026-10-21T19:46:33.478Z",
+      "criadoPor": "Conta principal"
+    }
+  }
+]
