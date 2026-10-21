@@ -31,22 +31,25 @@ import {
   X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import React, { useEffect, useMemo, useState } from 'react';
-import { memorialData } from './data/memorialData';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { MemorialEvent, MemorialPhoto } from './types';
-import { allGalleryPhotos } from './data/allGalleryPhotos';
-import { chefesDepartamento } from './data/chefesData';
-import { professoresTitulares } from './data/professoresTitularesData';
-import { professoresAtuais } from './data/professoresAtuaisData';
-import { tecnicosAtuais } from './data/tecnicosAtuaisData';
-import { profissionaisAdmitidos } from './data/profissionaisAdmitidosData';
-import { colacoesGrau } from './data/homenageadosData';
+import {
+  allGalleryPhotos,
+  chefesDepartamento,
+  colacoesGrau,
+  memorialData,
+  professoresAtuais,
+  professoresTitulares,
+  tecnicosAtuais,
+} from './data/conteudo';
 import { EventDetailModal } from './data/EventDetailModal';
-import Fuse from 'fuse.js';
+import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } from './memorialSearch';
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'profissionais' | 'homenageados';
+const MAX_SEARCH_RESULTS = 50;
 
-const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'tecnicosAtuais', 'profissionais', 'homenageados'];
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'homenageados';
+
+const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'tecnicosAtuais', 'homenageados'];
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
@@ -148,24 +151,94 @@ export default function App() {
     return list;
   }, [dbEvents]);
 
-  const fuse = useMemo(() => {
-    return new Fuse(allEventsForSearch, {
-      keys: [
-        { name: 'event.title', weight: 0.7 },
-        { name: 'event.desc', weight: 0.3 },
-        { name: 'year', weight: 0.5 },
-        { name: 'event.tag', weight: 0.2 }
-      ],
-      threshold: 0.35,
-      ignoreLocation: true,
-    });
-  }, [allEventsForSearch]);
+  const searchIndex = useMemo(() => buildSearchIndex(allEventsForSearch), [allEventsForSearch]);
 
-  const searchResults = useMemo(() => {
-    if (!searchQuery.trim()) return [];
-    const results = fuse.search(searchQuery);
-    return results.map(result => result.item);
-  }, [searchQuery, fuse]);
+  const { results: searchResults, approximate: isApproximateSearch } = useMemo(
+    () => searchMemorial(searchIndex, searchQuery),
+    [searchQuery, searchIndex]
+  );
+  const searchTokens = useMemo(() => tokenize(searchQuery), [searchQuery]);
+  const visibleSearchResults = searchResults.slice(0, MAX_SEARCH_RESULTS);
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeSearchIndex, setActiveSearchIndex] = useState(0);
+  const searchBoxRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setActiveSearchIndex(0);
+  }, [searchQuery]);
+
+  // Menu mobile: trava a rolagem da página, fecha com Esc e já abre "O DAD" se uma de suas abas estiver ativa
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    setIsMobileODadOpen(O_DAD_PANELS.includes(activePanel));
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Fecha o dropdown ao clicar fora da busca
+  useEffect(() => {
+    const onMouseDown = (e: MouseEvent) => {
+      if (searchBoxRef.current && !searchBoxRef.current.contains(e.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onMouseDown);
+    return () => document.removeEventListener('mousedown', onMouseDown);
+  }, []);
+
+  // Atalho "/" para focar a busca
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (e.key !== '/' || target.closest('input, textarea, select, [contenteditable="true"]')) return;
+      e.preventDefault();
+      searchInputRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  const openSearchResult = ({ year, event }: { year: number; event: MemorialEvent }) => {
+    setSelectedYear(year);
+    setCurrentDecade(Math.floor(year / 10) * 10);
+    setSelectedEventModal({ event, year });
+    setIsSearchOpen(false);
+    searchInputRef.current?.blur();
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape') {
+      if (searchQuery) setSearchQuery('');
+      else searchInputRef.current?.blur();
+      return;
+    }
+    if (!visibleSearchResults.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setIsSearchOpen(true);
+      setActiveSearchIndex(i => (i + 1) % visibleSearchResults.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveSearchIndex(i => (i - 1 + visibleSearchResults.length) % visibleSearchResults.length);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      openSearchResult(visibleSearchResults[activeSearchIndex] ?? visibleSearchResults[0]);
+    }
+  };
+
+  useEffect(() => {
+    document.getElementById(`search-result-${activeSearchIndex}`)?.scrollIntoView({ block: 'nearest' });
+  }, [activeSearchIndex]);
 
   const yearPhotos = useMemo(() => {
     const originalPhotos = memorialData[selectedYear]?.photos || [];
@@ -308,31 +381,46 @@ export default function App() {
             Preservando a trajetória histórica e o legado acadêmico do Departamento de Administração e Contabilidade.
           </div>
           <div className="w-full md:w-auto md:ml-auto flex items-center gap-3">
-            <div className="flex-grow md:flex-none relative">
+            <div ref={searchBoxRef} className="flex-grow md:flex-none relative">
               <div className="flex items-center bg-white/10 border border-white/25 rounded-full px-4 py-1.5 focus-within:bg-white/20 focus-within:border-ufv-gold-light transition-all">
                 <Search className="w-4 h-4 text-white/50 mr-2 shrink-0" />
                 <input
-                  type="text"
+                  ref={searchInputRef}
+                  type="search"
                   placeholder="Pesquisar no Memorial…"
-                  className="bg-transparent border-none text-white text-sm outline-none w-full md:w-48 placeholder:text-white/40"
+                  aria-label="Pesquisar no Memorial"
+                  className="bg-transparent border-none text-white text-sm outline-none w-full md:w-48 placeholder:text-white/40 [&::-webkit-search-cancel-button]:hidden"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setIsSearchOpen(true);
+                  }}
+                  onFocus={() => setIsSearchOpen(true)}
+                  onKeyDown={handleSearchKeyDown}
                 />
                 {searchQuery && (
-                  <button onClick={() => setSearchQuery('')} className="ml-2 text-white/40 hover:text-white transition-colors shrink-0">
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      searchInputRef.current?.focus();
+                    }}
+                    className="ml-2 text-white/40 hover:text-white transition-colors shrink-0"
+                    aria-label="Limpar busca"
+                  >
                     <X className="w-3.5 h-3.5" />
                   </button>
                 )}
               </div>
 
               {/* DROPDOWN DE BUSCA */}
-              {searchQuery.trim() && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-ufv-border z-[200] max-h-[70vh] overflow-y-auto min-w-[320px] md:min-w-[420px]">
-                  <div className="px-4 py-3 border-b border-ufv-border flex items-center justify-between bg-ufv-cream rounded-t-xl">
+              {isSearchOpen && searchQuery.trim() && (
+                <div className="absolute top-full right-0 left-0 md:left-auto mt-2 bg-white rounded-xl shadow-2xl border border-ufv-border z-[200] max-h-[70vh] overflow-y-auto w-full md:w-[480px]">
+                  <div className="sticky top-0 px-4 py-3 border-b border-ufv-border flex items-center justify-between bg-ufv-cream rounded-t-xl">
                     <span className="text-xs font-bold uppercase tracking-wider text-ufv-gray-light">
-                      {searchResults.length} resultado{searchResults.length !== 1 ? 's' : ''} para &ldquo;{searchQuery}&rdquo;
+                      {searchResults.length} resultado{searchResults.length !== 1 ? 's' : ''}
+                      {isApproximateSearch && <span className="normal-case font-medium tracking-normal"> · busca aproximada</span>}
                     </span>
-                    <button onClick={() => setSearchQuery('')} className="text-ufv-gray-light hover:text-ufv-gray transition-colors">
+                    <button onClick={() => setIsSearchOpen(false)} className="text-ufv-gray-light hover:text-ufv-gray transition-colors" aria-label="Fechar resultados">
                       <X className="w-4 h-4" />
                     </button>
                   </div>
@@ -340,36 +428,51 @@ export default function App() {
                   {searchResults.length === 0 ? (
                     <div className="px-4 py-10 text-center">
                       <Search className="w-8 h-8 text-ufv-border mx-auto mb-2" />
-                      <p className="text-sm text-ufv-gray-light">Nenhum resultado encontrado.</p>
-                      <p className="text-xs text-ufv-gray-light mt-1">Tente outras palavras-chave.</p>
+                      <p className="text-sm text-ufv-gray-light">Nenhum resultado para &ldquo;{searchQuery}&rdquo;.</p>
+                      <p className="text-xs text-ufv-gray-light mt-1">Tente um nome, um ano (ex.: 1988) ou um tema (ex.: contábeis).</p>
                     </div>
                   ) : (
-                    <div className="divide-y divide-ufv-border">
-                      {searchResults.map(({ year, event }, i) => (
-                        <button
-                          key={i}
-                          className="w-full text-left px-4 py-3.5 hover:bg-ufv-cream/60 transition-colors group"
-                          onClick={() => {
-                            setSelectedEventModal({ event, year });
-                            setSearchQuery('');
-                          }}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="w-8 h-8 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-ufv-green/20 transition-colors text-ufv-green">
-                              {getTagIcon(event.tag)}
-                            </div>
-                            <div className="flex-grow min-w-0">
-                              <div className="flex items-center gap-2 mb-0.5">
-                                <span className="text-[10px] font-bold text-ufv-gold uppercase tracking-wider">{year}</span>
-                                <span className={`event-tag tag-${event.tag}`} style={{ fontSize: '9px', padding: '0 4px' }}>{event.tag}</span>
+                    <div className="divide-y divide-ufv-border" role="listbox">
+                      {visibleSearchResults.map((result, i) => {
+                        const { year, event } = result;
+                        return (
+                          <button
+                            key={`${year}-${i}-${event.title}`}
+                            id={`search-result-${i}`}
+                            role="option"
+                            aria-selected={i === activeSearchIndex}
+                            className={`w-full text-left px-4 py-3.5 transition-colors group ${i === activeSearchIndex ? 'bg-ufv-cream' : 'hover:bg-ufv-cream/60'}`}
+                            onMouseEnter={() => setActiveSearchIndex(i)}
+                            onClick={() => openSearchResult(result)}
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-8 h-8 rounded-full bg-ufv-green/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-ufv-green/20 transition-colors text-ufv-green">
+                                {getTagIcon(event.tag)}
                               </div>
-                              <div className="text-sm font-semibold text-ufv-gray leading-snug truncate">{event.title}</div>
-                              <div className="text-xs text-ufv-gray-light mt-0.5 line-clamp-2 leading-relaxed">{event.desc}</div>
+                              <div className="flex-grow min-w-0">
+                                <div className="flex items-center gap-2 mb-0.5">
+                                  <span className="text-[10px] font-bold text-ufv-gold uppercase tracking-wider">{year}</span>
+                                  {event.tag && (
+                                    <span className={`event-tag tag-${event.tag}`} style={{ fontSize: '9px', padding: '0 4px' }}>{event.tag}</span>
+                                  )}
+                                </div>
+                                <div className="text-sm font-semibold text-ufv-gray leading-snug line-clamp-2">
+                                  <Highlight text={event.title} tokens={searchTokens} />
+                                </div>
+                                <div className="text-xs text-ufv-gray-light mt-0.5 line-clamp-3 leading-relaxed">
+                                  <Highlight text={makeSnippet(event.desc, searchTokens)} tokens={searchTokens} />
+                                </div>
+                              </div>
+                              <ChevronRight className="w-4 h-4 text-ufv-border shrink-0 mt-2 group-hover:text-ufv-green transition-colors" />
                             </div>
-                            <ChevronRight className="w-4 h-4 text-ufv-border shrink-0 mt-2 group-hover:text-ufv-green transition-colors" />
-                          </div>
-                        </button>
-                      ))}
+                          </button>
+                        );
+                      })}
+                      {searchResults.length > MAX_SEARCH_RESULTS && (
+                        <p className="px-4 py-3 text-xs text-center text-ufv-gray-light">
+                          Mostrando os {MAX_SEARCH_RESULTS} mais relevantes. Refine a busca para ver outros.
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
@@ -378,6 +481,8 @@ export default function App() {
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="md:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              aria-label="Abrir menu"
+              aria-expanded={isMobileMenuOpen}
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -385,7 +490,7 @@ export default function App() {
         </div>
 
         {/* NAVEGAÇÃO DE ABAS */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap gap-1 pb-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 hidden md:flex flex-wrap gap-1 pb-1">
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'overview' ? 'active' : ''}`}
             onClick={() => setActivePanel('overview')}
@@ -460,12 +565,6 @@ export default function App() {
                       <UserCog className="w-4 h-4 shrink-0" /> Técnicos Administrativos Atuais
                     </button>
                     <button
-                      onClick={() => { setActivePanel('profissionais'); setIsODadMenuOpen(false); }}
-                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'profissionais' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
-                    >
-                      <Users className="w-4 h-4 shrink-0" /> Profissionais Admitidos
-                    </button>
-                    <button
                       onClick={() => { setActivePanel('homenageados'); setIsODadMenuOpen(false); }}
                       className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'homenageados' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
                     >
@@ -527,37 +626,44 @@ export default function App() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] md:hidden"
             />
-            <motion.div
+            <motion.nav
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 w-80 bg-white z-[101] md:hidden shadow-2xl flex flex-col"
+              transition={{ type: 'spring', damping: 28, stiffness: 260 }}
+              className="fixed right-0 top-0 bottom-0 w-[86vw] max-w-sm bg-white z-[101] md:hidden shadow-2xl flex flex-col"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Menu de navegação"
             >
-              <div className="bg-ufv-green p-6 text-white flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-ufv-gold">
-                    <svg viewBox="0 0 46 46" className="w-7 h-7">
-                      <path d="M23 3 L40 10 L40 24 Q40 36 23 43 Q6 36 6 24 L6 10 Z" fill="#006837" stroke="#c9a227" strokeWidth="1.5" />
-                      <text x="23" y="22" textAnchor="middle" fontFamily="serif" fontSize="10" fontWeight="bold" fill="white">UFV</text>
-                    </svg>
+              <div className="bg-gradient-to-br from-ufv-green-dark to-ufv-green text-white px-5 pt-5 pb-4 border-b-4 border-ufv-gold">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV" className="w-11 h-11 object-contain shrink-0" />
+                    <div className="min-w-0">
+                      <span className="font-serif text-base font-bold leading-tight block">Memorial DAD</span>
+                      <span className="text-[11px] text-white/70 leading-snug block">Departamento de Administração e Contabilidade</span>
+                    </div>
                   </div>
-                  <span className="font-serif font-bold">Menu Memorial</span>
+                  <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="p-2 -mr-2 -mt-1 hover:bg-white/10 rounded-full transition-colors shrink-0"
+                    aria-label="Fechar menu"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
-                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-white/10 rounded-full transition-colors">
-                  <X className="w-6 h-6" />
-                </button>
               </div>
 
-              <div className="flex-grow overflow-y-auto p-6 space-y-8">
+              <div className="flex-grow overflow-y-auto px-3 py-5 space-y-6">
                 <div>
-                  <h4 className="text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-4">Navegação</h4>
-                  <div className="space-y-2">
+                  <h4 className="px-3 text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-2">Explorar</h4>
+                  <div className="space-y-0.5">
                     {[
-                      { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-4 h-4" /> },
-                      { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-4 h-4" /> },
-                      { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-4 h-4" /> },
-                      { id: 'years', label: 'Por Ano', icon: <Calendar className="w-4 h-4" /> },
+                      { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-[18px] h-[18px]" /> },
+                      { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-[18px] h-[18px]" /> },
+                      { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
+                      { id: 'years', label: 'Por Ano', icon: <Calendar className="w-[18px] h-[18px]" /> },
                     ].map(item => (
                       <button
                         key={item.id}
@@ -565,41 +671,47 @@ export default function App() {
                           setActivePanel(item.id as PanelType);
                           setIsMobileMenuOpen(false);
                         }}
-                        className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all ${activePanel === item.id ? 'bg-ufv-green text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                        className={`relative w-full flex items-center gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors ${activePanel === item.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
                       >
-                        {item.icon}
-                        <span className="font-medium">{item.label}</span>
+                        {activePanel === item.id && <span className="absolute left-0 top-2 bottom-2 w-1 rounded-r bg-ufv-gold" />}
+                        <span className={activePanel === item.id ? 'text-ufv-green' : 'text-ufv-gray-light'}>{item.icon}</span>
+                        {item.label}
                       </button>
                     ))}
+                  </div>
+                </div>
 
+                <div>
+                  <h4 className="px-3 text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-2">O Departamento</h4>
+                  <div className="space-y-0.5">
                     {/* SUBMENU O DAD */}
-                    <div>
-                      <button
-                        onClick={() => setIsMobileODadOpen(v => !v)}
-                        className={`w-full flex items-center justify-between gap-3 p-3 rounded-lg transition-all ${O_DAD_PANELS.includes(activePanel) ? 'bg-ufv-green text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
-                      >
-                        <span className="flex items-center gap-3">
-                          <Landmark className="w-4 h-4" />
-                          <span className="font-medium">O DAD</span>
-                        </span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isMobileODadOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      <AnimatePresence>
-                        {isMobileODadOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden pl-4 mt-1 space-y-1"
-                          >
+                    <button
+                      onClick={() => setIsMobileODadOpen(v => !v)}
+                      aria-expanded={isMobileODadOpen}
+                      className={`w-full flex items-center justify-between gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors hover:bg-ufv-cream ${O_DAD_PANELS.includes(activePanel) ? 'text-ufv-green font-semibold' : 'text-ufv-gray'}`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className={O_DAD_PANELS.includes(activePanel) ? 'text-ufv-green' : 'text-ufv-gray-light'}><Landmark className="w-[18px] h-[18px]" /></span>
+                        O DAD
+                      </span>
+                      <ChevronDown className={`w-4 h-4 text-ufv-gray-light transition-transform ${isMobileODadOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {isMobileODadOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="ml-[22px] pl-3 border-l-2 border-ufv-border space-y-0.5 py-1">
                             {[
-                              { id: 'chefes', label: 'Chefias', icon: <Landmark className="w-4 h-4" /> },
-                              { id: 'professores', label: 'Professores Titulares', icon: <GraduationCap className="w-4 h-4" /> },
-                              { id: 'professoresAtuais', label: 'Professores Atuais', icon: <Users className="w-4 h-4" /> },
-                              { id: 'tecnicosAtuais', label: 'Técnicos Administrativos Atuais', icon: <UserCog className="w-4 h-4" /> },
-                              { id: 'profissionais', label: 'Profissionais Admitidos', icon: <Users className="w-4 h-4" /> },
-                              { id: 'homenageados', label: 'Profissionais Homenageados', icon: <Award className="w-4 h-4" /> },
+                              { id: 'chefes', label: 'Chefias' },
+                              { id: 'professores', label: 'Professores Titulares' },
+                              { id: 'professoresAtuais', label: 'Professores Atuais' },
+                              { id: 'tecnicosAtuais', label: 'Técnicos Administrativos Atuais' },
+                              { id: 'homenageados', label: 'Profissionais Homenageados' },
                             ].map(item => (
                               <button
                                 key={item.id}
@@ -607,21 +719,20 @@ export default function App() {
                                   setActivePanel(item.id as PanelType);
                                   setIsMobileMenuOpen(false);
                                 }}
-                                className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all text-sm ${activePanel === item.id ? 'bg-ufv-green/90 text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors ${activePanel === item.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
                               >
-                                {item.icon}
-                                <span className="font-medium">{item.label}</span>
+                                {item.label}
                               </button>
                             ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
 
                     {[
-                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-4 h-4" /> },
-                      { id: 'desmembramento', label: 'O Desmembramento do DAE para DAD', icon: <History className="w-4 h-4" /> },
-                      { id: 'quebec', label: '🍁 Projeto Quebec', icon: <Globe className="w-4 h-4" /> }
+                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-[18px] h-[18px]" /> },
+                      { id: 'desmembramento', label: 'O Desmembramento do DAE', icon: <History className="w-[18px] h-[18px]" /> },
+                      { id: 'quebec', label: 'Projeto Quebec', icon: <Globe className="w-[18px] h-[18px]" /> }
                     ].map(item => (
                       <button
                         key={item.id}
@@ -629,18 +740,19 @@ export default function App() {
                           setActivePanel(item.id as PanelType);
                           setIsMobileMenuOpen(false);
                         }}
-                        className={`w-full flex items-center gap-3 p-3 rounded-lg transition-all ${activePanel === item.id ? 'bg-ufv-green text-white' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                        className={`relative w-full flex items-center gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors ${activePanel === item.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
                       >
-                        {item.icon}
-                        <span className="font-medium">{item.label}</span>
+                        {activePanel === item.id && <span className="absolute left-0 top-2 bottom-2 w-1 rounded-r bg-ufv-gold" />}
+                        <span className={activePanel === item.id ? 'text-ufv-green' : 'text-ufv-gray-light'}>{item.icon}</span>
+                        {item.label}
                       </button>
                     ))}
                   </div>
                 </div>
 
-                <div>
-                  <h4 className="text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-4">Décadas</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                <div className="px-3">
+                  <h4 className="text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-3">Décadas</h4>
+                  <div className="grid grid-cols-3 gap-2">
                     {decades.map(d => (
                       <button
                         key={d}
@@ -650,20 +762,19 @@ export default function App() {
                           setSelectedYear(memorialData[d] ? d : d + 4);
                           setIsMobileMenuOpen(false);
                         }}
-                        className={`p-3 rounded-lg border text-center transition-all ${currentDecade === d && activePanel === 'years' ? 'bg-ufv-gold text-white border-ufv-gold' : 'border-ufv-border text-ufv-gray hover:border-ufv-green'}`}
+                        className={`py-2.5 rounded-lg border text-sm font-bold transition-colors ${currentDecade === d && activePanel === 'years' ? 'bg-ufv-gold text-white border-ufv-gold' : 'border-ufv-border text-ufv-gray hover:border-ufv-green hover:text-ufv-green'}`}
                       >
-                        <span className="text-sm font-bold">{d}</span>
+                        {d}
                       </button>
                     ))}
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-ufv-cream text-[10px] text-ufv-gray-light text-center">
-                © 2026 Memorial DAD · UFV<br />
-                Departamento de Administração e Contabilidade
+              <div className="px-5 py-4 bg-ufv-cream border-t border-ufv-border text-[10px] text-ufv-gray-light text-center">
+                © 2026 Memorial DAD · UFV
               </div>
-            </motion.div>
+            </motion.nav>
           </>
         )}
       </AnimatePresence>
@@ -1428,56 +1539,6 @@ export default function App() {
                           </span>
                         )}
                       </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {activePanel === 'profissionais' && (
-            <motion.div
-              key="profissionais"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
-                      <Users className="w-5 h-5 text-ufv-gold-light" />
-                    </div>
-                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
-                  </div>
-                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Profissionais Admitidos</h1>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                {profissionaisAdmitidos.map((prof) => (
-                  <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
-                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
-                      {prof.foto ? (
-                        <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
-                      ) : (
-                        <Users className="w-7 h-7 text-ufv-green" />
-                      )}
-                    </div>
-                    <div className="flex-grow text-center sm:text-left">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-1">
-                        <span className="font-serif text-lg font-bold text-ufv-gray">{prof.nome}</span>
-                        <span className="event-tag tag-gestao self-center sm:self-auto">
-                          {prof.periodoFim ? `${prof.periodoInicio} – ${prof.periodoFim}` : `Admitido em ${prof.periodoInicio}`}
-                        </span>
-                      </div>
-                      <div className="text-xs text-ufv-gold font-semibold uppercase tracking-wide mb-1">
-                        {prof.cargo || 'Profissional Admitido'}
-                      </div>
-                      {prof.observacoes && (
-                        <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
-                      )}
                     </div>
                   </div>
                 ))}

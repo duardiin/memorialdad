@@ -1,7 +1,14 @@
 {
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "/admin/",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api/|admin/).*)",
       "destination": "/index.html"
     }
   ]

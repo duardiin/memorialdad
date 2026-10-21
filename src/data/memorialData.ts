@@ -171,7 +171,7 @@ export const memorialData: MemorialData = {
           { url: '/1978 “Direção do CCH”.avif', caption: 'Direção do CCH.' },
         ],
         externalLinks: [],
-        articleUrl: 'https://atom.ufv.br/index.php/1978-ufv-informa'
+        articleUrl: ''
       }
     ],
     photos: [],
@@ -1170,7 +1170,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'NAIPE é Inaugurado - PARTE III',
         desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, inaugurou, o Núcleo de Assistência Integral à Pequena Empresa (NAIPE), nas dependências do Departamento de Administração e Economia da UFV. O evento fez parte do I Encontro de Empresários da Zona da Mata. O NAIPE é fruto do convênio assinado entre a UFV/DAE,  BDMG, CEAG-MG e o INDI, atendendo aos interessados, nas instalações recém-inauguradas no DAE. О Reitor descerrou a placa de inauguração do Núcleo juntamente com Jairo Teixeira, dirigente do BDMG. Após o descerramento da placa, Jairo Teixeira enfatizou a importância do convênio assinado, ao mesmo tempo em que destacou um maior fomento ao ensino proporcionado pela UFV. O dirigente do BDMG colocou o Banco “à disposição total da UFV, no momento em que se deseja fortalecer a integração do órgão com esta Universidade”. Em seguida, o Reitor congratulou-se com o DAE que, “numa hora muito feliz e própria, procurou o caminho do comprometimento com a comunidade, ampliando a sua atuação e dando-lhe condições de desenvolvimento”. (14ago. n.960). (COLOCAR FOTO)',
         photos: [],
@@ -1178,7 +1178,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'DAE e Centro Acadêmico Promovem Cursos de Comércio Exterior e de Recrutamento',
         desc: 'O Curso de Comércio Exterior foi ministrado pelo diretor cultural da Associação Brasileira de Administração (ABTA), Joao Gabriel de Sá Albernaz, comprador internacional da Mannesmann; pela professora Rita de Cássia Liberato, da UFMG e da UNA- Ciências Gerenciais; pelo assessor Alexandre Moura Marques, da Diretoria Comercial da empresa Serviço de Соmércio Exterior; pelo gerente de câmbio do Grupo BMG, Cláudio Santos Viana; pelo gerente da Área de Financiamento Externo, Samuel Thiebault, da Açominas; e pelo diretor da empresa Divisa, Idalmo Rezende, com participação especial do professor José Edson Lara do DAE. Outro curso foi oferecido aos interessados, desta vez abordando Recrutamento e Seleção de Pessoal. As aulas estiveram a cargo do coordenador do Serviço de Encaminhamento Profissional (SEP), Juarez Guppi de Castro. (11set. n.964; 25set. n.966).',
         photos: [],
@@ -1187,7 +1187,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'DAE Promove Ciclo de Debates sobre a Constituinte',
         desc: 'O Ciclo de Debates sobre a Constituinte, promovido pelo DAE, teve três etapas: o professor Carlos Roberto Ramos, do DAE, discorreu sobre “Constituição: origem, conceito; Poder Constituinte e história das constituições brasileiras”; o professor José Alfredo Baracho, da UFMG, falou a respeito de ”Presidencialismo x Parlamentarismo”. (25set. n.966).',
         photos: [],
@@ -1195,7 +1195,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Melhora na Imagem Institucional do DAE e Homenagem Coletiva',
         desc: 'Em reunião do dia 31 de outubro, conduzida pelo Professor Tancredo Almada Cruz, a chefia informou aos presentes que a imagem do departamento perante a comunidade havia melhorado significativamente devido aos trabalhos realizados, gerando demandas de diversos órgãos. Na mesma oportunidade, foi anunciada que o chefe do departamento receberia uma homenagem da Associação Comercial de Viçosa, comemoração esta que ele declarou estender a toda a equipe do departamento.',
         photos: [],
@@ -1203,7 +1203,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Palestra da Coopersucar Discute Reflexos do Plano Cruzado e Comércio de Commodities',
         desc: 'Empresários, estudantes e professores participaram de uma palestra ministrada pelo Assessor de Exportação da Coopersucar, Reinaldo de Barros Alcântara, e pelo Assessor da Diretoria de Suprimentos, Luís Roberto Martins Silveira. A promoção foi do DAE, com a coordenação do professor José Edson Lara. Os temas Reflexos do Plano Cruzado no Comércio Exterior de Commodities e Panorama da Administração de Materiais foram os temas das palestras. Ainda foi feita uma exposição em vídeo-cassete, mostrando os canaviais, usinas e Centros de Pesquisa da Coopersucar, cuja sede é em São Paulo, e tem abrangência de 72 usinas cooperadas de açúcar e álcool. Na oportunidade, o Assessor de Exportação da empresa paulista destacou que «se a atual tendência permanecer poderá faltar álcool para atendimento de uma frota de 2.500 mil veículos em circulação no País». Outro aspecto salientado foi com relação aos profissionais da área: no Brasil, praticamente não existem especialistas em comércio exterior de "commodities" (bens primários). Esta é uma das razões do fraco desempenho das vendas externas dos nossos produtos exportáveis. (30 out. n.971)\n(30 de Outubro de 1986  Nº 971)',
         photos: [{url: '/1986 - coperscucar.png', caption: 'Os dirigentes da Copersucar no encontro de quinta-feira, dia 23.'}],
@@ -1211,7 +1211,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'NAIPE e DAE Convidam Empresários para Seis Cursos de Gestão',
         desc: 'O DAE convidou empresários e futuros empresários para os cursos que o Núcleo de Assistência Integral à Pequena Empresa (NAIPE) estava oferecendo. Foram, ao todo, seis cursos: Administração da Pequena Empresa, Administração de Pessoal, Sistema de Informações Contábeis, Análise de Custos, Administração de Estoques e Administração de Vendas. O Curso «Administração da Pequena Empresa» foi ministrado pela professora Nina Rosa Silveira Cunha; o Curso Administração de Pessoal, ministrado pelo professor Juarez Magalhães Rodrigues; Sistema de Informações Contábeis, pela professora Nanci Pereira de Vasconcelos; Análise de Custos, pelo professor José Clévio Dias Casali; "Administração de Estoques" pelo professor Márcio Jose Ozório Gonçalves; e "Administração de Vendas", pelo professor José Edson Lara, todos do DAE/UFV. (25set. n.966; 16out. n.969 e 06nov. n.972).',
         photos: [],
@@ -1236,7 +1236,7 @@ export const memorialData: MemorialData = {
   1987: {
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Posse de José Edson Lara como Diretor Administrativo-Financeiro da Funarbe',
         desc: 'O Reitor da Universidade Federal de Viçosa (UFV), professor Geraldo Martins Chaves, deu posse a José Edson Lara como o novo Diretor administrativo-financeiro da Fundação Arthur Bernardes-FUNARBE. (15jan. n.982).',
         photos: [{url: '/1987 “O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.”.jpg', caption: 'O Reitor da UFV, professor Geraldo Martins Chaves, dá posse ao novo Diretor administrativo-financeiro da FUNARBE.'}],
@@ -1244,7 +1244,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Cursos do NAIPE',
         desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos. nº 982',
         photos: [],
@@ -1252,7 +1252,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Professora Nanci à Frente do Novo Núcleo de Treinamento do DAE',
         desc: 'Sob a coordenação da professora Nanci Pereira de Vasconcelos, o Departamento de Administração e Economia (DAE) da UFV implementou o Núcleo de Treinamento Profissional na área de Contabilidade. (26fev. n.988).',
         photos: [{url: '/1987 - Professora Nanci.png', caption: 'A professora Nanci Pereira de Vasconcelos, à frente do novo Núcleo de Treinamento do DAE.'}],
@@ -1260,7 +1260,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
         {
-        tag: 'gestao',
+        tag: '',
         title: 'Núcleo de Treinamento Profissional em Contabilidade',
         desc: 'O DAE iniciou, no primeiro semestre de 1987, as atividades do Núcleo de Treinamento Profissional. Coordenado pela professora Nanci Pereira de Vasconcelos e visa familiarizar os estudantes com os procedimentos práticos e executivos da área empresarial. 26.fev nº 988',
         photos: [],
@@ -1268,7 +1268,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'I Semana do Empresário',
         desc: 'A I Semana do Empresário, evento promovido pelo DAE foi realizada de quatro a sete de agosto na UFV, e teve como objetivo a aproximação de empresários e executivos com a UFV e o DAE, além de transmitir aos produtores urbanos conhecimentos técnicos e gerenciais, com a realização de cursos, palestras, debates, mesas-redondas e exposição de produtos. Os cursos foram nas áreas de produção, marketing, administração de operações, finanças, recursos humanos, pequenas e médias empresas, dentre outros.  (12fev. n.986; 21mai. n.1000; 02jul. n.1006; 16jul. n.1008; 30jul. n. 1010; 06ago. n.1011 e 13ago. n.1013).',
         photos: [{url: '/1987 - 1 Semana do Empresario.png', caption: 'I Semana do Empresário.'}],
@@ -1292,7 +1292,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Participação no Projeto Rondon',
         desc: 'O DAE encerrou sua participação no Projeto Rondon, ministrando Treinamento para empresários de Micro, Pequenas e Médias Empresas. (19mar. ed.991).',
         photos: [],
@@ -1324,7 +1324,7 @@ export const memorialData: MemorialData = {
   1988: {
     events: [
       {
-        tag: 'extensao',
+        tag: '',
         title: 'I Encontro de Administração Municipal',
         desc: 'Entre os dias 16 e 18 de março, a UFV promoveu o I Encontro de Administração Municipal. O objetivo foi reunir prefeitos e técnicos da Zona da Mata para analisar problemas locais e buscar soluções com suporte universitário. A iniciativa faz parte da filosofia da instituição de integrar-se ativamente ao desenvolvimento da sua região. Os principais problemas da administração municipal foram discutidos na UFV, durante a Assembleia Geral da Federação Mineira das Associações Microrregionais. O Encontro trouxe a Viçosa prefeitos e assessores de municípios da Zona da Mata Norte. Predominaram assuntos como a municipalização da saúde e da educação e a situação das prefeituras diante da nova perspectiva, sendo defendida a participação do município no bolo tributário. (18fev. n.1039; 12mai. n.1051; 19mai. n.1053).',
         photos: [{url: '/1987 - 1 Encontro de Adm Municipal.png', caption: 'I Encontro de Administração Municipal'}],
@@ -1332,6 +1332,29 @@ export const memorialData: MemorialData = {
         {label: 'Jornal 1051', url: 'hhttps://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/c/7/5/c75b3cb323ac2c2f7ba6351c2cd14e5bfdaa382653b1e8273904f02930353607/Edi____o_n1051.pdf'},
         {label: 'Jornal 1053', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/9/7/3978c353ca3639959df2f815724359f81cd7ec3d55a4ad4afe6ecc71090b0884/Edi____o_n1053.pdf'}
         ],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'Propostas de Expansão Acadêmica e Avaliação da Área de Administração',
+        desc: 'Em março de 1988, durante as deliberações do colegiado, o DAE deu um importante passo em direção à expansão de suas atividades de ensino com a apresentação e discussão de uma proposta preliminar voltada para a criação do novo Curso de Direito na instituição.',
+        photos: [
+          { url: '/1988 - Curso de Direito 1.jpeg', caption: 'Curso de Direito - Justificativa preliminar (1/6)' },
+          { url: '/1988 - Curso de Direito 2.jpeg', caption: 'Curso de Direito - Justificativa preliminar (2/6)' },
+          { url: '/1988 - Curso de Direito 3.jpeg', caption: 'Curso de Direito - Justificativa preliminar (3/6)' },
+          { url: '/1988 - Curso de Direito 4.jpeg', caption: 'Curso de Direito - Justificativa preliminar (4/6)' },
+          { url: '/1988 - Curso de Direito 5.jpeg', caption: 'Curso de Direito - Justificativa preliminar (5/6)' },
+          { url: '/1988 - Curso de Direito 6.jpeg', caption: 'Curso de Direito - Justificativa preliminar (6/6)' }
+        ],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'UFV Propõe Criação do Curso de Ciências Contábeis para Suprir Demanda Regional',
+        desc: 'O Departamento de Administração e Economia (DAE) encaminhou, em abril de 1988, uma proposta preliminar para a implementação do curso de graduação em Ciências Contábeis. A iniciativa, assinada pelos professores Nanci Pereira de Vasconcelos e Milton Rodrigues Natalino, visa preencher uma lacuna na área de ciências humanas da instituição.',
+        photos: [],
+        externalLinks: [],
         articleUrl: ''
       },
      {
@@ -1343,7 +1366,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'UFV Promove II Semana do Empresário em Julho',
         desc: 'O Departamento de Administração e Economia (DAE) da Universidade Federal de Viçosa (UFV), em conjunto com o Conselho de Extensão, realizará entre os dias 10 e 14 de julho a II Semana do Empresário.  nº 1055',
         photos: [],
@@ -1351,7 +1374,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Professor do DAE fala sobre dinâmica do investimento em economias capitalistas',
         desc: 'O professor Newton Paulo Bueno, do DAE, debateu a dinâmica do investimento em economias capitalistas em palestra na UFV. (21abr. n.1048).',
         photos: [{url: '/1988 - PET.png', caption: 'O grupo de estudantes selecionados, juntamente com o professor Adriel Rodrigues de Oliveira'}],
@@ -1359,7 +1382,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Il Encontro Mineiro sobre Ensino de Economia',
         desc: 'Realizado nos dias 18 e 19 de agosto de 1988, o evento ocorreu no Centro de Ensino de Extensão da UFV. Com o tema central "Técnicas de Pesquisa e Monografia". n.1065',
         photos: [],
@@ -1367,7 +1390,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-        tag: 'gestao',
+        tag: '',
         title: 'Implantação do PET na Administração',
         desc: 'O Departamento de Administração da UFV teve sua proposta aprovada pela CAPES para a implantação de um dos primeiros Programas Especiais de Treinamento do Brasil nessa área. O programa é orientado pelo professor Adriel Rodrigues de Oliveira, que atua como tutor e foi o responsável pela iniciativa da proposta. n. 1079',
         photos: [{url: '/1988 - PET.png', caption: 'O grupo de estudantes selecionados, juntamente com o professor Adriel Rodrigues de Oliveira'}],
@@ -1375,7 +1398,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'VIII Semana do Administrador',
         desc: 'O Centro Acadêmico de Administração promoverá em 16 a 19 de agosto, a VIII Semana do Administrador. (04ago. n.1063).',
         photos: [],
@@ -1383,7 +1406,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Posses do DAD 1ª Chefia e do DEE 1ª Chefia',
         desc: 'Em 19 de agosto de 1988, o Reitor Geraldo Martins Chaves empossou os primeiros chefes dos novos departamentos de Administração (DAD) e Economia (DEE) da UFV. A solenidade marcou o desmembramento do antigo Departamento de Administração e Economia (DAE), oficializando as seguintes lideranças: Professor Juraci Aureliano Teixeira: 1ª chefia do Departamento de Economia. Professor Marcos Tanure Sanábio: 1ª chefia do Departamento de Administração. (20out. n.1074).',
         photos: [{url: "/Posse econ e adm 1988.jpg", caption: "Primeiros Chefes"}],
@@ -1391,7 +1414,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Tratativas para o novo prédio do Departamento de Administração',
         desc: 'Em 16 de dezembro de 1988, a ata número onze, na reunião do Colegiado do Departamento de Administração, o Senhor Presidente Prof. Marcos Tanure Sanábio compartilhou informações institucionais de grande relevância para a infraestrutura e a expansão acadêmica do departamento, destacando a realização de uma reunião com o Reitor para tratar diretamente sobre o andamento das obras de construção das novas instalações físicas destinadas ao prédio do Departamento de Administração, cuja agenda incluiu um encontro planejado no próprio hall do referido edifício em obras.',
         photos: [],
@@ -1416,7 +1439,7 @@ export const memorialData: MemorialData = {
   1989: {
     events: [
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Relatos sobre o Espaço Físico do Prédio e Planejamento Integrado da Semana do Fazendeiro e Semana do Empresário',
         desc: 'Na reunião do Colegiado do Departamento de Administração (DAD) realizada na sala de reuniões do Departamento de Engenharia Florestal, foram apresentadas importantes deliberações relativas às instalações físicas e eventos de extensão do departamento. No âmbito da infraestrutura e espaço físico do DAD, o Senhor Presidente Prof. Marcos Tanure Sanábio conduziu relatos informativos mapeados sob o item de assuntos gerais dedicados ao prédio e gerenciamento do espaço físico da unidade. Adicionalmente, discutiu-se em plenário a articulação de eventos institucionais de extensão com a proposta de unificar e realizar, na mesma data, as atividades comemorativas e programáticas voltadas para a Semana do Fazendeiro e a Semana do Empresário.',
         photos: [],
@@ -1424,7 +1447,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'TELMA REGINA DA COSTA GUIMARÂES BARBOSA',
         desc: 'Admissão da docente TELMA REGINA DA COSTA GUIMARÂES BARBOSA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 02/05/1989.',
         photos: [],
@@ -1432,7 +1455,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'EVALDO GUIMARÃES BARBOSA',
         desc: 'Admissão do docente EVALDO GUIMARÃES BARBOSA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/11/1989.',
         photos: [],
@@ -1440,7 +1463,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Professoras da UFV visitam Universidades do Canadá',
         desc: 'Em 1989, a Universidade Federal de Viçosa (UFV) deu um passo histórico rumo ao fortalecimento do empreendedorismo regional ao iniciar uma cooperação técnica com a Universidade de Quebec, Chicoutimi, no Canadá. O pontapé inicial ocorreu quando as professoras Maria Elena Barbassa e Nina Rosa visitaram a instituição canadense para negociar a parceria. Logo em seguida, em março do mesmo ano, professores da Universidade de Quebec retribuíram a visita, indo até o Departamento de Administração da UFV para firmar o intercâmbio. O grande objetivo dessa cooperação internacional era criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa em Viçosa. Para consolidar o centro e capacitar o corpo docente, o projeto previa o treinamento de professores da UFV em nível de doutorado no Canadá, além da implementação pioneira de cursos de mestrado (com previsão de início para 1991) e doutorado na universidade mineira. Além do ganho acadêmico, a iniciativa buscava implantar, de forma pioneira, "Incubatórios de Empresa" (as chamadas incubadoras), com o propósito de fomentar o empreendedorismo local e gerar novos empregos no município de Viçosa. (23jun. n.1107).',
         photos: [{url: '/1989 “As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa”.jpg', caption:'As professoras Nina Rosa da S. Cunhas e Maria E. Barbassa'}],
@@ -1456,7 +1479,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'UFV e Québec: Um Marco na Administração',
         desc: 'Em março de 1989, os professores André Briand e Michel Michaud da Universidade de Quebec de Chicoutimi visitaram o Departamento de Administração da UFV para firmar um intercâmbio histórico. O grande objetivo dessa cooperação internacional fora criar o Centro de Estudos e Pesquisa de Pequena e Média Empresa na universidade. O projeto envolvia treinar professores da UFV no doutorado no Canadá e fundar um curso de mestrado em Viçosa para 1991. (20jan. nº 1087, 10mar. nº 1094 e 23jun. nº 1107).',
         photos: [],
@@ -1464,7 +1487,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Reitor empossa novos chefes de departamento da UFV',
         desc: 'O Reitor Antônio Fagundes de Sousa empossou os novos chefes de 23 departamentos da UFV para um novo período administrativo. As cerimônias ocorreram em 11 e 13 de setembro de 1989, após votações internas em cada órgão. Entre os empossados está o professor Roberto de Carvalho Araújo do Departamento de Administração. (15set. nº 1117).',
         photos: [{url: '/1989 - Novos Chefes.png', caption:'Reitor empossa novos chefes de departamento da UFV '}],
@@ -1472,7 +1495,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'III Semana do Empresário',
         desc: 'A III Semana do Empresário ocorreu de 10 a 14 de julho na UFV, focando em empresários e profissionais do setor. O evento ofereceu cursos de curta duração sobre temas como administração em tempos de crise, informática aplicada, marketing para pequenas empresas, novos empresários, franquia comercial, racionalização do consumo de energia, montagem e desenvolvimento de indústria, matemática financeira para empresários, gerenciamento de estoques, política governamental e de desenvolvimento tecnológico na indústria brasileira, Paralelamente, durante a III Semana houve uma exposição de produtos e serviços aberta ao público no Centro de Vivência. A organização contou com o apoio da Associação Comercial de Viçosa e do CEAG-MG, e do Instituto de Desenvolvimento Industrial de Minas Gerais-INDI. (15mai. nº 1102, 25set. nº1118 e 13out. nº 1120).',
         photos: [{url: '/1989 - Semana do Empresario.png', caption:'Estande de exposição no centro de vivência'},
@@ -1485,7 +1508,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Aprovação da ocupação do DAD no novo prédio e curso de extensão concluído',
         desc: 'Em 19 de outubro de 1989, em relação ao espaço físico departamental, o Senhor Presidente Prof. Marcos Tanure Sanábio apresentou ao Colegiado a planta do prédio do DAD, informando que a comissão da obra se reuniu com o arquiteto Paulo, da prefeitura universitária, que solicitou dados sobre as divisões internas conforme as necessidades. Após debates, o Colegiado aprovou por maioria que o DAD ficasse instalado nas dependências do terceiro andar e na parte térrea (garagem) da nova edificação. Também nesta data, a professora Nina Rosa informou a conclusão do segundo curso de extensão em Informática Aplicada à Administração.',
         photos: [{url: '/1989 “Construção do Departamento de Administração e Economia”.jpg', caption:'Construção do Departamento de Administração'}],
@@ -1493,7 +1516,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Departamentos de Administração e Economia terão novas sedes',
         desc: 'As novas sedes dos Departamentos de Administração e de Economia da UFV estão em fase adiantada, com o primeiro pavimento de uma estrutura de 3.410 m² quase concluído atrás do Edifício Reinaldo de Jesus Araújo. O projeto prevê, no térreo, 24 gabinetes duplos, áreas administrativas, laboratórios e salas de leitura e computação. Os andares superiores deverão abrigar os departamentos de Letras e Artes e de Educação. (23out. nº1121).',
         photos: [{url: '/1989 “Construção do Departamento de Administração e Economia”.jpg', caption:'Construção do Departamento de Administração'}],
@@ -1501,7 +1524,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Professor Gualberto Ferreira da Silva Lança Apostila pela Imprensa Universitária',
         desc: 'O professor Gualberto Ferreira da Silva do DAE lançou a apostila "Tabelas Financeiras–Juros Compostos" pela Imprensa Universitária, que traz tabelas financeiras calculadas em microcomputador ao longo de 254 páginas. (01dez. nº 1127).',
         photos: [{url: '/1989 - Apostila.png', caption:'Apostila "Tabelas Financeiras"'}],
@@ -1509,7 +1532,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Falecimento do professor Roberto de Carvalho Araújo',
         desc: 'O professor Roberto de Carvalho Araújo, chefe do Departamento de Administração da UFV, faleceu em 20 de dezembro de 1989, em Belo Horizonte. Formado em Direito, Administração e Economia, ele era mestre pela PUC-Rio e planejava cursar doutorado na Espanha. O velório ocorreu no Salão Nobre da Universidade, seguido de missa solene no Santuário de Santa Rita de Cássia e sepultamento no Cemitério Dom Viçoso. Roberto pertencia a uma família tradicional de Viçosa e deixou esposa e três filhos. (29dez. nº 1130).',
         photos: [{url: '/1989 “O professor Roberto de Carvalho Araújo. ”.jpg', caption: 'Roberto de Carvalho Araújo'}],
@@ -1517,7 +1540,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'ANTONIO DE FIGUEIREDO VIEIRA',
         desc: 'Admissão do docente ANTONIO DE FIGUEIREDO VIEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 27/12/1989.',
         photos: [],
@@ -1659,7 +1682,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'XVII Encontro Nacional dos Estudantes de Administração',
         desc: 'Cerca de dois mil estudantes de diversas regiões do país foram recebidos em Viçosa, entre 8 e 12 de julho, para o XVII Encontro Nacional dos Estudantes de Administração. (25jan. nº 1179 e 06mai. nº 1190).',
         photos: [],
@@ -1669,7 +1692,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'V Semana do Empresário',
         desc: 'O DAD realizou de 8 a 12 de julho, a V Semana do Empresário, evento voltado para a reciclagem e discussão de novas alternativas de negócios para empresários e gerentes. (10mai. nº 1191 e 18jun. nº 1196).',
         photos: [],
@@ -1687,7 +1710,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'TV Viçosa iniciou suas transmissões',
         desc: 'Os preparativos para o início das transmissões da TV Viçosa, vinculada à Fundação Rádio e Televisão Educativa (RTV), foram concluídos. A emissora teve a programação voltada para interesses comunitários da microrregião, com ênfase especial em jornalismo regional durante a retransmissão da Rede Brasil (TVE). A equipe de trabalho, coordenada pela Prof. Carlos Alberto Freire Resende do DAD, aproveitou funcionários e estudantes da própria UFV, sendo estes últimos selecionados por concurso. (29ago. nº 1199).',
         photos: [],
@@ -1695,7 +1718,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'JOSE ROBERTO REIS',
         desc: 'Admissão do docente JOSE ROBERTO REIS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/12/1991.',
         photos: [],
@@ -1742,7 +1765,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'V Semana do Empresário',
         desc: 'A V Semana do Empresário, organizada pela UFV/DAD e ACV, ocorreu de 23 a 27 de agosto de 1992 para promover a integração entre executivos e a universidade. O evento teve foco no intercâmbio de conhecimentos técnicos e gerenciais para pequenas e microempresas através de cursos e debates. n. 1238',
         photos: [],
@@ -1750,7 +1773,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'DAD promove curso sobre bolsa de valores',
         desc: 'O Departamento de Administração (DAD) promoveu curso sobre Bolsa de Valores em parceria com a Bolsa de Valores de Minas Gerais (BVMG). O evento contou com palestras dos superintendentes Paulo Henrique Ayres Pena e Lacyr Maffia, que abordaram o funcionamento do mercado, a capitalização de empresas e métodos de análise de ações. O curso visou capacitar alunos e profissionais, esclarecendo dúvidas sobre investimentos e o ambiente de negociação. n. 1239',
         photos: [{ url: '/1992 “O superintendente Paulo Henrique Ayres Pena”.jpg', caption: 'O superintendente Paulo Henrique Ayres Pena.' }],
@@ -1758,7 +1781,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Alunos de Administração promovem palestras',
         desc: 'Os egressos da turma de 1991 de Administração da Unioeste, conhecidos como "Calouros 91", realizam periodicamente eventos e palestras para compartilhar experiências de mercado com os atuais estudantes. A iniciativa visa fortalecer o networking e integrar gerações, oferecendo uma visão prática da profissão aos acadêmicos.  n. 1220',
         photos: [],
@@ -1782,7 +1805,7 @@ export const memorialData: MemorialData = {
     // 7 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'SORAYA MACHADO FONTES',
         desc: 'Admissão da servidora técnico-administrativa SORAYA MACHADO FONTES, no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/01/1993.',
         photos: [],
@@ -1790,7 +1813,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA',
         desc: 'Aprovação unânime da nomeação do Administrador AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA para o cargo de professor, com admissão no Departamento de Administração e Contabilidade (DAD), com início das atividades em 05/08/1993.',
         photos: [],
@@ -1806,7 +1829,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'UFES Busca Integração com a UFV/DAD',
         desc: 'Com o objetivo de conhecer a sólida experiência da UFV na realização de eventos corporativos e de extensão, representantes da Universidade Federal do Espírito Santo (UFES) realizaram uma visita oficial ao campus de Viçosa. A equipe da UFES reuniu-se com docentes e técnicos da Comissão de Extensão do DAD, formalizando convite para a equipe do DAD ministrar palestras na UFES. Tiveram participação os professores e técnicos Cássia Viviani Silva Santiago, José Roberto Reis, Afonso Augusto Teixeira de Freitas de Carvalho Lima e Beatriz de Freitas Dias. n. 1261',
         photos: [{ url: '/1993 - UFES UFV.png', caption: 'O grupo foi recebido na Imprensa Universitaria pelo diretor, professor José Geraldo Femandes de Araújo.' }],
@@ -1814,7 +1837,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Técnicas Gerenciais Japonesas',
         desc: 'O administrador de empresas Sérgio Maia Botelho, consultor do Armarinho Santo Antônio de Ubá (MG), proferiu uma palestra na Universidade Federal de Viçosa (UFV) abordando o tema "Técnicas Gerenciais Japonesas em Empresa Nacional: uma experiência positiva". O evento foi promovido pelo DAD/PET e coordenado pelo professor José Edson Lara. Em sua apresentação, Botelho detalhou o processo de implementação de gestão de qualidade no Armarinho, que englobou o uso de ferramentas estruturadas como seminários motivacionais, diagramas de causa e efeito.(10 dez n. 1271)',
         photos: [{ url: '/1993 Tecnicas Japonesas.png', caption: 'O administrador de empresas Sérgio Maia Botelho' }],
@@ -1838,7 +1861,7 @@ export const memorialData: MemorialData = {
     // 7 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'WALMER FARONI',
         desc: 'Admissão do docente WALMER FARONI no Departamento de Administração e Contabilidade (DAD), com início das atividades em 21/02/1994.',
         photos: [],
@@ -1846,7 +1869,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'PAULO SERGIO GREGORIO',
         desc: 'Admissão do servidor técnico-administrativo PAULO SÉRGIO GREGÓRIO, no Departamento de Administração e Contabilidade (DAD), com início das atividades em 10/02/1994.',
         photos: [],
@@ -1854,7 +1877,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Aprovação da Empresa Júnior no CEPE',
         desc: 'Ocorreu a aprovação da criação da Empresa Júnior de Consultoria em reunião realizada pela Coordenação de Ensino, Pesquisa e Extensão (CEPE) da UFV.',
         photos: [],
@@ -1862,7 +1885,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Ratificação da Criação do Curso de Direito',
         desc: 'Aprovação pelo DAD a criação do Curso de Direito e homologação do respectivo Plano de Curso, ratificando a decisão da Ata nº 53/91.',
         photos: [],
@@ -1870,7 +1893,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Primeira revista do PET',
         desc: 'O DAD lançou a primeira edição da Revista do PET Administração, sob a coordenação do professor José Edson Lara. A publicação visa divulgar as atividades de ensino, pesquisa e extensão desenvolvidas pelo grupo, além de oferecer um espaço para produções científicas de estudantes e professores.  n. 1288',
         photos: [{ url: '/1994 - Revista PET Administração.png', caption: 'Lançamento da primeira edição da Revista do PET Administração.' }],
@@ -1886,7 +1909,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'fundacao',
+        tag: '',
         title: 'Criação do Centro Acadêmico de Consultoria – CACE',
         desc: 'Estudantes de Administração da UFV constituíram o Centro Acadêmico de Consultoria Empresarial (CACE), uma empresa júnior que visa aproximar a teoria acadêmica da prática profissional. A entidade presta serviços de consultoria e assessoria a micro, pequenas e médias empresas, além de produtores rurais da região. n. 1278',
         photos: [],
@@ -1894,7 +1917,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Professores e estudantes de Administração realizam visita de estudos ao Sul de Minas',
         desc: 'Um grupo de professores e estudantes do curso de Administração visitou Santa Rita do Sapucaí para conhecer a estrutura do Inatel e seu processo de incubação de empresas. A equipe da UFV também foi convidada a auxiliar o Inatel na implantação de um programa com as atribuições do PET. n. 1279',
         photos: [],
@@ -1918,7 +1941,7 @@ export const memorialData: MemorialData = {
     // 5 registros neste ano
     events: [
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Seminário com a Professora Suzana Braga Rodrigues',
         desc: 'Anúncio da visita da professora Suzana Braga Rodrigues para a apresentação do seminário "Gerência e Cultura nas Organizações". 18 de maio de 1995 (Ata nº 111/95)',
         photos: [],
@@ -1926,7 +1949,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Curso de Chefia e Liderança',
         desc: 'O Curso de Chefia e Liderança, coordenado pelos professores José Edson Lara e Arnete Folgaça, recebeu uma avaliação positiva dos participantes. A iniciativa focou no desenvolvimento de habilidades gerenciais e na melhoria das relações interpessoais no ambiente de trabalho. O sucesso do evento reforçou a importância da capacitação contínua para o fortalecimento das lideranças na instituição.',
         photos: [],
@@ -1944,7 +1967,7 @@ export const memorialData: MemorialData = {
     // 6 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LUIZ ANTÔNIO ABRANTES',
         desc: 'Admissão do Administrador LUIZ ANTÔNIO ABRANTES como docente no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/01/1996.',
         photos: [],
@@ -1952,7 +1975,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Ricardo Correa Gomes',
         desc: 'Admissão do docente Ricardo Correa Gomes no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/09/1996.',
         photos: [],
@@ -1976,7 +1999,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LOURIVAL DE CASTRO VALE',
         desc: 'Admissão do docente LOURIVAL DE CASTRO VALE no Departamento de Administração e Contabilidade (DAD), com início das atividades em 18/03/1997..',
         photos: [],
@@ -1984,7 +2007,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LUCIANA DE OLIVEIRA MIRANDA GOMES',
         desc: 'Admissão da docente LUCIANA DE OLIVEIRA MIRANDA GOMES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 12/03/1997.',
         photos: [],
@@ -1992,7 +2015,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'JORGE ALBERTO DOS SANTOS',
         desc: 'Admissão do docente JORGE ALBERTO DOS SANTOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 28/05/1997.',
         photos: [],
@@ -2000,7 +2023,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'WALMER FARONI',
         desc: 'Atuação do docente WALMER FARONI na administração superior como Pró-Reitor de Assuntos Comunitários.',
         photos: [],
@@ -2008,7 +2031,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'SÉRGIO AUGUSTO PEREIRA MONTEIRO',
         desc: 'Atuação do docente SÉRGIO AUGUSTO PEREIRA MONTEIRO na administração superior como Coordenador do Sistema Rádio e Televisão.',
         photos: [],
@@ -2016,7 +2039,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'NINA ROSA DA SILVEIRA CUNHA',
         desc: 'Atuação da docente NINA ROSA DA SILVEIRA CUNHA na administração superior como Diretora de Recursos Humanos.',
         photos: [],
@@ -2034,7 +2057,7 @@ export const memorialData: MemorialData = {
     // 10 registros neste ano
     events: [
       {
-        tag: 'nomeacao',
+        tag: '',
         title: 'Tutor do PET',
         desc: 'Aprovação do prof. Adriel Rodrigues de Oliveira como tutor do PET com voto de reconhecimento ao prof. José Edson Lara.',
         photos: [],
@@ -2042,7 +2065,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'nomeacao',
+        tag: '',
         title: 'Homologação de Concurso',
         desc: 'Concurso na área de Administração da Produção/Material/Novas Empresas, elegendo Luiz Cláudio Lopes Alves para o cargo de Professor Assistente I, em 07/05/1997',
         photos: [],
@@ -2050,7 +2073,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Aprovação da Especialização em Administração Municipal',
         desc: 'Aprovação da implantação do curso de especialização Lato-Sensu em Administração Municipal, com carga horária de 400 horas-aulas com disciplinas aos sábados.',
         photos: [],
@@ -2058,7 +2081,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Planejamento de Atividades de Extensão do 2º Semestre',
         desc: 'Deliberação sobre o cronograma que integrará o Dia do Administrador, Encontro Mineiro de Administração Municipal, Simpósio Sobre Qualidade Total, Semana de Trainees e curso de Gestão da Inovação.',
         photos: [],
@@ -2066,7 +2089,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Eliezer Egídio e Silva',
         desc: 'Admissão do docente Eliezer Egídio e Silva no Departamento de Administração e Contabilidade (DAD), com início das atividades em 25/08/1997.',
         photos: [],
@@ -2074,7 +2097,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Diretor do CCH',
         desc: 'Professor Adriel Rodrigues de Oliveira assume diretoria do CCH, para o período de 03/11/1997 a 11/01/2001.',
         photos: [],
@@ -2082,7 +2105,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'I Semana do Empresário e Atuação do DAD/CEE',
         desc: 'O Departamento de Administração e Economia (DAD) e o Conselho de Extensão (CEE) da UFV promovem, entre 12 e 18 de julho, a I Semana do Empresário. O evento tem como objetivo aproximar executivos e empresários da universidade, oferecendo conhecimentos técnicos e gerenciais para o desenvolvimento de diversos setores empresariais. (CONFERIR)',
         photos: [],
@@ -2090,7 +2113,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Cursos do NAIPE',
         desc: 'O Núcleo de Assistência Integrada à Pequena Empresa (NAIPE) encerrou o curso de "Administração de Vendas", que foi ministrado por José Edson Lara para 34 inscritos. A coordenadora Nina Rosa Silveira Cunha confirmou que o NAIPE pretende repetir e ampliar a oferta de cursos. (CONFERIR)',
         photos: [],
@@ -2098,7 +2121,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Posse na FUNARBE',
         desc: 'O Reitor da UFV, professor Geraldo Martins Chaves, empossou o prof. José Edson Lara (DAD) como novo Diretor Administrativo-Financeiro da Fundação Arthur Bernardes (FUNARBE) em substituição a José Clévio Dias Casali (DAD).',
         photos: [],
@@ -2115,7 +2138,7 @@ export const memorialData: MemorialData = {
     // 10 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Jailson de Oliveira Arieira',
         desc: 'Admissão do docente Jailson de Oliveira Arieira no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/05/1998.',
         photos: [],
@@ -2134,7 +2157,14 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'Minuto Gerencial',
         desc: 'Foi lançado o Minuto Gerencial, uma série de orientações para o público ouvinte da Rádio Universitária. Os textos tiveram a participação efetiva dos alunos, que  abordaram temas como A Qualidade do Ponto de Vista do Cliente, Como Tratar o Cliente, Informação e Qualidade, Atendimento por  Telefone,  5 S, dentre outros.',
-        photos: [],
+        photos: [
+          { url: '/1998 - Minuto Gerencial 1.jpeg', caption: 'Minuto Gerencial (1/6)' },
+          { url: '/1998 - Minuto Gerencial 2.jpeg', caption: 'Minuto Gerencial (2/6)' },
+          { url: '/1998 - Minuto Gerencial 3.jpeg', caption: 'Minuto Gerencial (3/6)' },
+          { url: '/1998 - Minuto Gerencial 4.jpeg', caption: 'Minuto Gerencial (4/6)' },
+          { url: '/1998 - Minuto Gerencial 5.jpeg', caption: 'Minuto Gerencial (5/6)' },
+          { url: '/1998 - Minuto Gerencial 6.jpeg', caption: 'Minuto Gerencial (6/6)' }
+        ],
         externalLinks: [],
         articleUrl: ''
       },
@@ -2150,10 +2180,21 @@ export const memorialData: MemorialData = {
     // 5 registros neste ano
     events: [
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Aula Inaugural da Pós-Graduação em Gestão Estratégica',
         desc: 'Realização da aula inaugural do Curso de Pós-Graduação Lato Sensu em Gestão Estratégica, com preenchimento total das vagas ofertadas.',
         photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'Aprovada a Criação do Curso de Ciências Contábeis',
+        desc: 'Foi aprovada, por unanimidade, por proposição da conselheira Elza Fernandes de Araújo, a criação do curso de Ciências Contábeis, a ser iniciado a partir do ano 2000, com 50 vagas, oferecidas já a partir do próximo processo seletivo. Decidiu-se, também, delegar competência à Pró-Reitoria de Ensino para, juntamente com as Comissões Especiais, definir as provas específicas que os candidatos a esses cursos deverão fazer no Vestibular. ATANº348/99–CEPE.',
+        photos: [
+          { url: '/1999 - Curso de Ciencias Contabeis 1.jpeg', caption: 'Criação do Curso de Ciências Contábeis (1/2)' },
+          { url: '/1999 - Curso de Ciencias Contabeis 2.jpeg', caption: 'Criação do Curso de Ciências Contábeis (2/2)' }
+        ],
         externalLinks: [],
         articleUrl: ''
       }
@@ -2169,7 +2210,7 @@ export const memorialData: MemorialData = {
     events: [
      
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Agradecimento por Instalação da Sala do CACE',
         desc: 'Alocação de 4 salas no subsolo do anexo ao Prédio de Ciências Humanas, Letras e Artes para abrigar o CACE, monitoria, almoxarifado/arquivo morto e pequenas reuniões.',
         photos: [],
@@ -2177,7 +2218,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Encontro Mineiro de Empresas',
         desc: 'O evento reuniu representantes de diversas empresas juniores, entre elas, o CACE e entidades de classe para discutir o mercado de trabalho.',
         photos: [],
@@ -2185,7 +2226,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Posse de Chefes de Departamento',
         desc: 'O professor Walmer Faroni é empossado como chefe do Departamento de Administração (DAD) em 15/12/2000 a 15/12/2004.',
         photos: [],
@@ -2203,7 +2244,7 @@ export const memorialData: MemorialData = {
     // 7 registros neste ano
     events: [
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Curso de administração comemora 25 Anos',
         desc: 'O vigésimo quinto aniversário do curso de Administração, foi organizado pela Comissão de Extensão, coordenação do curso e a chefia do DAD.',
         photos: [],
@@ -2211,7 +2252,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Demanda de Pós-Graduação em Ponte Nova',
         desc: 'Professores do DAD debatem solicitação da Faculdade de Ciências Contábeis (FACCO) de Ponte Nova (MG) para o oferecimento de uma turma de Pós-Graduação Lato Sensu.',
         photos: [],
@@ -2219,7 +2260,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
        {
-        tag: 'ensino',
+        tag: '',
         title: 'Utilização de Recursos',
         desc: 'Foi Promovido um Curso teórico e prático para capacitar alunos, professores, contadores e demais interessados a utilizarem os recursos da calculadora financeira HP-12C na resolução de problemas nas operações finanaceiras. 28 de abril',
         photos: [{ url: '/2001 - Utilização de Recursos.jpeg', caption: 'Panfleto do Curso.' }],
@@ -2227,7 +2268,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Encerramento de Turma em Ubá',
         desc: 'Pós-Graduação Lato Sensu conclui as atividades na cidade de Ubá e encerra a primeira turma do Curso de Pós-Graduação Lato Sensu.',
         photos: [],
@@ -2235,7 +2276,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'I Meeting de Administração',
         desc: 'Evento coordenado pelos professores do DAD, idealizado para oferecer cursos de curta duração com o tema "Novas Tecnologias e Administração".',
         photos: [],
@@ -2243,7 +2284,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Excelência em Administração',
         desc: 'O curso de Administração da UFV manteve a avaliação "A" consecutivamente desde 1997.',
         photos: [],
@@ -2261,7 +2302,7 @@ export const memorialData: MemorialData = {
     // 11 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'RODRIGO GAVA',
         desc: 'Admissão do docente RODRIGO GAVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/07/2002.',
         photos: [],
@@ -2269,7 +2310,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'SUELY DE FATIMA RAMOS SILVEIRA',
         desc: 'Admissão da docente SUELY DE FATIMA RAMOS SILVEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/07/2002.',
         photos: [],
@@ -2277,7 +2318,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Mudança de Nomenclatura em Pós-Graduação',
         desc: 'Alteração do nome do Curso de Pós-Graduação Lato Sensu de \'Gestão Empresarial\' para \'Gestão e Diagnóstico Empresarial\'.',
         photos: [],
@@ -2285,7 +2326,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Novas Turmas de Especialização 2002/2003',
         desc: 'Aprovação pelo DAD da abertura de novas turmas em Gestão Estratégica e em Gestão e Diagnóstico Empresarial.',
         photos: [],
@@ -2302,7 +2343,7 @@ export const memorialData: MemorialData = {
     // 6 registros neste ano
     events: [
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Convênio DAD e MASTERMAQ',
         desc: 'Formalização de parceria com a empresa MASTERMAQ para a cessão de softwares especializados voltados ao suporte da prática de contabilidade nos cursos do DAD.',
         photos: [],
@@ -2310,7 +2351,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Novas Ofertas e Curso em Gestão Municipal',
         desc: 'Aprovação pelo DAD da primeira turma do novo curso de pós-graduação lato sensu em Gestão Municipal.',
         photos: [],
@@ -2318,7 +2359,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Comemoração do 15º Aniversário do DAD',
         desc: 'DAD comemora a consolidação de seu décimo quinto aniversário, como unidade acadêmica após o desmembramento do antigo DAE.',
         photos: [],
@@ -2334,7 +2375,7 @@ export const memorialData: MemorialData = {
     // 14 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'NÁLBIA DE ARAUJO SANTOS',
         desc: 'Admissão da docente NÁLBIA DE ARAUJO SANTOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 28/04/2004.',
         photos: [],
@@ -2342,7 +2383,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LUIZA AMELIA DE ARRUDA LADEIRA',
         desc: 'Admissão da servidora técnico-administrativo LUIZA AMELIA DE ARRUDA LADEIRA, ocupando o cargo de ASSISTENTE EM ADMINISTRAÇÃO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/06/2004.',
         photos: [],
@@ -2350,7 +2391,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Pós Graduação em Stricto Sensu em Administração Pública',
         desc: 'Aprovação de Criação do Curso de Pós-Graduação Stricto Sensu focado na área de Administração Pública/Gestão Municipal.',
         photos: [],
@@ -2358,7 +2399,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Mec reconhece o curso de Ciências Contábeis',
         desc: 'Foi homologado pelo MEC, pela Portaria n.º 1628, que oficializou o reconhecimento do curso de Ciências Contábeis.',
         photos: [],
@@ -2366,7 +2407,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Moções de Congratulações ao DAD',
         desc: 'Moção do Conselho departamental do CCH pela aprovação do Mestrado em Administração Pública e Congratulações da Câmara Municipal de Viçosa pelo sucesso do I Seminário de Contabilidade.',
         photos: [],
@@ -2374,7 +2415,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Chefe do DAD',
         desc: 'Professor Walmer Faroni é reconduzido e empossado como chefe do DAD para o novo quadriênio em 15 de dezembro de 2004 a 20 de fevereiro de 2006.',
         photos: [],
@@ -2392,7 +2433,7 @@ export const memorialData: MemorialData = {
     // 6 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'MARCO AURELIO MARQUES FERREIRA',
         desc: 'Admissão do docente MARCO AURELIO MARQUES FERREIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/09/2005.',
         photos: [],
@@ -2400,7 +2441,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Convênio entre o DAD e a Secretaria Estadual do Meio Ambiente e Desenvolvimento Sustentável SEMAD - MG.',
         desc: 'Em abril de 2005, o Departamento de Administração DAD realizou o curso "Desenvolvimento de Habilidades para Chefes e Supervisores". Fruto de convênio com a Semad, o treinamento capacitou 58 diretores do IEF, da FEAM e da própria secretaria no Centro de Ensino de Extensão, sob a condução de professores do DAD, as palestras abordaram temas como planejamento, motivação, gerenciamento e ética no serviço público.',
         photos: [],
@@ -2408,7 +2449,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
     {
-      tag: 'reconhecimento',
+      tag: '',
       title: 'Homenagem nos 25 anos do AGROS - Profª Nina Rosa da Silveira Cunha',
       desc: 'Homenageada na qualidade de ex-conselheira nos 25 anos de fundação do AGROS.',
       photos: [],
@@ -2416,7 +2457,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Alinhamento Estratégico da Gestão Institucional',
         desc: 'Sob a coordenação da Pró-Reitoria de Planejamento e Orçamento, professores do Departamento de Administração (DAD) ministraram palestras sobre Planejamento Estratégico Institucional para as chefias da UFV. Integradas ao Plano de Gestão 2005–2008.',
         photos: [],
@@ -2434,7 +2475,7 @@ export const memorialData: MemorialData = {
     // 9 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'MAGNUS LUIZ EMMENDOERFER',
         desc: 'Admissão do docente MAGNUS LUIZ EMMENDOERFER no Departamento de Administração e Contabilidade (DAD), com início das atividades em 04/08/2006.',
         photos: [],
@@ -2442,7 +2483,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'THIAGO DE MELO TEIXEIRA DA COSTA',
         desc: 'Admissão do docente THIAGO DE MELO TEIXEIRA DA COSTA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 07/11/2006.',
         photos: [],
@@ -2450,7 +2491,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Criação do Curso em Controladoria e Finanças',
         desc: 'Criação do Curso de Pós-Graduação Lato Sensu em Controladoria e Finanças, com previsão de início para novembro de 2006.',
         photos: [],
@@ -2458,7 +2499,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Implantação do Curso de Administração a Distância (EAD)',
         desc: 'Definições dos coordenadores e comissão para o curso EAD (Resolução 5/2006), com início em agosto nos polos de Viçosa e Florestal, além de autorização para compra de equipamentos e seleção de 11 tutores.',
         photos: [],
@@ -2466,7 +2507,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Capacitação para Gestores',
         desc: 'Ciclo de palestras voltado para dirigentes, ministrado por professores do DAD.',
         photos: [],
@@ -2474,7 +2515,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Professor Walmer Faroni assume diretoria do CCH, no período de 20/02/2006 a 30/03/2010 e 30/03/2010 a 22/04/2014.',
         desc: '',
         photos: [],
@@ -2482,7 +2523,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Criação da Coopera',
         desc: 'Comissão instituída para otimização dos procedimentos e rotinas administrativas da universidade.',
         photos: [],
@@ -2500,7 +2541,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Novas Turmas de Lato Sensu (2007-2009)',
         desc: 'Abertura de duas turmas para as especializações em Gestão Estratégica e em Gestão e Diagnóstico Empresarial.',
         photos: [],
@@ -2508,7 +2549,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Mudança de Nome do Departamento de Administração',
         desc: 'Alteração da denominação do Departamento de Administração, que passou a se chamar OFICIALMENTE DEPARTAMENTO DE ADMINISTRAÇÃO E CONTABILIDADE, ocorrido em 07 março de 2007, Ata 251.',
         photos: [],
@@ -2524,7 +2565,7 @@ export const memorialData: MemorialData = {
     // 3 registros neste ano
     events: [
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Cace Consultoria Jr.',
         desc: 'O Cace Consultoria Jr, participou da 3ª Junior Enterprise World Conference na cidade de Porto, em Portugal.',
         photos: [],
@@ -2532,7 +2573,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: '15 Anos do CACE',
         desc: 'Em 12 de agosto de 2008 foram comemorados os 15 anos da Central de Empresas Juniores (CACE).',
         photos: [],
@@ -2540,7 +2581,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'PET comemora 20 anos',
         desc: 'O PET ADM completou 20 anos no DAD, tendo sido o professor Adriel Rodrigues de Oliveira indicado pelo colegiado como primeiro tutor, em 19 de outubro de 1988.',
         photos: [],
@@ -2555,7 +2596,7 @@ export const memorialData: MemorialData = {
     // 6 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'SIMONE MARTINS',
         desc: 'Admissão da docente SIMONE MARTINS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 16/02/2009.',
         photos: [],
@@ -2563,7 +2604,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'WENDER FRAGA MIRANDA',
         desc: 'Admissão do docente WENDER FRAGA MIRANDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/07/2009.',
         photos: [],
@@ -2571,7 +2612,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'reconhecimento',
+      tag: '',
       title: 'Prêmio Rui Miller Paiva - SOBER - Profª Nina Rosa Silveira Cunha',
       desc: 'Foi contemplada com o Prêmio Rui Miller Paiva,\npelo Melhor Artigo Publicado na Revista Economia Rural no\nano de 2009, durante o 47º Congresso da Sociedade\nBrasileira de Economia, Administração e Sociologia Rural -\nSOBER.',
       photos: [],
@@ -2579,7 +2620,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },  
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Dissertação do Mestrado em Administração Recebe Diploma de Honra ao Mérito em Convenção Mineira',
         desc: 'O trabalho intitulado "Contribuição de Melhoria e a Lei de Responsabilidade Fiscal: Um estudo de caso da Mesorregião da Zona da Mata Mineira", de autoria de Tainá Rodrigues Gomide Souza Pinto, figurou entre os premiados na Convenção Mineira de Contabilidade, realizada em Belo Horizonte entre os dias 21 e 23 de outubro. A pesquisa foi agraciada com o Diploma de Honra ao Mérito no Prêmio Internacional de Produção Contábil Técnico-Científica Prof. Dr. Antônio Lopes de Sá. O artigo premiado consiste em um recorte de sua dissertação desenvolvida no Programa de Mestrado em Administração da UFV, sob a orientação do professor Walmer Faroni. Nº 1.428 (12 de dezembro de 2009) FOTO PG. 9',
         photos: [{ url: '2009 “A professora Tainá.”.jpg', caption: 'A professora Tainá Rodrigues Gomide Souza Pinto.' }],
@@ -2588,7 +2629,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Criação do IPPDS e Recursos do CT-INFRA',
         desc: 'O Colegiado aprovou o referendo referente à proposta de criação do Instituto de Políticas Públicas e Desenvolvimento Sustentável da UFV (IPPDS), uma iniciativa conjunta que envolve os departamentos de Administração e Contabilidade, Economia, Economia Doméstica e Economia Rural. Também foi anunciada a aprovação de recursos financeiros do CT-INFRA/FINEP destinados às instalações físicas do Centro de Ciências Humanas, Letras e Artes. 17 de dezembro de 2009 – Ata nº 273/2009.',
         photos: [],
@@ -2596,7 +2637,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Posse do Professor Luiz Antônio Abrantes',
         desc: 'O professor Luiz Antônio Abrantes, em 30 de dezembro de 2009, toma posse como pró-reitor de Gestão de Pessoas da UFV. Nº 1.421 (28 de fevereiro de 2009)',
         photos: [{ url: '/2009 “O pré-reitor Luiz Antônio Abrantes faz seu pronunciamento, tendo o lado o diretor-assistente Ely Rosa.”.jpg', caption: 'O pró-reitor Luiz Antônio Abrantes em seu pronunciamento.' }],
@@ -2604,7 +2645,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'Lançamento da Revista Administração Pública e Gestão Social (APGS)',
         desc: 'Em setembro de 2009 o DAD lança a primeira edição da revista eletrônica Administração Pública e Gestão Social. N 1.427',
         photos: [{ url: '/2009 - CAPA REVISTA PGS.png', caption: 'CAPA REVISTA PGS' }],
@@ -2621,7 +2662,7 @@ export const memorialData: MemorialData = {
     // 7 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'TAINÁ RODRIGUES GOMIDE SOUZA PINTO',
         desc: 'Admissão da docente TAINÁ RODRIGUES GOMIDE SOUZA PINTO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/03/2010.',
         photos: [],
@@ -2629,7 +2670,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'ANTÔNIO CARLOS BRUNOZI JÚNIOR',
         desc: 'Admissão do docente ANTÔNIO CARLOS BRUNOZI JÚNIOR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/07/2010.',
         photos: [],
@@ -2637,7 +2678,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Tributação na cadeia agroindustrial do leite',
       desc: 'ABRANTES, L. A. ; GOMES, A. P. ; B. JUNIOR, A. C. ; ZUCCOLOTTO, R. ; FERREIRA, Marco Aurélio Marques ; GOMES, S. T. . Tributação na cadeia agroindustrial do leite. 1. ed. Belo Horizonte: Polo de Excelência de Leite e Derivados de Minas Gerais, 2010. v. 1.',
       photos: [],
@@ -2645,7 +2686,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Criação do NUPEC',
         desc: 'Foi formalizada a criação do Núcleo de Pesquisa em Contabilidade (NUPEC), voltado para a Iniciação Científica do curso de Ciências Contábeis. 16 de março de 2010 – Ata nº 274/2010.',
         photos: [],
@@ -2653,7 +2694,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'O II Encontro Mineiro de Administração Pública e Gestão Social (EMAPEGS).',
         desc: 'Ocorreu em 10 e 11 de junho o II EMAPEGS coordenado pelo professor Marco Aurélio Marques Ferreira, do DAD.',
         photos: [],
@@ -2661,7 +2702,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Reconhecimento no Aniversário do Curso',
         desc: 'O curso de Administração do DAD celebrou seus 35 anos de fundação consolidando-se como uma referência na formação de profissionais capacitados para atuar em diversos setores da economia. O evento contou com a presença de autoridades acadêmicas, como o reitor e o diretor do CCH.',
         photos: [],
@@ -2669,7 +2710,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Excelência no Enade e Destaque do Curso de Administração',
         desc: 'O curso de Administração do DAD UFV alcançou um resultado histórico ao obter a nota máxima 5 no Exame Nacional de Desempenho dos Estudantes (Enade) de 2009, consolidando sua posição entre as melhores do país. Nº 1.436 | 28 de dezembro 2009',
         photos: [],
@@ -2686,7 +2727,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'FERNANDA MARIA DE ALMEIDA',
         desc: 'Admissão da docente FERNANDA MARIA DE ALMEIDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 21/01/2011.',
         photos: [],
@@ -2694,7 +2735,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'GISLAINE APARECIDA SANTANA SEDIYAMA',
         desc: 'Admissão da docente GISLAINE APARECIDA SANTANA SEDIYAMA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 03/03/2011.',
         photos: [],
@@ -2702,7 +2743,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Administração pública, gestão social e economia solidária: avanços e desafios',
       desc: 'FERREIRA, M. A. M. (Org.) ; EMMENDOERFER, M. L. (Org.) ; GAVA, R. (Org.) . Administração pública, gestão social e economia solidária: avanços e desafios (ISBN 9788560249688). 1. ed. Viçosa (MG): DAD/UFV, 2011. v. 1. 351p .',
       photos: [],
@@ -2710,7 +2751,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Administração pública, gestão social e economia solidária: avanços e desafios',
       desc: 'FERREIRA, Marco Aurélio Marques; EMMENDOERFER, M. L. (Org.) ; GAVA, R. (Org.) . Administração pública, gestão social e economia solidária: avanços e desafios. 1. ed. Viçosa: DAD/UFV, 2011. v. 1. 351p .',
       photos: [],
@@ -2718,7 +2759,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Estudos Sobre a Gestão do Programa Esporte e Lazer da Cidade',
       desc: 'VIEIRA, L. H. S. ; SILVEIRA, S. F. R. ; FERREIRA, Marco Aurélio Marques ; TEIXEIRA, K. M. D. . Estudos Sobre a Gestão do Programa Esporte e Lazer da Cidade. 1. ed. Brasilia: Gráfica e Editora Ideal, 2011. v. 1. 188p .',
       photos: [],
@@ -2726,7 +2767,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Livro Administração Pública, Gestão Social e Economia Solidária',
         desc: 'A obra intitulada "Administração Pública, Gestão Social e Economia Solidária" foi organizada pelos professores Marco Aurélio Ferreira Marques, Magnus Luiz Emmendoerfer e Rodrigo Gava, do DAD UFV.',
         photos: [],
@@ -2734,7 +2775,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Lançamento de Curso e Divulgação no Dia do Administrador',
         desc: 'A professora Nina Rosa da Silveira Cunha expôs informações sobre o andamento do curso lato sensu em Gestão Estratégica e Ambiental. E falou sobre o Dia do Administrador. Ata n.º 285/2011 (1 de setembro de 2011)',
         photos: [],
@@ -2750,7 +2791,7 @@ export const memorialData: MemorialData = {
     // 3 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'ALAN FERREIRA DE FREITAS',
         desc: 'Admissão do docente ALAN FERREIRA DE FREITAS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 01/02/2012.',
         photos: [],
@@ -2758,7 +2799,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Recondução da professora Suely no IPPDS',
         desc: 'O Instituto de Políticas Públicas e Desenvolvimento Sustentável da Universidade Federal de Viçosa realizou a cerimônia de posse de sua nova diretoria, reconduzindo a professora Suely de Fátima Ramos Silveira, do Departamento de Administração, ao cargo de diretora para um novo mandato. Ed 1449',
         photos: [],
@@ -2766,7 +2807,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'O cargo de empreendedor público em um governo estadual no Brasil: será este ator contribuinte para a inovação social?',
       desc: 'VALADARES, J.L. ; EMMENDOERFER, M. L. ; FARONI, W. . O cargo de empreendedor público em um governo estadual no Brasil: será este ator contribuinte para a inovação social? (ISBN-978-85-7192-849-7). In: Simone Portella Teixeira de Mello. (Org.). Administração Pública Contemporânea: temas para o debate. 1ed.Pelotas: UFPel, 2012, v. 1, p. 140-160.',
       photos: [],
@@ -2774,7 +2815,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Homenagem à Professora Suely de Fátima Ramos Silveira',
         desc: 'A professora Suely de Fátima Ramos Silveira, vinculada ao Departamento de Administração (DAD), foi agraciada com a Medalha de Mérito em Extensão durante as festividades do 85º aniversário de fundação da Universidade Federal de Viçosa. Ed 1450.',
         photos: [],
@@ -2790,7 +2831,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'WESCLEY SILVA XAVIER',
         desc: 'Admissão do docente WESCLEY SILVA XAVIER no Departamento de Administração e Contabilidade (DAD), com início das atividades em 17/10/2013.',
         photos: [],
@@ -2798,7 +2839,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'JANSEN CARDOSO PEREIRA',
         desc: 'Admissão do(a) servidor(a) técnico-administrativo(a) JANSEN CARDOSO PEREIRA, no Departamento de Administração e Contabilidade (DAD), com início das atividades em 20/08/2013.',
         photos: [],
@@ -2806,7 +2847,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Pesquisa e Interdisciplinaridade em Ciências Sociais Aplicadas, Humanas, Letras e Artes',
       desc: 'FARONI, W. (Org.) ; Emmendoerfer, Magnus Luiz (Org.) . Pesquisa e Interdisciplinaridade em Ciências Sociais Aplicadas, Humanas, Letras e Artes (ISBN 9788566482003). 1. ed. Viçosa: Centro de Ciências Humanas, Letras e Artes/UFV, 2013. v. 1. 192p .',
       photos: [],
@@ -2814,7 +2855,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Fatores Determinantes do Clima Organizacional na Gestão de Pessoas em uma Instituição Federal de Ensino Superior',
       desc: 'ABRANTES, Luiz Antônio ; CUNHA, Nina Rosa Silveira ; PEREIRA, Eduardo Rezende ; GOMES, Geraldo Robésio ; GOMIDE, Marco Antonio L. ; LIMA, Rita de Cássia ; DIAS, Lucas . Fatores Determinantes do Clima Organizacional na Gestão de Pessoas em uma Instituição Federal de Ensino Superior. In: BARBOSA, Telma Regina da C. G.; ROCHA, Águida G. F.; REI, Maria Cecília T.; MOREIRA, Natália C.. (Org.). Gestão Pública em Minas Gerais: estudos práticos. 1ed.Contagem - MG: MJR Editora Gráfica, 2013, v. 1, p. 176-255.',
       photos: [],
@@ -2822,7 +2863,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Benchmarking como Estratégia de Gestão de Unidades Públicas de Ensino',
       desc: 'Moreira, Ney Paulo ; CUNHA, Nina Rosa Silveira ; FERREIRA, M. A. M. ; SILVEIRA, Suely de Fátima Ramos . Benchmarking como Estratégia de Gestão de Unidades Públicas de Ensino: uma aplicação aos Programas de Pós-Graduação Acadêmicos em Administração, Contabilidade e Turismo. In: FERREIRA, Marco Aurélio F.; ABRANTES, L. Antonio. (Org.). Políticas Públicas, Gestão e Sociedade. 01ed.Viçosa MG: Triunfal Gráfica e Editora, 2013, v. 1, p. 133-335.',
       photos: [],
@@ -2830,7 +2871,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'A Constituição de um Fórum de Pesquisa como Espaço de Diálogos Científicos e Interdisciplinares no Centro de Ciências Humanas, Letras e Artes na Universidade Federal de Viçosa',
       desc: 'EMMENDOERFER, M. L. ; FARONI, W. . A Constituição de um Fórum de Pesquisa como Espaço de Diálogos Científicos e Interdisciplinares no Centro de Ciências Humanas, Letras e Artes na Universidade Federal de Viçosa (ISBN-978-85-66482-00-3). In: Walmer Faroni, Magnus Emmendoerfer. (Org.). II FÓRUM DE PESQUISA DO CCH: INTERDISCIPLINARIDADE EM CIÊNCIAS SOCIAIS APLICADAS, HUMANAS, LETRAS E ARTES. 1ed.Viçosa: CCH/UFV, 2013, v. 1, p. 8-15.',
       photos: [],
@@ -2838,7 +2879,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-      tag: 'reconhecimento',
+      tag: '',
       title: 'Diploma de Honra ao Mérito - Profª Nina Rosa da Silveira Cunha',
       desc: 'A professora Nina Rosa do Departamendo de Administração e Contabilidade foi contemplada com o Diploma de Honra ao Mérito em nome da Divisão de Saúde da Universidade Federal de Viçosa, Fundação Hemominas - Hemonúcleo de Ponte Nova - MG',
       photos: [],
@@ -2846,7 +2887,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Homenagens e Menções Honrosas',
         desc: 'O Colegiado registrou homenagens e menções honrosas a membros do corpo docente pelas suas conquistas acadêmicas, parabenizando o professor Magnus Luiz Emmendoerfer em decorrência da reclassificação da revista Administração Pública e Gestão Social como periódico B3 pela Qualis e também a professora Suely de Fátima Ramos Silveira por conta de sua indicação oficial como pesquisadora do CNPq. Ata nº 294/2013 – 1º de março de 2013',
         photos: [],
@@ -2854,7 +2895,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Avaliação da CAPES',
         desc: 'O Curso de pós graduação em administração, em nível de mestrado, conquista conceito 4 na CAPES. Ata nº 299/2013 – 12 de dezembro de 2013.',
         photos: [],
@@ -2870,7 +2911,7 @@ export const memorialData: MemorialData = {
     // 1 registro neste ano
     events: [
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Obras do Anexo e Mudança de Departamento de Letras',
         desc: 'A presidência apresentou informes sobre as instalações físicas do departamento, destacando a conclusão da primeira etapa da obra do anexo do DAD, a qual ficava dependendo da liberação de recursos financeiros por parte da UFV para que pudesse ser finalizada. Adicionalmente, foi comunicada aos presentes a mudança do Departamento de Letras para sua sede própria e a respectiva reforma do prédio. Ata nº 302/2014 (11 de junho de 2014)',
         photos: [],
@@ -2878,7 +2919,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Gestão Pública do Turismo no Brasil: teorias, metodologias e aplicações',
       desc: 'PIMENTEL, T. D. (Org.) ; EMMENDOERFER, MAGNUS LUIZ (Org.) ; TOMAZZONI, E. (Org.) . Gestão Pública do Turismo no Brasil: teorias, metodologias e aplicações (ISBN 9788570617354). 1. ed. Caxias do Sul: EDUCS, 2014. v. 1. 528p .',
       photos: [],
@@ -2886,7 +2927,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Administração pública, gestão social e economia solidária: avanços e desafios',
       desc: 'FERREIRA, M. A. M. (Org.) ; Emmendoerfer, Magnus Luiz (Org.) ; GAVA, R. (Org.) . Administração pública, gestão social e economia solidária: avanços e desafios (ISBN 9788566482027). 2. ed. Viçosa: Centro de Ciências Humanas, Letras e Artes - UFV, 2014. v. 1. 354p .',
       photos: [],
@@ -2894,7 +2935,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Assédio Moral em Organizações Públicas e a (Re)Ação dos Sindicatos',
       desc: 'EMMENDOERFER, MAGNUS LUIZ; TOLFO, S. R. (Org.) ; NUNES, T. S. (Org.) . Assédio Moral em Organizações Públicas e a (Re)Ação dos Sindicatos (ISBN 9788566482034). 1. ed. Viçosa: Centro de Ciências Humanas, Letras e Artes - UFV, 2014. v. 1. 280p .',
       photos: [],
@@ -2902,7 +2943,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Pesquisa e Interdisciplinaridade em Ciências Sociais Aplicadas, Humanas, Letras e Artes',
       desc: 'FARONI, W. (Org.) ; EMMENDOERFER, MAGNUS LUIZ (Org.) . Pesquisa e Interdisciplinaridade em Ciências Sociais Aplicadas, Humanas, Letras e Artes (ISBN 9788566482010). 2. ed. Viçosa (MG): Centro de Ciências Humanas, Letras e Artes - UFV, 2014. v. 1. 192p .',
       photos: [],
@@ -2910,7 +2951,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Métodos de pesquisa aplicados à gestão pública',
       desc: 'Emmendoerfer, Magnus Luiz. Métodos de pesquisa aplicados à gestão pública (ISBN 9788579882333). 1. ed. Florianópolis: CAD/UFSC, 2014. v. 1. 74p .',
       photos: [],
@@ -2918,7 +2959,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Administração Pública, Economia Solidária e Gestão Social',
       desc: 'FERREIRA, Marco Aurélio Marques. Administração Pública, Economia Solidária e Gestão Social. 01. ed. Viçosa: UFV, 2014. v. 01. 299p .',
       photos: [],
@@ -2926,7 +2967,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Gestão Pública',
       desc: 'Ferreira, Marco Aurelio Marques. Gestão Pública. 1. ed. Florianópolis: PROFIAP/UFSC, 2014. v. 1. 58p .',
       photos: [],
@@ -2934,7 +2975,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Gestão Tributária',
       desc: 'ABRANTES, L. A. ; Ferreira, M.A.M. . Gestão Tributária. 3. ed. Brasilia: UAB/CAPES, 2014. v. 1. 132p .',
       photos: [],
@@ -2942,7 +2983,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'NINA ROSA DA SILVEIRA CUNHA',
         desc: 'Nomeação da docente NINA ROSA DA SILVEIRA CUNHA como Professora Titular em 06/06/2014.',
         photos: [],
@@ -2950,7 +2991,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'WALMER FARONI',
         desc: 'Nomeação do docente WALMER FARONI como Professor Titular em 06/06/2014.',
         photos: [],
@@ -2958,7 +2999,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'TELMA REGINA DA COSTA GUIMARÃES BARBOSA',
         desc: 'Nomeação da docente TELMA REGINA DA COSTA GUIMARÃES BARBOSA como Professora Titular em 19/09/2014.',
         photos: [],
@@ -2966,7 +3007,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'ADRIEL RODRIGUES DE OLIVEIRA',
         desc: 'Nomeação do docente ADRIEL RODRIGUES DE OLIVEIRA como Professor Titular em 29/09/2014.',
         photos: [],
@@ -2982,7 +3023,7 @@ export const memorialData: MemorialData = {
     // 5 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Comemoração de Aniversários',
         desc: 'Comemorações dos 15 anos do Curso de Ciências Contábeis, 10 anos da Pós-Graduação em Administração, 40 anos do curso de Administração e os 40 anos do Departamento. Ata nº 310/2015 (25 de agosto de 2015).',
         photos: [],
@@ -2990,7 +3031,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Assédio Moral em Organizações Públicas e a (Re)Ação dos Sindicatos',
       desc: 'EMMENDOERFER, MAGNUS LUIZ; TOLFO, S. R. (Org.) ; NUNES, T. S. (Org.) . Assédio Moral em Organizações Públicas e a (Re)Ação dos Sindicatos (ISBN 9788544402689). 1. ed. Curitiba: CRV, 2015. v. 1. 276p .',
       photos: [],
@@ -2998,7 +3039,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Implantação do Curso de Doutorado',
         desc: 'DAD aprova o curso de doutorado, com previsão de implantação para o primeiro semestre de 2016.',
         photos: [],
@@ -3006,7 +3047,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Homenagens a Titulares e Aposentadoria no Departamento',
         desc: 'Foram prestadas homenagens aos professores Nina Rosa da Silveira Cunha e Walmer Faroni pela aprovação para a categoria de professores titulares do departamento. Adicionalmente, o professor Antônio de Figueiredo Vieira comunicou o início de seu processo de aposentadoria, recebendo agradecimentos formais da professora Nina Rosa da Silveira Cunha, em nome de todo o departamento, pela convivência e dedicação ao longo de seus 25 anos de atividades docentes no DAD/UFV. 24 de fevereiro de 2015.',
         photos: [],
@@ -3014,7 +3055,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Tramitação do Doutorado em Administração',
         desc: 'O Processo para a criação do curso de doutorado em Administração foi aprovado pelo Conselho de Ensino, Pesquisa e Extensão (CEPE) e encaminhado para a avaliação da CAPES. 17 de abril de 2015.',
         photos: [],
@@ -3022,7 +3063,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Chefia do DAD',
         desc: 'A professora Simone Martins assume a chefia do DAD. O professor Djair Cesário de Araújo na ocasião, recebeu as congratulações pela sua  gestão que se encerrou. (26 de junho de 2015)',
         photos: [],
@@ -3038,7 +3079,7 @@ export const memorialData: MemorialData = {
     // 8 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Coordenador do Programa de Pós-Graduação Stricto Sensu em Administração',
         desc: 'O professor Magnus Luiz Emmendoerfer foi formalizado como o novo coordenador do Programa de Pós-Graduação Stricto Sensu em Administração. ATA 317. 04 de março de 2016.',
         photos: [],
@@ -3046,7 +3087,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: '20 anos do movimento empresa junior na Universidade Federal de Viçosa',
       desc: 'EMMENDOERFER, MAGNUS LUIZ; FRAGA, B. O. ; CRUZATO, C. S. ; SILVA, H. M. . 20 anos do movimento empresa junior na Universidade Federal de Viçosa (ISBN 9788566482089). 1. ed. Viçosa: Centro de Ciências Humanas, Letras e Artes - UFV, 2016. v. 1. 175p .',
       photos: [],
@@ -3054,7 +3095,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'O Marketing Verde na Tecnologia da Informação',
       desc: 'CASTRO, B. R. V. ; MOURA, Luiz Rodrigo Cunha ; CUNHA, Nina Rosa Silveira ; PIRES, Ruthe Rebello . O Marketing Verde na Tecnologia da Informação: percepções das atitudes e comportamentos dos profissionais de TI e ações para incrementar o Marketing Verde nesse setor. In: CRUZ, L.; GOMES, P. S.; FERRARI, V.. (Org.). Gestão em Foco: conversas sobre aspectos da gestão empresarial. 1ed.Belo Horizonte - MG: Letramento, 2016, v. , p. 359-386.',
       photos: [],
@@ -3062,7 +3103,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Fundo de financiamento e qualidade da educação: uma visão dos gestores escolares da Rede Municipal de Viçosa/MG',
       desc: 'MIRANDA, A. C. ; Barreto ML ; FARONI, W. . Fundo de financiamento e qualidade da educação: uma visão dos gestores escolares da Rede Municipal de Viçosa/MG. In: Amelia Carla Sobrinho Bifano. (Org.). Politicas Públicas e sua efetivação local. 1ed.Viçosa-MG: uniedhs, 2016, v. II, p. 332-360.',
       photos: [],
@@ -3070,7 +3111,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Coordenação de Curso',
         desc: 'O professor Djair Cesário de Araújo foi anunciado como o novo coordenador do curso de graduação em Administração. ATA 319. 15 de abril de 2016.',
         photos: [],
@@ -3078,7 +3119,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Congratulações ao Professor Marco Aurélio',
         desc: 'Registro formal de congratulações ao professor Marco Aurélio Marques Ferreira por sua indicação ao cargo de Diretor de Publicação e Comunicação pela Associação Brasileira de Administração Pública - ABAP. ATA 321 2. 10 de junho de 2016.',
         photos: [],
@@ -3086,7 +3127,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'JOSIEL LOPES VALADARES',
         desc: 'Admissão do docente JOSIEL LOPES VALADARES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 15/04/2016.',
         photos: [],
@@ -3094,7 +3135,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'FERNANDA CRISTINA DA SILVA',
         desc: 'Admissão da docente FERNANDA CRISTINA DA SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 13/07/2016.',
         photos: [],
@@ -3102,7 +3143,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Novo Editor da Revista Administração Pública e Gestão Social (APGS)',
         desc: 'O professor Josiel Lopes Valadares foi nomeado para o cargo de editor adjunto da revista Administração Pública e Gestão Social (APGS). ATA 322. 01 de julho de 2016.',
         photos: [],
@@ -3110,7 +3151,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Tutoria do Programa de Educação Tutorial (PET)',
         desc: 'Eleição do professor Thiago de Melo Teixeira da Costa como o novo tutor do PET-ADM. ATA 323. 12 de agosto de 2016.',
         photos: [],
@@ -3118,7 +3159,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Premiações Docentes e Simpósio Internacional de Administração Pública (SINAP)',
         desc: 'O Colegiado registrou congratulações ao professor Josiel Lopes Valadares pelo recebimento do Prêmio Guerreiro Ramos de Gestão Pública e ao professor Magnus Luiz Emmendoerfer pela realização do Simpósio Internacional de Administração Pública - SINAP. ATA 324. 09 de setembro de 2016.',
         photos: [],
@@ -3134,7 +3175,7 @@ export const memorialData: MemorialData = {
     // 1 registro neste ano
     events: [
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Legado Profissional da Primeira Chefe do DAD',
         desc: 'A professora Simone Martins foi homenageada pelos docentes, que a parabenizaram pelo legado de profissionalismo e dedicação, destacando o marco histórico de ter sido a primeira mulher a ocupar a chefia do departamento. Ata nº 328/2017. 24 de agosto de 2017.',
         photos: [],
@@ -3142,7 +3183,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Organizações Públicas, Inovações e Políticas de Desenvolvimento',
       desc: 'EMMENDOERFER, M. L.. Organizações Públicas, Inovações e Políticas de Desenvolvimento (ISBN 9788593276-01-9). 1. ed. Viçosa: IPPDS/UFV, 2017. v. 1. 281p .',
       photos: [],
@@ -3150,7 +3191,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Analise da gestão por competências em organizações da justiça eleitoral no Brasil',
       desc: 'SENA, Gabriel Astoni ; CUNHA, Nina Rosa Silveira ; MOURA, Luiz Rodrigo Cunha . Analise da gestão por competências em organizações da justiça eleitoral no Brasil. In: Magnus Luiz Emmendoerfer. (Org.). Organizações públicas, inovações e políticas de desenvolvimento. 1ed.Viçosa: IPPDS UFV, 2017, v. 1, p. 118-140.',
       photos: [],
@@ -3166,7 +3207,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Nomeação de Coordenadores de Administração e Contabilidade',
         desc: 'O Colegiado formalizou a nomeação de novos coordenadores para os cursos oferecidos pelo departamento, sendo designado o professor Evandro Rodrigues de Faria para a coordenação do curso de Administração e o professor Antônio Carlos Brunozi Júnior para a coordenação do curso de Ciências Contábeis. Ata nº 336/2018. 26 de abril de 2018.',
         photos: [],
@@ -3174,7 +3215,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Envelhecimento Ativo: das ações à política',
       desc: 'MARTINS, Simone (Abreu, S.M.); RIBEIRO, A. Q. (Org.) . Envelhecimento Ativo: das ações à política. 1. ed. Viçosa: IPPDS, 2018. v. 1. 133p .',
       photos: [],
@@ -3182,7 +3223,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'extensao',
+        tag: '',
         title: 'V Encontro Brasileiro de Administração Pública',
         desc: 'V Encontro Brasileiro de Administração Pública foi realizado pelo DAD e coordenado pelo professor Magnus Luiz Emmendoerfer. Ata nº 337/2018. 15 de junho de 2018.',
         photos: [],
@@ -3190,7 +3231,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'reconhecimento',
+        tag: '',
         title: 'Aniversário do PET ADM',
         desc: 'Comemoração dos 30 anos de existência do PET ADM. Ata nº 339/2018. 14 de setembro de 2018.',
         photos: [],
@@ -3206,7 +3247,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'DIEGO COSTA MENDES',
         desc: 'Admissão do docente DIEGO COSTA MENDES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/10/2019.',
         photos: [],
@@ -3214,7 +3255,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LAYON CARLOS CEZAR',
         desc: 'Admissão do docente LAYON CARLOS CEZAR no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/11/2019.',
         photos: [],
@@ -3222,7 +3263,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'ANA CLAUDIA AZEVEDO',
         desc: 'Admissão da docente ANA CLAUDIA AZEVEDO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/11/2019.',
         photos: [],
@@ -3230,7 +3271,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Inovação e Empreendedorismo no Setor Público',
       desc: 'EMMENDOERFER, MAGNUS LUIZ. Inovação e Empreendedorismo no Setor Público (ISBN 9788525601087). 1. ed. Brasilia: ENAP, 2019. v. 1. 80p .',
       photos: [],
@@ -3238,7 +3279,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Temporalidades no dia-a-dia do Trabalho Gerencial: Usos, Tensões e Conciliações',
       desc: 'EMMENDOERFER, MAGNUS LUIZ. Temporalidades no dia-a-dia do Trabalho Gerencial: Usos, Tensões e Conciliações (ISBN 9786139626397). 1. ed. Letônia: Novas Edições Acadêmicas, 2019. v. 1. 225p .',
       photos: [],
@@ -3246,7 +3287,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'O comportamento de compra e a percepção dos atributos da água mineral pelos consumidores',
       desc: 'MOURA, Luiz Rodrigo Cunha ; PORTO, G. D. ; CUNHA, Nina Rosa Silveira ; MOURA, Luiz Eduardo Leite de ; VEIGA, Ricardo T. . O comportamento de compra e a percepção dos atributos da água mineral pelos consumidores. Gestão da Produção em Foco: uma abordagem holística. 1ªed.Uberlândia MG: Editora Conhecimento Livre, 2019, v. , p. 799-821.',
       photos: [],
@@ -3254,7 +3295,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Ocupação do Terceiro Andar do Acesso ao CCH1',
         desc: 'O DAD assume oficialmente a ocupação da parte direita do terceiro andar do edifício CCH1. (18 de junho de 2019)',
         photos: [],
@@ -3270,7 +3311,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Inauguração de Auditório do CCH1',
         desc: 'Inauguração do auditório do CCH1, espaço que passou a ser compartilhado com o DEE.  Ata 351/2020 – 13 de março de 2020.',
         photos: [],
@@ -3278,7 +3319,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'MBA em Gestão Empresarial',
         desc: 'A professora Tainá Rodrigues Gomide Souza Pinto informou o Colegiado a respeito do início das atividades e das aulas do curso MBA em Gestão Empresarial. Ata 351/2020 – 13 de março de 2020.',
         photos: [],
@@ -3286,7 +3327,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'UNESCO Chair ? Creative Economy & Public Policies',
       desc: 'EMMENDOERFER, M. L.; RICHARDS, G. ; MEDIOTTE, E. J. . UNESCO Chair ? Creative Economy & Public Policies. 1. ed. Viçosa: CCH - Universidade Federal de Viçosa, 2020. v. 1. 113p .',
       photos: [],
@@ -3294,7 +3335,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Empreendedorismo, Formação e Inovação Tecnológica em Instituições de Ensino Superior',
       desc: 'GUIMARAES, P. B. V. (Org.) ; CARICIO, M. R. (Org.) ; LIMA, E. O. (Org.) ; EMMENDOERFER, MAGNUS LUIZ (Org.) . Empreendedorismo, Formação e Inovação Tecnológica em Instituições de Ensino Superior. 1. ed. Natal: Motres, 2020. v. 1. 206p .',
       photos: [],
@@ -3302,7 +3343,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Gestão de Projetos de Inovação: As premissas do Project 2020 Management Institute aplicadas ao Setor Público Municipal',
       desc: 'EMMENDOERFER, M. L.; SAMPAIO, V. S. . Gestão de Projetos de Inovação: As premissas do Project 2020 Management Institute aplicadas ao Setor Público Municipal. 1. ed. Viçosa: IPPDS/UFV, 2020. v. 1. 92p .',
       photos: [],
@@ -3310,7 +3351,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Avaliação da qualidade dos serviços educacionais em uma Instituição Pública de Ensino Superior',
       desc: 'SANTOS, P. H. ; MOURA, Luiz Rodrigo Cunha ; VASCONCE, F. C. W. ; CUNHA, Nina Rosa Silveira . Avaliação da qualidade dos serviços educacionais em uma Instituição Pública de Ensino Superior. Processos de Organicidade e Integração da Educação Brasileira. 4ed.Ponta Grossa - PR: Atena, 2020, v. 4, p. 143-159.',
       photos: [],
@@ -3318,7 +3359,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'CONSEQUENCES OF THE EXPERIENCE OF BRAND OF CONSUMERS IN THE SECTOR OF SMARTPHONES',
       desc: 'PIRES, L. L. ; MOURA, Luiz Rodrigo Cunha ; CUNHA, Nina Rosa Silveira . CONSEQUENCES OF THE EXPERIENCE OF BRAND OF CONSUMERS IN THE SECTOR OF SMARTPHONES. In: Sanabria-Landazábal, Néstor J.; Rodríguez-Albor, Gustavo J. & Barrientos-Oradini, Nicolás P. (Org.). Innovation and the digital world: iInfluence of agile structures and intellectual capital. 1ed.Barranquilla, Santiago Chile: Barranquilla, Editorial Uniautónoma, 2020, v. III, p. 115-137.',
       photos: [],
@@ -3326,7 +3367,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Uma Nova Democracia para o Século XXI?',
       desc: 'BRUGUE, J. ; MARTINS, SIMONE ; NEBOT, M. C. P. . Uma Nova Democracia para o Século XXI?. 1. ed. Viçosa: IPPDS, 2020. v. 1. 329p .',
       photos: [],
@@ -3334,7 +3375,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: '¿Una nueva democracia para el siglo XXI?',
       desc: 'BRUGUE, J. (Org.) ; MARTINS, SIMONE (Org.) ; NEBOT, M. C. P. (Org.) . ¿Una nueva democracia para el siglo XXI?. 1. ed. Ciudad Autónoma de Buenos Ai: Clacso, 2020. v. 1. 361p .',
       photos: [],
@@ -3342,7 +3383,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Pós-Graduação lato sensu em Administração Pública Municipal',
         desc: 'O curso de pós-graduação lato sensu em Administração Pública Municipal foi oficialmente aprovado pela PPG. Ata 352/2020 – 15 de maio de 2020.',
         photos: [],
@@ -3350,7 +3391,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'Premiações',
         desc: 'Congratulações ao professor Magnus Luiz Emmendoerfer pelo encerramento de seu mandato na Sociedade Brasileira de Administração Pública (SBAP), e extensão das homenagens ao professor Alan Ferreira de Freitas e ao pós-graduando Samuel Soares da Silva pelo prêmio de melhor artigo da SBAP, recebido do grupo de trabalho GT4 – Planejamento Público, Gestão Social e Desenvolvimento Territorial. Ata 357/2020 – 13 de novembro de 2020.',
         photos: [],
@@ -3358,7 +3399,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'infraestrutura',
+        tag: '',
         title: 'Atualização da logomarca',
         desc: 'Atualização da logomarca oficial do DAD. (colocar a foto da logo)',
         photos: [{ url: '/2020 - logo DAD.png', caption: 'Logo do DAD atualizada em 2020' }],
@@ -3374,7 +3415,7 @@ export const memorialData: MemorialData = {
     // 6 registros neste ano
     events: [
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LUANA FERREIRA DOS SANTOS',
         desc: 'Admissão da docente LUANA FERREIRA DOS SANTOS no Departamento de Administração e Contabilidade (DAD), com início das atividades em 08/01/2021.',
         photos: [],
@@ -3382,7 +3423,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-        tag: 'gestao',
+        tag: '',
         title: 'LEANDRO RIVELLI TEIXEIRA NOGUEIRA',
         desc: 'Admissão do docente LEANDRO RIVELLI TEIXEIRA NOGUEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/04/2021.',
         photos: [],
@@ -3390,7 +3431,7 @@ export const memorialData: MemorialData = {
         articleUrl: ''
       },
       {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Inovação e empreendedorismo na gestão pública',
       desc: 'EMMENDOERFER, M. L.; MEDIOTTE, E. J. . Inovação e empreendedorismo na gestão pública ( ISBN 9786584620063). 1. ed. Niterói: Laboratório de Políticas, Governança e Turismo (LabPGTUR), 2021. v. 1. 76p .',
       photos: [],
@@ -3398,7 +3439,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'Políticas Públicas de Cultura',
       desc: 'VITORIA, J. R. (Org.) ; EMMENDOERFER, MAGNUS LUIZ (Org.) . Políticas Públicas de Cultura (ISBN 9786589765059). 1. ed. Salvador: Motres Acadêmicos, 2021. v. 1. 182p .',
       photos: [],
@@ -3406,7 +3447,7 @@ export const memorialData: MemorialData = {
       articleUrl: ''
     },
     {
-      tag: 'pesquisa',
+      tag: '',
       title: 'ANÁLISE COMPARATIVA DO ENGAJAMENTO DE UNIVERSIDADES PÚBLICAS EM SISTEMAS MUNICIPAIS DE CULTURA',
       desc: 'VITÓRIA, J. R. ; MORAIS, M. C. A. ; EMMENDOERFER, Magnus Luiz ; CUNHA, Nina Rosa Silveira . ANÁLISE COMPARATIVA DO ENGAJAMENTO DE UNIVERSIDADES PÚBLICAS EM SISTEMAS MUNICIPAIS DE CULTURA. In: José Ricardo Vitória; Magnus Luiz Emmendoerfer. (Org.).. (Org.). POLÍTICAS PÚBLICAS DE CULTURA. 1eded.Salvador BA: Motres, 2021, v. , p. 107-128.',
       photos: [],
@@ -3446,7 +3487,7 @@ export const memorialData: MemorialData = {
     // 4 registros neste ano
     events: [
       {
-        tag: 'ensino',
+        tag: '',
         title: 'Acordo Internacional Unesco e UFV',
         desc: 'Homologação do Acordo Internacional entre a UNESCO e a UFV para a Cátedra em Economia Criativa e Políticas Públicas. 25/03/2022',
         photos: [],
