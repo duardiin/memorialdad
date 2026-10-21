@@ -2,7 +2,7 @@
  * Validação do conteúdo enviado pelo painel, antes de gravar.
  * Tudo que chega do navegador é conferido aqui: tipos, tamanhos e links.
  */
-import { ANO_INICIAL, type Colecoes, type NomeColecao } from '../../src/content/schema';
+import { ANO_INICIAL, type Colecoes, type NomeColecao } from '../../src/content/schema.js';
 
 export class ErroValidacao extends Error {}
 

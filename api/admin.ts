@@ -6,8 +6,8 @@
  *                        | 'salvarUsuario' | 'excluirUsuario' | 'trocarSenha', ... }
  */
 import { randomBytes } from 'crypto';
-import { caminhoColecao, type NomeColecao, type UsuarioPublico } from '../src/content/schema';
-import { ErroArmazenamento, obterArmazenamento, type Alteracao, type Leitor } from './_lib/armazenamento';
+import { caminhoColecao, type NomeColecao, type UsuarioPublico } from '../src/content/schema.js';
+import { ErroArmazenamento, obterArmazenamento, type Alteracao, type Leitor } from './_lib/armazenamento.js';
 import {
   alteracaoUsuarios,
   conferirSenha,
@@ -22,8 +22,8 @@ import {
   paraPublico,
   usuarioPrincipal,
   validarNovaSenha,
-} from './_lib/autenticacao';
-import { COLECOES, ehColecao, ErroValidacao } from './_lib/colecoes';
+} from './_lib/autenticacao.js';
+import { COLECOES, ehColecao, ErroValidacao } from './_lib/colecoes.js';
 
 type Dados = Record<string, any>;
 

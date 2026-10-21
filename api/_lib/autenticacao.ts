@@ -8,8 +8,8 @@
  * - A sessão é um cookie assinado com ADMIN_SECRET, válido por 12 horas.
  */
 import { createCipheriv, createDecipheriv, createHash, createHmac, randomBytes, randomUUID, scrypt, timingSafeEqual } from 'crypto';
-import type { Papel, UsuarioPublico } from '../../src/content/schema';
-import type { Alteracao, Leitor } from './armazenamento';
+import type { Papel, UsuarioPublico } from '../../src/content/schema.js';
+import type { Alteracao, Leitor } from './armazenamento.js';
 
 export const CAMINHO_USUARIOS = 'admin-data/usuarios.json';
 const COOKIE = 'memorial_admin';
