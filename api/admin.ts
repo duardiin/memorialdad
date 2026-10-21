@@ -7,7 +7,7 @@
  */
 import { randomBytes } from 'crypto';
 import { caminhoColecao, type NomeColecao, type UsuarioPublico } from '../src/content/schema.js';
-import { ErroArmazenamento, obterArmazenamento, type Alteracao, type Leitor } from './_lib/armazenamento.js';
+import { ErroArmazenamento, ErroConfiguracao, obterArmazenamento, type Alteracao, type Leitor } from './_lib/armazenamento.js';
 import {
   alteracaoUsuarios,
   conferirSenha,
@@ -272,6 +272,7 @@ const tratarErro = (erro: unknown) => {
   if (erro instanceof ErroAcesso) return json({ erro: erro.message }, erro.status);
   if (erro instanceof ErroValidacao) return json({ erro: erro.message }, 400);
   console.error(erro);
+  if (erro instanceof ErroConfiguracao) return json({ erro: erro.message }, 500);
   if (erro instanceof ErroArmazenamento) {
     return json({ erro: 'Não foi possível salvar agora. Tente de novo em alguns instantes.' }, 502);
   }

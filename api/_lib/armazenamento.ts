@@ -36,6 +36,9 @@ export interface Armazenamento {
 
 export class ErroArmazenamento extends Error {}
 
+/** Falta configurar alguma variável na Vercel: a mensagem é mostrada como está. */
+export class ErroConfiguracao extends Error {}
+
 // ---------------------------------------------------------------------------
 // GitHub
 // ---------------------------------------------------------------------------
@@ -193,7 +196,7 @@ export const obterArmazenamento = (): Armazenamento => {
   } else if (!process.env.VERCEL) {
     instancia = criarArmazenamentoLocal(process.cwd());
   } else {
-    throw new ErroArmazenamento('Painel não configurado: defina GITHUB_TOKEN e GITHUB_REPO na Vercel.');
+    throw new ErroConfiguracao('Painel não configurado: falta definir GITHUB_TOKEN e GITHUB_REPO na Vercel (veja PAINEL-ADMIN.md).');
   }
   return instancia;
 };
