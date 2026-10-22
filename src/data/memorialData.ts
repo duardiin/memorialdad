@@ -1353,7 +1353,15 @@ export const memorialData: MemorialData = {
         tag: '',
         title: 'UFV Propõe Criação do Curso de Ciências Contábeis para Suprir Demanda Regional',
         desc: 'O Departamento de Administração e Economia (DAE) encaminhou, em abril de 1988, uma proposta preliminar para a implementação do curso de graduação em Ciências Contábeis. A iniciativa, assinada pelos professores Nanci Pereira de Vasconcelos e Milton Rodrigues Natalino, visa preencher uma lacuna na área de ciências humanas da instituição.',
-        photos: [],
+        photos: [
+          { url: '/1988 - Proposta Ciencias Contabeis 1.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis no CCH da UFV (1/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 2.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (2/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 3.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (3/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 4.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (4/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 5.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (5/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 6.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (6/7)' },
+          { url: '/1988 - Proposta Ciencias Contabeis 7.jpg', caption: 'Assinaturas da Profª Nanci Pereira de Vasconcelos e do Prof. Milton Rodrigues Natalino (7/7)' }
+        ],
         externalLinks: [],
         articleUrl: ''
       },
