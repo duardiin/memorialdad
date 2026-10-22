@@ -48,13 +48,16 @@ import {
   tecnicosAtuais,
 } from './data/conteudo';
 import { EventDetailModal } from './data/EventDetailModal';
+import { professoresAposentados } from './data/professoresAposentadosData';
+import { exProfessores } from './data/exProfessoresData';
+import { NIVEIS_TECNICOS, tecnicosAposentados } from './data/tecnicosAposentadosData';
 import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } from './memorialSearch';
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'homenageados' | 'contribuir';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir';
 
-const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'tecnicosAtuais', 'homenageados'];
+const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
@@ -470,10 +473,28 @@ export default function App() {
                       <Users className="w-4 h-4 shrink-0" /> Professores Atuais
                     </button>
                     <button
+                      onClick={() => { setActivePanel('professoresAposentados'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'professoresAposentados' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <GraduationCap className="w-4 h-4 shrink-0" /> Professores Aposentados
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('exProfessores'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'exProfessores' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Users className="w-4 h-4 shrink-0" /> Ex-Professores
+                    </button>
+                    <button
                       onClick={() => { setActivePanel('tecnicosAtuais'); setIsODadMenuOpen(false); }}
                       className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'tecnicosAtuais' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
                     >
                       <UserCog className="w-4 h-4 shrink-0" /> Técnicos Administrativos Atuais
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('tecnicosAposentados'); setIsODadMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'tecnicosAposentados' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <UserCog className="w-4 h-4 shrink-0" /> Técnicos Administrativos Aposentados
                     </button>
                     <button
                       onClick={() => { setActivePanel('homenageados'); setIsODadMenuOpen(false); }}
@@ -621,7 +642,10 @@ export default function App() {
                               { id: 'chefes', label: 'Chefias' },
                               { id: 'professores', label: 'Professores Titulares' },
                               { id: 'professoresAtuais', label: 'Professores Atuais' },
+                              { id: 'professoresAposentados', label: 'Professores Aposentados' },
+                              { id: 'exProfessores', label: 'Ex-Professores' },
                               { id: 'tecnicosAtuais', label: 'Técnicos Administrativos Atuais' },
+                              { id: 'tecnicosAposentados', label: 'Técnicos Administrativos Aposentados' },
                               { id: 'homenageados', label: 'Profissionais Homenageados' },
                             ].map(item => (
                               <button
@@ -1405,6 +1429,93 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'professoresAposentados' && (
+            <motion.div
+              key="professoresAposentados"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <GraduationCap className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Professores Aposentados</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Docentes que dedicaram sua carreira ao Departamento de Administração e Contabilidade e hoje estão aposentados.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {professoresAposentados.map((prof) => (
+                  <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {prof.foto ? (
+                        <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <GraduationCap className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <span className="font-serif text-lg font-bold text-ufv-gray block mb-1">{prof.nome}</span>
+                      {prof.observacoes && (
+                        <p className="text-sm text-ufv-gray-light leading-relaxed">{prof.observacoes}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'exProfessores' && (
+            <motion.div
+              key="exProfessores"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Ex-Professores</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Docentes que fizeram parte do Departamento de Administração e Contabilidade.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {exProfessores.map((prof) => (
+                  <div key={prof.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                    <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                      {prof.foto ? (
+                        <img src={prof.foto} alt={prof.nome} className="w-full h-full object-cover" />
+                      ) : (
+                        <GraduationCap className="w-7 h-7 text-ufv-green" />
+                      )}
+                    </div>
+                    <div className="flex-grow text-center sm:text-left">
+                      <span className="font-serif text-lg font-bold text-ufv-gray block">{prof.nome}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'tecnicosAtuais' && (
             <motion.div
               key="tecnicosAtuais"
@@ -1452,6 +1563,58 @@ export default function App() {
                       </div>
                     </div>
                   </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {activePanel === 'tecnicosAposentados' && (
+            <motion.div
+              key="tecnicosAposentados"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 mb-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <UserCog className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">O DAD</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Técnicos Administrativos Aposentados</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Servidores técnico-administrativos que contribuíram com o Departamento de Administração e Contabilidade e hoje estão aposentados.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-10">
+                {NIVEIS_TECNICOS.map((nivel) => (
+                  <section key={nivel.id}>
+                    <h2 className="font-serif text-xl font-bold text-ufv-green mb-4">{nivel.titulo}</h2>
+                    <div className="space-y-4">
+                      {tecnicosAposentados.filter((tec) => tec.nivel === nivel.id).map((tec) => (
+                        <div key={tec.id} className="card flex flex-col sm:flex-row gap-5 sm:items-center">
+                          <div className="w-16 h-16 rounded-full bg-ufv-green/10 border-2 border-ufv-green/20 flex items-center justify-center shrink-0 overflow-hidden mx-auto sm:mx-0">
+                            {tec.foto ? (
+                              <img src={tec.foto} alt={tec.nome} className="w-full h-full object-cover" />
+                            ) : (
+                              <UserCog className="w-7 h-7 text-ufv-green" />
+                            )}
+                          </div>
+                          <div className="flex-grow text-center sm:text-left">
+                            <span className="font-serif text-lg font-bold text-ufv-gray block mb-1">{tec.nome}</span>
+                            {tec.observacoes && (
+                              <p className="text-sm text-ufv-gray-light leading-relaxed">{tec.observacoes}</p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </div>
             </motion.div>
@@ -1573,7 +1736,7 @@ export default function App() {
                   {
                     icone: <Users className="w-5 h-5" />,
                     titulo: 'Pessoas',
-                    texto: 'Chefias, professores titulares, professores atuais e técnicos administrativos, com foto e dados de contato.',
+                    texto: 'Chefias, professores titulares, professores atuais, professores aposentados, ex-professores e técnicos administrativos atuais e aposentados, com foto e dados de contato.',
                   },
                   {
                     icone: <Award className="w-5 h-5" />,

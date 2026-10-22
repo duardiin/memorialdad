@@ -1336,7 +1336,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
-        title: 'Propostas de Expansão Acadêmica e Avaliação da Área de Administração',
+        title: 'Proposta para a Criação do Novo Curso de Direito',
         desc: 'Em março de 1988, durante as deliberações do colegiado, o DAE deu um importante passo em direção à expansão de suas atividades de ensino com a apresentação e discussão de uma proposta preliminar voltada para a criação do novo Curso de Direito na instituição.',
         photos: [
           { url: '/1988 - Curso de Direito 1.jpeg', caption: 'Curso de Direito - Justificativa preliminar (1/6)' },
@@ -1354,6 +1354,8 @@ export const memorialData: MemorialData = {
         title: 'UFV Propõe Criação do Curso de Ciências Contábeis para Suprir Demanda Regional',
         desc: 'O Departamento de Administração e Economia (DAE) encaminhou, em abril de 1988, uma proposta preliminar para a implementação do curso de graduação em Ciências Contábeis. A iniciativa, assinada pelos professores Nanci Pereira de Vasconcelos e Milton Rodrigues Natalino, visa preencher uma lacuna na área de ciências humanas da instituição.',
         photos: [
+          { url: '/1999 - Curso de Ciencias Contabeis 1.jpeg', caption: 'Criação do Curso de Ciências Contábeis (1/2)' },
+          { url: '/1999 - Curso de Ciencias Contabeis 2.jpeg', caption: 'Criação do Curso de Ciências Contábeis (2/2)' },
           { url: '/1988 - Proposta Ciencias Contabeis 1.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis no CCH da UFV (1/7)' },
           { url: '/1988 - Proposta Ciencias Contabeis 2.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (2/7)' },
           { url: '/1988 - Proposta Ciencias Contabeis 3.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (3/7)' },
@@ -2000,8 +2002,8 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
-        title: 'Ricardo Correa Gomes',
-        desc: 'Admissão do docente Ricardo Correa Gomes no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/09/1996.',
+        title: 'RICARDO CORRÊA GOMES',
+        desc: 'Admissão do docente RICARDO CORRÊA GOMES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 14/08/1996.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2187,8 +2189,8 @@ export const memorialData: MemorialData = {
     events: [
       {
         tag: '',
-        title: 'Jailson de Oliveira Arieira',
-        desc: 'Admissão do docente Jailson de Oliveira Arieira no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/05/1998.',
+        title: 'JAILSON DE OLIVEIRA ARIEIRA',
+        desc: 'Admissão do docente JAILSON DE OLIVEIRA ARIEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 26/05/1998.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2253,10 +2255,9 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Aprovada a Criação do Curso de Ciências Contábeis',
-        desc: 'Foi aprovada, por unanimidade, por proposição da conselheira Elza Fernandes de Araújo, a criação do curso de Ciências Contábeis, a ser iniciado a partir do ano 2000, com 50 vagas, oferecidas já a partir do próximo processo seletivo. Decidiu-se, também, delegar competência à Pró-Reitoria de Ensino para, juntamente com as Comissões Especiais, definir as provas específicas que os candidatos a esses cursos deverão fazer no Vestibular. ATANº348/99–CEPE.',
+        desc: 'Foi aprovada pelo CEPE, por unanimidade, por proposição da conselheira Elza Fernandes de Araújo, a criação do curso de Ciências Contábeis, a ser iniciado a partir do ano 2000, com 50 vagas, oferecidas já a partir do próximo processo seletivo. Decidiu-se, também, delegar competência à Pró-Reitoria de Ensino para, juntamente com as Comissões Especiais, definir as provas específicas que os candidatos a esses cursos deverão fazer no Vestibular. ATA Nº348/99–CEPE.',
         photos: [
-          { url: '/1999 - Curso de Ciencias Contabeis 1.jpeg', caption: 'Criação do Curso de Ciências Contábeis (1/2)' },
-          { url: '/1999 - Curso de Ciencias Contabeis 2.jpeg', caption: 'Criação do Curso de Ciências Contábeis (2/2)' }
+          
         ],
         externalLinks: [],
         articleUrl: ''
@@ -2589,12 +2590,28 @@ export const memorialData: MemorialData = {
   },
 
   2005: {
-    // 6 registros neste ano
+    // 8 registros neste ano
     events: [
       {
         tag: '',
         title: 'MARCO AURELIO MARQUES FERREIRA',
         desc: 'Admissão do docente MARCO AURELIO MARQUES FERREIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/09/2005.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'EMANUEL RODRIGUES DE MATOS JUNQUEIRA',
+        desc: 'Admissão do docente EMANUEL RODRIGUES DE MATOS JUNQUEIRA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/09/2005.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'SIMONE LETÍCIA RAIMUNDINI',
+        desc: 'Admissão da docente SIMONE LETÍCIA RAIMUNDINI no Departamento de Administração e Contabilidade (DAD), com início das atividades em 12/09/2005.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2647,12 +2664,28 @@ export const memorialData: MemorialData = {
   },
 
   2006: {
-    // 9 registros neste ano
+    // 11 registros neste ano
     events: [
       {
         tag: '',
         title: 'MAGNUS LUIZ EMMENDOERFER',
         desc: 'Admissão do docente MAGNUS LUIZ EMMENDOERFER no Departamento de Administração e Contabilidade (DAD), com início das atividades em 04/08/2006.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'GUSTAVO MELO SILVA',
+        desc: 'Admissão do docente GUSTAVO MELO SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 22/08/2006.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'ROBSON ZUCCOLOTTO',
+        desc: 'Admissão do docente ROBSON ZUCCOLOTTO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/08/2006.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2729,8 +2762,16 @@ export const memorialData: MemorialData = {
   },
 
   2007: {
-    // 4 registros neste ano
+    // 5 registros neste ano
     events: [
+      {
+        tag: '',
+        title: 'PABLO ROGERS SILVA',
+        desc: 'Admissão do docente PABLO ROGERS SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 04/01/2007.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
       {
         tag: '',
         title: 'Novas Turmas de Lato Sensu (2007-2009)',
@@ -2816,7 +2857,7 @@ export const memorialData: MemorialData = {
     articleUrl: ''
   },
   2009: {
-    // 6 registros neste ano
+    // 8 registros neste ano
     events: [
       {
         tag: '',
@@ -2828,8 +2869,24 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
+        title: 'ALCINDO CIPRIANO ARGOLO MENDES',
+        desc: 'Admissão do docente ALCINDO CIPRIANO ARGOLO MENDES no Departamento de Administração e Contabilidade (DAD), com início das atividades em 22/05/2009.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
         title: 'WENDER FRAGA MIRANDA',
         desc: 'Admissão do docente WENDER FRAGA MIRANDA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 29/07/2009.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'EDSON ARLINDO SILVA',
+        desc: 'Admissão do docente EDSON ARLINDO SILVA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 08/12/2009.',
         photos: [],
         externalLinks: [],
         articleUrl: ''
@@ -2898,12 +2955,20 @@ export const memorialData: MemorialData = {
   },
 
   2010: {
-    // 7 registros neste ano
+    // 8 registros neste ano
     events: [
       {
         tag: '',
         title: 'TAINÁ RODRIGUES GOMIDE SOUZA PINTO',
         desc: 'Admissão da docente TAINÁ RODRIGUES GOMIDE SOUZA PINTO no Departamento de Administração e Contabilidade (DAD), com início das atividades em 11/03/2010.',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'ÁGUIDA GARRETH FERRAZ ROCHA',
+        desc: 'Admissão da docente ÁGUIDA GARRETH FERRAZ ROCHA no Departamento de Administração e Contabilidade (DAD), com início das atividades em 06/07/2010.',
         photos: [],
         externalLinks: [],
         articleUrl: ''

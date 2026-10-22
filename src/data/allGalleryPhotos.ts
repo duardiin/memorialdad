@@ -813,6 +813,76 @@ export const allGalleryPhotos: GalleryPhoto[] = [
     title: 'Registro histórico do DAD',
     caption: 'Registro fotográfico do acervo do DAD.'
   },
+  {
+    id: 'photo-191',
+    url: '/Equipe DAD 2025 (1).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-192',
+    url: '/Equipe DAD 2025 (2).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-193',
+    url: '/Equipe DAD 2025 (3).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-194',
+    url: '/Equipe DAD 2025 (4).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-195',
+    url: '/Equipe DAD 2025 (5).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-196',
+    url: '/Equipe DAD 2025 (6).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-197',
+    url: '/Equipe DAD 2025 (7).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-198',
+    url: '/Equipe DAD 2025 (8).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-199',
+    url: '/Equipe DAD 2025 (9).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
+  {
+    id: 'photo-200',
+    url: '/Equipe DAD 2025 (10).jpeg',
+    colorida: true,
+    title: 'Equipe DAD 2025',
+    caption: 'Confraternização da equipe do DAD em 2025.'
+  },
 ];
 
 
