@@ -1955,7 +1955,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 1995',
+      desc: 'Prof. Afonso Augusto Teixeira de Freitas de Carvalho Lima\nProf. José Edson Lara\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima e Prof. José Edson Lara\n- Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1995',
+      desc: 'Prof. Walmer Faroni\nTéc. Beatriz de Freitas Dias\nProf. Afonso Augusto Teixeira de Freitas de Carvalho Lima - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
 
@@ -2046,6 +2062,14 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1996',
+      desc: 'Prof.\nTéc.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
 
@@ -2127,7 +2151,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 1997',
+      desc: 'Profª. Telma Regina da Costa Guimarães Barbosa\nTéc. Marcelo Antônio Lopes\nProf. Antônio de Figueiredo Vieira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1997',
+      desc: 'Prof. Luiz Antônio Abrantes\nTéc. Soraya Machado Fontes\nProf. Djair Cesário de Araújo - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
     ],
@@ -2168,7 +2208,22 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
-     
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 1998',
+      desc: 'Prof. Walmer Faroni\nTéc. Luís Carlos de Freitas\nProf. Djair Cesário de Araújo - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1998',
+      desc: 'Prof. Luiz Antônio Abrantes\nTéc. Carmem Antônio Elias\nProfª. Telma Regina da Costa Guimarães Barbosa - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
 
@@ -2197,7 +2252,23 @@ export const memorialData: MemorialData = {
         ],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 1999',
+      desc: 'Prof. Lourival de Castro Vale\nTéc. Luiz Carlos de Freitas\nProfª. Telma Regina da Costa Guimarães Barbosa - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 1999',
+      desc: 'Prof. Jaílson de Oliveira Arieira\nTéc. Soraya Machado Fontes\nProf. Luiz Antônio Abrantes - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
      
@@ -2232,7 +2303,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2000',
+      desc: 'Prof. Lourival de Castro Vale\nTéc. Soraya Machado Fontes\nProfª. Telma Regina da Costa Guimarães Barbosa - Prof. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2000',
+      desc: 'Prof. Prof. Djair Cesário de Araújo\nTéc. Luiz Carlos de Freitas\nProf. Lourival de Castro Vale - Prof. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       
@@ -2290,7 +2377,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2001',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2001',
+      desc: 'Prof. José Roberto Reis\nTéc. Soraya Machado Fontes\nProf. Antônio de Figueiredo Vieira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
      
@@ -2332,7 +2435,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2002',
+      desc: 'Prof. Rodrigo Gava\nTéc. Luís Carlos de Freitas\nProf. José Roberto Reis - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2002',
+      desc: 'Prof. Rodrigo Gava\nTéc. Soraya Machado Fontes\nProf. José Roberto Reis - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
     ],
@@ -2365,7 +2484,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2003',
+      desc: 'Prof. Djair Cesário de Araújo\nTéc. Vicente Diogo Justino\nProf. Luiz Antônio Abrantes - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2003',
+      desc: 'Prof. Antônio de Figueiredo Vieira\nTéc. Luiz Carlos de Freitas\nProf.Lourival de Castro Vale - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -2421,7 +2556,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2004',
+      desc: 'Prof. Luiz Antônio Abrantes\nTéc. Carmem Antônio Elias\nProf. Antônio de Figueiredo Vieira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2004',
+      desc: 'Prof. Luiz Antônio Abrantes\nTéc. Luiz Carlos de Freitas\nProf. Rodrigo Gava - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
      
@@ -2463,7 +2614,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2005',
+      desc: 'Administração\nProf. Rodrigo Gava\nTéc. Luiz Carlos de Freitas\nProf. Walmer Faroni Aula da Saudade\n\nCiências Contábeis\nProf. José Clévio Dias Casali\nTéc. Luiz Carlos de Freitas\nProf. Walmer Faroni Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2005',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
       
@@ -2529,7 +2696,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2006',
+      desc: 'Prof. Afonso Augusto Teixeira de Freitas de Carvalho Lima\nTéc. Luiz Carlos de Freitas\nProf. Antônio de Figueiredo Vieira - Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Dezembro de 2006',
+      desc: 'Prof.\nProf. Aula da Saudade',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
    
@@ -2555,7 +2738,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Janeiro de 2007',
+      desc: 'ADMINISTRAÇÃO\nPROF. José Roberto Reis\nAULA DA SAUDADE PROFAª Telma Regina da Costa Guimarães Barbosa\n\nCIÊNCIAS CONTÁBEIS\nPROF. WALMER FARONI\nTÉCNICO LUIS CARLOS DE FREITAS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Agosto de 2007',
+      desc: 'ADMINISTRAÇÃO\nPROF.: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nFUNC.:\nSAUDADE: LUIZ ANTÔNIO ABRANTES\n\nCIÊNCIAS CONTÁBEIS\nPROF.: WALMER FARONI\nFUNC.: LUIS CARLOS DE FREITAS\nSAUDADE:',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -2587,7 +2786,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Janeiro de 2008',
+      desc: 'ADMINISTRAÇÃO\nPROF.: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nFUNC.: SORAYA MACHADO FONTES\nSAUDADE: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\n\nCIÊNCIAS CONTÁBEIS\nPROF.: WALMER FARONI\nFUNC.: LUIS CARLOS DE FREITAS\nSAUDADE: LUIS ANTONIO ABRANTES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2008',
+      desc: 'ADMINISTRAÇÃO\nPROF.: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nFUNC.: SORAYA MACHADO FONTES\nSAUDADE: LUCIANA DE OLIVEIRA MIRANDA GOMES\n\nCIÊNCIAS CONTÁBEIS\nPROF.: WALMER FARONI\nFUNC.: SORAYA MACHADO FONTES\nSAUDADE: JOSÉ CLÉVIO DIAS CASALI',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -2651,7 +2866,23 @@ export const memorialData: MemorialData = {
         photos: [{ url: '/2009 - CAPA REVISTA PGS.png', caption: 'CAPA REVISTA PGS' }],
         externalLinks: [{ label: 'Jornal 1427', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/0/0/8/008c3949385dace957921e948276646ad5a978dbf2a13ddf4893de5f7699216c/Edi____o_n___1427.pdf' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Janeiro de 2009',
+      desc: 'ADMINISTRAÇÃO\nPROF.: DJAIR CESÁRIO DE ARAÚJO\nFUNC.: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nSAUDADE: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\n\nCIÊNCIAS CONTÁBEIS\nPROF.: ROBSON ZUCOLOTTO\nFUNC.: SORAYA MACHADO FONTES\nSAUDADE: WALMER FARONI',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2009',
+      desc: 'ADMINISTRAÇÃO\nPROF. : GUSTAVO MELO SILVA\nFUNC. : LUIS CARLOS DE FREITAS\nSAUDADE: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\n\nCIÊNCIAS CONTÁBEIS\nPROF. : ROBSON ZUCOLOTTO\nFUNC. : THIAGO DOS SANTOS\nSAUDADE: THIAGO DE MELO TEIXEIRA DA COSTA',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
     ],
@@ -2716,7 +2947,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 1436', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/3/e/5/3e58c9e8e06b5479403073195ec61343bc873756f6f659d547e373d4f1310954/Edi____o_n___1436.pdf' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Janeiro de 2010',
+      desc: 'ADMINISTRAÇÃO\nPROF.: GUSTAVO MELO SILVA\nFUNC.: SORAYA MACHADO FONTES\nSAUDADE: AFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\n\nCIÊNCIAS CONTÁBEIS\nPROF. :SIMONE MARTINS\nFUNC. :LUIS CARLOS DE FREITAS\nSAUDADE: ROBSON ZUCCOLOTTO',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de Julho de 2010',
+      desc: 'ADMINISTRAÇÃO\nPROF. : ANTÔNIO DE FIGUEIREDO VIEIRA\nFUNC. : THIAGO DOS SANTOS\nSAUDADE: MAGNUS LUIS EMMENDOERFER\n\nCIÊNCIAS CONTÁBEIS\nPROF. : SIMONE MARTINS\nFUNC. : SORAYA MACHADO FONTES\nSAUDADE: ALCINDO CIPRIANO ARGOLO MENDES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
     ],
@@ -2781,7 +3028,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Ata n.º 285/2011', url: 'https://docs.google.com/document/d/1UpBdCyOBaIv6eKHtuwjptcMim54XMxci/edit?usp=sharing&ouid=117232787169035636664&rtpof=true&sd=true' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 21/01/2011',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nANTÔNIO DE FIGUEIREDO VIEIRA\nTHIAGO DOS SANTOS\n\nCIÊNCIAS CONTÁBEIS\nSIMONE MARTINS\nWENDER FRAGA MIRANDA\nANTÔNIO GOMES DA SILVA JÚNIOR',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 22/07/2011',
+      desc: 'ADMINISTRAÇÃO\nTELMA REGINA DA COSTA GUIMARÃES BARBOSA\nANTÔNIO DE FIGUEIREDO VIEIRA\nLUIZ CARLOS DE FREITAS\n\nCIÊNCIAS CONTÁBEIS\nALCINDO CIPRIANO ARGOLO MENDES\nSIMONE MARTINS\nANTÔNIO GOMES DA SILVA JÚNIOR.',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/2011-jornal-da-ufv'
@@ -2821,7 +3084,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Jornal 1449', url: 'https://atom.ufv.br/uploads/r/arquivo-central-e-historico-da-ufv-ach-ufv/6/f/c/6fcb2753d5a56874b511fe6c9fce88dbc6841dee48d9cf9de38c289dc4421447/Edi____o_n___1450.pdf' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 20/01/2012',
+      desc: 'ADMINISTRAÇÃO\nANTÔNIO DE FIGUEIREDO VIEIRA\nSORAYA MACHADO FONTES\nMAGNUS LUIS EMMENDOERFER\n\nCIÊNCIAS CONTÁBEIS\nTAINÁ RODRIGUES GOMIDE SOUSA PINTO\nSORAYA MACHADO FONTES\nSIMONE MARTINS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 23/11/2012',
+      desc: 'ADMINISTRAÇÃO\nSUELY DE FÁTIMA RAMOS SILVEIRA\nSORAYA MACHADO FONTES\nANTÔNIO DE FIGUEIREDO VIEIRA\n\nCIÊNCIAS CONTÁBEIS\nTAINÁ RODRIGUES GOMIDE SOUZA PINTO\nSORAYA MACHADO FONTES\nSIMONE MARTINS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/2012-jornal-da-ufv'
@@ -2901,7 +3180,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Ata nº 299/2013', url: 'https://docs.google.com/document/d/1M1pGGY-UxSncVZ3sC1X27SVhDvImJumr/edit?usp=sharing&ouid=117232787169035636664&rtpof=true&sd=true' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 03/05/2013',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nANTÔNIO DE FIGUEIREDO VIEIRA\nSORAYA MACHADO FONTES\n\nCIÊNCIAS CONTÁBEIS\nALCINDO CIPRIANO ARGOLO MENDES\nSIMONE MARTINS\nTHIAGO DOS SANTOS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 27/09/2013',
+      desc: 'ADMINISTRAÇÃO\nÁGUIDA GARRETH FERRAZ ROCHA\nSUELY DE FÁTIMA RAMOS SILVEIRA\nTHIAGO DOS SANTOS\n\nCIÊNCIAS CONTÁBEIS\nWENDER FRAGA MIRANDA\nSIMONE MARTINS\nTHIAGO DOS SANTOS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: 'https://atom.ufv.br/index.php/2013-jornal-da-ufv'
@@ -3013,7 +3308,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 07/03/2014',
+      desc: 'ADMINISTRAÇÃO\nTELMA REGINA DA COSTA GUIMARAES BARBOSA\nANTONIO DE FIGUEIREDO VIEIRA\nTHIAGO DOS SANTOS\n\nCIÊNCIAS CONTÁBEIS\nTAINA RODRIGUES GOMIDE\nGISLAINE APARECIDA SANTANA SEDIYAMA\nSORAYA MACHADO FONTES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 08/08/2014',
+      desc: 'ADMINISTRAÇÃO\nALAN FERREIRA DE FREITAS\nAFONSO AUGUSTO TEIXEIRA DE FREITAS  DE CARVALHO LIMA\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nGISLAINE APARECIDA SANTANA SEDIYAMA\nTAINÁ RODRIGUES GOMIDE DE SOUZA PINTO\nLUIZ CARLOS DE FREITAS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3069,7 +3380,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 23/01/2015',
+      desc: 'ADMINISTRAÇÃO\nALAN FERREIRA DE FREITAS\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nSORAYA MACHADO FONTES.\n\nCIÊNCIAS CONTÁBEIS\nRODRIGO SILVA DINIZ LEROY\nALCINDO CIPRIANO ARGOLO MENDES\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 24/07/2015',
+      desc: 'ADMINISTRAÇÃO\nTHIAGO DE MELO TEIXEIRA DA COSTA\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nTHIAGO DOS SANTOS\n\nCIÊNCIAS CONTÁBEIS\nTAINÁ RODRIGUES GOMIDE\nMILTON ROMUALDO DIÓRIO\nTHIAGO DOS SANTOS',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3165,7 +3492,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 22/01/2016',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nSORAYA MACHADO FONTES\nALAN FERREIRA DE FREITAS\n\nCIÊNCIAS CONTÁBEIS\nGISLAINE APARECIDA DA SILVA SANTANA\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 29/07/2016',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA E\nLUÍS CARLOS DE FREITAS\n\nCIÊNCIAS CONTÁBEIS\nALCINDO CIPRIANO ARGOLO MENDES\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3194,6 +3537,22 @@ export const memorialData: MemorialData = {
       tag: '',
       title: 'Analise da gestão por competências em organizações da justiça eleitoral no Brasil',
       desc: 'SENA, Gabriel Astoni ; CUNHA, Nina Rosa Silveira ; MOURA, Luiz Rodrigo Cunha . Analise da gestão por competências em organizações da justiça eleitoral no Brasil. In: Magnus Luiz Emmendoerfer. (Org.). Organizações públicas, inovações e políticas de desenvolvimento. 1ed.Viçosa: IPPDS UFV, 2017, v. 1, p. 118-140.',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 20/01/2017',
+      desc: 'ADMINISTRAÇÃO\nALAN FERREIRA DE FREITAS\nLUÍS CARLOS DE FREITAS\n\nCIÊNCIAS CONTÁBEIS\nGISLAINE APARECIDA SANTANA SEDIYAMA\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 28/07/2017',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nALCINDO CIPRIANO ARGOLO MENDES\nWELITON RODRIGUES',
       photos: [],
       externalLinks: [],
       articleUrl: ''
@@ -3237,7 +3596,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 19/01/2018',
+      desc: 'ADMINISTRAÇÃO\nALAN FERREIRA DE FREITAS\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nSIMONE MARTINS\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 27/07/2018',
+      desc: 'ADMINISTRAÇÃO\nJOSIEL LOPES VALADARES\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nGUSTAVO JOSÉ PÁDULA DE SOUZA\nSORAYA MACHADO FONTES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3301,7 +3676,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 18/01/2019',
+      desc: 'ADMINISTRAÇÃO\nAFONSO AUGUSTO TEIXEIRA DE FREITAS DE CARVALHO LIMA\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nSIMONE MARTINS\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 26/07/2019',
+      desc: 'ADMINISTRAÇÃO\nWESCLEY SILVA XAVIER\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3401,11 +3792,19 @@ export const memorialData: MemorialData = {
       {
         tag: '',
         title: 'Atualização da logomarca',
-        desc: 'Atualização da logomarca oficial do DAD. (colocar a foto da logo)',
+        desc: 'Atualização da logomarca oficial do DAD.',
         photos: [{ url: '/2020 - logo DAD.png', caption: 'Logo do DAD atualizada em 2020' }],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 17/01/2020',
+      desc: 'ADMINISTRAÇÃO\nFERNANDA MARIA DE ALMEIDA\nWELITON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3685,7 +4084,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 20/01/2023',
+      desc: 'ADMINISTRAÇÃO\nLEANDRO RIVELLI TEIXEIRA NOGUEIRA\nWELINTON RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 04/08/2023',
+      desc: 'ADMINISTRAÇÃO\nLAYON CARLOS CEZAR\nJOSIAS REIS DE ARRUDA\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nWELITON RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3741,7 +4156,23 @@ export const memorialData: MemorialData = {
         photos: [],
         externalLinks: [{ label: 'Ata 399/2024', url: 'https://docs.google.com/document/d/1yqiylBTKAplCRPtD-wHc6MX87uHSWOgF/edit?usp=sharing&ouid=117232787169035636664&rtpof=true&sd=true' }],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 19/01/2024',
+      desc: 'ADMINISTRAÇÃO\nANA CLAUDIA AZEVEDO\nMARCELO ANTONIO LOPES\n\nCIÊNCIAS CONTÁBEIS\nWENDER FRAGA MIRANDA\nJOSÉ ROMEU SANTANA RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 27/09/2024',
+      desc: 'ADMINISTRAÇÃO\nANA CLÁUDIA AZEVEDO\nMARCELO ANTÔNIO LOPES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [],
     articleUrl: ''
@@ -3789,7 +4220,23 @@ export const memorialData: MemorialData = {
         photos: [{ url: '/2025 - Eduardo Jesus.png', caption: 'O Programador Estagiário, Eduardo Jesus' }],
         externalLinks: [],
         articleUrl: ''
-      }
+      },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 14/02/2025',
+      desc: 'ADMINISTRAÇÃO\nLAYON CARLOS CEZAR\nMARCELO ANTONIO LOPES\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nJOSÉ ROMEU SANTANA RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 25/07/2025',
+      desc: 'ADMINISTRAÇÃO\nLEANDRO RIVELLI TEIXEIRA NOGUEIRA\nJOSÉ ROMEU SANTANA RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    }
     ],
     photos: [
     ],
@@ -3851,6 +4298,22 @@ export const memorialData: MemorialData = {
       tag: '',
       title: 'Melhorias na infraestrutura física do DAD e do prédio CCH1',
       desc: 'Foram apresentados informes sobre melhorias na infraestrutura física do departamento, englobando a substituição de piso na entrada do segundo e terceiro pavimentos, a melhoria do sinal e acesso à internet no prédio do CCH1 em parceria com o CCH e a PPO, além de andamentos no projeto geral de reforma do prédio do CCH1. Ata 413/2026 · 14 de agosto de 2026',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 23/01/2026',
+      desc: 'ADMINISTRAÇÃO\nJOSIEL LOPES VALADARES\nJOSÉ ROMEU SANTANA RODRIGUES\n\nCIÊNCIAS CONTÁBEIS\nRONAN PEREIRA CAPOBIANGO\nJOSÉ ROMEU SANTANA RODRIGUES',
+      photos: [],
+      externalLinks: [],
+      articleUrl: ''
+    },
+    {
+      tag: 'homenagens',
+      title: 'Homenagens da Colação de Grau de 07/08/2026',
+      desc: 'ADMINISTRAÇÃO\nFERNANDA CRISTINA DA SILVA\nMARCELO ANTÔNIO LOPES\n\nCIÊNCIAS CONTÁBEIS\nANTÔNIO CARLOS BRUNOZI JÚNIOR\nSORAYA MACHADO FONTES',
       photos: [],
       externalLinks: [],
       articleUrl: ''

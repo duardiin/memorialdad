@@ -32,14 +32,43 @@ import type {
 
 const porNome = (a: { nome: string }, b: { nome: string }) => a.nome.localeCompare(b.nome, 'pt-BR');
 
+export const colacoesGrau = [...colacoesOriginais, ...(homenageadosPainel as ColacaoItem[])]
+  .sort((a, b) => a.ano - b.ano);
+
+/**
+ * As colações originais já têm sua notícia de homenagens escrita em memorialData.ts.
+ * As cadastradas pelo painel ganham a notícia automaticamente, no mesmo formato.
+ */
+const formatarDataColacao = (data: string) =>
+  data
+    .replace(/^(\d{2})\.(\d{2})\.(\d{4})$/, '$1/$2/$3') // 21.01.2011 -> 21/01/2011
+    .replace(/^([A-Za-zÀ-ú]+) (\d{4})$/, '$1 de $2'); // Janeiro 2007 -> Janeiro de 2007
+
+const noticiaDaColacao = (colacao: ColacaoItem) => ({
+  tag: 'homenagens',
+  title: `Homenagens da Colação de Grau de ${formatarDataColacao(colacao.data)}`,
+  desc: [
+    colacao.grupos.map(g => [g.curso, ...g.linhas].filter(Boolean).join('\n')).join('\n\n'),
+    colacao.nota,
+  ]
+    .filter(Boolean)
+    .join('\n\n'),
+  photos: [],
+  externalLinks: [],
+  articleUrl: '',
+});
+
 export const memorialData: MemorialData = (() => {
   const dados: MemorialData = {};
+  const doAno = (ano: number) => (dados[ano] ??= { events: [], photos: [] });
   for (const [ano, info] of Object.entries(memorialOriginal)) {
     dados[Number(ano)] = { ...info, events: [...info.events] };
   }
+  for (const colacao of homenageadosPainel as ColacaoItem[]) {
+    doAno(colacao.ano).events.push(noticiaDaColacao(colacao));
+  }
   for (const { year, ...evento } of noticiasPainel as NoticiaItem[]) {
-    if (!dados[year]) dados[year] = { events: [], photos: [] };
-    dados[year].events.push(evento);
+    doAno(year).events.push(evento);
   }
   return dados;
 })();
@@ -54,6 +83,3 @@ export const professoresTitulares = [...titularesOriginais, ...(titularesPainel 
 export const professoresAtuais = [...atuaisOriginais, ...(atuaisPainel as ProfessorAtualItem[])].sort(porNome);
 
 export const tecnicosAtuais = [...tecnicosOriginais, ...(tecnicosPainel as TecnicoItem[])].sort(porNome);
-
-export const colacoesGrau = [...colacoesOriginais, ...(homenageadosPainel as ColacaoItem[])]
-  .sort((a, b) => a.ano - b.ano);
