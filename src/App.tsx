@@ -11,20 +11,25 @@ import {
   Calendar,
   ChevronDown,
   ChevronRight,
+  Clock,
+  ExternalLink,
   Globe,
   GraduationCap,
   Handshake,
   History,
   Image as ImageIcon,
+  ImagePlus,
   Info,
   Italic,
+  KeyRound,
   Landmark,
   LayoutGrid,
   Mail,
   Menu,
   Microscope,
+  Newspaper,
+  Pencil,
   Phone,
-  Plus,
   Search,
   UserCog,
   Users,
@@ -32,7 +37,7 @@ import {
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { MemorialEvent, MemorialPhoto } from './types';
+import { MemorialEvent } from './types';
 import {
   allGalleryPhotos,
   chefesDepartamento,
@@ -47,7 +52,7 @@ import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } fr
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'homenageados';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'tecnicosAtuais' | 'homenageados' | 'contribuir';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'tecnicosAtuais', 'homenageados'];
 
@@ -95,21 +100,11 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('all');
 
-  const [dbEvents, setDbEvents] = useState<Record<number, MemorialEvent[]>>({});
-  const [dbPhotos, setDbPhotos] = useState<Record<number, MemorialPhoto[]>>({});
-
-  const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
-  const [isEventModalOpen, setIsEventModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isODadMenuOpen, setIsODadMenuOpen] = useState(false);
   const [isMobileODadOpen, setIsMobileODadOpen] = useState(false);
   const [homenageadosQuery, setHomenageadosQuery] = useState('');
   const [homenageadosDecade, setHomenageadosDecade] = useState<number | null>(null);
-  const [isGalleryUploadModalOpen, setIsGalleryUploadModalOpen] = useState(false);
-  const [uploadData, setUploadData] = useState({ caption: '', file: null as File | null, base64: '' });
-  const [galleryUploadData, setGalleryUploadData] = useState({ caption: '', title: '', file: null as File | null, base64: '' });
-  const [eventData, setEventData] = useState<MemorialEvent>({ tag: 'ensino', title: '', desc: '' });
-  const [extraGalleryPhotos, setExtraGalleryPhotos] = useState<MemorialPhoto[]>([]);
 
   const [lightboxPhoto, setLightboxPhoto] = useState<{ url: string; caption: string; title: string } | null>(null);
 
@@ -122,20 +117,13 @@ export default function App() {
 
   const decades = [1970, 1980, 1990, 2000, 2010, 2020];
 
-  const hasAnyEvents = useMemo(() => {
-    const originalEvents = memorialData[selectedYear]?.events || [];
-    const userEvents = dbEvents[selectedYear] || [];
-    return originalEvents.length > 0 || userEvents.length > 0;
-  }, [selectedYear, dbEvents]);
+  const hasAnyEvents = (memorialData[selectedYear]?.events || []).length > 0;
 
   const filteredEvents = useMemo(() => {
-    const originalEvents = memorialData[selectedYear]?.events || [];
-    const userEvents = dbEvents[selectedYear] || [];
-    const allEvents = [...originalEvents, ...userEvents];
-
+    const allEvents = memorialData[selectedYear]?.events || [];
     if (activeFilter === 'all') return allEvents;
     return allEvents.filter(e => e.tag === activeFilter);
-  }, [selectedYear, activeFilter, dbEvents]);
+  }, [selectedYear, activeFilter]);
 
   const allEventsForSearch = useMemo(() => {
     const list: Array<{ year: number; event: MemorialEvent }> = [];
@@ -144,12 +132,8 @@ export default function App() {
       data.events.forEach(event => list.push({ year: Number(year), event }));
     });
 
-    Object.entries(dbEvents).forEach(([year, events]) => {
-      events.forEach(event => list.push({ year: Number(year), event }));
-    });
-
     return list;
-  }, [dbEvents]);
+  }, []);
 
   const searchIndex = useMemo(() => buildSearchIndex(allEventsForSearch), [allEventsForSearch]);
 
@@ -240,18 +224,13 @@ export default function App() {
     document.getElementById(`search-result-${activeSearchIndex}`)?.scrollIntoView({ block: 'nearest' });
   }, [activeSearchIndex]);
 
-  const yearPhotos = useMemo(() => {
-    const originalPhotos = memorialData[selectedYear]?.photos || [];
-    const userPhotos = dbPhotos[selectedYear] || [];
-    return [...originalPhotos, ...userPhotos];
-  }, [selectedYear, dbPhotos]);
 
   const combinedGalleryPhotos = useMemo(() => {
     // Fotos coloridas primeiro, depois preto e branco; dentro de cada grupo mantém a ordem original.
-    const photos = [...allGalleryPhotos, ...extraGalleryPhotos];
+    const photos = allGalleryPhotos;
     const semCor = (p: (typeof photos)[number]) => 'colorida' in p && p.colorida === false;
     return [...photos.filter(p => !semCor(p)), ...photos.filter(semCor)];
-  }, [extraGalleryPhotos]);
+  }, []);
 
   const filteredColacoes = useMemo(() => {
     const query = normalizeText(homenageadosQuery.trim());
@@ -271,74 +250,6 @@ export default function App() {
       return haystack.includes(query);
     });
   }, [homenageadosQuery, homenageadosDecade]);
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (file.size > 700 * 1024) {
-        alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB.");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setUploadData({
-          ...uploadData,
-          file: file,
-          base64: reader.result as string
-        });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleGalleryFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (file.size > 700 * 1024) {
-        alert("A imagem é muito grande. Por favor, escolha uma imagem menor que 700KB.");
-        return;
-      }
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setGalleryUploadData({ ...galleryUploadData, file, base64: reader.result as string });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const submitPhoto = () => {
-    if (!uploadData.file || !uploadData.caption) return;
-    const newPhoto: MemorialPhoto = { url: uploadData.base64, caption: uploadData.caption };
-    setDbPhotos({
-      ...dbPhotos,
-      [selectedYear]: [...(dbPhotos[selectedYear] || []), newPhoto]
-    });
-    setUploadData({ caption: '', file: null, base64: '' });
-    setIsUploadModalOpen(false);
-  };
-
-  const submitEvent = () => {
-    if (!eventData.title || !eventData.desc) return;
-    setDbEvents({
-      ...dbEvents,
-      [selectedYear]: [...(dbEvents[selectedYear] || []), eventData]
-    });
-    setEventData({ tag: 'ensino', title: '', desc: '' });
-    setIsEventModalOpen(false);
-  };
-
-  const submitGalleryPhoto = () => {
-    if (!galleryUploadData.file || !galleryUploadData.caption || !galleryUploadData.title) return;
-    const newPhoto: MemorialPhoto = {
-      id: `local-${Date.now()}`,
-      url: galleryUploadData.base64,
-      caption: galleryUploadData.caption,
-      title: galleryUploadData.title
-    };
-    setExtraGalleryPhotos([...extraGalleryPhotos, newPhoto]);
-    setGalleryUploadData({ caption: '', title: '', file: null, base64: '' });
-    setIsGalleryUploadModalOpen(false);
-  };
 
   const getTagIcon = (tag: string) => {
     switch (tag) {
@@ -1546,6 +1457,172 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'contribuir' && (
+            <motion.div
+              key="contribuir"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto space-y-8"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Memorial</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Como contribuir</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl mb-6">
+                    Novas notícias, fotos, pessoas e homenageados entram no memorial pelo <strong>Painel do Memorial</strong>.
+                    Veja abaixo como usar — não é preciso conhecimento técnico.
+                  </p>
+                  <a
+                    href="/admin/"
+                    className="inline-flex items-center gap-2 bg-ufv-gold text-white px-5 py-3 rounded-lg text-sm font-semibold hover:brightness-110 transition"
+                  >
+                    <ExternalLink className="w-4 h-4" /> Abrir o Painel do Memorial
+                  </a>
+                </div>
+              </div>
+
+              <div className="card">
+                <h2 className="font-serif text-xl font-bold text-ufv-green mb-2 flex items-center gap-2">
+                  <KeyRound className="w-5 h-5" /> Quem pode contribuir
+                </h2>
+                <p className="text-sm text-ufv-gray leading-relaxed">
+                  O acesso ao painel é feito com <strong>e-mail e senha</strong>, cadastrados por um administrador do memorial.
+                  Se você quer contribuir e ainda não tem acesso, procure a equipe do{' '}
+                  <a href="https://dad.ufv.br/" className="text-ufv-green-light hover:underline">Departamento de Administração e Contabilidade</a>.
+                </p>
+              </div>
+
+              <div className="card">
+                <h2 className="font-serif text-xl font-bold text-ufv-green mb-5">Passo a passo</h2>
+                <ol className="space-y-6">
+                  {[
+                    {
+                      titulo: 'Entre no painel',
+                      texto: (
+                        <>
+                          Acesse <a href="/admin/" className="text-ufv-green-light hover:underline">o Painel do Memorial</a> e entre com seu e-mail e senha.
+                          No primeiro acesso, troque a senha inicial em <strong>Minha conta</strong>.
+                        </>
+                      ),
+                    },
+                    {
+                      titulo: 'Escolha o que vai adicionar',
+                      texto: (
+                        <>
+                          No menu, escolha a seção: <strong>Notícias</strong>, <strong>Galeria de fotos</strong>, <strong>Pessoas</strong> ou{' '}
+                          <strong>Homenageados</strong>.
+                        </>
+                      ),
+                    },
+                    {
+                      titulo: 'Clique em “Adicionar” e preencha',
+                      texto: (
+                        <>
+                          Os campos marcados com <span className="text-ufv-gold font-bold">*</span> são obrigatórios. Cada campo traz um exemplo do que
+                          escrever.
+                        </>
+                      ),
+                    },
+                    {
+                      titulo: 'Envie as fotos',
+                      texto: (
+                        <>
+                          Clique em <strong>Adicionar fotos</strong> e escolha os arquivos do computador ou do celular (JPG ou PNG). Elas são reduzidas
+                          automaticamente — não é preciso editá-las antes. Escreva uma legenda para cada uma.
+                        </>
+                      ),
+                    },
+                    {
+                      titulo: 'Clique em “Salvar e publicar”',
+                      texto: (
+                        <>
+                          Pronto! A mudança aparece no memorial em <strong>cerca de 2 minutos</strong>.
+                        </>
+                      ),
+                    },
+                  ].map((passo, i) => (
+                    <li key={passo.titulo} className="flex gap-4">
+                      <div className="w-9 h-9 rounded-full bg-ufv-gold text-white font-bold flex items-center justify-center shrink-0">{i + 1}</div>
+                      <div>
+                        <p className="font-semibold text-ufv-gray">{passo.titulo}</p>
+                        <p className="text-sm text-ufv-gray-light leading-relaxed mt-1">{passo.texto}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    icone: <Newspaper className="w-5 h-5" />,
+                    titulo: 'Notícias',
+                    texto: 'Fatos da linha do tempo. Escolha o ano em que a notícia deve aparecer e, se tiver, informe a fonte (ata ou edição do jornal) no fim do texto.',
+                  },
+                  {
+                    icone: <ImagePlus className="w-5 h-5" />,
+                    titulo: 'Galeria de fotos',
+                    texto: 'Fotos da aba "Fotos". Informe se a foto é colorida ou preto e branco, e descreva na legenda quem aparece, onde e quando.',
+                  },
+                  {
+                    icone: <Users className="w-5 h-5" />,
+                    titulo: 'Pessoas',
+                    texto: 'Chefias, professores titulares, professores atuais e técnicos administrativos, com foto e dados de contato.',
+                  },
+                  {
+                    icone: <Award className="w-5 h-5" />,
+                    titulo: 'Homenageados',
+                    texto: 'Homenageados das colações de grau. Escreva um homenageado por linha, do jeito que deve aparecer no site.',
+                  },
+                ].map(secao => (
+                  <div key={secao.titulo} className="bg-white rounded-xl border border-ufv-border p-5">
+                    <div className="flex items-center gap-2 text-ufv-green font-semibold mb-1.5">
+                      {secao.icone} {secao.titulo}
+                    </div>
+                    <p className="text-sm text-ufv-gray-light leading-relaxed">{secao.texto}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="card">
+                <h2 className="font-serif text-xl font-bold text-ufv-green mb-4">Dúvidas frequentes</h2>
+                <div className="space-y-5 text-sm leading-relaxed">
+                  <div>
+                    <p className="font-semibold text-ufv-gray flex items-center gap-2"><Pencil className="w-4 h-4 text-ufv-gray-light" /> Errei algo. Como corrijo?</p>
+                    <p className="text-ufv-gray-light mt-1">Na lista da seção, clique em <strong>Editar</strong> para corrigir ou em <strong>Excluir</strong> para remover. A correção também aparece no site em cerca de 2 minutos.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ufv-gray flex items-center gap-2"><Clock className="w-4 h-4 text-ufv-gray-light" /> Salvei, mas não apareceu no site.</p>
+                    <p className="text-ufv-gray-light mt-1">Aguarde cerca de 2 minutos e recarregue a página do memorial. No painel, fotos recém-enviadas podem aparecer como “em publicação” durante esse tempo.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ufv-gray flex items-center gap-2"><KeyRound className="w-4 h-4 text-ufv-gray-light" /> Esqueci minha senha.</p>
+                    <p className="text-ufv-gray-light mt-1">Peça a um administrador do painel para definir uma nova senha para você.</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-ufv-gray flex items-center gap-2"><Info className="w-4 h-4 text-ufv-gray-light" /> Não encontro no painel uma notícia antiga.</p>
+                    <p className="text-ufv-gray-light mt-1">O painel mostra apenas o que foi adicionado por ele. O conteúdo que já existia no memorial antes do painel continua no site, mas é corrigido diretamente pela equipe técnica.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center pb-4">
+                <a
+                  href="/admin/"
+                  className="inline-flex items-center gap-2 bg-ufv-green text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" /> Abrir o Painel do Memorial
+                </a>
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'homenageados' && (
             <motion.div
               key="homenageados"
@@ -1682,12 +1759,6 @@ export default function App() {
                   </h2>
                   <p className="text-sm text-ufv-gray-light mt-1">{combinedGalleryPhotos.length} foto(s) no acervo geral do memorial</p>
                 </div>
-                <button
-                  onClick={() => setIsGalleryUploadModalOpen(true)}
-                  className="flex items-center justify-center gap-2 bg-ufv-green text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors shadow-sm"
-                >
-                  <Plus className="w-4 h-4" /> Adicionar Foto
-                </button>
               </div>
 
               {combinedGalleryPhotos.length > 0 ? (
@@ -1728,82 +1799,6 @@ export default function App() {
                   </p>
                 </div>
               )}
-
-              {/* MODAL UPLOAD DA GALERIA */}
-              <AnimatePresence>
-                {isGalleryUploadModalOpen && (
-                  <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      className="bg-white rounded-xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto relative"
-                    >
-                      <div className="bg-ufv-green p-4 text-white flex justify-between items-center sticky top-0 z-10">
-                        <h3 className="font-serif font-bold flex items-center gap-2">
-                          <ImageIcon className="w-4 h-4" /> Adicionar Foto ao Acervo
-                        </h3>
-                        <button onClick={() => setIsGalleryUploadModalOpen(false)} className="text-white/70 hover:text-white">
-                          <X className="w-5 h-5" />
-                        </button>
-                      </div>
-                      <div className="p-6 space-y-4">
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Foto *</label>
-                          <div className="border-2 border-dashed border-ufv-border rounded-lg p-8 text-center hover:border-ufv-green transition-colors cursor-pointer relative">
-                            <input
-                              type="file"
-                              accept="image/*"
-                              className="absolute inset-0 opacity-0 cursor-pointer"
-                              onChange={handleGalleryFileUpload}
-                            />
-                            {galleryUploadData.base64 ? (
-                              <div>
-                                <img src={galleryUploadData.base64} alt="Preview" className="max-h-48 mx-auto rounded-lg shadow-md" />
-                                <div className="mt-2 text-xs text-ufv-green font-bold flex items-center justify-center gap-1">
-                                  <ImageIcon className="w-3 h-3" /> {galleryUploadData.file?.name}
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="text-sm text-ufv-gray-light">
-                                <ImageIcon className="w-8 h-8 mx-auto mb-2 opacity-20" />
-                                Clique ou arraste uma foto aqui<br />
-                                <span className="text-[11px] opacity-60">Máx. 700KB</span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Título *</label>
-                          <input
-                            type="text"
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none"
-                            placeholder="Ex: Formatura Turma 1985..."
-                            value={galleryUploadData.title}
-                            onChange={(e) => setGalleryUploadData({ ...galleryUploadData, title: e.target.value })}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Legenda / Contexto *</label>
-                          <textarea
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none min-h-[100px]"
-                            placeholder="Descreva a foto, quem são as pessoas..."
-                            value={galleryUploadData.caption}
-                            onChange={(e) => setGalleryUploadData({ ...galleryUploadData, caption: e.target.value })}
-                          ></textarea>
-                        </div>
-                        <button
-                          onClick={submitGalleryPhoto}
-                          disabled={!galleryUploadData.file || !galleryUploadData.caption || !galleryUploadData.title}
-                          className="w-full bg-ufv-green text-white py-3 rounded-lg font-bold hover:bg-ufv-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                          Enviar para o Acervo
-                        </button>
-                      </div>
-                    </motion.div>
-                  </div>
-                )}
-              </AnimatePresence>
 
               {/* LIGHTBOX GERAL */}
               <AnimatePresence>
@@ -1895,14 +1890,6 @@ export default function App() {
                       </div>
                       <div className="text-xs sm:text-sm text-ufv-gray-light mt-1">Departamento de Administração e Contabilidade · UFV</div>
                     </div>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setIsEventModalOpen(true)}
-                        className="flex-grow sm:flex-none flex items-center justify-center gap-2 bg-ufv-gold text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-gold-light transition-colors"
-                      >
-                        <Plus className="w-4 h-4" /> Adicionar Registro
-                      </button>
-                    </div>
                   </div>
 
                   {hasAnyEvents ? (
@@ -1976,187 +1963,8 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* FOTOS DO ANO */}
-                  <div className="mt-12">
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                      <h3 className="font-serif text-xl font-bold text-ufv-green flex items-center gap-2">
-                        <ImageIcon className="w-5 h-5" /> Galeria de Fotos ({yearPhotos.length})
-                      </h3>
-                      <button
-                        onClick={() => setIsUploadModalOpen(true)}
-                        className="w-full sm:w-auto flex items-center justify-center gap-2 bg-ufv-green text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-ufv-green-dark transition-colors"
-                      >
-                        <Plus className="w-4 h-4" /> Contribuir com Foto
-                      </button>
-                    </div>
-
-                    {yearPhotos.length > 0 ? (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {yearPhotos.map((photo, i) => (
-                          <motion.div
-                            key={i}
-                            whileHover={{ y: -5 }}
-                            className="bg-white border border-ufv-border rounded-lg overflow-hidden shadow-sm cursor-pointer"
-                            onClick={() => setLightboxPhoto({ url: photo.url, caption: photo.caption, title: photo.title || '' })}
-                          >
-                            <div className="aspect-video overflow-hidden bg-ufv-cream">
-                              <img
-                                src={photo.url}
-                                alt={photo.caption}
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                              />
-                            </div>
-                            <div className="p-4">
-                              <p className="text-sm text-ufv-gray italic leading-relaxed">
-                                &ldquo;{photo.caption}&rdquo;
-                              </p>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="bg-white border border-ufv-border rounded-lg p-14 text-center">
-                        <ImageIcon className="w-12 h-12 text-ufv-border mx-auto mb-4" />
-                        <h3 className="font-serif text-lg text-ufv-gray mb-2">Sem registros fotográficos</h3>
-                        <p className="text-sm text-ufv-gray-light max-w-xs mx-auto">Não há fotos disponíveis para o ano de {selectedYear}.</p>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </div>
-
-              {/* MODAL NOVO REGISTRO ANO */}
-              <AnimatePresence>
-                {isUploadModalOpen && (
-                  <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      className="bg-white rounded-xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto relative"
-                    >
-                      <div className="bg-ufv-green p-4 text-white flex justify-between items-center sticky top-0 z-10">
-                        <h3 className="font-serif font-bold">Contribuir para o Memorial ({selectedYear})</h3>
-                        <button onClick={() => setIsUploadModalOpen(false)} className="text-white/70 hover:text-white">
-                          <LayoutGrid className="w-5 h-5 rotate-45" />
-                        </button>
-                      </div>
-                      <div className="p-6 space-y-4">
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Foto</label>
-                          <div className="border-2 border-dashed border-ufv-border rounded-lg p-8 text-center hover:border-ufv-green transition-colors cursor-pointer relative">
-                            <input
-                              type="file"
-                              accept="image/*"
-                              className="absolute inset-0 opacity-0 cursor-pointer"
-                              onChange={handleFileUpload}
-                            />
-                            {uploadData.base64 ? (
-                              <div className="relative group">
-                                <img
-                                  src={uploadData.base64}
-                                  alt="Preview"
-                                  className="max-h-48 mx-auto rounded-lg shadow-md"
-                                />
-                                <div className="mt-2 text-xs text-ufv-green font-bold flex items-center justify-center gap-1">
-                                  <ImageIcon className="w-3 h-3" /> {uploadData.file?.name}
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="text-sm text-ufv-gray-light">
-                                <ImageIcon className="w-8 h-8 mx-auto mb-2 opacity-20" />
-                                Clique ou arraste uma foto aqui
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Legenda / Contexto</label>
-                          <textarea
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-green focus:border-ufv-green outline-none min-h-[100px]"
-                            placeholder="Descreva a foto, pessoas presentes, contexto..."
-                            value={uploadData.caption}
-                            onChange={(e) => setUploadData({ ...uploadData, caption: e.target.value })}
-                          ></textarea>
-                        </div>
-                        <button
-                          onClick={submitPhoto}
-                          disabled={!uploadData.file || !uploadData.caption}
-                          className="w-full bg-ufv-green text-white py-3 rounded-lg font-bold hover:bg-ufv-green-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                          Enviar para o Memorial
-                        </button>
-                      </div>
-                    </motion.div>
-                  </div>
-                )}
-              </AnimatePresence>
-
-              {/* MODAL ADICIONAR EVENTO */}
-              <AnimatePresence>
-                {isEventModalOpen && (
-                  <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      className="bg-white rounded-xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto relative"
-                    >
-                      <div className="bg-ufv-gold p-4 text-white flex justify-between items-center sticky top-0 z-10">
-                        <h3 className="font-serif font-bold">Adicionar Registro Histórico ({selectedYear})</h3>
-                        <button onClick={() => setIsEventModalOpen(false)} className="text-white/70 hover:text-white">
-                          <LayoutGrid className="w-5 h-5 rotate-45" />
-                        </button>
-                      </div>
-                      <div className="p-6 space-y-4">
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Categoria</label>
-                          <select
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none bg-white"
-                            value={eventData.tag}
-                            onChange={(e) => setEventData({ ...eventData, tag: e.target.value as any })}
-                          >
-                            <option value="ensino">Ensino</option>
-                            <option value="pesquisa">Pesquisa</option>
-                            <option value="extensao">Extensão</option>
-                            <option value="gestao">Gestão</option>
-                            <option value="infraestrutura">Infraestrutura</option>
-                            <option value="reconhecimento">Reconhecimento</option>
-                            <option value="parceria">Parceria</option>
-                            <option value="fundacao">Fundação</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Título do Evento</label>
-                          <input
-                            type="text"
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none"
-                            placeholder="Ex: Criação do novo laboratório"
-                            value={eventData.title}
-                            onChange={(e) => setEventData({ ...eventData, title: e.target.value })}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-bold uppercase text-ufv-gray-light mb-1.5">Descrição / Detalhes</label>
-                          <textarea
-                            className="w-full border border-ufv-border rounded-lg p-3 text-sm focus:ring-2 focus:ring-ufv-gold focus:border-ufv-gold outline-none min-h-[100px]"
-                            placeholder="Descreva o marco histórico com detalhes..."
-                            value={eventData.desc}
-                            onChange={(e) => setEventData({ ...eventData, desc: e.target.value })}
-                          ></textarea>
-                        </div>
-                        <button
-                          onClick={submitEvent}
-                          disabled={!eventData.title || !eventData.desc}
-                          className="w-full bg-ufv-gold text-white py-3 rounded-lg font-bold hover:bg-ufv-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                          Salvar no Memorial
-                        </button>
-                      </div>
-                    </motion.div>
-                  </div>
-                )}
-              </AnimatePresence>
 
               <div className="space-y-6">
                 <div className="bg-white border border-ufv-border rounded-lg overflow-hidden">
@@ -2164,7 +1972,7 @@ export default function App() {
                   <div className="p-4">
                     <div className="text-3xl font-serif font-bold text-ufv-green mb-1">{selectedYear}</div>
                     <div className="text-xs text-ufv-gray-light font-medium uppercase tracking-wider mb-4">
-                      {(memorialData[selectedYear] as any)?.events?.length || 0} Eventos · {(memorialData[selectedYear] as any)?.photos?.length || 0} Fotos
+                      {(memorialData[selectedYear] as any)?.events?.length || 0} Eventos
                     </div>
                     <div className="space-y-3">
                       {(memorialData[selectedYear] as any)?.events?.slice(0, 3).map((e: any, i: number) => (
@@ -2277,12 +2085,19 @@ export default function App() {
           <div>
             <div className="font-serif text-lg text-white font-bold mb-3">Memorial DAD — UFV</div>
             <p className="mb-3 leading-relaxed">
-              Departamento de Administração e Contabilidade<br />
-              Centro de Ciências Humanas, Letras e Artes
+              <a href="https://dad.ufv.br/" className="hover:text-ufv-gold-light transition-colors">Departamento de Administração e Contabilidade</a><br />
+              <a href="https://cch.ufv.br/" className="hover:text-ufv-gold-light transition-colors">Centro de Ciências Humanas, Letras e Artes</a>
             </p>
             <p className="leading-relaxed">
-              Universidade Federal de Viçosa<br />
-              Av. Peter Henry Rolfs, s/n — Viçosa/MG
+              <a href="https://www.ufv.br/" className="hover:text-ufv-gold-light transition-colors">Universidade Federal de Viçosa</a><br />
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Universidade+Federal+de+Vi%C3%A7osa%2C+Av.+Peter+Henry+Rolfs%2C+Vi%C3%A7osa+MG"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-ufv-gold-light transition-colors"
+              >
+                Av. Peter Henry Rolfs, s/n — Viçosa/MG
+              </a>
             </p>
           </div>
           <div>
@@ -2297,16 +2112,32 @@ export default function App() {
           <div>
             <div className="text-[11px] tracking-[1.5px] uppercase font-bold text-ufv-gold-light mb-4">Memorial</div>
             <div className="space-y-2">
-              <a href="#" className="block hover:text-ufv-gold-light transition-colors">Como contribuir</a>
-              <a href="#" className="block hover:text-ufv-gold-light transition-colors">Enviar registro</a>
-              <a href="#" className="block hover:text-ufv-gold-light transition-colors">Acervo fotográfico</a>
+              <button
+                onClick={() => {
+                  setActivePanel('contribuir');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="block hover:text-ufv-gold-light transition-colors"
+              >
+                Como contribuir
+              </button>
+              <a href="/admin/" className="block hover:text-ufv-gold-light transition-colors">Enviar registro</a>
+              <button
+                onClick={() => {
+                  setActivePanel('photos');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="block hover:text-ufv-gold-light transition-colors"
+              >
+                Acervo fotográfico
+              </button>
               <a href="#" className="block hover:text-ufv-gold-light transition-colors">Contato</a>
             </div>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <span>© 2026 Universidade Federal de Viçosa — DAD. Todos os direitos reservados.</span>
-          <span>Desenvolvido pelo <a href="#" className="hover:text-white/60">DAD/UFV</a></span>
+          <span>Desenvolvido pelo <a href="https://dad.ufv.br/" className="hover:text-white/60">DAD/UFV</a></span>
         </div>
       </footer>
     </div>
