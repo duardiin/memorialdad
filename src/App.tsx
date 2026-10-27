@@ -2244,7 +2244,7 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="bg-ufv-green-dark text-white/65 py-12 px-6 text-sm border-t-4 border-ufv-gold">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pb-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-8 border-b border-white/10">
           <div>
             <div className="font-serif text-lg text-white font-bold mb-3">Memorial DAD — UFV</div>
             <p className="mb-3 leading-relaxed">
@@ -2294,13 +2294,39 @@ export default function App() {
               >
                 Acervo fotográfico
               </button>
-              <a href="#" className="block hover:text-ufv-gold-light transition-colors">Contato</a>
+              <a href="#contato" className="block hover:text-ufv-gold-light transition-colors">Contato</a>
             </div>
+          </div>
+          <div id="contato">
+            <div className="text-[11px] tracking-[1.5px] uppercase font-bold text-ufv-gold-light mb-4">Contato</div>
+            <address className="not-italic leading-relaxed space-y-3">
+              <p>
+                Departamento de Administração e Contabilidade<br />
+                Universidade Federal de Viçosa<br />
+                Av. Peter Henry Rolfs s/n – Campus Universitário<br />
+                CEP: 36570-000 – Viçosa/MG
+              </p>
+              <p>
+                Fone: <a href="tel:+553136127003" className="hover:text-ufv-gold-light transition-colors">(31) 3612-7003</a><br />
+                E-mail: <a href="mailto:dad@ufv.br" className="hover:text-ufv-gold-light transition-colors">dad@ufv.br</a>
+              </p>
+            </address>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <span>© 2026 Universidade Federal de Viçosa — DAD. Todos os direitos reservados.</span>
-          <span>Desenvolvido pelo <a href="https://dad.ufv.br/" className="hover:text-white/60">DAD/UFV</a></span>
+          <span>
+            Desenvolvido pelo <a href="https://dad.ufv.br/" className="hover:text-white/60">DAD/UFV</a>
+            {' · '}Design e desenvolvimento:{' '}
+            <a
+              href="https://www.linkedin.com/in/eduarrdojesus"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-white/60 hover:text-ufv-gold-light transition-colors"
+            >
+              Eduardo Jesus
+            </a>
+          </span>
         </div>
       </footer>
     </div>

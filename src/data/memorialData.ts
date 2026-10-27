@@ -2618,6 +2618,14 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
+        title: 'CEPE aprova proposta de criação do Mestrado em Administração na UFV',
+        desc: 'Durante a apreciação da pauta pelo colegiado, o Departamento de Administração e Contabilidade (DAD) deu um importante passo em direção ao aperfeiçoamento didático e à expansão de suas atividades de ensino com a apresentação do relatório e proposta preliminar voltada para a criação do Programa de Pós-Graduação em Administração — Mestrado em Administração na instituição. Ata nº 232/2005',
+        photos: [],
+        externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
         title: 'Convênio entre o DAD e a Secretaria Estadual do Meio Ambiente e Desenvolvimento Sustentável SEMAD - MG.',
         desc: 'Em abril de 2005, o Departamento de Administração DAD realizou o curso "Desenvolvimento de Habilidades para Chefes e Supervisores". Fruto de convênio com a Semad, o treinamento capacitou 58 diretores do IEF, da FEAM e da própria secretaria no Centro de Ensino de Extensão, sob a condução de professores do DAD, as palestras abordaram temas como planejamento, motivação, gerenciamento e ética no serviço público.',
         photos: [],
@@ -3428,6 +3436,16 @@ export const memorialData: MemorialData = {
         desc: 'DAD aprova o curso de doutorado, com previsão de implantação para o primeiro semestre de 2016.',
         photos: [],
         externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'CEPE aprova proposta de criação do Doutorado em Administração na UFV',
+        desc: 'Em junho de 2015, durante as deliberações do colegiado, o DAD deu um importante passo em direção à expansão de suas atividades de pós-graduação stricto sensu com o informe de que a proposta de criação do novo curso de Doutorado em Administração havia sido aprovada pelo CEPE e seguia para avaliação e aprovação junto à CAPES." Ata nº 309/2015',
+        photos: [],
+        externalLinks: [
+          { label: 'Ata nº 309/2015', url: 'https://docs.google.com/document/d/17OAf0SS4NSzQZFyu2dNrgKvBD-8tyGZp/edit' }
+        ],
         articleUrl: ''
       },
       {
