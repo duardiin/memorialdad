@@ -792,7 +792,7 @@ export default function App() {
                   <div className="space-y-3">
                     {[
                       { title: 'Primeira Jornada Acadêmica', href: 'https://drive.google.com/file/d/1TB5j47Hrl4t3ARd_EQeOhFXMJoE65f3u/view?usp=sharing' },
-                      { title: ' Participação dos Professores ASPUV', href: 'https://drive.google.com/file/d/1gBKFZjv0gpCJCEb4wFvR4mxQ5CLwdfXB/view?usp=sharing' },
+                      { title: 'Participação dos Professores ASPUV', href: 'https://drive.google.com/file/d/1gBKFZjv0gpCJCEb4wFvR4mxQ5CLwdfXB/view?usp=sharing' },
                       { title: 'Criação do Curso de Ciências Contábeis', href: 'https://drive.google.com/file/d/1pMLkf3Oo0GsRm-MDJghAiqqZD8XsIY1s/view?usp=sharing' },
                       { title: 'Relatório de Atividade de Extensão', href: 'https://drive.google.com/file/d/1LNJB9rQCBQNrhq0F45nexkNSxz05ru1I/view?usp=sharing' },
                       { title: 'O Planejamento Estratégico e sua Aplicação na Organização Universitária', href: 'https://drive.google.com/file/d/1UILui-B0EgioEWPag5cvIu-LFPZLNcCY/view?usp=sharing' },
@@ -1660,7 +1660,7 @@ export default function App() {
                 <p className="text-sm text-ufv-gray leading-relaxed">
                   O acesso ao painel é feito com <strong>e-mail e senha</strong>, cadastrados por um administrador do memorial.
                   Se você quer contribuir e ainda não tem acesso, procure a equipe do{' '}
-                  <a href="https://dad.ufv.br/" className="text-ufv-green-light hover:underline"> Departamento de Administração e Contabilidade</a>.
+                  <a href="https://dad.ufv.br/" className="text-ufv-green-light hover:underline">Departamento de Administração e Contabilidade</a>.
                 </p>
               </div>
 
