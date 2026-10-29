@@ -1,0 +1,14 @@
+/* EQUIPE */
+Design e desenvolvimento: Eduardo Jesus
+Função: Programador — Laboratório de Informática do DAD/UFV
+LinkedIn: https://www.linkedin.com/in/eduarrdojesus
+Local: Viçosa, MG, Brasil
+
+/* REALIZAÇÃO */
+Departamento de Administração e Contabilidade (DAD)
+Universidade Federal de Viçosa
+Site: https://dad.ufv.br/
+
+/* SITE */
+Idioma: Português (Brasil)
+Tecnologias: React, TypeScript, Vite, Tailwind CSS, Vercel

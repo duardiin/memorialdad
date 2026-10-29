@@ -1364,7 +1364,7 @@ export const memorialData: MemorialData = {
           { url: '/1988 - Proposta Ciencias Contabeis 6.jpg', caption: 'Proposta para a criação do curso de Ciências Contábeis (6/7)' },
           { url: '/1988 - Proposta Ciencias Contabeis 7.jpg', caption: 'Assinaturas da Profª Nanci Pereira de Vasconcelos e do Prof. Milton Rodrigues Natalino (7/7)' }
         ],
-        externalLinks: [],
+        externalLinks: [{ label: 'Documento: Criação do Curso de Ciências Contábeis', url: 'https://drive.google.com/file/d/1pMLkf3Oo0GsRm-MDJghAiqqZD8XsIY1s/view?usp=sharing' }],
         articleUrl: ''
       },
      {
@@ -2072,6 +2072,14 @@ export const memorialData: MemorialData = {
         externalLinks: [],
         articleUrl: ''
       },
+      {
+        tag: '',
+        title: 'Participação dos Professores ASPUV',
+        desc: 'Registro da participação dos professores do departamento na edição de maio de 1996 do Argumento, jornal da ASPUV – Seção Sindical dos Docentes da UFV.',
+        photos: [],
+        externalLinks: [{ label: 'Jornal Argumento – Maio de 1996', url: 'https://drive.google.com/file/d/1gBKFZjv0gpCJCEb4wFvR4mxQ5CLwdfXB/view?usp=sharing' }],
+        articleUrl: ''
+      },
     {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 1996',
@@ -2453,6 +2461,22 @@ export const memorialData: MemorialData = {
       externalLinks: [],
       articleUrl: ''
     },
+      {
+        tag: '',
+        title: 'Regulamentação do uso da biblioteca e laboratório de informática',
+        desc: 'Em maio de 2002, a chefia do DAD, na gestão do Prof. Walmer Faroni, estabeleceu as normas de uso da biblioteca e do Laboratório de Informática do departamento, incluindo empréstimos e as atribuições dos bolsistas.',
+        photos: [],
+        externalLinks: [{ label: 'Documento: Regulamentação', url: 'https://drive.google.com/file/d/1Dv8SEC1a44m8tGYt_DFmzdumRzYjcRls/view?usp=sharing' }],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'Relatório de Atividade de Extensão',
+        desc: 'Relatório das atividades de extensão realizadas pelo DAD em 2002, com cursos, palestras e ciclos de palestras coordenados pelos professores do departamento, totalizando 201 horas-aula.',
+        photos: [],
+        externalLinks: [{ label: 'Documento: Relatório de Atividade de Extensão', url: 'https://drive.google.com/file/d/1LNJB9rQCBQNrhq0F45nexkNSxz05ru1I/view?usp=sharing' }],
+        articleUrl: ''
+      },
     {
       tag: 'homenagens',
       title: 'Homenagens da Colação de Grau de Dezembro de 2002',
@@ -2492,6 +2516,14 @@ export const memorialData: MemorialData = {
         desc: 'DAD comemora a consolidação de seu décimo quinto aniversário, como unidade acadêmica após o desmembramento do antigo DAE.',
         photos: [],
         externalLinks: [],
+        articleUrl: ''
+      },
+      {
+        tag: '',
+        title: 'Primeira Jornada Acadêmica',
+        desc: 'Realização, em abril de 2003, da Primeira Jornada Acadêmica do curso de Ciências Contábeis, no Centro de Vivência da UFV.',
+        photos: [],
+        externalLinks: [{ label: 'Documento: Primeira Jornada Acadêmica', url: 'https://drive.google.com/file/d/1TB5j47Hrl4t3ARd_EQeOhFXMJoE65f3u/view?usp=sharing' }],
         articleUrl: ''
       },
     {

@@ -50,7 +50,7 @@ export const chefesDepartamento: ChefeDepartamento[] = [
   },
   {
     id: "2",
-    nome: "Roberto de Caralho Araújo",
+    nome: "Roberto de Carvalho Araújo",
     periodoInicio: "12/09/1989",
     periodoFim: "01/11/1989",
     cargo: "",

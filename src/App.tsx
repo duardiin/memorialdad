@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ChevronRight,
   Clock,
+  Code,
   ExternalLink,
   Globe,
   GraduationCap,
@@ -22,6 +23,7 @@ import {
   Info,
   Italic,
   KeyRound,
+  Linkedin,
   Landmark,
   LayoutGrid,
   Mail,
@@ -55,7 +57,7 @@ import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } fr
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
 
@@ -195,7 +197,12 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
-  const openSearchResult = ({ year, event }: { year: number; event: MemorialEvent }) => {
+  const openEventByTitle = (year: number, title: string) => {
+    const event = memorialData[year]?.events.find(e => e.title === title);
+    if (event) setSelectedEventModal({ event, year });
+  };
+
+  const openSearchResult =({ year, event }: { year: number; event: MemorialEvent }) => {
     setSelectedYear(year);
     setCurrentDecade(Math.floor(year / 10) * 10);
     setSelectedEventModal({ event, year });
@@ -781,6 +788,21 @@ export default function App() {
                     <p>
                       Ao longo de cinco décadas, o DAD consolidou-se como um dos principais centros de formação em Administração e Ciências Contábeis, contribuindo para o desenvolvimento regional e nacional por meio da produção científica e formação de excelência.
                     </p>
+                  </div>
+                  <div className="mt-5 pt-4 border-t border-ufv-border flex flex-wrap items-center justify-between gap-3 text-sm text-ufv-gray-light">
+                    <span>
+                      Um projeto do <strong className="text-ufv-gray">DAD/UFV</strong> · Desenvolvido por{' '}
+                      <strong className="text-ufv-green">Eduardo Jesus</strong>
+                    </span>
+                    <button
+                      onClick={() => {
+                        setActivePanel('sobre');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="flex items-center gap-1 text-xs font-semibold text-ufv-green hover:underline"
+                    >
+                      Conheça o projeto <ChevronRight className="w-3 h-3" />
+                    </button>
                   </div>
                 </div>
 
@@ -1789,6 +1811,106 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'sobre' && (
+            <motion.div
+              key="sobre"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto space-y-8"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Memorial</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Sobre o Memorial</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    Uma plataforma digital que reúne a galeria virtual e o resgate histórico da trajetória do Departamento de Administração e
+                    Contabilidade da UFV, criada no contexto das comemorações dos 50 anos do departamento.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card">
+                <h2 className="card-title">
+                  <div className="card-icon"><Landmark className="w-4 h-4 text-white" /></div>
+                  Realização
+                </h2>
+                <div className="flex items-center gap-4">
+                  <img src="/ADM.png" alt="" className="w-14 h-14 object-contain shrink-0" />
+                  <p className="text-[15px] text-ufv-gray leading-relaxed">
+                    <a href="https://dad.ufv.br/" className="font-semibold text-ufv-green hover:underline">Departamento de Administração e Contabilidade</a>
+                    <br />
+                    Centro de Ciências Humanas, Letras e Artes · Universidade Federal de Viçosa
+                  </p>
+                </div>
+              </div>
+
+              <div className="card border-t-4 border-t-ufv-gold">
+                <h2 className="card-title">
+                  <div className="card-icon"><Code className="w-4 h-4 text-white" /></div>
+                  Design e desenvolvimento
+                </h2>
+                <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                  <img
+                    src="/Eduardo.jpg"
+                    alt="Eduardo Jesus"
+                    className="w-32 h-32 rounded-full object-cover border-4 border-ufv-gold/40 shadow-md shrink-0"
+                  />
+                  <div className="text-center sm:text-left">
+                    <p className="font-serif text-2xl font-bold text-ufv-green">Eduardo Jesus</p>
+                    <p className="text-sm text-ufv-gold font-semibold mb-3">Programador · Laboratório de Informática do DAD/UFV</p>
+                    <p className="text-[15px] text-ufv-gray leading-relaxed mb-4">
+                      Responsável pela concepção, design e desenvolvimento do Memorial do DAD — da organização do acervo histórico à interface,
+                      à busca e ao painel que permite à comunidade enviar novos registros. Também desenvolveu o aplicativo DADTech.
+                    </p>
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-2">
+                      <a
+                        href="https://www.linkedin.com/in/eduarrdojesus"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-ufv-green border border-ufv-green rounded-full px-3 py-1.5 hover:bg-ufv-green hover:text-white transition-colors"
+                      >
+                        <Linkedin className="w-3.5 h-3.5" /> LinkedIn
+                      </a>
+                      <button
+                        onClick={() => openEventByTitle(2025, 'Contratação de Estagiário de T.I. e Projeto do Memorial do DAD')}
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-ufv-green border border-ufv-green rounded-full px-3 py-1.5 hover:bg-ufv-green hover:text-white transition-colors"
+                      >
+                        <History className="w-3.5 h-3.5" /> O início do projeto (2025)
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <h2 className="card-title">
+                  <div className="card-icon"><ImageIcon className="w-4 h-4 text-white" /></div>
+                  Acervo e colaboração
+                </h2>
+                <p className="text-[15px] text-ufv-gray leading-relaxed">
+                  O conteúdo do memorial foi reunido a partir de atas, jornais, documentos e fotografias do departamento e da UFV, com a colaboração
+                  de professores, técnicos administrativos e ex-alunos. Quer contribuir com o acervo?{' '}
+                  <button
+                    onClick={() => {
+                      setActivePanel('contribuir');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="text-ufv-green-light font-semibold hover:underline"
+                  >
+                    Veja como contribuir
+                  </button>
+                  .
+                </p>
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'homenageados' && (
             <motion.div
               key="homenageados"
@@ -2287,6 +2409,15 @@ export default function App() {
               >
                 Como contribuir
               </button>
+              <button
+                onClick={() => {
+                  setActivePanel('sobre');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="block hover:text-ufv-gold-light transition-colors"
+              >
+                Sobre o projeto e créditos
+              </button>
               <a href="/admin/" className="block hover:text-ufv-gold-light transition-colors">Enviar registro</a>
               <button
                 onClick={() => {
@@ -2316,20 +2447,66 @@ export default function App() {
             </address>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-          <span>© 2026 Universidade Federal de Viçosa — DAD. Todos os direitos reservados.</span>
-          <span>
-            Desenvolvido pelo <a href="https://dad.ufv.br/" className="hover:text-white/60">DAD/UFV</a>
-            {' · '}Design e desenvolvimento:{' '}
-            <a
-              href="https://www.linkedin.com/in/eduarrdojesus"
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-white/60 hover:text-ufv-gold-light transition-colors"
-            >
-              Eduardo Jesus
+        <div className="max-w-7xl mx-auto py-8 border-b border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div>
+            <div className="flex items-center gap-2 text-xs tracking-[2px] uppercase font-extrabold text-ufv-gold-light mb-4">
+              <Landmark className="w-4 h-4" /> Realização
+              <span className="flex-1 h-px bg-ufv-gold/30 ml-1" />
+            </div>
+            <a href="https://dad.ufv.br/" className="flex items-center gap-3 group">
+              <img src="/ADM.png" alt="" className="w-12 h-12 object-contain shrink-0" />
+              <span className="text-white/85 leading-snug group-hover:text-ufv-gold-light transition-colors">
+                Departamento de Administração e Contabilidade
+                <span className="block text-xs text-white/55">Universidade Federal de Viçosa</span>
+              </span>
             </a>
-          </span>
+          </div>
+          <div>
+            <div className="flex items-center gap-2 text-xs tracking-[2px] uppercase font-extrabold text-ufv-gold-light mb-4">
+              <Code className="w-4 h-4" /> Design e desenvolvimento
+              <span className="flex-1 h-px bg-ufv-gold/30 ml-1" />
+            </div>
+            <div className="flex items-center gap-3">
+              <img
+                src="/Eduardo.jpg"
+                alt="Eduardo Jesus"
+                className="w-12 h-12 rounded-full object-cover border-2 border-ufv-gold/60 shrink-0"
+              />
+              <div className="leading-snug">
+                <a
+                  href="https://www.linkedin.com/in/eduarrdojesus"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-serif text-base font-bold text-white hover:text-ufv-gold-light transition-colors"
+                >
+                  Eduardo Jesus
+                </a>
+                <span className="block text-xs text-white/55">Programador · DAD/UFV</span>
+                <span className="flex items-center gap-3 mt-1 text-xs">
+                  <a
+                    href="https://www.linkedin.com/in/eduarrdojesus"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1 hover:text-ufv-gold-light transition-colors"
+                  >
+                    <Linkedin className="w-3 h-3" /> LinkedIn
+                  </a>
+                  <button
+                    onClick={() => {
+                      setActivePanel('sobre');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="hover:text-ufv-gold-light transition-colors"
+                  >
+                    Sobre o projeto
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto mt-6 text-center md:text-left text-xs text-white/40">
+          © 2026 Universidade Federal de Viçosa — DAD. Todos os direitos reservados.
         </div>
       </footer>
     </div>

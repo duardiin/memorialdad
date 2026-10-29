@@ -29,6 +29,14 @@
   .card {
     @apply bg-white rounded-lg border border-ufv-border p-7 shadow-sm;
   }
+
+  .card-title {
+    @apply flex items-center gap-3 font-serif text-xl font-bold text-ufv-green mb-5 pb-3 border-b border-ufv-border;
+  }
+
+  .card-icon {
+    @apply w-8 h-8 rounded-full bg-ufv-green flex items-center justify-center shrink-0;
+  }
   
   .nav-item {
     @apply bg-transparent border-none cursor-pointer font-sans text-[13px] font-medium text-white/70 px-3.5 py-2.5 whitespace-nowrap border-b-3 border-transparent transition-all relative;
