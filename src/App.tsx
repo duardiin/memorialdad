@@ -17,6 +17,7 @@ import {
   Globe,
   GraduationCap,
   Handshake,
+  Heart,
   History,
   Image as ImageIcon,
   ImagePlus,
@@ -52,12 +53,13 @@ import {
 import { EventDetailModal } from './data/EventDetailModal';
 import { professoresAposentados } from './data/professoresAposentadosData';
 import { exProfessores } from './data/exProfessoresData';
+import { agradecimentos, equipePrincipal } from './data/agradecimentosData';
 import { NIVEIS_TECNICOS, tecnicosAposentados } from './data/tecnicosAposentadosData';
 import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } from './memorialSearch';
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
 
@@ -287,13 +289,13 @@ export default function App() {
       {/* HEADER */}
       <header className="bg-ufv-green pt-4 sticky top-0 z-50 shadow-lg border-b-4 border-ufv-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 pb-4">
-          <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto">
+          <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto lg:shrink-0">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-transparent rounded-full flex items-center justify-center border-2 border-transparent shrink-0">
               <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV" />
             </div>
             <div className="text-white overflow-hidden">
               <span className="font-serif text-[10px] sm:text-sm font-light tracking-wider opacity-90 block truncate">Universidade Federal de Viçosa</span>
-              <span className="font-serif text-lg sm:text-2xl font-bold leading-tight block">
+              <span className="font-serif text-lg sm:text-2xl font-bold leading-tight block lg:whitespace-nowrap">
                 <span className="block">Memorabilia do Departamento de</span>
                 <span className="block">Administração e Contabilidade</span>
               </span>
@@ -301,7 +303,7 @@ export default function App() {
             </div>
           </div>
           <div className="hidden md:block w-px h-12 bg-white/25 shrink-0"></div>
-          <div className="hidden lg:block text-white/75 text-sm leading-relaxed max-w-sm">
+          <div className="hidden lg:block text-white/75 text-sm leading-relaxed max-w-sm min-w-0">
             Preservando a trajetória histórica e o legado acadêmico do Departamento de Administração e Contabilidade.
           </div>
           <div className="w-full md:w-auto md:ml-auto flex items-center gap-3">
@@ -425,7 +427,7 @@ export default function App() {
             className={`nav-item whitespace-nowrap ${activePanel === 'timeline' ? 'active' : ''}`}
             onClick={() => setActivePanel('timeline')}
           >
-            Linha do Tempo
+            Gênese
           </button>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'photos' ? 'active' : ''}`}
@@ -535,6 +537,12 @@ export default function App() {
           >
             🍁 Projeto Quebec
           </button>
+          <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'agradecimentos' ? 'active' : ''}`}
+            onClick={() => setActivePanel('agradecimentos')}
+          >
+            Agradecimentos
+          </button>
           <div className="hidden sm:flex items-center">
             <div className="w-px h-6 bg-white/15 self-center mx-2 shrink-0"></div>
             <span className="text-[10px] tracking-[1.5px] uppercase text-white/35 font-semibold self-center mr-2 whitespace-nowrap">Décadas</span>
@@ -603,7 +611,7 @@ export default function App() {
                   <div className="space-y-0.5">
                     {[
                       { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-[18px] h-[18px]" /> },
-                      { id: 'timeline', label: 'Linha do Tempo', icon: <History className="w-[18px] h-[18px]" /> },
+                      { id: 'timeline', label: 'Gênese', icon: <History className="w-[18px] h-[18px]" /> },
                       { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-[18px] h-[18px]" /> },
                     ].map(item => (
@@ -677,7 +685,8 @@ export default function App() {
                     {[
                       { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-[18px] h-[18px]" /> },
                       { id: 'desmembramento', label: 'O Desmembramento do DAE', icon: <History className="w-[18px] h-[18px]" /> },
-                      { id: 'quebec', label: 'Projeto Quebec', icon: <Globe className="w-[18px] h-[18px]" /> }
+                      { id: 'quebec', label: 'Projeto Quebec', icon: <Globe className="w-[18px] h-[18px]" /> },
+                      { id: 'agradecimentos', label: 'Agradecimentos', icon: <Heart className="w-[18px] h-[18px]" /> }
                     ].map(item => (
                       <button
                         key={item.id}
@@ -1911,6 +1920,77 @@ export default function App() {
             </motion.div>
           )}
 
+          {activePanel === 'agradecimentos' && (
+            <motion.div
+              key="agradecimentos"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto space-y-8"
+            >
+              <div className="bg-gradient-to-br from-ufv-green-dark via-ufv-green to-[#1E3A8A] text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center">
+                      <Heart className="w-5 h-5 text-ufv-gold-light" />
+                    </div>
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Memorial</span>
+                  </div>
+                  <h1 className="font-serif text-2xl sm:text-3xl font-bold mb-3 leading-tight">Agradecimentos</h1>
+                  <p className="text-sm text-white/80 leading-relaxed max-w-2xl">
+                    A todas as pessoas que tornaram possível o Memorial do Departamento de Administração e Contabilidade da UFV.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card border-t-4 border-t-ufv-gold">
+                <h2 className="card-title">
+                  <div className="card-icon"><Users className="w-4 h-4 text-white" /></div>
+                  Equipe principal
+                </h2>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                  {equipePrincipal.map(pessoa => (
+                    <div key={pessoa.nome} className="flex flex-col items-center text-center">
+                      {pessoa.foto ? (
+                        <img
+                          src={pessoa.foto}
+                          alt={pessoa.nome}
+                          className="w-24 h-24 rounded-full object-cover border-4 border-ufv-gold/40 shadow-md mb-3"
+                        />
+                      ) : (
+                        <div className="w-24 h-24 rounded-full bg-ufv-cream border-4 border-ufv-gold/40 shadow-md mb-3 flex items-center justify-center font-serif text-2xl font-bold text-ufv-green">
+                          {pessoa.nome.split(' ').map(p => p[0]).slice(0, 2).join('')}
+                        </div>
+                      )}
+                      <p className="font-serif text-lg font-bold text-ufv-green leading-tight">{pessoa.nome}</p>
+                      {pessoa.descricao && <p className="text-xs text-ufv-gray-light mt-1">{pessoa.descricao}</p>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {agradecimentos.length > 0 && (
+                <div className="card">
+                  <h2 className="card-title">
+                    <div className="card-icon"><Heart className="w-4 h-4 text-white" /></div>
+                    Agradecemos
+                  </h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+                    {agradecimentos.map(pessoa => (
+                      <li key={pessoa.nome} className="flex items-start gap-3 py-3 border-b border-ufv-border">
+                        <div className="w-2 h-2 rounded-full bg-ufv-gold shrink-0 mt-2"></div>
+                        <div>
+                          <span className="text-sm font-medium text-ufv-gray">{pessoa.nome}</span>
+                          {pessoa.descricao && <span className="block text-xs text-ufv-gray-light">{pessoa.descricao}</span>}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </motion.div>
+          )}
+
           {activePanel === 'homenageados' && (
             <motion.div
               key="homenageados"
@@ -2417,6 +2497,15 @@ export default function App() {
                 className="block hover:text-ufv-gold-light transition-colors"
               >
                 Sobre o projeto e créditos
+              </button>
+              <button
+                onClick={() => {
+                  setActivePanel('agradecimentos');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="block hover:text-ufv-gold-light transition-colors"
+              >
+                Agradecimentos
               </button>
               <a href="/admin/" className="block hover:text-ufv-gold-light transition-colors">Enviar registro</a>
               <button

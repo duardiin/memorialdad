@@ -3136,7 +3136,7 @@ export const memorialData: MemorialData = {
       },
       {
         tag: '',
-        title: 'Lançamento de Curso e Divulgação no Dia do Administrador',
+        title: 'Lançamento do Curso Gestão Empresarial e Ambiental e Divulgação do Dia do Administrador',
         desc: 'A professora Nina Rosa da Silveira Cunha expôs informações sobre o andamento do curso lato sensu em Gestão Estratégica e Ambiental. E falou sobre o Dia do Administrador. Ata n.º 285/2011 (1 de setembro de 2011)',
         photos: [],
         externalLinks: [{ label: 'Ata n.º 285/2011', url: 'https://docs.google.com/document/d/1UpBdCyOBaIv6eKHtuwjptcMim54XMxci/edit?usp=sharing&ouid=117232787169035636664&rtpof=true&sd=true' }],
