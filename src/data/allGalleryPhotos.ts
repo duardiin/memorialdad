@@ -883,6 +883,181 @@ export const allGalleryPhotos: GalleryPhoto[] = [
     title: 'Equipe DAD 2025',
     caption: 'Confraternização da equipe do DAD em 2025.'
   },
+  {
+    id: 'photo-201',
+    url: '/Tocha do EBAP no DAD.jpeg',
+    colorida: true,
+    title: 'Tocha do EBAP no DAD',
+    caption: 'Professores com a tocha do Encontro Brasileiro de Administração Pública (EBAP), na sala com a galeria de ex-chefes do departamento.'
+  },
+  {
+    id: 'photo-202',
+    url: '/Delegação no EBAP.jpeg',
+    colorida: true,
+    title: 'Delegação no EBAP',
+    caption: 'Professores e estudantes reunidos durante o Encontro Brasileiro de Administração Pública (EBAP).'
+  },
+  {
+    id: 'photo-203',
+    url: '/Coordenação do PPGAdm.jpeg',
+    colorida: true,
+    title: 'Coordenação da Pós-Graduação em Administração',
+    caption: 'Prof. Magnus Luiz Emmendoerfer em frente à sala da Coordenação do Programa de Pós-Graduação em Administração.'
+  },
+  {
+    id: 'photo-204',
+    url: '/Sala de aula DAD.jpeg',
+    colorida: true,
+    title: 'Sala de aula',
+    caption: 'Estudantes reunidos em sala de aula.'
+  },
+  {
+    id: 'photo-205',
+    url: '/Futebol do DAD 1.jpeg',
+    colorida: true,
+    title: 'Futebol do DAD',
+    caption: 'Professores e alunos reunidos para uma partida de futebol.'
+  },
+  {
+    id: 'photo-206',
+    url: '/Futebol do DAD 2.jpeg',
+    colorida: true,
+    title: 'Futebol do DAD',
+    caption: 'Professores e alunos no campo de futebol.'
+  },
+  {
+    id: 'photo-207',
+    url: '/Reunião de trabalho DAD.jpeg',
+    colorida: true,
+    title: 'Reunião de trabalho',
+    caption: 'Professores e servidores reunidos em sala de reuniões.'
+  },
+  {
+    id: 'photo-208',
+    url: '/Confraternização na sala de reuniões.jpeg',
+    colorida: true,
+    title: 'Confraternização no DAD',
+    caption: 'Professores, servidores e estudantes reunidos na sala com a galeria de ex-chefes do departamento.'
+  },
+  {
+    id: 'photo-209',
+    url: '/Entrega de placa 1.jpeg',
+    colorida: true,
+    title: 'Entrega de placa de homenagem',
+    caption: 'Homenagem com entrega de placa na sala de reuniões do departamento.'
+  },
+  {
+    id: 'photo-210',
+    url: '/Professores em solenidade.jpeg',
+    colorida: true,
+    title: 'Professores em solenidade',
+    caption: 'Professores do departamento durante uma solenidade.'
+  },
+  {
+    id: 'photo-211',
+    url: '/Entrega de placa 2.jpeg',
+    colorida: true,
+    title: 'Entrega de placa de homenagem',
+    caption: 'Homenagem com entrega de placa na sala de reuniões do departamento.'
+  },
+  {
+    id: 'photo-212',
+    url: '/Registro no DAD 1.jpeg',
+    colorida: true,
+    title: 'Registro no DAD',
+    caption: 'Professora e colega no departamento.'
+  },
+  {
+    id: 'photo-213',
+    url: '/Descerramento de placa.jpeg',
+    colorida: true,
+    title: 'Descerramento de placa',
+    caption: 'Professores e autoridades junto à placa inaugural.'
+  },
+  {
+    id: 'photo-214',
+    url: '/EMAPEGS.jpeg',
+    colorida: true,
+    title: 'EMAPEGS',
+    caption: 'Professores, entre eles a professora Suely, e organizadores do PET Administração durante o EMAPEGS.'
+  },
+  {
+    id: 'photo-215',
+    url: '/Festa com estudantes.jpeg',
+    colorida: true,
+    title: 'Festa com estudantes',
+    caption: 'Professores e estudantes em uma festa.'
+  },
+  {
+    id: 'photo-216',
+    url: '/SIA UFV 2012.jpeg',
+    colorida: true,
+    title: 'SIA UFV 2012',
+    caption: 'Professora com estudantes durante a apresentação de pôsteres no Simpósio de Integração Acadêmica (SIA) da UFV, em 2012.'
+  },
+  {
+    id: 'photo-217',
+    url: '/Posto de vacinação.jpeg',
+    colorida: true,
+    title: 'Posto de vacinação',
+    caption: 'Professora no posto de coleta e vacinação montado no campus.'
+  },
+  {
+    id: 'photo-218',
+    url: '/Registro no DAD 2.jpeg',
+    colorida: true,
+    title: 'Registro no DAD',
+    caption: 'Professores e estudantes reunidos em sala do departamento.'
+  },
+  {
+    id: 'photo-219',
+    url: '/Cerimônia de homenagem.jpeg',
+    colorida: true,
+    title: 'Cerimônia de homenagem',
+    caption: 'Entrega de homenagem em cerimônia oficial da Universidade Federal de Viçosa.'
+  },
+  {
+    id: 'photo-220',
+    url: '/20 anos do PPGAdm.jpeg',
+    colorida: true,
+    title: '20 anos do PPGAdm',
+    caption: 'Festa junina em comemoração aos 20 anos do Programa de Pós-Graduação em Administração (PPGAdm).'
+  },
+  {
+    id: 'photo-221',
+    url: '/Prédio no campus.jpeg',
+    colorida: true,
+    title: 'Prédio no campus',
+    caption: 'Vista de prédio do campus da UFV.'
+  },
+  {
+    id: 'photo-222',
+    url: '/Encontro entre colegas.jpeg',
+    colorida: true,
+    title: 'Encontro entre colegas',
+    caption: 'Registro descontraído de professores em um evento.'
+  },
+  {
+    id: 'photo-223',
+    url: '/Equipe de Robótica.jpeg',
+    colorida: true,
+    title: 'Equipe de Robótica',
+    caption: 'Professores, convidados e estudantes da equipe de Robótica na escadaria de um prédio histórico do campus.'
+  },
+  {
+    id: 'photo-224',
+    url: '/Campanha Antigordofobia.jpeg',
+    colorida: true,
+    title: 'Campanha Antigordofobia',
+    caption: 'Professores apoiando a campanha antigordofobia.'
+  },
+  {
+    id: 'photo-225',
+    url: '/Pesquisas concluídas.jpeg',
+    colorida: true,
+    title: 'Pesquisas concluídas',
+    caption: 'Luiz (PPGAdm) e Nathália (DAD) com a professora, celebrando a conclusão de suas pesquisas.'
+  },
 ];
 
 
