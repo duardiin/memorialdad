@@ -33,9 +33,11 @@ import {
   Newspaper,
   Pencil,
   Phone,
+  Play,
   Search,
   UserCog,
   Users,
+  Video,
   X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
@@ -56,12 +58,14 @@ import { exProfessores } from './data/exProfessoresData';
 import { agradecimentos, equipePrincipal } from './data/agradecimentosData';
 import { NIVEIS_TECNICOS, tecnicosAposentados } from './data/tecnicosAposentadosData';
 import { buildSearchIndex, Highlight, makeSnippet, searchMemorial, tokenize } from './memorialSearch';
+import { memorialVideos, videoPrincipal } from './data/videosData';
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
+type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'videos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
+const FOTOS_PANELS: PanelType[] = ['photos', 'videos'];
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
@@ -110,6 +114,10 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isODadMenuOpen, setIsODadMenuOpen] = useState(false);
   const [isMobileODadOpen, setIsMobileODadOpen] = useState(false);
+  const [isFotosMenuOpen, setIsFotosMenuOpen] = useState(false);
+  const [isMobileFotosOpen, setIsMobileFotosOpen] = useState(false);
+  // O player do YouTube só é carregado quando a pessoa clica em play (deixa a página leve)
+  const [isVideoPrincipalPlaying, setIsVideoPrincipalPlaying] = useState(false);
   const [homenageadosQuery, setHomenageadosQuery] = useState('');
   const [homenageadosDecade, setHomenageadosDecade] = useState<number | null>(null);
 
@@ -164,6 +172,7 @@ export default function App() {
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     setIsMobileODadOpen(O_DAD_PANELS.includes(activePanel));
+    setIsMobileFotosOpen(FOTOS_PANELS.includes(activePanel));
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const onKeyDown = (e: KeyboardEvent) => {
@@ -429,12 +438,48 @@ export default function App() {
           >
             Gênese
           </button>
-          <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'photos' ? 'active' : ''}`}
-            onClick={() => setActivePanel('photos')}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsFotosMenuOpen(true)}
+            onMouseLeave={() => setIsFotosMenuOpen(false)}
           >
-            Fotos
-          </button>
+            <button
+              className={`nav-item whitespace-nowrap flex items-center gap-1 ${FOTOS_PANELS.includes(activePanel) ? 'active' : ''}`}
+              onClick={() => setIsFotosMenuOpen(v => !v)}
+              aria-haspopup="true"
+              aria-expanded={isFotosMenuOpen}
+            >
+              Galeria
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isFotosMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {isFotosMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 top-full pt-2 z-[60] min-w-[200px]"
+                >
+                  <div className="bg-white rounded-lg shadow-2xl border border-ufv-border py-2 overflow-hidden">
+                    <button
+                      onClick={() => { setActivePanel('photos'); setIsFotosMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'photos' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <ImageIcon className="w-4 h-4 shrink-0" /> Fotos
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('videos'); setIsFotosMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'videos' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Video className="w-4 h-4 shrink-0" /> Vídeos
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'years' ? 'active' : ''}`}
             onClick={() => setActivePanel('years')}
@@ -612,9 +657,53 @@ export default function App() {
                     {[
                       { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-[18px] h-[18px]" /> },
                       { id: 'timeline', label: 'Gênese', icon: <History className="w-[18px] h-[18px]" /> },
-                      { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
+                      { id: 'photos', label: 'Galeria', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-[18px] h-[18px]" /> },
-                    ].map(item => (
+                    ].map(item => item.id === 'photos' ? (
+                      <React.Fragment key={item.id}>
+                        {/* SUBMENU FOTOS */}
+                        <button
+                          onClick={() => setIsMobileFotosOpen(v => !v)}
+                          aria-expanded={isMobileFotosOpen}
+                          className={`w-full flex items-center justify-between gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors hover:bg-ufv-cream ${FOTOS_PANELS.includes(activePanel) ? 'text-ufv-green font-semibold' : 'text-ufv-gray'}`}
+                        >
+                          <span className="flex items-center gap-3">
+                            <span className={FOTOS_PANELS.includes(activePanel) ? 'text-ufv-green' : 'text-ufv-gray-light'}>{item.icon}</span>
+                            {item.label}
+                          </span>
+                          <ChevronDown className={`w-4 h-4 text-ufv-gray-light transition-transform ${isMobileFotosOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isMobileFotosOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="ml-[22px] pl-3 border-l-2 border-ufv-border space-y-0.5 py-1">
+                                {[
+                                  { id: 'photos', label: 'Fotos' },
+                                  { id: 'videos', label: 'Vídeos' },
+                                ].map(sub => (
+                                  <button
+                                    key={sub.id}
+                                    onClick={() => {
+                                      setActivePanel(sub.id as PanelType);
+                                      setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors ${activePanel === sub.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                                  >
+                                    {sub.label}
+                                  </button>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </React.Fragment>
+                    ) : (
                       <button
                         key={item.id}
                         onClick={() => {
@@ -1765,7 +1854,7 @@ export default function App() {
                   {
                     icone: <ImagePlus className="w-5 h-5" />,
                     titulo: 'Galeria de fotos',
-                    texto: 'Fotos da aba "Fotos". Informe se a foto é colorida ou preto e branco, e descreva na legenda quem aparece, onde e quando.',
+                    texto: 'Fotos da aba "Galeria → Fotos". Informe se a foto é colorida ou preto e branco, e descreva na legenda quem aparece, onde e quando.',
                   },
                   {
                     icone: <Users className="w-5 h-5" />,
@@ -2206,6 +2295,108 @@ export default function App() {
                   </motion.div>
                 )}
               </AnimatePresence>
+            </motion.div>
+          )}
+
+          {activePanel === 'videos' && (
+            <motion.div
+              key="videos"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                <div>
+                  <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
+                    <Video className="w-6 h-6" /> Acervo de Vídeos
+                  </h2>
+                  <p className="text-sm text-ufv-gray-light mt-1">{memorialVideos.length + 1} vídeo(s) no acervo do memorial</p>
+                </div>
+              </div>
+
+              {/* VÍDEO PRINCIPAL */}
+              <section className="mb-12 rounded-2xl overflow-hidden shadow-xl border-b-4 border-ufv-gold bg-gradient-to-br from-ufv-green-dark to-ufv-green">
+                <div className="relative aspect-video bg-black">
+                  {isVideoPrincipalPlaying ? (
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${videoPrincipal.youtubeId}?autoplay=1&rel=0`}
+                      title={videoPrincipal.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  ) : (
+                    <button
+                      onClick={() => setIsVideoPrincipalPlaying(true)}
+                      className="absolute inset-0 w-full h-full group"
+                      aria-label={`Assistir: ${videoPrincipal.title}`}
+                    >
+                      <img
+                        src={`https://i.ytimg.com/vi_webp/${videoPrincipal.youtubeId}/maxresdefault.webp`}
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                      />
+                      <span className="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors" />
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-ufv-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                          <Play className="w-7 h-7 sm:w-9 sm:h-9 ml-1 fill-current" />
+                        </span>
+                      </span>
+                    </button>
+                  )}
+                </div>
+                <div className="px-5 sm:px-7 py-5 text-white">
+                  <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Vídeo principal</span>
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold leading-tight mt-1">{videoPrincipal.title}</h3>
+                  <p className="text-sm text-white/70 mt-1">Produção: {videoPrincipal.fonte}</p>
+                </div>
+              </section>
+
+              {memorialVideos.length > 0 && (
+                <h3 className="font-serif text-lg font-bold text-ufv-green mb-4">Depoimentos</h3>
+              )}
+
+              {memorialVideos.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {memorialVideos.map((video) => (
+                    <div
+                      key={video.id}
+                      className="bg-white border border-ufv-border rounded-xl overflow-hidden flex flex-col shadow-sm hover:shadow-lg transition-shadow"
+                    >
+                      <div className="relative bg-black aspect-video">
+                        <video
+                          src={video.capa ? video.url : `${video.url}#t=0.1`}
+                          poster={video.capa}
+                          controls
+                          preload={video.capa ? 'none' : 'metadata'}
+                          playsInline
+                          className="absolute inset-0 w-full h-full object-contain"
+                        >
+                          Seu navegador não consegue reproduzir este vídeo.
+                        </video>
+                      </div>
+                      <div className="p-4">
+                        <div className="font-semibold text-ufv-gray text-sm">{video.title}</div>
+                        {video.data && (
+                          <div className="text-xs text-ufv-gold font-semibold mt-0.5">{video.data}</div>
+                        )}
+                        {video.descricao && (
+                          <p className="text-xs text-ufv-gray-light leading-relaxed mt-2">{video.descricao}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-white border border-ufv-border rounded-lg p-16 text-center">
+                  <Video className="w-14 h-14 text-ufv-border mx-auto mb-4" />
+                  <h3 className="font-serif text-xl text-ufv-gray mb-2">Acervo vazio</h3>
+                  <p className="text-sm text-ufv-gray-light max-w-sm mx-auto">
+                    Nenhum vídeo foi adicionado ao acervo ainda.
+                  </p>
+                </div>
+              )}
             </motion.div>
           )}
 
