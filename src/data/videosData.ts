@@ -24,11 +24,11 @@ export interface MemorialVideo {
  *       ffmpeg -ss 2 -i public/videos/nome.mp4 -frames:v 1 -q:v 4 public/videos/nome.jpg
  *  3. Acrescente um item abaixo. O GitHub recusa arquivos acima de 100 MB.
  */
-/** Vídeo principal, exibido em destaque no topo da aba Vídeos (hospedado no YouTube). */
+/** Vídeo institucional, exibido na aba inicial "Vídeo Institucional" (hospedado no YouTube). */
 export const videoPrincipal = {
   youtubeId: 'bGRa6WuUvws',
   title: 'Departamento de Administração e Contabilidade (DAD) da UFV completa 50 anos',
-  fonte: 'UFV',
+  fonte: 'DCI — Diretoria de Comunicação Institucional da UFV',
 };
 
 const DESCRICAO_DEPOIMENTO = 'Depoimento em homenagem aos 50 anos do DAD.';

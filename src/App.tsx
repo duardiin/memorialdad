@@ -4,6 +4,7 @@
  */
 
 import {
+  ArrowRight,
   Award,
   BookOpen,
   Briefcase,
@@ -30,6 +31,7 @@ import {
   Mail,
   Menu,
   Microscope,
+  MonitorPlay,
   Newspaper,
   Pencil,
   Phone,
@@ -63,7 +65,7 @@ import { memorialVideos, videoPrincipal } from './data/videosData';
 
 const MAX_SEARCH_RESULTS = 50;
 
-type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'videos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
+type PanelType = 'institucional' | 'overview' | 'timeline' | 'years' | 'photos' | 'videos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
 const ACONTECIMENTOS_PANELS: PanelType[] = ['desmembramento', 'quebec', 'naipe'];
@@ -89,7 +91,7 @@ const normalizeText = (text: string) =>
   text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 export default function App() {
-  const [activePanel, setActivePanel] = useState<PanelType>('overview');
+  const [activePanel, setActivePanel] = useState<PanelType>('institucional');
 
   // Pop-up introdutório: abre automaticamente ao carregar o site
   const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
@@ -428,6 +430,12 @@ export default function App() {
         {/* NAVEGAÇÃO DE ABAS */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 hidden md:flex flex-wrap gap-1 pb-1">
           <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'institucional' ? 'active' : ''}`}
+            onClick={() => setActivePanel('institucional')}
+          >
+            Vídeo Institucional
+          </button>
+          <button
             className={`nav-item whitespace-nowrap ${activePanel === 'overview' ? 'active' : ''}`}
             onClick={() => setActivePanel('overview')}
           >
@@ -656,6 +664,7 @@ export default function App() {
                   <h4 className="px-3 text-[10px] tracking-[2px] uppercase text-ufv-gray-light font-bold mb-2">Explorar</h4>
                   <div className="space-y-0.5">
                     {[
+                      { id: 'institucional', label: 'Vídeo Institucional', icon: <MonitorPlay className="w-[18px] h-[18px]" /> },
                       { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-[18px] h-[18px]" /> },
                       { id: 'timeline', label: 'Gênese', icon: <History className="w-[18px] h-[18px]" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-[18px] h-[18px]" /> },
@@ -863,6 +872,75 @@ export default function App() {
       {/* MAIN CONTENT */}
       <main className="max-w-7xl mx-auto px-6 py-10 flex-grow w-full">
         <AnimatePresence mode="wait">
+          {activePanel === 'institucional' && (
+            <motion.div
+              key="institucional"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-8">
+                  <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold font-bold">Bem-vindo ao Memorial DAD</span>
+                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-ufv-green mt-2">
+                    50 anos do Departamento de Administração e Contabilidade
+                  </h2>
+                  <p className="text-[15px] text-ufv-gray-light mt-3 max-w-2xl mx-auto leading-relaxed">
+                    Assista ao vídeo institucional e, em seguida, percorra a história, as pessoas e os acontecimentos que marcaram o DAD desde 1974.
+                  </p>
+                </div>
+
+                {/* VÍDEO INSTITUCIONAL */}
+                <section className="rounded-2xl overflow-hidden shadow-xl border-b-4 border-ufv-gold bg-gradient-to-br from-ufv-green-dark to-ufv-green">
+                  <div className="relative aspect-video bg-black">
+                    {isVideoPrincipalPlaying ? (
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${videoPrincipal.youtubeId}?autoplay=1&rel=0`}
+                        title={videoPrincipal.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    ) : (
+                      <button
+                        onClick={() => setIsVideoPrincipalPlaying(true)}
+                        className="absolute inset-0 w-full h-full group"
+                        aria-label={`Assistir: ${videoPrincipal.title}`}
+                      >
+                        <img
+                          src={`https://i.ytimg.com/vi_webp/${videoPrincipal.youtubeId}/maxresdefault.webp`}
+                          alt=""
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                        />
+                        <span className="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors" />
+                        <span className="absolute inset-0 flex items-center justify-center">
+                          <span className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-ufv-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                            <Play className="w-7 h-7 sm:w-9 sm:h-9 ml-1 fill-current" />
+                          </span>
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                  <div className="px-5 sm:px-7 py-5 text-white">
+                    <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Vídeo institucional</span>
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold leading-tight mt-1">{videoPrincipal.title}</h3>
+                    <p className="text-sm text-white/70 mt-1">Produção: {videoPrincipal.fonte}</p>
+                  </div>
+                </section>
+
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => setActivePanel('overview')}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ufv-green text-white font-semibold text-sm shadow-lg hover:bg-ufv-green-dark transition-colors"
+                  >
+                    Explorar o memorial <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {activePanel === 'overview' && (
             <motion.div
               key="overview"
@@ -2308,52 +2386,9 @@ export default function App() {
                   <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
                     <Video className="w-6 h-6" /> Depoimentos
                   </h2>
-                  <p className="text-sm text-ufv-gray-light mt-1">{memorialVideos.length + 1} vídeo(s) no acervo do memorial</p>
+                  <p className="text-sm text-ufv-gray-light mt-1">{memorialVideos.length} depoimento(s) no acervo do memorial</p>
                 </div>
               </div>
-
-              {/* VÍDEO PRINCIPAL */}
-              <section className="mb-12 rounded-2xl overflow-hidden shadow-xl border-b-4 border-ufv-gold bg-gradient-to-br from-ufv-green-dark to-ufv-green">
-                <div className="relative aspect-video bg-black">
-                  {isVideoPrincipalPlaying ? (
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${videoPrincipal.youtubeId}?autoplay=1&rel=0`}
-                      title={videoPrincipal.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  ) : (
-                    <button
-                      onClick={() => setIsVideoPrincipalPlaying(true)}
-                      className="absolute inset-0 w-full h-full group"
-                      aria-label={`Assistir: ${videoPrincipal.title}`}
-                    >
-                      <img
-                        src={`https://i.ytimg.com/vi_webp/${videoPrincipal.youtubeId}/maxresdefault.webp`}
-                        alt=""
-                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                      />
-                      <span className="absolute inset-0 bg-black/25 group-hover:bg-black/10 transition-colors" />
-                      <span className="absolute inset-0 flex items-center justify-center">
-                        <span className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-ufv-gold text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                          <Play className="w-7 h-7 sm:w-9 sm:h-9 ml-1 fill-current" />
-                        </span>
-                      </span>
-                    </button>
-                  )}
-                </div>
-                <div className="px-5 sm:px-7 py-5 text-white">
-                  <span className="text-[11px] tracking-[2px] uppercase text-ufv-gold-light font-bold">Vídeo principal</span>
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold leading-tight mt-1">{videoPrincipal.title}</h3>
-                  <p className="text-sm text-white/70 mt-1">Produção: {videoPrincipal.fonte}</p>
-                </div>
-              </section>
-
-              {memorialVideos.length > 0 && (
-                <h3 className="font-serif text-lg font-bold text-ufv-green mb-4">Depoimentos</h3>
-              )}
 
               {memorialVideos.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
