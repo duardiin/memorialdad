@@ -42,7 +42,7 @@ const depoimento = (slug: string, title: string): MemorialVideo => ({
 });
 
 export const memorialVideos: MemorialVideo[] = [
-  depoimento('andreia', 'Andréia'),
+  depoimento('andreia', 'Andréia Hoezle'),
   depoimento('andreia-albino', 'Andréia Albino'),
   depoimento('daniel-lima-carneiro', 'Daniel Lima Carneiro'),
   depoimento('guilherme-martins', 'Guilherme Martins'),

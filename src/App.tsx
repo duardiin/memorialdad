@@ -35,6 +35,7 @@ import {
   Phone,
   Play,
   Search,
+  Star,
   UserCog,
   Users,
   Video,
@@ -65,7 +66,7 @@ const MAX_SEARCH_RESULTS = 50;
 type PanelType = 'overview' | 'timeline' | 'years' | 'photos' | 'videos' | 'quebec' | 'desmembramento' | 'naipe' | 'chefes' | 'professores' | 'professoresAtuais' | 'professoresAposentados' | 'exProfessores' | 'tecnicosAtuais' | 'tecnicosAposentados' | 'homenageados' | 'contribuir' | 'sobre' | 'agradecimentos';
 
 const O_DAD_PANELS: PanelType[] = ['chefes', 'professores', 'professoresAtuais', 'professoresAposentados', 'exProfessores', 'tecnicosAtuais', 'tecnicosAposentados', 'homenageados'];
-const FOTOS_PANELS: PanelType[] = ['photos', 'videos'];
+const ACONTECIMENTOS_PANELS: PanelType[] = ['desmembramento', 'quebec', 'naipe'];
 
 const HOMENAGEADOS_DECADES = [1970, 1980, 1990, 2000, 2010, 2020];
 
@@ -114,8 +115,8 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isODadMenuOpen, setIsODadMenuOpen] = useState(false);
   const [isMobileODadOpen, setIsMobileODadOpen] = useState(false);
-  const [isFotosMenuOpen, setIsFotosMenuOpen] = useState(false);
-  const [isMobileFotosOpen, setIsMobileFotosOpen] = useState(false);
+  const [isAcontecimentosMenuOpen, setIsAcontecimentosMenuOpen] = useState(false);
+  const [isMobileAcontecimentosOpen, setIsMobileAcontecimentosOpen] = useState(false);
   // O player do YouTube só é carregado quando a pessoa clica em play (deixa a página leve)
   const [isVideoPrincipalPlaying, setIsVideoPrincipalPlaying] = useState(false);
   const [homenageadosQuery, setHomenageadosQuery] = useState('');
@@ -172,7 +173,7 @@ export default function App() {
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     setIsMobileODadOpen(O_DAD_PANELS.includes(activePanel));
-    setIsMobileFotosOpen(FOTOS_PANELS.includes(activePanel));
+    setIsMobileAcontecimentosOpen(ACONTECIMENTOS_PANELS.includes(activePanel));
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const onKeyDown = (e: KeyboardEvent) => {
@@ -438,48 +439,6 @@ export default function App() {
           >
             Gênese
           </button>
-          <div
-            className="relative"
-            onMouseEnter={() => setIsFotosMenuOpen(true)}
-            onMouseLeave={() => setIsFotosMenuOpen(false)}
-          >
-            <button
-              className={`nav-item whitespace-nowrap flex items-center gap-1 ${FOTOS_PANELS.includes(activePanel) ? 'active' : ''}`}
-              onClick={() => setIsFotosMenuOpen(v => !v)}
-              aria-haspopup="true"
-              aria-expanded={isFotosMenuOpen}
-            >
-              Galeria
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isFotosMenuOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            <AnimatePresence>
-              {isFotosMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute left-0 top-full pt-2 z-[60] min-w-[200px]"
-                >
-                  <div className="bg-white rounded-lg shadow-2xl border border-ufv-border py-2 overflow-hidden">
-                    <button
-                      onClick={() => { setActivePanel('photos'); setIsFotosMenuOpen(false); }}
-                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'photos' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
-                    >
-                      <ImageIcon className="w-4 h-4 shrink-0" /> Fotos
-                    </button>
-                    <button
-                      onClick={() => { setActivePanel('videos'); setIsFotosMenuOpen(false); }}
-                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'videos' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
-                    >
-                      <Video className="w-4 h-4 shrink-0" /> Vídeos
-                    </button>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'years' ? 'active' : ''}`}
             onClick={() => setActivePanel('years')}
@@ -564,23 +523,65 @@ export default function App() {
               )}
             </AnimatePresence>
           </div>
-          <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'naipe' ? 'active' : ''}`}
-            onClick={() => setActivePanel('naipe')}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsAcontecimentosMenuOpen(true)}
+            onMouseLeave={() => setIsAcontecimentosMenuOpen(false)}
           >
-            NAIPE
+            <button
+              className={`nav-item whitespace-nowrap flex items-center gap-1 ${ACONTECIMENTOS_PANELS.includes(activePanel) ? 'active' : ''}`}
+              onClick={() => setIsAcontecimentosMenuOpen(v => !v)}
+              aria-haspopup="true"
+              aria-expanded={isAcontecimentosMenuOpen}
+            >
+              Acontecimentos Relevantes
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isAcontecimentosMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {isAcontecimentosMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 top-full pt-2 z-[60] min-w-[240px]"
+                >
+                  <div className="bg-white rounded-lg shadow-2xl border border-ufv-border py-2 overflow-hidden">
+                    <button
+                      onClick={() => { setActivePanel('desmembramento'); setIsAcontecimentosMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'desmembramento' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <History className="w-4 h-4 shrink-0" /> O Desmembramento do DAE
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('quebec'); setIsAcontecimentosMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'quebec' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Globe className="w-4 h-4 shrink-0" /> 🍁 Projeto Quebec
+                    </button>
+                    <button
+                      onClick={() => { setActivePanel('naipe'); setIsAcontecimentosMenuOpen(false); }}
+                      className={`w-full text-left px-4 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${activePanel === 'naipe' ? 'bg-ufv-cream text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream hover:text-ufv-green'}`}
+                    >
+                      <Briefcase className="w-4 h-4 shrink-0" /> NAIPE
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <button
+            className={`nav-item whitespace-nowrap ${activePanel === 'photos' ? 'active' : ''}`}
+            onClick={() => setActivePanel('photos')}
+          >
+            Fotos
           </button>
           <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'desmembramento' ? 'active' : ''}`}
-            onClick={() => setActivePanel('desmembramento')}
+            className={`nav-item whitespace-nowrap ${activePanel === 'videos' ? 'active' : ''}`}
+            onClick={() => setActivePanel('videos')}
           >
-            O Desmembramento do DAE
-          </button>
-          <button
-            className={`nav-item whitespace-nowrap ${activePanel === 'quebec' ? 'active' : ''}`}
-            onClick={() => setActivePanel('quebec')}
-          >
-            🍁 Projeto Quebec
+            Depoimentos
           </button>
           <button
             className={`nav-item whitespace-nowrap ${activePanel === 'agradecimentos' ? 'active' : ''}`}
@@ -657,53 +658,8 @@ export default function App() {
                     {[
                       { id: 'overview', label: 'Visão Geral', icon: <LayoutGrid className="w-[18px] h-[18px]" /> },
                       { id: 'timeline', label: 'Gênese', icon: <History className="w-[18px] h-[18px]" /> },
-                      { id: 'photos', label: 'Galeria', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
                       { id: 'years', label: 'Por Ano', icon: <Calendar className="w-[18px] h-[18px]" /> },
-                    ].map(item => item.id === 'photos' ? (
-                      <React.Fragment key={item.id}>
-                        {/* SUBMENU FOTOS */}
-                        <button
-                          onClick={() => setIsMobileFotosOpen(v => !v)}
-                          aria-expanded={isMobileFotosOpen}
-                          className={`w-full flex items-center justify-between gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors hover:bg-ufv-cream ${FOTOS_PANELS.includes(activePanel) ? 'text-ufv-green font-semibold' : 'text-ufv-gray'}`}
-                        >
-                          <span className="flex items-center gap-3">
-                            <span className={FOTOS_PANELS.includes(activePanel) ? 'text-ufv-green' : 'text-ufv-gray-light'}>{item.icon}</span>
-                            {item.label}
-                          </span>
-                          <ChevronDown className={`w-4 h-4 text-ufv-gray-light transition-transform ${isMobileFotosOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        <AnimatePresence initial={false}>
-                          {isMobileFotosOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="ml-[22px] pl-3 border-l-2 border-ufv-border space-y-0.5 py-1">
-                                {[
-                                  { id: 'photos', label: 'Fotos' },
-                                  { id: 'videos', label: 'Vídeos' },
-                                ].map(sub => (
-                                  <button
-                                    key={sub.id}
-                                    onClick={() => {
-                                      setActivePanel(sub.id as PanelType);
-                                      setIsMobileMenuOpen(false);
-                                    }}
-                                    className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors ${activePanel === sub.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
-                                  >
-                                    {sub.label}
-                                  </button>
-                                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </React.Fragment>
-                    ) : (
+                    ].map(item => (
                       <button
                         key={item.id}
                         onClick={() => {
@@ -771,10 +727,52 @@ export default function App() {
                       )}
                     </AnimatePresence>
 
+                    {/* SUBMENU ACONTECIMENTOS RELEVANTES */}
+                    <button
+                      onClick={() => setIsMobileAcontecimentosOpen(v => !v)}
+                      aria-expanded={isMobileAcontecimentosOpen}
+                      className={`w-full flex items-center justify-between gap-3 px-3 py-3 rounded-lg text-[15px] transition-colors hover:bg-ufv-cream ${ACONTECIMENTOS_PANELS.includes(activePanel) ? 'text-ufv-green font-semibold' : 'text-ufv-gray'}`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className={ACONTECIMENTOS_PANELS.includes(activePanel) ? 'text-ufv-green' : 'text-ufv-gray-light'}><Star className="w-[18px] h-[18px]" /></span>
+                        Acontecimentos Relevantes
+                      </span>
+                      <ChevronDown className={`w-4 h-4 text-ufv-gray-light transition-transform ${isMobileAcontecimentosOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {isMobileAcontecimentosOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="ml-[22px] pl-3 border-l-2 border-ufv-border space-y-0.5 py-1">
+                            {[
+                              { id: 'desmembramento', label: 'O Desmembramento do DAE' },
+                              { id: 'quebec', label: 'Projeto Quebec' },
+                              { id: 'naipe', label: 'NAIPE' },
+                            ].map(item => (
+                              <button
+                                key={item.id}
+                                onClick={() => {
+                                  setActivePanel(item.id as PanelType);
+                                  setIsMobileMenuOpen(false);
+                                }}
+                                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors ${activePanel === item.id ? 'bg-ufv-green/10 text-ufv-green font-semibold' : 'text-ufv-gray hover:bg-ufv-cream'}`}
+                              >
+                                {item.label}
+                              </button>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
                     {[
-                      { id: 'naipe', label: 'NAIPE', icon: <Briefcase className="w-[18px] h-[18px]" /> },
-                      { id: 'desmembramento', label: 'O Desmembramento do DAE', icon: <History className="w-[18px] h-[18px]" /> },
-                      { id: 'quebec', label: 'Projeto Quebec', icon: <Globe className="w-[18px] h-[18px]" /> },
+                      { id: 'photos', label: 'Fotos', icon: <ImageIcon className="w-[18px] h-[18px]" /> },
+                      { id: 'videos', label: 'Depoimentos', icon: <Video className="w-[18px] h-[18px]" /> },
                       { id: 'agradecimentos', label: 'Agradecimentos', icon: <Heart className="w-[18px] h-[18px]" /> }
                     ].map(item => (
                       <button
@@ -1854,7 +1852,7 @@ export default function App() {
                   {
                     icone: <ImagePlus className="w-5 h-5" />,
                     titulo: 'Galeria de fotos',
-                    texto: 'Fotos da aba "Galeria → Fotos". Informe se a foto é colorida ou preto e branco, e descreva na legenda quem aparece, onde e quando.',
+                    texto: 'Fotos da aba "Fotos". Informe se a foto é colorida ou preto e branco, e descreva na legenda quem aparece, onde e quando.',
                   },
                   {
                     icone: <Users className="w-5 h-5" />,
@@ -2308,7 +2306,7 @@ export default function App() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-ufv-green flex items-center gap-2">
-                    <Video className="w-6 h-6" /> Acervo de Vídeos
+                    <Video className="w-6 h-6" /> Depoimentos
                   </h2>
                   <p className="text-sm text-ufv-gray-light mt-1">{memorialVideos.length + 1} vídeo(s) no acervo do memorial</p>
                 </div>
