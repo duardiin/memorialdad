@@ -2650,8 +2650,7 @@ export default function App() {
             <p className="leading-relaxed">
               <a href="https://www.ufv.br/" className="hover:text-ufv-gold-light transition-colors">Universidade Federal de Viçosa</a><br />
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Universidade+Federal+de+Vi%C3%A7osa%2C+Av.+Peter+Henry+Rolfs%2C+Vi%C3%A7osa+MG"
-                target="_blank"
+                href="https://maps.app.goo.gl/m35NDK2wwDX5ZCQV9"
                 rel="noreferrer"
                 className="hover:text-ufv-gold-light transition-colors"
               >
@@ -2717,7 +2716,7 @@ export default function App() {
               <p>
                 Departamento de Administração e Contabilidade<br />
                 Universidade Federal de Viçosa<br />
-                Av. Peter Henry Rolfs s/n – Campus Universitário<br />
+                  Henry Rolfs s/n – Campus Universitário<br />
                 CEP: 36570-000 – Viçosa/MG
               </p>
               <p>

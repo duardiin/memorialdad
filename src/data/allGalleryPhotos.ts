@@ -1041,15 +1041,15 @@ export const allGalleryPhotos: GalleryPhoto[] = [
     id: 'photo-223',
     url: '/Equipe de Robótica.jpeg',
     colorida: true,
-    title: 'Equipe de Robótica',
-    caption: 'Professores, convidados e estudantes da equipe de Robótica na escadaria de um prédio histórico do campus.'
+    title: 'Equipe DAD',
+    caption: 'Professores, convidados e estudantes do DAD'
   },
   {
     id: 'photo-224',
     url: '/Campanha Antigordofobia.jpeg',
     colorida: true,
-    title: 'Campanha Antigordofobia',
-    caption: 'Professores apoiando a campanha antigordofobia.'
+    title: 'Registro no DAD',
+    caption: 'Registro de professores e estudantes no departamento.'
   },
   {
     id: 'photo-225',
@@ -1058,6 +1058,13 @@ export const allGalleryPhotos: GalleryPhoto[] = [
     title: 'Pesquisas concluídas',
     caption: 'Luiz (PPGAdm) e Nathália (DAD) com a professora, celebrando a conclusão de suas pesquisas.'
   },
+  {
+    id: 'photo-226',
+    url: '/Time do DAD.jpeg',
+    colorida: true,
+    title: 'Time do DAD',
+    caption: 'Professores e tecnicos reunidos no campo de futebol.'
+  }
 ];
 
 
