@@ -6,21 +6,17 @@ Para quem usa o painel, nada muda. A única diferença é que as alterações ap
 
 ---
 
-## 1. O que solicitar à DTI
+## 1. Requisitos do servidor
 
-| Item | Necessidade |
-|---|---|
-| Endereço | Um subdomínio próprio, com o site na **raiz** (ex.: `memorial.dad.ufv.br`). O site não funciona dentro de uma subpasta como `ufv.br/memorial/`. |
-| PHP | Versão **7.2 ou superior**. Não precisa de banco de dados nem de extensões extras. |
-| HTTPS | Certificado ativo no subdomínio. |
-| Permissão de escrita | O PHP precisa gravar em duas pastas: `api/dados/` e `uploads/`. |
-| Limite de envio | `post_max_size` de pelo menos **8 MB** (cada foto vai com até 3 MB). |
-| Espaço em disco | Cerca de **300 MB** no início, que crescem com as fotos enviadas pelo painel. |
-| Acesso para publicar | SFTP ou FTP. |
-| Backup | Que as pastas `api/dados/` e `uploads/` entrem no backup do servidor. |
-
-> Opcional: se a DTI oferecer uma pasta **fora** da área pública do site, ela pode guardar os
-> dados do painel (configuração `PASTA_DADOS`, no passo 3).
+Estão no pedido enviado à DTI: **[SOLICITACAO-DTI.md](SOLICITACAO-DTI.md)**. Em resumo:
+- subdomínio próprio, com o site na raiz;
+- PHP 7.2 ou superior, sem banco de dados;
+- HTTPS;
+- escrita do PHP em `api/dados/` e `uploads/`;
+- `post_max_size` de pelo menos 8 MB;
+- cerca de 210 MB de espaço;
+- acesso SFTP;
+- backup das duas pastas.
 
 ---
 
