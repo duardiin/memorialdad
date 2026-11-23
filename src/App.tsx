@@ -301,10 +301,9 @@ export default function App() {
       {/* HEADER */}
       <header className="bg-ufv-green pt-4 sticky top-0 z-50 shadow-lg border-b-4 border-ufv-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 pb-4">
-          <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto lg:shrink-0">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-transparent rounded-full flex items-center justify-center border-2 border-transparent shrink-0">
-              <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV" />
-            </div>
+          {/* Logotipo UFV: largura mínima de 1,5 cm (vertical) e área de proteção D (≈ 1/3 da largura) — Manual de Identidade Visual UFV */}
+          <div className="flex items-center gap-5 w-full md:w-auto lg:shrink-0">
+            <img src="/Vertical Branco Logo UFV.png" alt="Universidade Federal de Viçosa" className="w-16 h-auto shrink-0" />
             <div className="text-white overflow-hidden">
               <span className="font-serif text-[10px] sm:text-sm font-light tracking-wider opacity-90 block truncate">Universidade Federal de Viçosa</span>
               <span className="font-serif text-lg sm:text-2xl font-bold leading-tight block lg:whitespace-nowrap">
@@ -642,8 +641,8 @@ export default function App() {
             >
               <div className="bg-gradient-to-br from-ufv-green-dark to-ufv-green text-white px-5 pt-5 pb-4 border-b-4 border-ufv-gold">
                 <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-3 min-w-0">
-                    <img src="/Vertical Branco Logo UFV.png" alt="Logo UFV" className="w-11 h-11 object-contain shrink-0" />
+                  <div className="flex items-center gap-5 min-w-0">
+                    <img src="/Vertical Branco Logo UFV.png" alt="Universidade Federal de Viçosa" className="w-16 h-auto shrink-0" />
                     <div className="min-w-0">
                       <span className="font-serif text-base font-bold leading-tight block">Memorial DAD</span>
                       <span className="text-[11px] text-white/70 leading-snug block">Departamento de Administração e Contabilidade</span>
