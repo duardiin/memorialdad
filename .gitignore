@@ -9,3 +9,8 @@ coverage/
 
 .vercel
 .env*.local
+
+# Versão para o servidor da UFV (npm run build:dti)
+dist-dti/
+servidor-php/config.php
+servidor-php/dados/

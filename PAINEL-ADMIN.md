@@ -10,6 +10,9 @@ conteúdo ao memorial sem mexer em código:
 
 Não há custo: o conteúdo fica no próprio repositório do GitHub e o site é publicado pela Vercel.
 
+> Hospedagem no servidor da UFV (DTI): o painel tem uma versão em PHP que grava tudo no próprio
+> servidor. Veja **[HOSPEDAGEM-DTI.md](HOSPEDAGEM-DTI.md)**. As instruções abaixo valem para a versão da Vercel.
+
 ---
 
 ## Para quem vai usar o painel

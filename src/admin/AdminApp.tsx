@@ -17,13 +17,15 @@ import {
   X,
 } from 'lucide-react';
 import type { Colecoes, NomeColecao, Papel, UsuarioPublico } from '../content/schema';
-import { api, ErroApi, type ItemNovo } from './api';
+import { api, ErroApi, NO_SERVIDOR_UFV, type ItemNovo } from './api';
 import { Aviso, Botao, Carregando, Confirmacao, Entrada, Janela, Miniatura } from './componentes';
 import { SECOES, SECOES_PESSOAS, type Secao } from './secoes';
 
 type Pagina = 'inicio' | 'noticias' | 'galeria' | 'pessoas' | 'homenageados' | 'usuarios' | 'conta';
 
-const AVISO_PUBLICACAO = 'Salvo! A mudança aparece no site em cerca de 2 minutos.';
+const QUANDO_APARECE = NO_SERVIDOR_UFV ? 'A mudança já aparece no site.' : 'A mudança aparece no site em cerca de 2 minutos.';
+const AVISO_PUBLICACAO = `Salvo! ${QUANDO_APARECE}`;
+const ONDE_FICA_A_SENHA_PRINCIPAL = NO_SERVIDOR_UFV ? 'no arquivo api/config.php do servidor' : 'nas configurações do projeto na Vercel';
 
 const formatarData = (iso?: string) => (iso ? new Date(iso).toLocaleDateString('pt-BR') : '');
 
@@ -248,7 +250,7 @@ function PaginaColecao<N extends NomeColecao>({ secao, semCabecalho }: { secao: 
               throw new Error(tratarErro(erro));
             }
             setExcluindo(null);
-            setSucesso('Excluído! A mudança aparece no site em cerca de 2 minutos.');
+            setSucesso(`Excluído! ${QUANDO_APARECE}`);
             await carregar();
           }}
         />
@@ -374,7 +376,7 @@ const PaginaUsuarios: React.FC<{ eu: UsuarioPublico }> = ({ eu }) => {
                 </p>
                 <p className="text-sm text-ufv-gray-light truncate">{u.email}</p>
                 <p className="text-xs text-ufv-gray-light/80 mt-0.5">
-                  {u.principal ? 'Conta principal (definida na Vercel)' : u.papel === 'admin' ? 'Administrador' : 'Editor'}
+                  {u.principal ? `Conta principal (definida ${NO_SERVIDOR_UFV ? 'no servidor' : 'na Vercel'})` : u.papel === 'admin' ? 'Administrador' : 'Editor'}
                 </p>
               </div>
               {!u.principal && (
@@ -518,7 +520,7 @@ const PaginaConta: React.FC<{ eu: UsuarioPublico }> = ({ eu }) => {
       </div>
       {eu.principal ? (
         <Aviso tipo="info">
-          Esta é a conta principal. A senha dela é definida nas configurações do projeto na Vercel (variável <code>ADMIN_PASSWORD</code>). Ela serve para
+          Esta é a conta principal. A senha dela é definida {ONDE_FICA_A_SENHA_PRINCIPAL} (<code>ADMIN_PASSWORD</code>). Ela serve para
           recuperar o acesso: use-a para cadastrar as pessoas que vão editar o memorial.
         </Aviso>
       ) : (
@@ -580,7 +582,7 @@ const PaginaInicio: React.FC<{ eu: UsuarioPublico; ir: (p: Pagina) => void }> = 
         <li>Escolha uma seção acima (ou no menu).</li>
         <li>Clique em <strong>Adicionar</strong>, preencha os campos e envie as fotos.</li>
         <li>
-          Clique em <strong>Salvar e publicar</strong>. A mudança aparece no site em cerca de <strong>2 minutos</strong>.
+          Clique em <strong>Salvar e publicar</strong>. {QUANDO_APARECE}
         </li>
       </ol>
       <p className="text-xs text-ufv-gray-light mt-4 leading-relaxed">

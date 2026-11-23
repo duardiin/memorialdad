@@ -7,6 +7,10 @@ export class ErroApi extends Error {
   }
 }
 
+/** Versão da DTI (npm run build:dti): a API é o arquivo PHP do servidor da UFV. */
+export const NO_SERVIDOR_UFV = import.meta.env.MODE === 'dti';
+const ENDERECO_API = NO_SERVIDOR_UFV ? '/api/admin.php' : '/api/admin';
+
 const tratar = async <T>(resposta: Response): Promise<T> => {
   let dados: any = null;
   try {
@@ -21,10 +25,10 @@ const tratar = async <T>(resposta: Response): Promise<T> => {
 };
 
 const get = <T>(parametros: Record<string, string>) =>
-  fetch(`/api/admin?${new URLSearchParams(parametros)}`, { credentials: 'same-origin' }).then(r => tratar<T>(r));
+  fetch(`${ENDERECO_API}?${new URLSearchParams(parametros)}`, { credentials: 'same-origin' }).then(r => tratar<T>(r));
 
 const post = <T>(acao: string, dados: Record<string, unknown> = {}) =>
-  fetch('/api/admin', {
+  fetch(ENDERECO_API, {
     method: 'POST',
     credentials: 'same-origin',
     headers: { 'Content-Type': 'application/json' },

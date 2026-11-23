@@ -1,6 +1,10 @@
 /**
  * Junta os dados originais (arquivos .ts desta pasta) com o conteúdo
- * adicionado pelo Painel Administrativo (src/content/*.json).
+ * adicionado pelo Painel Administrativo.
+ *
+ * - Versão da Vercel: o conteúdo do painel vem de src/content/*.json, embutido no site.
+ * - Versão da DTI (npm run build:dti): o conteúdo do painel fica no servidor da UFV e é
+ *   buscado em api/admin.php quando o site abre (ver carregarConteudoDoServidor).
  *
  * Os arquivos originais não são alterados: o site importa tudo daqui.
  */
@@ -20,20 +24,21 @@ import titularesPainel from '../content/professoresTitulares.json';
 import atuaisPainel from '../content/professoresAtuais.json';
 import tecnicosPainel from '../content/tecnicos.json';
 import homenageadosPainel from '../content/homenageados.json';
-import type {
-  ChefeItem,
-  ColacaoItem,
-  GaleriaItem,
-  NoticiaItem,
-  ProfessorAtualItem,
-  ProfessorTitularItem,
-  TecnicoItem,
+import {
+  NOMES_COLECOES,
+  type ChefeItem,
+  type ColacaoItem,
+  type Colecoes,
+  type GaleriaItem,
+  type NoticiaItem,
+  type ProfessorAtualItem,
+  type ProfessorTitularItem,
+  type TecnicoItem,
 } from '../content/schema';
 
-const porNome = (a: { nome: string }, b: { nome: string }) => a.nome.localeCompare(b.nome, 'pt-BR');
+type ConteudoPainel = { [N in keyof Colecoes]: Colecoes[N][] };
 
-export const colacoesGrau = [...colacoesOriginais, ...(homenageadosPainel as ColacaoItem[])]
-  .sort((a, b) => a.ano - b.ano);
+const porNome = (a: { nome: string }, b: { nome: string }) => a.nome.localeCompare(b.nome, 'pt-BR');
 
 /**
  * As colações originais já têm sua notícia de homenagens escrita em memorialData.ts.
@@ -58,28 +63,73 @@ const noticiaDaColacao = (colacao: ColacaoItem) => ({
   articleUrl: '',
 });
 
-export const memorialData: MemorialData = (() => {
+const montarMemorial = (painel: ConteudoPainel): MemorialData => {
   const dados: MemorialData = {};
   const doAno = (ano: number) => (dados[ano] ??= { events: [], photos: [] });
   for (const [ano, info] of Object.entries(memorialOriginal)) {
     dados[Number(ano)] = { ...info, events: [...info.events] };
   }
-  for (const colacao of homenageadosPainel as ColacaoItem[]) {
+  for (const colacao of painel.homenageados) {
     doAno(colacao.ano).events.push(noticiaDaColacao(colacao));
   }
-  for (const { year, ...evento } of noticiasPainel as NoticiaItem[]) {
+  for (const { year, ...evento } of painel.noticias) {
     doAno(year).events.push(evento);
   }
   return dados;
-})();
+};
 
-export const allGalleryPhotos = [...galeriaOriginal, ...(galeriaPainel as GaleriaItem[])];
+// Exportados como `let`: quem importa sempre enxerga a versão mais recente (ver montar).
+export let colacoesGrau: ColacaoItem[] = [];
+export let memorialData: MemorialData = {};
+export let allGalleryPhotos: (typeof galeriaOriginal[number] | GaleriaItem)[] = [];
+export let chefesDepartamento: (typeof chefesOriginais[number] | ChefeItem)[] = [];
+export let professoresTitulares: (typeof titularesOriginais[number] | ProfessorTitularItem)[] = [];
+export let professoresAtuais: (typeof atuaisOriginais[number] | ProfessorAtualItem)[] = [];
+export let tecnicosAtuais: (typeof tecnicosOriginais[number] | TecnicoItem)[] = [];
 
-export const chefesDepartamento = [...chefesOriginais, ...(chefesPainel as ChefeItem[])];
+const montar = (painel: ConteudoPainel) => {
+  colacoesGrau = [...colacoesOriginais, ...painel.homenageados].sort((a, b) => a.ano - b.ano);
+  memorialData = montarMemorial(painel);
+  allGalleryPhotos = [...galeriaOriginal, ...painel.galeria];
+  chefesDepartamento = [...chefesOriginais, ...painel.chefes];
+  professoresTitulares = [...titularesOriginais, ...painel.professoresTitulares].sort((a, b) => a.periodoInicio - b.periodoInicio);
+  professoresAtuais = [...atuaisOriginais, ...painel.professoresAtuais].sort(porNome);
+  tecnicosAtuais = [...tecnicosOriginais, ...painel.tecnicos].sort(porNome);
+};
 
-export const professoresTitulares = [...titularesOriginais, ...(titularesPainel as ProfessorTitularItem[])]
-  .sort((a, b) => a.periodoInicio - b.periodoInicio);
+const conteudoEmbutido: ConteudoPainel = {
+  noticias: noticiasPainel as NoticiaItem[],
+  galeria: galeriaPainel as GaleriaItem[],
+  chefes: chefesPainel as ChefeItem[],
+  professoresTitulares: titularesPainel as ProfessorTitularItem[],
+  professoresAtuais: atuaisPainel as ProfessorAtualItem[],
+  tecnicos: tecnicosPainel as TecnicoItem[],
+  homenageados: homenageadosPainel as ColacaoItem[],
+};
 
-export const professoresAtuais = [...atuaisOriginais, ...(atuaisPainel as ProfessorAtualItem[])].sort(porNome);
+montar(conteudoEmbutido);
 
-export const tecnicosAtuais = [...tecnicosOriginais, ...(tecnicosPainel as TecnicoItem[])].sort(porNome);
+/**
+ * Na versão da DTI, busca no servidor o conteúdo adicionado pelo painel.
+ * Deve terminar antes de o site ser desenhado (ver main.tsx). Se o servidor
+ * não responder, o site abre normalmente com o conteúdo original.
+ */
+export const carregarConteudoDoServidor = async () => {
+  if (import.meta.env.MODE !== 'dti') return;
+  const controle = new AbortController();
+  const limite = setTimeout(() => controle.abort(), 5000);
+  try {
+    const resposta = await fetch('/api/admin.php?acao=publico', { cache: 'no-cache', signal: controle.signal });
+    if (!resposta.ok) return;
+    const recebido = await resposta.json();
+    const painel = { ...conteudoEmbutido } as Record<string, unknown[]>;
+    for (const nome of NOMES_COLECOES) {
+      if (Array.isArray(recebido?.[nome])) painel[nome] = recebido[nome];
+    }
+    montar(painel as ConteudoPainel);
+  } catch {
+    // sem conexão com o servidor: segue com o conteúdo original
+  } finally {
+    clearTimeout(limite);
+  }
+};

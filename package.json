@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --port=3000 --host",
     "build": "vite build",
+    "build:dti": "vite build --mode dti --outDir dist-dti --emptyOutDir && node scripts/empacotar-dti.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview",
